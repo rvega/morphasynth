@@ -1,0 +1,10 @@
+*.swp
+/code/tags
+
+/code/libs/*
+!/code/libs/emptyFolder
+/code/MetaMorphASynth/bin/*
+!/code/MetaMorphASynth/bin/data
+/code/MetaMorphASynth/obj
+// /code/MetaMorphASynth/bin/libs/libfmodex.so
+// /code/MetaMorphASynth/bin/libs/libfmodexp64.so

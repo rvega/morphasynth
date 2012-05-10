@@ -1,0 +1,3 @@
+[submodule "code/libs/openFrameworks/addons/ofxUI"]
+	path = code/libs/openFrameworks/addons/ofxUI
+	url = https://github.com/rezaali/ofxUI.git
