@@ -1,40 +1,28 @@
 #pragma once
 
-// #include <iostream>
-// #include <cstdlib>
-// #include <vector>
-// #include <string>
-// 
-// #include "portaudio.h"
-// #include "pa_jack.h"
+#include <iostream>
 #include "RtAudio.h"
+
+#include "Synthesizer.h"
 
 class AudioIO{
    protected:
-      // PaStream *outputStream;
-      // int outputDevice;
-      // int sampleRate;
-      // int bufferLength;
 
-      // void init();
+      // Use member function process as the audio callback.
+      // See http://www.assembla.com/spaces/portaudio/wiki/Tips_CPlusPlus
+      int process(void *outputBuffer, void *inputBuffer, unsigned int nFrames, double streamTime, RtAudioStreamStatus status, void *userData);
+      static int audioIOCallback(void *outputBuffer, void *inputBuffer, unsigned int nFrames, double streamTime, RtAudioStreamStatus status, void *userData){
+         return ((AudioIO*)userData)->process(outputBuffer, inputBuffer, nFrames, streamTime, status, userData); 
+      }
 
-      // std::vector<const PaHostApiInfo*> *drivers;
-      // std::vector<const PaDeviceInfo*> *inputDevices;
-      // std::vector<const PaDeviceInfo*> *outputDevices;
-
-      // int process(const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo* timeInfo, PaStreamCallbackFlags statusFlags);
-      // static int paCallback(const void *input, void *output, unsigned long frameCount, const PaStreamCallbackTimeInfo* timeInfo, PaStreamCallbackFlags statusFlags, void *userData ) {
-      //    return ((AudioIO*)userData)->process(input, output, frameCount, timeInfo, statusFlags); // See http://www.assembla.com/spaces/portaudio/wiki/Tips_CPlusPlus
-      // }
-      RtAudio dac;
+      RtAudio* dac;
+      Synthesizer* synth;
       unsigned int sampleRate;
 
    public:
-      AudioIO();
+      AudioIO(Synthesizer* synthesizer);
       ~AudioIO();
 
-      // std::vector<std::string> getDriverNames();
-      // std::vector<std::string> getOutputDeviceNamesForDriver(std::string driverName);
-      // void selectOutputDevice(std::string deviceName);
-      // void start();
+      void start();
+      void stop();
 };

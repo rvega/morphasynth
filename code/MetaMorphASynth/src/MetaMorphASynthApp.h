@@ -23,4 +23,5 @@ class MetaMorphASynthApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
       AudioIO* audioIO;
+      Synthesizer* synth;
 };

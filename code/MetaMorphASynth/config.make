@@ -28,7 +28,8 @@ USER_LIBS =
 
 # change this to add different compiler optimizations to your project
 
-USER_COMPILER_OPTIMIZATION = -march=native -mtune=native -Os
+# Rvega: -O3 is important to turn on function inlining: http://stackoverflow.com/questions/934529/c-inline-functions-using-gcc-why-the-call
+USER_COMPILER_OPTIMIZATION = -march=native -mtune=native -O3
 
 
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"

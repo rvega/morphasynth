@@ -2,11 +2,15 @@
 
 //--------------------------------------------------------------
 void MetaMorphASynthApp::setup(){
-   audioIO = new AudioIO();
+   synth = new Synthesizer();
+   audioIO = new AudioIO(synth);
+   audioIO->start();
 }
 
 void MetaMorphASynthApp::exit(){
-   // delete audioIO;
+   audioIO->stop();
+   delete audioIO;
+   delete synth;
 }
 //--------------------------------------------------------------
 void MetaMorphASynthApp::update(){
