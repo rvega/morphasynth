@@ -7,6 +7,7 @@
 #include "ringbuffer.h"
 #include "Event.h"
 #include "Oscillator.h"
+#include "ADSR.h"
 
 using namespace stk;
 
@@ -20,6 +21,7 @@ class Synthesizer{
       Event event;
 
       Oscillator* oscillator1;
+      ADSR* envelope1;
 
       void processEvent(Event* event);
    public:

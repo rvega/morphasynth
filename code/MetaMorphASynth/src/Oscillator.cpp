@@ -4,10 +4,11 @@
 Oscillator::Oscillator(): 
    amplitude(0.0), 
    frequency(440.0), 
-   waveform(0.5), 
+   waveform(0.5),
    sine(new SineWave()),
    square(new BlitSquare()),
-   saw(new BlitSaw())      
+   saw(new BlitSaw()),
+   out(0.0)      
 {
       //Constructor
       sine->setFrequency(220.0);
@@ -23,7 +24,6 @@ void Oscillator::setAmplitude(StkFloat amp){
    if(amp > 1.0) amp = 1.0;
    else if(amp < 0.0) amp = 0.0;
    amplitude = amp;
-   // std::cout << "Amplitude: " << amplitude << "\n";
 }
 
 void Oscillator::setFrequency(StkFloat freq){
@@ -48,4 +48,10 @@ void Oscillator::setWaveform(StkFloat wf){
    if(wf > 1.0) wf = 1.0;
    else if(wf < 0.0) wf = 0.0;
    waveform = wf;
+}
+
+void Oscillator::reset(){
+   sine->reset();
+   square->reset();
+   saw->reset();
 }

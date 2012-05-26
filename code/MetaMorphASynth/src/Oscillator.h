@@ -1,7 +1,5 @@
 #pragma once
 
-
-
 #include "Stk.h"
 #include "SineWave.h"
 #include "BlitSquare.h"
@@ -19,6 +17,8 @@ class Oscillator{
       BlitSquare* square;
       BlitSaw* saw;
 
+      StkFloat out;
+
    public:
       Oscillator();
       ~Oscillator();
@@ -27,19 +27,19 @@ class Oscillator{
       void setFrequency(StkFloat freq);
       void setWaveform(StkFloat wf);
       inline StkFloat tick();
+      void reset();
 };
 
 inline StkFloat Oscillator::tick(){
    // std::cout << waveform << "\n";
    if(waveform < 0.5){
       saw->tick();
-      return amplitude * ( ( sine->tick() * (1.0 - 2.0*waveform) ) + ( 2 * waveform * square->tick() ) );
+      out = amplitude * ( ( sine->tick() * (1.0 - 2.0*waveform) ) + ( 2 * waveform * square->tick() ) );
    }
    else{
       sine->tick();
-      return amplitude * ( ( 2 * (1.0-waveform) * square->tick() ) +  (saw->tick() * (waveform - 0.5) * 2.0) );
+      out = amplitude * ( ( 2 * (1.0-waveform) * square->tick() ) +  (saw->tick() * (waveform - 0.5) * 2.0) );
    }
-   // return amplitude * sine->tick();
-   // return amplitude * square->tick();
-   // return amplitude * saw->tick();
+
+   return out;
 }
