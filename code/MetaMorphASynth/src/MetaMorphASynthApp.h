@@ -3,6 +3,8 @@
 #include "ofMain.h"
 
 #include "AudioIO.h"
+#include "Synthesizer.h"
+#include "SynthesizerGUI.h"
 
 class MetaMorphASynthApp : public ofBaseApp{
 
@@ -24,4 +26,5 @@ class MetaMorphASynthApp : public ofBaseApp{
 		
       AudioIO* audioIO;
       Synthesizer* synth;
+      SynthesizerGUI* synthGUI;
 };

@@ -10,7 +10,7 @@ OF_ROOT = ../libs/openFrameworks
 # for example search paths like:
 # USER_CFLAGS = -I src/objects
 
-USER_CFLAGS = -I../libs/stk/include
+USER_CFLAGS = -I../libs/stk/include -Isrc/ringbuffer -Wno-sign-compare
 
 
 # USER_LDFLAGS allows to pass custom flags to the linker
@@ -33,3 +33,8 @@ USER_COMPILER_OPTIMIZATION = -march=native -mtune=native -O3
 
 
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
+
+run:
+	make cleanDebug
+	make Debug
+	cd bin && ./MetaMorphASynth_debug

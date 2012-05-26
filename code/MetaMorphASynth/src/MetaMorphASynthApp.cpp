@@ -2,7 +2,15 @@
 
 //--------------------------------------------------------------
 void MetaMorphASynthApp::setup(){
+   ofSetVerticalSync(true); 
+   ofEnableSmoothing(); 
+	ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
+
    synth = new Synthesizer();
+
+   synthGUI = new SynthesizerGUI(synth);
+   synthGUI->setup();
+
    audioIO = new AudioIO(synth);
    audioIO->start();
 }
@@ -10,6 +18,7 @@ void MetaMorphASynthApp::setup(){
 void MetaMorphASynthApp::exit(){
    audioIO->stop();
    delete audioIO;
+   delete synthGUI;
    delete synth;
 }
 //--------------------------------------------------------------
@@ -19,7 +28,7 @@ void MetaMorphASynthApp::update(){
 
 //--------------------------------------------------------------
 void MetaMorphASynthApp::draw(){
-
+	ofBackground(ofColor(233, 52, 27));     
 }
 
 //--------------------------------------------------------------

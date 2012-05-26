@@ -13,7 +13,10 @@ AudioIO::~AudioIO(){
 }
 
 void AudioIO::start(){
-   if ( dac->getDeviceCount() == 0 ) return;
+   if ( dac->getDeviceCount() == 0 ){
+      std::cout << "Could not connect to audio device" << "\n";
+      return;
+   } 
 
    // Connect to JACK's default output.
    unsigned int deviceId = dac->getDefaultOutputDevice(); 
