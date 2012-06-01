@@ -36,10 +36,10 @@ void SynthesizerGUI::setup(){
    canvas->addWidgetDown(new ofxUISpacer(width,2));
    canvas->addWidgetDown(new ofxUILabel("ENVELOPE", OFX_UI_FONT_MEDIUM));
 
-	canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 2.0, 0.1, "ATTACK TIME")); 
-   canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 2.0, 0.1, "DECAY TIME"));
+	canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")); 
+   canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME"));
    canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL"));
-   canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 2.0, 0.1, "RELEASE TIME"));
+   canvas->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME"));
 
 
    //==================//

@@ -54,4 +54,7 @@ void Oscillator::reset(){
    sine->reset();
    square->reset();
    saw->reset();
+   // sine->setPhase(0.0);
+   // square->setPhase(0.0);
+   // saw->setPhase(0.0);
 }
