@@ -10,8 +10,8 @@ All the parameters in the synthesizer are continuous (no switches, only knobs), 
 Linux Build Instructions
 ------------------------
 
-cd /path/to/repo/code
-make download_dependencies
-make install_dependencies
-cd MetaMorphASynth
-make Debug
+cd /path/to/repo/code  
+make download_dependencies  
+make install_dependencies  
+cd MetaMorphASynth  
+make Debug  
