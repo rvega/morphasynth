@@ -8,6 +8,7 @@
 #include "Event.h"
 #include "Oscillator.h"
 #include "ADSR.h"
+#include "LoPass.h"
 
 using namespace stk;
 
@@ -22,8 +23,10 @@ class Synthesizer{
 
       Oscillator* oscillator1;
       ADSR* envelope1;
+      LoPass* lopass;
 
       void processEvent(Event* event);
+
    public:
       Synthesizer();
       ~Synthesizer();

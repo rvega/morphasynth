@@ -5,7 +5,8 @@ Synthesizer::Synthesizer():
    outputBuffer(NULL), 
    out(0.0), 
    oscillator1(new Oscillator()),
-   envelope1(new ADSR())
+   envelope1(new ADSR()),
+   lopass(new LoPass())
 { 
       eventsBuffer = jack_ringbuffer_create(128 * sizeof(Event));
       jack_ringbuffer_mlock(eventsBuffer);
@@ -15,11 +16,13 @@ Synthesizer::~Synthesizer(){
    jack_ringbuffer_free(eventsBuffer);
    delete oscillator1;
    delete envelope1;
+   delete lopass;
 }
 
 void Synthesizer::setSampleRate(unsigned int sampleRate){
    this->sampleRate = sampleRate;
    Stk::setSampleRate( (StkFloat)sampleRate );
+   lopass->setSampleRate( sampleRate );
 }
 
 void Synthesizer::processEvent(Event* event){
@@ -74,7 +77,8 @@ int Synthesizer::process(void *outBuffer, void *inBuffer, unsigned int bufferSiz
    // Make some sound
    outputBuffer = (StkFloat *)outBuffer;   
    for(unsigned int i = 0; i < bufferSize; i++) {
-      out = oscillator1->tick() * envelope1->tick();
+      out = lopass->tick( oscillator1->tick() ) * envelope1->tick();
+      // out = oscillator1->tick() * envelope1->tick();
       *outputBuffer++ = out;
       *outputBuffer++ = out;
    }
