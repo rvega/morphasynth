@@ -8,3 +8,5 @@
 /code/MetaMorphASynth/obj
 // /code/MetaMorphASynth/bin/libs/libfmodex.so
 // /code/MetaMorphASynth/bin/libs/libfmodexp64.so
+/faust/filter.cpp
+/faust/filter

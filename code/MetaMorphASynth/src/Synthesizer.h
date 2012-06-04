@@ -22,7 +22,7 @@ class Synthesizer{
       Event event;
 
       Oscillator* oscillator1;
-      ADSR* envelope1;
+      ADSR* envelope;
       LoPass* lopass;
 
       void processEvent(Event* event);

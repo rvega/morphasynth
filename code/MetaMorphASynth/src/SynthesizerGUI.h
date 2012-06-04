@@ -7,9 +7,11 @@
 
 class SynthesizerGUI{
    protected:
-      ofxUICanvas *canvas;   	
       Synthesizer *synth;
+      ofxUICanvas* canvas;
+
       void guiEvent(ofxUIEventArgs &e);
+      void sendEventToAudio(ofxUIWidget* w);
 
    public:
       SynthesizerGUI(Synthesizer* synthesizer);
