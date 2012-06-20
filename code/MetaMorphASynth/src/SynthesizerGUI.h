@@ -8,7 +8,9 @@
 class SynthesizerGUI{
    protected:
       Synthesizer *synth;
-      ofxUICanvas* canvas;
+      ofxUICanvas* canvas1;
+      ofxUICanvas* canvas2;
+      ofxUICanvas* canvas3;
 
       void guiEvent(ofxUIEventArgs &e);
       void sendEventToAudio(ofxUIWidget* w);
