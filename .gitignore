@@ -10,3 +10,5 @@
 // /code/MetaMorphASynth/bin/libs/libfmodexp64.so
 /faust/filter.cpp
 /faust/filter
+/faust/HPF
+/faust/HPF.cpp
