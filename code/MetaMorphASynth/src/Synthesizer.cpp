@@ -4,6 +4,7 @@ Synthesizer::Synthesizer():
    sampleRate(0), 
    outputBuffer(NULL), 
    out(0.0), 
+   noise(new NoiseWithLevel()),
    oscillator1(new Oscillator()),
    envelope(new ADSR()),
    lopass(new LoPass())
@@ -14,6 +15,7 @@ Synthesizer::Synthesizer():
 
 Synthesizer::~Synthesizer(){
    jack_ringbuffer_free(eventsBuffer);
+   delete noise;
    delete oscillator1;
    delete envelope;
    delete lopass;
@@ -36,6 +38,11 @@ void Synthesizer::processEvent(Event* event){
          envelope->keyOff();
       }
    }   
+
+   // Noise 1 params
+   else if(!strcmp("NOISE_LEVEL", event->parameter)){
+      noise->setLevel(event->value);
+   }
 
    // Oscillator 1 params
    else if(!strcmp("OSCILLATOR_1_FREQUENCY", event->parameter)){
@@ -89,7 +96,7 @@ int Synthesizer::process(void *outBuffer, void *inBuffer, unsigned int bufferSiz
    // Make some sound
    outputBuffer = (StkFloat *)outBuffer;   
    for(unsigned int i = 0; i < bufferSize; i++) {
-      out = lopass->tick( oscillator1->tick() ) * envelope->tick();
+      out = lopass->tick( noise->tick() + oscillator1->tick() ) * envelope->tick();
       *outputBuffer++ = out;
       *outputBuffer++ = out;
    }

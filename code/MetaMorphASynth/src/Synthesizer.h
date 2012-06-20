@@ -8,6 +8,7 @@
 #include "Event.h"
 #include "Oscillator.h"
 #include "ADSR.h"
+#include "NoiseWithLevel.h"
 #include "LoPass.h"
 
 using namespace stk;
@@ -21,6 +22,7 @@ class Synthesizer{
       StkFloat out;
       Event event;
 
+      NoiseWithLevel* noise;
       Oscillator* oscillator1;
       ADSR* envelope;
       LoPass* lopass;
