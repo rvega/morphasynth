@@ -3,11 +3,13 @@
 Synthesizer::Synthesizer(): 
    sampleRate(0), 
    outputBuffer(NULL), 
-   out(0.0), 
    noise(new NoiseWithLevel()),
    oscillator1(new Oscillator()),
    envelope(new ADSR()),
-   lopass(new LoPass())
+   lopass(new LoPass()),
+   hipass(new HiPass()),
+   out(0.0), 
+   s1(0.0)
 { 
       eventsBuffer = jack_ringbuffer_create(128 * sizeof(Event));
       jack_ringbuffer_mlock(eventsBuffer);
@@ -19,12 +21,14 @@ Synthesizer::~Synthesizer(){
    delete oscillator1;
    delete envelope;
    delete lopass;
+   delete hipass;
 }
 
 void Synthesizer::setSampleRate(unsigned int sampleRate){
    this->sampleRate = sampleRate;
    Stk::setSampleRate( (StkFloat)sampleRate );
    lopass->setSampleRate( sampleRate );
+   hipass->setSampleRate( sampleRate );
 }
 
 void Synthesizer::processEvent(Event* event){
@@ -65,6 +69,17 @@ void Synthesizer::processEvent(Event* event){
    else if(!strcmp("LOPASS_GAIN", event->parameter)){
       lopass->setGain(event->value);
    }
+
+   // Hi pass filter parameters
+   else if(!strcmp("HIPASS_FREQUENCY", event->parameter)){
+      hipass->setFrequency(event->value);
+   }
+   else if(!strcmp("HIPASS_RESONANCE", event->parameter)){
+      hipass->setResonance(event->value);
+   }
+   else if(!strcmp("HIPASS_GAIN", event->parameter)){
+      hipass->setGain(event->value);
+   }
    
    // Envelope params
    else if(!strcmp("ENVELOPE_ATTACK TIME", event->parameter)){
@@ -96,7 +111,8 @@ int Synthesizer::process(void *outBuffer, void *inBuffer, unsigned int bufferSiz
    // Make some sound
    outputBuffer = (StkFloat *)outBuffer;   
    for(unsigned int i = 0; i < bufferSize; i++) {
-      out = lopass->tick( noise->tick() + oscillator1->tick() ) * envelope->tick();
+      s1 = noise->tick() + oscillator1->tick();
+      out = lopass->tick( hipass->tick(s1) ) * envelope->tick();
       *outputBuffer++ = out;
       *outputBuffer++ = out;
    }

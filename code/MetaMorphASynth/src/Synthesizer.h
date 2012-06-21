@@ -10,6 +10,7 @@
 #include "ADSR.h"
 #include "NoiseWithLevel.h"
 #include "LoPass.h"
+#include "HiPass.h"
 
 using namespace stk;
 
@@ -19,13 +20,17 @@ class Synthesizer{
       StkFloat* outputBuffer;
       jack_ringbuffer_t *eventsBuffer;
 
-      StkFloat out;
       Event event;
 
       NoiseWithLevel* noise;
       Oscillator* oscillator1;
       ADSR* envelope;
       LoPass* lopass;
+      HiPass* hipass;
+
+      // Some intermediate signals:
+      StkFloat out;
+      StkFloat s1;
 
       void processEvent(Event* event);
 

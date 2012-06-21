@@ -28,7 +28,7 @@ void Oscillator::setAmplitude(StkFloat amp){
 
 void Oscillator::setFrequency(StkFloat freq){
    if(freq > 4200.0) freq=4200.0;
-   else if(freq < 0) freq=0.0;
+   else if(freq < 27) freq=27.0;
    frequency = freq;
 
    sine->setFrequency(frequency);

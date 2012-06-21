@@ -26,7 +26,7 @@ void LoPass::setSampleRate(unsigned int sr){
    else if(sr < 1.0) sr = 1.0;
    sampleRate = sr;
 
-   fConst0 = (3.141592653589793f / min(192000, max(1, sampleRate)));
+   fConst0 = (3.141592653589793f / faustmin(192000, faustmax(1, sampleRate)));
 }
 
 void LoPass::setGain(StkFloat g){

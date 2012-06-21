@@ -35,7 +35,7 @@ void SynthesizerGUI::setup(){
    //  OSCILLATOR  //
    //==============//
    canvas1->addWidgetDown(new ofxUILabel("OSCILLATOR", OFX_UI_FONT_MEDIUM));
-	canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 20.0, 4200.0, 440.0, "FREQUENCY")) -> setID(10);
+	canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 27.0, 4200.0, 440.0, "FREQUENCY")) -> setID(10);
    canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(11);
    canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(12);
    canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "PHASE")) -> setID(13);
@@ -55,8 +55,8 @@ void SynthesizerGUI::setup(){
    //  HI PASS  //
    //===========//
    canvas2->addWidgetDown(new ofxUILabel("HI PASS FILTER", OFX_UI_FONT_MEDIUM));
-	canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 00.0, 22000.0, 22000.0, "FREQUENCY")) -> setID(50);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "RESONANCE")) -> setID(51);
+	canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 00.0, 22000.0, 0.0, "FREQUENCY")) -> setID(50);
+   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "RESONANCE")) -> setID(51);
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 2.0, 1.0, "GAIN")) -> setID(52);
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 1.0, "KEYFOLLOW")) -> setID(53);
    
