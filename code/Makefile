@@ -1,39 +1,39 @@
-# # # # # # # # #
-# Compile the app
-# # # # # # # # #
-all: release
+# Change the following according to your OS:
+OF_RELEASE_URL = http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz
+OF_INSTALL_SCRIPTS = libs/openFrameworks/scripts/linux/ubuntu
 
-release: 
-	cd MetaMorphASynth && make Release
+STK_RELEASE_URL = http://ccrma.stanford.edu/software/stk/release/stk-4.4.3.tar.gz
 
-debug:
-	cd MetaMorphASynth && make Debug
-
-clean:
-	cd MetaMorphASynth && make clean
 
 # # # # # # # # # # # # # # # # # # # # # # 
 # Downloads dependencies and git submodules
 # # # # # # # # # # # # # # # # # # # # # # 
 download_dependencies: 
-	# Download and uncompress openframeworks:
-	wget http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz # You need to change this according to your OS
-	tar -xvzf of_preRelease_v007_linux64.tar.gz
-	mv of_preRelease_v007_linux64 libs/openFrameworks
-	rm of_preRelease_v007_linux64.tar.gz
+	sudo ls
+	# Download, uncompress and install openframeworks:
+	wget -c $(OF_RELEASE_URL) -O of.tar.gz
+	mkdir -p libs/openFrameworks
+	tar -xvzf of.tar.gz -C libs/openFrameworks --strip-components=1
+	cd $(OF_INSTALL_SCRIPTS) && sudo chmod +x ./* && sudo ./install_dependencies.sh && sudo ./install_codecs.sh
 	
 	#Download and uncompress the STK
-	wget http://ccrma.stanford.edu/software/stk/release/stk-4.4.3.tar.gz
-	tar -xvzf stk-4.4.3.tar.gz
-	mv stk-4.4.3 libs/stk
-	rm stk-4.4.3.tar.gz
+	wget -c $(STK_RELEASE_URL) -O stk.tar.gz
+	mkdir -p libs/stk
+	tar -xvzf stk.tar.gz -C libs/stk --strip-components=1
+
+	#Change some names that will clash between stk and of
+	find libs/stk -type f -exec sed -i 's/ TWO_PI/ STK_TWO_PI/g' {} \;
+	find libs/stk -type f -exec sed -i 's/(TWO_PI/(STK_TWO_PI/g' {} \;
+	find libs/stk -type f -exec sed -i 's/ PI/ STK_PI/g' {} \;
+	find libs/stk -type f -exec sed -i 's/(PI/(STK_PI/g' {} \;
+	find libs/stk -type f -exec sed -i 's/*PI/*STK_PI/g' {} \;
+	
+	# Compile STK
+	cd libs/stk && ./configure --with-jack && make
 
 	# Download/update other stuff specified in .gitmodules
 	cd .. && git submodule init && git submodule update
-
-install_dependencies:
-	cd libs/stk && ./configure --with-jack && make
 	
-	# Change this according to your OS:
-	cd libs/openFrameworks/scripts/linux/ubuntu && sudo chmod +x ./* && sudo ./install_dependencies.sh && sudo ./install_codecs.sh
-
+	#Cleanup
+	rm of.tar.gz
+	rm stk.tar.gz

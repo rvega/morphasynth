@@ -12,6 +12,5 @@ Linux Build Instructions
 
 cd /path/to/repo/code  
 make download_dependencies  
-make install_dependencies  
 cd MetaMorphASynth  
 make Debug  
