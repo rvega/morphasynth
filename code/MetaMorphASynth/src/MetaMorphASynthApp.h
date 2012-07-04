@@ -1,10 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-
-#include "AudioIO.h"
-#include "Synthesizer.h"
-#include "SynthesizerGUI.h"
+#include "Controller.h"
 
 class MetaMorphASynthApp : public ofBaseApp{
 
@@ -24,7 +21,5 @@ class MetaMorphASynthApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-      AudioIO* audioIO;
-      Synthesizer* synth;
-      SynthesizerGUI* synthGUI;
+      Controller* controller;
 };

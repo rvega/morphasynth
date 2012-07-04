@@ -6,20 +6,11 @@ void MetaMorphASynthApp::setup(){
    ofEnableSmoothing(); 
 	ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
 
-   synth = new Synthesizer();
-
-   synthGUI = new SynthesizerGUI(synth);
-   synthGUI->setup();
-
-   audioIO = new AudioIO(synth);
-   audioIO->start();
+   controller = new Controller();
 }
 
 void MetaMorphASynthApp::exit(){
-   audioIO->stop();
-   delete audioIO;
-   delete synthGUI;
-   delete synth;
+   delete controller;
 }
 //--------------------------------------------------------------
 void MetaMorphASynthApp::update(){

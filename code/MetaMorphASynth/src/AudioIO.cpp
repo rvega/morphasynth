@@ -1,8 +1,6 @@
 #include "AudioIO.h"
 
-#include "Synthesizer.h"
-// AudioIO::AudioIO(Synthesizer* synthesizer): dac(new RtAudio()), synth(synthesizer), sampleRate(0) {}
-AudioIO::AudioIO(Synthesizer* synthesizer){
+AudioIO::AudioIO(DSPSynthesizer* synthesizer){
    dac = new RtAudio();
    synth = synthesizer;
    sampleRate = 0;

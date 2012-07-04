@@ -3,7 +3,7 @@
 #include <iostream>
 #include "RtAudio.h"
 
-#include "Synthesizer.h"
+#include "DSPSynthesizer.h"
 
 class AudioIO{
    protected:
@@ -16,11 +16,11 @@ class AudioIO{
       }
 
       RtAudio* dac;
-      Synthesizer* synth;
+      DSPSynthesizer* synth;
       unsigned int sampleRate;
 
    public:
-      AudioIO(Synthesizer* synthesizer);
+      AudioIO(DSPSynthesizer* synthesizer);
       ~AudioIO();
 
       void start();

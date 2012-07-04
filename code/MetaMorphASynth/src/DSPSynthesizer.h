@@ -6,27 +6,27 @@
 #include "SineWave.h"
 #include "ringbuffer.h"
 #include "Event.h"
-#include "Oscillator.h"
+#include "DSPOscillator.h"
 #include "ADSR.h"
-#include "NoiseWithLevel.h"
-#include "LoPass.h"
-#include "HiPass.h"
+#include "DSPNoiseWithLevel.h"
+#include "DSPLoPass.h"
+#include "DSPHiPass.h"
 
 using namespace stk;
 
-class Synthesizer{
-   protected:
+class DSPSynthesizer{
+   private:
       unsigned int sampleRate;
       StkFloat* outputBuffer;
-      jack_ringbuffer_t *eventsBuffer;
+      jack_ringbuffer_t* guiEventsBuffer;
 
       Event event;
 
-      NoiseWithLevel* noise;
-      Oscillator* oscillator1;
+      DSPNoiseWithLevel* noise;
+      DSPOscillator* oscillator1;
       ADSR* envelope;
-      LoPass* lopass;
-      HiPass* hipass;
+      DSPLoPass* lopass;
+      DSPHiPass* hipass;
 
       // Some intermediate signals:
       StkFloat out;
@@ -35,11 +35,12 @@ class Synthesizer{
       void processEvent(Event* event);
 
    public:
-      Synthesizer();
-      ~Synthesizer();
+      DSPSynthesizer();
+      ~DSPSynthesizer();
 
       void setSampleRate(unsigned int sampleRate);
       int process(void *outBuffer, void *inBuffer, unsigned int bufferSize);
-      void pushEvent(Event* event);
+      void addGUIEvent(Event event);
+      void addMidiEvent(Event event);
 };
 

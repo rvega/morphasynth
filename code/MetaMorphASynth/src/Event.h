@@ -1,6 +1,9 @@
 #pragma once
+   
+#include "Parameter.h"
 
 typedef struct Event{
-   char* parameter;
-   float value;   
+   Parameter parameter;
+   float value1;   
+   float value2;   
 } Event;
