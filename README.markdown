@@ -1,10 +1,8 @@
 MORPHASYNTH
 ===========
 
-A synthesizer written in C++ with Open Frameworks (OF), The Synthesis Toolkit (STK), ofxUI, RTAudio, jack_ring_buffer.
-
-Currently only running as a jack client on Linux (please port). 
-
+A synthesizer written in C++ with Open Frameworks (OF), The Synthesis Toolkit (STK), ofxUI, RTAudio, jack_ring_buffer.  
+Currently only running as a jack client on Linux (please port).  
 All the parameters in the synthesizer are continuous (no switches, only knobs), this will allow for interpolation of timbres. 
 
 Linux Build Instructions
@@ -18,8 +16,8 @@ make Debug
 License
 -------
 
-Copyright (C) 2012 Rafael Vega González
-Copyright (C) 2012 Daniel Gómez Marín
+Copyright (C) 2012 Rafael Vega González  
+Copyright (C) 2012 Daniel Gómez Marín  
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
