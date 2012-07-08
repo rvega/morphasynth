@@ -1,8 +1,8 @@
 #pragma once
 
 #include <vector>
-// #include <map>
 #include <iostream>
+#include "MidiEvent.h"
 
 class Controller;
 

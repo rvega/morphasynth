@@ -3,6 +3,7 @@
 #include <iostream>
 #include "RtAudio.h"
 
+#include "Constants.h"
 #include "DSPSynthesizer.h"
 
 class AudioIO{

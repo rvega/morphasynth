@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofxUI.h"
-#include "Event.h"
+#include "GuiEvent.h"
 
 class Controller;
 
@@ -10,7 +10,7 @@ class GUI{
       GUI(Controller* cont);
       ~GUI();
 
-      void addEvent(Event e);
+      void addEvent(GuiEvent e);
 
    private:
       Controller* controller;

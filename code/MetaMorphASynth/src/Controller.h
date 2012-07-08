@@ -5,7 +5,7 @@
 #include "MidiIO.h"
 #include "GUI.h"
 #include "ringbuffer.h"
-#include "Event.h"
+#include "GuiEvent.h"
 #include "Parameter.h"
 #include "MidiMap.h"
 
@@ -14,8 +14,8 @@ class Controller{
       Controller();
       ~Controller();
 
-		void addMidiEvent(Event e);
-      void addGUIEvent(Event e);
+		void addMidiEvent(MidiEvent e);
+      void addGUIEvent(GuiEvent e);
 
    private:
       std::map<Parameter, float> parameters;

@@ -16,12 +16,12 @@ GUI::~GUI(){
    delete canvas3;
 }
 
-void GUI::addEvent(Event e){
+void GUI::addEvent(GuiEvent e){
    // Iterate all widgets and set the value to the one that matches id
    for (std::vector<ofxUIWidget*>::iterator i = allSliders->begin(); i!=allSliders->end(); ++i) {
       ofxUISlider* widget = (ofxUISlider*) *i;
       if(widget->getID() == e.parameter){
-         widget->setValue(e.value1);
+         widget->setValue(e.value);
          break;
       }
    }
@@ -116,8 +116,8 @@ void GUI::sendEventToController(ofxUIWidget* w){
       value = ((ofxUILabelToggle *)w)->getValue();
    }
 
-   Event event;
-   event.value1 = value;
+   GuiEvent event;
+   event.value = value;
    event.parameter = (Parameter)w->getID();
    controller->addGUIEvent(event);
 }

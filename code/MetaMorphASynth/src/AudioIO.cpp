@@ -31,7 +31,7 @@ void AudioIO::start(){
 
    RtAudio::StreamOptions options;
    options.flags = RTAUDIO_MINIMIZE_LATENCY | RTAUDIO_SCHEDULE_REALTIME;
-   options.streamName = "Metamorph-A-Synth";
+   options.streamName = APPLICATION_NAME;
 
    try {
       dac->openStream( &parameters, NULL, RTAUDIO_FLOAT64, sampleRate, &bufferFrames, &AudioIO::audioIOCallback, this, &options );

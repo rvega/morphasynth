@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Stk.h"
-#include "Goodies.h"
+#include "FaustDefinitions.h"
 #include "SineWave.h"
 #include "BlitSquare.h"
 #include "BlitSaw.h"

@@ -4,7 +4,7 @@
 #include "SineWave.h"
 #include "BlitSquare.h"
 #include "BlitSaw.h"
-#include "Goodies.h"
+#include "FaustDefinitions.h"
 
 using namespace stk;
 

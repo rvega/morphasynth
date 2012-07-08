@@ -1,13 +1,9 @@
 #pragma once
 
-
 // TODO: The assignment of numeric values for these is not trivial and needs more discussion
 
 enum Parameter {
-   NOTE_ON = 0 ,  // Not really a parameter but we're using these for midi events as well
-   NOTE_OFF, 
-   
-   NOISE_LEVEL,
+   NOISE_LEVEL =0,
 
 	OSCILLATOR_FREQUENCY,
    OSCILLATOR_AMPLITUDE,

@@ -21,17 +21,17 @@ Controller::~Controller(){
    delete midiMap;
 }
 
-void Controller::addMidiEvent(Event e){
-
+void Controller::addMidiEvent(MidiEvent e){
+   synth->addMidiEvent(e);
 }
 
 /**
  * Receives an event from the GUI. Stores the new parameter value in the parameters vector and
  * forwards the event to the audio thread.
  */
-void Controller::addGUIEvent(Event e){
+void Controller::addGUIEvent(GuiEvent e){
    synth->addGUIEvent(e);
-   parameters[e.parameter] = e.value1;
+   parameters[e.parameter] = e.value;
 }
 
 void Controller::setInitialParameters(){
@@ -62,9 +62,9 @@ void Controller::setInitialParameters(){
       parameters[p] = v;
 
       // Send to synth thread
-      Event e;
+      GuiEvent e;
       e.parameter = p;
-      e.value1 = v;
+      e.value = v;
       synth->addGUIEvent(e);
       gui->addEvent(e);
    }

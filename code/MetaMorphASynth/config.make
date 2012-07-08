@@ -10,14 +10,14 @@ OF_ROOT = ../libs/openFrameworks
 # for example search paths like:
 # USER_CFLAGS = -I src/objects
 
-USER_CFLAGS = -I../libs/stk/include -Isrc/ringbuffer -Wno-sign-compare
+USER_CFLAGS = -I../libs/rtmidi -I../libs/stk/include -Isrc/ringbuffer -Wno-sign-compare 
 
 
 # USER_LDFLAGS allows to pass custom flags to the linker
 # for example libraries like:
 # USER_LD_FLAGS = libs/libawesomelib.a
 
-USER_LDFLAGS = ../libs/stk/src/libstk.a
+USER_LDFLAGS = ../libs/rtmidi/librtmidi.a ../libs/stk/src/libstk.a 
 
 
 # use this to add system libraries for example:

@@ -5,7 +5,9 @@
 
 #include "SineWave.h"
 #include "ringbuffer.h"
-#include "Event.h"
+#include "GuiEvent.h"
+#include "MidiEvent.h"
+#include "MidiUtilities.h"
 #include "DSPOscillator.h"
 #include "ADSR.h"
 #include "DSPNoiseWithLevel.h"
@@ -18,21 +20,35 @@ class DSPSynthesizer{
    private:
       unsigned int sampleRate;
       StkFloat* outputBuffer;
+
+      // Event buffers
       jack_ringbuffer_t* guiEventsBuffer;
+      jack_ringbuffer_t* midiEventsBuffer;
 
-      Event event;
+      MidiUtilities* midiUtils;
 
+      // DSP Blocks:
       DSPNoiseWithLevel* noise;
       DSPOscillator* oscillator1;
       ADSR* envelope;
       DSPLoPass* lopass;
       DSPHiPass* hipass;
+      
+      // MidiEvent being processed
+      MidiEvent midiEvent; 
+
+      // Midi number of the note being played
+      short int currentNote;
+      
+      // GuiEvent being processed
+      GuiEvent guiEvent; 
 
       // Some intermediate signals:
       StkFloat out;
       StkFloat s1;
 
-      void processEvent(Event* event);
+      void processGuiEvent(GuiEvent* event);
+      void processMidiEvent(MidiEvent* event);
 
    public:
       DSPSynthesizer();
@@ -40,7 +56,7 @@ class DSPSynthesizer{
 
       void setSampleRate(unsigned int sampleRate);
       int process(void *outBuffer, void *inBuffer, unsigned int bufferSize);
-      void addGUIEvent(Event event);
-      void addMidiEvent(Event event);
+      void addGUIEvent(GuiEvent event);
+      void addMidiEvent(MidiEvent event);
 };
 

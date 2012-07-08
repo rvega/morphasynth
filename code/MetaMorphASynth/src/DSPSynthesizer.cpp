@@ -3,20 +3,29 @@
 DSPSynthesizer::DSPSynthesizer(): 
    sampleRate(0), 
    outputBuffer(NULL), 
+   midiUtils(new MidiUtilities()),
    noise(new DSPNoiseWithLevel()),
    oscillator1(new DSPOscillator()),
    envelope(new ADSR()),
    lopass(new DSPLoPass()),
    hipass(new DSPHiPass()),
+   currentNote(0),
    out(0.0), 
    s1(0.0)
 { 
-      guiEventsBuffer = jack_ringbuffer_create(128 * sizeof(Event));
+      midiEventsBuffer = jack_ringbuffer_create(128 * sizeof(MidiEvent));
+      jack_ringbuffer_mlock(midiEventsBuffer);
+
+      guiEventsBuffer = jack_ringbuffer_create(128 * sizeof(GuiEvent));
       jack_ringbuffer_mlock(guiEventsBuffer);
+
+      midiUtils->initMidiNotes();
 }
 
 DSPSynthesizer::~DSPSynthesizer(){
    jack_ringbuffer_free(guiEventsBuffer);
+   jack_ringbuffer_free(midiEventsBuffer);
+   delete midiUtils;
    delete noise;
    delete oscillator1;
    delete envelope;
@@ -31,43 +40,31 @@ void DSPSynthesizer::setSampleRate(unsigned int sampleRate){
    hipass->setSampleRate( sampleRate );
 }
 
-void DSPSynthesizer::processEvent(Event* event){
+void DSPSynthesizer::processGuiEvent(GuiEvent* event){
    switch(event->parameter){
 
-      
-      case(NOTE_ON):
-         if(event->value1 == 1){
-            oscillator1->reset();
-            envelope->keyOn();
-         }
-         else{
-            envelope->keyOff();
-         }
-         break;
-      
-
       case(NOISE_LEVEL):
-         noise->setLevel(event->value1);
+         noise->setLevel(event->value);
          break;
       case(OSCILLATOR_FREQUENCY):
-         oscillator1->setFrequency(event->value1);
+         oscillator1->setFrequency(event->value);
          break;
       case(OSCILLATOR_AMPLITUDE):
-         oscillator1->setAmplitude(event->value1);
+         oscillator1->setAmplitude(event->value);
          break;
       case(OSCILLATOR_WAVEFORM):
-         oscillator1->setWaveform(event->value1);
+         oscillator1->setWaveform(event->value);
          break;
 
 
       case(LOW_PASS_FREQUENCY):
-         lopass->setFrequency(event->value1);
+         lopass->setFrequency(event->value);
          break;
       case(LOW_PASS_RESONANCE):
-         lopass->setResonance(event->value1);
+         lopass->setResonance(event->value);
          break;
       case(LOW_PASS_GAIN):
-         lopass->setGain(event->value1);
+         lopass->setGain(event->value);
          break;
       case(LOW_PASS_KEYFOLLOW):
          // TODO
@@ -76,13 +73,13 @@ void DSPSynthesizer::processEvent(Event* event){
 
 
       case(HI_PASS_FREQUENCY):
-         hipass->setFrequency(event->value1);
+         hipass->setFrequency(event->value);
          break;
       case(HI_PASS_RESONANCE):
-         hipass->setResonance(event->value1);
+         hipass->setResonance(event->value);
          break;
       case(HI_PASS_GAIN):
-         hipass->setGain(event->value1);
+         hipass->setGain(event->value);
          break;
       case(HI_PASS_KEYFOLLOW):
          // TODO
@@ -91,30 +88,58 @@ void DSPSynthesizer::processEvent(Event* event){
 
 
       case(ENVELOPE_ATTACK):
-         envelope->setAttackTime(event->value1);
+         envelope->setAttackTime(event->value);
          break;
       case(ENVELOPE_DECAY):
-         envelope->setDecayTime(event->value1);
+         envelope->setDecayTime(event->value);
          break;
       case(ENVELOPE_SUSTAIN):
-         envelope->setSustainLevel(event->value1);
+         envelope->setSustainLevel(event->value);
          break;
       case(ENVELOPE_RELEASE):
-         envelope->setReleaseTime(event->value1);
+         envelope->setReleaseTime(event->value);
          break;
 
 
       default:
-         std::cout << "Synth is trying to set unknown parameter from received event " << event->parameter << ": " << event->value1 << "\n";
+         std::cout << "Synth is trying to set unknown parameter from received event " << event->parameter << ": " << event->value << "\n";
          break;
    }
 }
 
+void DSPSynthesizer::processMidiEvent(MidiEvent* event){
+   switch(event->command){
+      case(NOTE_ON):
+         oscillator1->setFrequency(midiUtils->midiNote2Pitch(event->value1));
+         oscillator1->reset();
+         envelope->keyOn();
+         currentNote = event->value1;
+         break;
+      case(NOTE_OFF):
+            // If the note off even is not for the note we're playing, ignore it.
+            if(event->value1 == currentNote){
+               envelope->keyOff();
+            }
+         break;
+      case(PITCH_BEND):
+         // TODO
+         break;
+      default:
+         std::cout << "Synth received an unknown MIDI message: " << event->command << "\n";
+         break;
+   }
+}
 int DSPSynthesizer::process(void *outBuffer, void *inBuffer, unsigned int bufferSize){
+   // Process events from MIDI
+   while(jack_ringbuffer_read_space(midiEventsBuffer) >= sizeof(MidiEvent)){ // If there's at least one event to read
+      jack_ringbuffer_read(midiEventsBuffer, (char*)&midiEvent, sizeof(MidiEvent));
+      processMidiEvent(&midiEvent);
+   }
+
    // Process events from GUI
-   while(jack_ringbuffer_read_space(guiEventsBuffer) >= sizeof(Event)){ // If there's at least one event to read
-      jack_ringbuffer_read(guiEventsBuffer, (char*)&event, sizeof(Event));
-      processEvent(&event);
+   while(jack_ringbuffer_read_space(guiEventsBuffer) >= sizeof(GuiEvent)){ 
+      jack_ringbuffer_read(guiEventsBuffer, (char*)&guiEvent, sizeof(GuiEvent));
+      processGuiEvent(&guiEvent);
    }
 
    // Make some sound
@@ -128,13 +153,20 @@ int DSPSynthesizer::process(void *outBuffer, void *inBuffer, unsigned int buffer
    return 0;
 }
 
-void DSPSynthesizer::addMidiEvent(Event event){}
-
-void DSPSynthesizer::addGUIEvent(Event event){
-   if(jack_ringbuffer_write_space(guiEventsBuffer) < sizeof(Event)){
-      std::cout << "Could not add " << event.parameter << ": " << event.value1 << " to synth's event buffer." << "\n";
+void DSPSynthesizer::addMidiEvent(MidiEvent event){
+   if(jack_ringbuffer_write_space(midiEventsBuffer) < sizeof(MidiEvent)){
+      std::cout << "Could not add midi event" << event.command << ": " << event.value1 << " to synth's event buffer." << "\n";
    }
    else{
-      jack_ringbuffer_write(guiEventsBuffer, (const char *)&event, sizeof(Event));
+      jack_ringbuffer_write(midiEventsBuffer, (const char *)&event, sizeof(MidiEvent));
+   }
+}
+
+void DSPSynthesizer::addGUIEvent(GuiEvent event){
+   if(jack_ringbuffer_write_space(guiEventsBuffer) < sizeof(GuiEvent)){
+      std::cout << "Could not add gui event" << event.parameter << ": " << event.value << " to synth's event buffer." << "\n";
+   }
+   else{
+      jack_ringbuffer_write(guiEventsBuffer, (const char *)&event, sizeof(GuiEvent));
    }
 }
