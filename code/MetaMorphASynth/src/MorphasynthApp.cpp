@@ -18,10 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "MetaMorphASynthApp.h"
+#include "MorphasynthApp.h"
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::setup(){
+void MorphasynthApp::setup(){
    ofSetVerticalSync(true); 
    ofEnableSmoothing(); 
 	ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
@@ -29,60 +29,60 @@ void MetaMorphASynthApp::setup(){
    controller = new Controller();
 }
 
-void MetaMorphASynthApp::exit(){
+void MorphasynthApp::exit(){
    delete controller;
 }
 //--------------------------------------------------------------
-void MetaMorphASynthApp::update(){
+void MorphasynthApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::draw(){
+void MorphasynthApp::draw(){
 	ofBackground(ofColor(233, 52, 27));     
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::keyPressed(int key){
+void MorphasynthApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::keyReleased(int key){
+void MorphasynthApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::mouseMoved(int x, int y ){
+void MorphasynthApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::mouseDragged(int x, int y, int button){
+void MorphasynthApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::mousePressed(int x, int y, int button){
+void MorphasynthApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::mouseReleased(int x, int y, int button){
+void MorphasynthApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::windowResized(int w, int h){
+void MorphasynthApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::gotMessage(ofMessage msg){
+void MorphasynthApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void MetaMorphASynthApp::dragEvent(ofDragInfo dragInfo){ 
+void MorphasynthApp::dragEvent(ofDragInfo dragInfo){ 
 
 }

@@ -23,7 +23,7 @@
 #include "ofMain.h"
 #include "Controller.h"
 
-class MetaMorphASynthApp : public ofBaseApp{
+class MorphasynthApp : public ofBaseApp{
 
 	public:
 		void setup();
