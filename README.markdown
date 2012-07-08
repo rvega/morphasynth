@@ -12,7 +12,7 @@ Linux Build Instructions
 
 cd /path/to/repo/code  
 make download_dependencies  
-cd MetaMorphASynth  
+cd Morphasynth  
 make Debug  
 
 License

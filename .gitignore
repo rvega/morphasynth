@@ -3,11 +3,11 @@
 
 /code/libs/*
 !/code/libs/emptyFolder
-/code/MetaMorphASynth/bin/*
-!/code/MetaMorphASynth/bin/data
-/code/MetaMorphASynth/obj
-// /code/MetaMorphASynth/bin/libs/libfmodex.so
-// /code/MetaMorphASynth/bin/libs/libfmodexp64.so
+/code/Morphasynth/bin/*
+!/code/Morphasynth/bin/data
+/code/Morphasynth/obj
+// /code/Morphasynth/bin/libs/libfmodex.so
+// /code/Morphasynth/bin/libs/libfmodexp64.so
 /faust/filter.cpp
 /faust/filter
 /faust/HPF
