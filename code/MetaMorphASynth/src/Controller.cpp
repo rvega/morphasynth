@@ -3,10 +3,13 @@
 Controller::Controller(): 
    gui(new GUI(this)),
    synth(new DSPSynthesizer()),
-   audioIO(new AudioIO(synth))
+   audioIO(new AudioIO(synth)),
+   midiMap(new MidiMap(this)),
+   midiIO(new MidiIO(midiMap))
 {
    setInitialParameters();
    audioIO->start();
+   midiIO->start();
 }
 
 Controller::~Controller(){
@@ -14,6 +17,8 @@ Controller::~Controller(){
    delete synth;
    delete gui;
    delete audioIO;
+   delete midiIO;
+   delete midiMap;
 }
 
 void Controller::addMidiEvent(Event e){
