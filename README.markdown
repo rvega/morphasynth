@@ -18,7 +18,7 @@ make Debug
 License
 -------
 
-Copyright (C) 2012 Rafael Vega González
+Copyright (C) 2012 Rafael Vega González  
 Copyright (C) 2012 Daniel Gómez Marín
 
 This program is free software: you can redistribute it and/or modify
