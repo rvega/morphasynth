@@ -1,15 +1,26 @@
-# Change the following according to your OS:
+#  Morphasynth
+#  
+#  Copyright (C) 2012 Rafael Vega González
+#  Copyright (C) 2012 Daniel Gómez Marín
+#  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 OF_RELEASE_URL = http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz
 OF_INSTALL_SCRIPTS = libs/openFrameworks/scripts/linux/ubuntu
-
 STK_RELEASE_URL = http://ccrma.stanford.edu/software/stk/release/stk-4.4.3.tar.gz
+RTMIDI_RELEASE_URL = http://www.music.mcgill.ca/~gary/rtmidi/release/rtmidi-2.0.0.tar.gz # The version of RtMidi included in the stk does not fully support Jack Midi
 
-# The version of RtMidi included in the stk does not fully support Jack Midi
-RTMIDI_RELEASE_URL = http://www.music.mcgill.ca/~gary/rtmidi/release/rtmidi-2.0.0.tar.gz
-
-# # # # # # # # # # # # # # # # # # # # # # 
-# Downloads dependencies and git submodules
-# # # # # # # # # # # # # # # # # # # # # # 
 download_dependencies: 
 	sudo ls
 	# Download, uncompress and compile openframeworks:
