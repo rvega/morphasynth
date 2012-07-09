@@ -22,9 +22,9 @@
 
 //--------------------------------------------------------------
 void MorphasynthApp::setup(){
-   ofSetVerticalSync(true); 
-   ofEnableSmoothing(); 
-	ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
+   // ofSetVerticalSync(true); 
+   // ofEnableSmoothing(); 
+	// ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
 
    controller = new Controller();
 }

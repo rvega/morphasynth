@@ -37,9 +37,12 @@ class GUI{
       ofxUICanvas* canvas1;
       ofxUICanvas* canvas2;
       ofxUICanvas* canvas3;
+      ofxUICanvas* canvas4;
+      ofxUICanvas* canvas5;
       std::vector<ofxUIWidget*>* allSliders;
 
       void setup();
       void guiEvent(ofxUIEventArgs &e);
       void sendEventToController(ofxUIWidget* w);
+      void onDraw(ofEventArgs &data);
 };
