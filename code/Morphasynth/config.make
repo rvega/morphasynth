@@ -37,4 +37,4 @@ EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
 run:
 	# make cleanDebug
 	make Debug
-	cd bin && ./MetaMorphASynth_debug
+	cd bin && ./Morphasynth_debug
