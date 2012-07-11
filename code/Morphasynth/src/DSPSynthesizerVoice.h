@@ -23,35 +23,39 @@
 #include <iostream>
 #include <string.h>
 
-#include "ringbuffer.h"
-#include "GuiEvent.h"
-#include "MidiEvent.h"
-#include "DSPSynthesizerVoice.h"
+#include "MidiUtilities.h"
+#include "Parameter.h"
+#include "DSPOscillator.h"
+#include "ADSR.h"
+#include "DSPNoiseWithLevel.h"
+#include "DSPLoPass.h"
+#include "DSPHiPass.h"
 
 using namespace stk;
 
-class DSPSynthesizer{
+class DSPSynthesizerVoice{
    private:
-      unsigned int sampleRate;
-      std::vector<DSPSynthesizerVoice*>* voices;
-      jack_ringbuffer_t* guiEventsBuffer;
-      jack_ringbuffer_t* midiEventsBuffer;
-
-      void processGuiEvent(GuiEvent* event);
-      void processMidiEvent(MidiEvent* event);
+      short int currentNote;
+      bool silence;
       
-      // Some "local" vars
-      MidiEvent midiEvent; 
-      GuiEvent guiEvent; 
-      StkFloat* out;
+      // DSP Blocks:
+      DSPNoiseWithLevel* noise;
+      DSPOscillator* oscillator1;
+      //    DSPLoPass* lopass;
+      //    DSPHiPass* hipass;
+      ADSR* envelope;
+      
+      // Some intermediate signals:
+      StkFloat output;
 
    public:
-      DSPSynthesizer();
-      ~DSPSynthesizer();
+      DSPSynthesizerVoice();
+      ~DSPSynthesizerVoice();
 
       void setSampleRate(unsigned int sampleRate);
-      int process(void *outBuffer, void *inBuffer, unsigned int bufferSize);
-      void addGUIEvent(GuiEvent event);
-      void addMidiEvent(MidiEvent event);
+      short int getCurrentNote();
+      void setParameter(Parameter param, float value);
+      void noteOn(short int noteNumber, short int velocity);
+      void noteOff();
+      void process(StkFloat* out, unsigned int bufferSize);
 };
-

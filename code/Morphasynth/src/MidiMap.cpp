@@ -43,7 +43,7 @@ void MidiMap::process(double deltatime, std::vector< unsigned char > *bytes){
    // Parse the midi bytes.
    // First byte is XXXXYYYY where YYYY is the channel number and XXXX is the bytes type
 
-   unsigned char channelNumber = bytes->at(0) & 0x0F;
+   // unsigned char channelNumber = bytes->at(0) & 0x0F;
    unsigned char messageType = bytes->at(0) & 0xF0;
    MidiEvent event;
 

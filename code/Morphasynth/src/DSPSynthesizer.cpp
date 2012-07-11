@@ -21,129 +21,60 @@
 #include "DSPSynthesizer.h"
 
 DSPSynthesizer::DSPSynthesizer(): 
-   sampleRate(0), 
-   outputBuffer(NULL), 
-   midiUtils(new MidiUtilities()),
-   noise(new DSPNoiseWithLevel()),
-   oscillator1(new DSPOscillator()),
-   envelope(new ADSR()),
-   lopass(new DSPLoPass()),
-   hipass(new DSPHiPass()),
-   currentNote(0),
-   out(0.0), 
-   s1(0.0)
+   sampleRate(0)
 { 
       midiEventsBuffer = jack_ringbuffer_create(128 * sizeof(MidiEvent));
       jack_ringbuffer_mlock(midiEventsBuffer);
 
       guiEventsBuffer = jack_ringbuffer_create(128 * sizeof(GuiEvent));
       jack_ringbuffer_mlock(guiEventsBuffer);
-
-      midiUtils->initMidiNotes();
+   
+      voices = new std::vector<DSPSynthesizerVoice*>;
+      DSPSynthesizerVoice* aVoice = new DSPSynthesizerVoice(); // Just one voice for now
+      voices->push_back(aVoice);
 }
 
 DSPSynthesizer::~DSPSynthesizer(){
    jack_ringbuffer_free(guiEventsBuffer);
    jack_ringbuffer_free(midiEventsBuffer);
-   delete midiUtils;
-   delete noise;
-   delete oscillator1;
-   delete envelope;
-   delete lopass;
-   delete hipass;
+
+   for(int i=0; i<voices->size(); ++i){
+      delete voices->at(i);
+   }
+   delete voices;
 }
 
 void DSPSynthesizer::setSampleRate(unsigned int sampleRate){
    this->sampleRate = sampleRate;
-   Stk::setSampleRate( (StkFloat)sampleRate );
-   lopass->setSampleRate( sampleRate );
-   hipass->setSampleRate( sampleRate );
+   Stk::setSampleRate( (StkFloat)sampleRate ); // Sets the sample rate for all STK objects
+   
+   for(int i=0; i<voices->size(); ++i){
+      voices->at(i)->setSampleRate(sampleRate);
+   }
 }
 
 void DSPSynthesizer::processGuiEvent(GuiEvent* event){
-   switch(event->parameter){
-
-      case(NOISE_LEVEL):
-         noise->setLevel(event->value);
-         break;
-      case(OSCILLATOR_FREQUENCY):
-         oscillator1->setFrequency(event->value);
-         break;
-      case(OSCILLATOR_AMPLITUDE):
-         oscillator1->setAmplitude(event->value);
-         break;
-      case(OSCILLATOR_WAVEFORM):
-         oscillator1->setWaveform(event->value);
-         break;
-
-
-      case(LOW_PASS_FREQUENCY):
-         lopass->setFrequency(event->value);
-         break;
-      case(LOW_PASS_RESONANCE):
-         lopass->setResonance(event->value);
-         break;
-      case(LOW_PASS_GAIN):
-         lopass->setGain(event->value);
-         break;
-      case(LOW_PASS_KEYFOLLOW):
-         // TODO
-         break;
-
-
-
-      case(HI_PASS_FREQUENCY):
-         hipass->setFrequency(event->value);
-         break;
-      case(HI_PASS_RESONANCE):
-         hipass->setResonance(event->value);
-         break;
-      case(HI_PASS_GAIN):
-         hipass->setGain(event->value);
-         break;
-      case(HI_PASS_KEYFOLLOW):
-         // TODO
-         break;
-
-
-
-      case(ENVELOPE_ATTACK):
-         envelope->setAttackTime(event->value);
-         break;
-      case(ENVELOPE_DECAY):
-         envelope->setDecayTime(event->value);
-         break;
-      case(ENVELOPE_SUSTAIN):
-         envelope->setSustainLevel(event->value);
-         break;
-      case(ENVELOPE_RELEASE):
-         envelope->setReleaseTime(event->value);
-         break;
-
-
-      default:
-         std::cout << "Synth is trying to set unknown parameter from received event " << event->parameter << ": " << event->value << "\n";
-         break;
+   for(int i = 0; i<voices->size(); i++) {
+      voices->at(i)->setParameter(event->parameter, event->value);
    }
 }
 
 void DSPSynthesizer::processMidiEvent(MidiEvent* event){
    switch(event->command){
       case(NOTE_ON):
-         oscillator1->setFrequency(midiUtils->midiNote2Pitch(event->value1));
-         oscillator1->reset();
-         envelope->keyOn();
-         currentNote = event->value1;
+         voices->at(0)->noteOn(event->value1, event->value2);
          break;
+
       case(NOTE_OFF):
-            // If the note off even is not for the note we're playing, ignore it.
-            if(event->value1 == currentNote){
-               envelope->keyOff();
-            }
+         if(voices->at(0)->getCurrentNote() == event->value1){
+            voices->at(0)->noteOff();
+         }
          break;
+
       case(PITCH_BEND):
-         // TODO
+         // TODO: Pitchbend
          break;
+
       default:
          std::cout << "Synth received an unknown MIDI message: " << event->command << "\n";
          break;
@@ -163,13 +94,7 @@ int DSPSynthesizer::process(void *outBuffer, void *inBuffer, unsigned int buffer
    }
 
    // Make some sound
-   outputBuffer = (StkFloat *)outBuffer;   
-   for(unsigned int i = 0; i < bufferSize; i++) {
-      s1 = noise->tick() + oscillator1->tick();
-      out = lopass->tick( hipass->tick(s1) ) * envelope->tick();
-      *outputBuffer++ = out;
-      *outputBuffer++ = out;
-   }
+   voices->at(0)->process((StkFloat*) outBuffer, bufferSize); // Only one voice for now
    return 0;
 }
 

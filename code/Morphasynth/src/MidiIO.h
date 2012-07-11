@@ -34,6 +34,8 @@ class MidiIO{
        */
       void start();
 
+      void stop();
+
    private:
       RtMidiIn* midiIn;
       MidiMap* midiMap;

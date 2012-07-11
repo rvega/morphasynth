@@ -136,90 +136,94 @@ void GUI::setup(){
    //=============//
    //  HIGH PASS  //
    //=============//
-   // canvas3 = new ofxUICanvas(2*width+4*padding, 0, width+2*padding, totalHeight);
-   // canvas3->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
+   canvas3 = new ofxUICanvas(2*width+4*padding, 0, width+2*padding, totalHeight);
+   canvas3->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
 
-   // canvas3->addWidgetDown(new ofxUILabel("HIGH PASS FILTER", OFX_UI_FONT_MEDIUM));
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   canvas3->addWidgetDown(new ofxUILabel("HIGH PASS FILTER", OFX_UI_FONT_MEDIUM));
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "FREQUENCY")) -> setID(HI_PASS_FREQUENCY);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "RESONANCE")) -> setID(HI_PASS_RESONANCE);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "KEYFOLLOW")) -> setID(HI_PASS_KEYFOLLOW);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);
 
-   // canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
+   canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
-   // canvas3->addWidgetDown(new ofxUILabel("HIGH PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   canvas3->addWidgetDown(new ofxUILabel("HIGH PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
+	canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(HI_PASS_ATTACK); // TODO: logarithmic
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(HI_PASS_DECAY);// TODO: logarithmic
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(HI_PASS_SUSTAIN);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(HI_PASS_RELEASE);// TODO: logarithmic
 
-   // canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-   // 
-   // canvas3->addWidgetDown(new ofxUILabel("LFO FOR HIGH PASS", OFX_UI_FONT_MEDIUM));
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
+   
+   canvas3->addWidgetDown(new ofxUILabel("LFO FOR HIGH PASS", OFX_UI_FONT_MEDIUM));
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_HI_PASS_WAVEFORM);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 22000.0, 0.0, "FREQUENCY")) -> setID(LFO_HI_PASS_FREQUENCY);// TODO: logarithmic
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "AMPLITUDE")) -> setID(LFO_HI_PASS_AMPLITUDE);
+   
+   //=============//
+   //  LOW PASS  //
+   //=============//
+   canvas4 = new ofxUICanvas(3*width+6*padding, 0, width+2*padding, totalHeight);
+   canvas4->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
 
-   // //=============//
-   // //  LOW  PASS  //
-   // //=============//
-   // canvas4 = new ofxUICanvas(3*width+6*padding, 0, width+2*padding, totalHeight);
-   // canvas4->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
+   canvas4->addWidgetDown(new ofxUILabel("LOW PASS FILTER", OFX_UI_FONT_MEDIUM));
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "FREQUENCY")) -> setID(LOW_PASS_FREQUENCY);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "RESONANCE")) -> setID(LOW_PASS_RESONANCE);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "KEYFOLLOW")) -> setID(LOW_PASS_KEYFOLLOW);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "CONTOUR")) -> setID(LOW_PASS_CONTOUR);
 
-   // canvas4->addWidgetDown(new ofxUILabel("LOW PASS FILTER", OFX_UI_FONT_MEDIUM));
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
-   // canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
+   canvas4->addWidgetDown(new ofxUILabel("LOW PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
+	canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(LOW_PASS_ATTACK); // TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(LOW_PASS_DECAY);// TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(LOW_PASS_SUSTAIN);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(LOW_PASS_RELEASE);// TODO: logarithmic
 
-   // canvas4->addWidgetDown(new ofxUILabel("LOW PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
+   
+   canvas4->addWidgetDown(new ofxUILabel("LFO FOR LOW PASS", OFX_UI_FONT_MEDIUM));
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_LOW_PASS_WAVEFORM);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 22000.0, 0.0, "FREQUENCY")) -> setID(LFO_LOW_PASS_FREQUENCY);// TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "AMPLITUDE")) -> setID(LFO_LOW_PASS_AMPLITUDE);
 
-   // canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-   // 
-   // canvas4->addWidgetDown(new ofxUILabel("LFO FOR LOW PASS", OFX_UI_FONT_MEDIUM));
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR_WAVEFORM);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR_AMPLITUDE);
-   // canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "FINETUNE")) -> setID(OSCILLATOR_PHASE);
+   
+   //============//
+   //  ENVELOPE  //
+   //============//
+   canvas5 = new ofxUICanvas(4*width+8*padding, 0, width+2*padding, totalHeight);
+   canvas5->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
 
-   // canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-   // 
-   // //============//
-   // //  ENVELOPE  //
-   // //============//
-   // canvas5 = new ofxUICanvas(4*width+8*padding, 0, width+2*padding, totalHeight);
-   // canvas5->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
+   canvas5->addWidgetDown(new ofxUILabel("ENVELOPE", OFX_UI_FONT_MEDIUM));
+	canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(ENVELOPE_ATTACK); 
+   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(ENVELOPE_DECAY);
+   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(ENVELOPE_SUSTAIN);
+   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(ENVELOPE_RELEASE);
 
-   // canvas5->addWidgetDown(new ofxUILabel("ENVELOPE", OFX_UI_FONT_MEDIUM));
-	// canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(ENVELOPE_ATTACK); 
-   // canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(ENVELOPE_DECAY);
-   // canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(ENVELOPE_SUSTAIN);
-   // canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(ENVELOPE_RELEASE);
 
-   // // Store a vector with all widgets for later use
-   // vector<ofxUIWidget*> widgets1 = canvas1->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   // vector<ofxUIWidget*> widgets2 = canvas2->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   // vector<ofxUIWidget*> widgets3 = canvas3->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   // vector<ofxUIWidget*> widgets4 = canvas4->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   // vector<ofxUIWidget*> widgets5 = canvas5->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   // allSliders->reserve(widgets1.size() + widgets2.size() + widgets3.size() + widgets4.size() + widgets5.size());
-   // allSliders->insert(allSliders->end(), widgets1.begin(), widgets1.end());
-   // allSliders->insert(allSliders->end(), widgets2.begin(), widgets2.end());
-   // allSliders->insert(allSliders->end(), widgets3.begin(), widgets3.end());
-   // allSliders->insert(allSliders->end(), widgets4.begin(), widgets4.end());
-   // allSliders->insert(allSliders->end(), widgets5.begin(), widgets5.end());
+   //============//
+   //  PLUMBING  //
+   //============//
 
-   // // Add event listener
-	// ofAddListener(canvas1->newGUIEvent, this, &GUI::guiEvent);
-	// ofAddListener(canvas2->newGUIEvent, this, &GUI::guiEvent);
-	// ofAddListener(canvas3->newGUIEvent, this, &GUI::guiEvent);
-	// ofAddListener(canvas4->newGUIEvent, this, &GUI::guiEvent);
-	// ofAddListener(canvas5->newGUIEvent, this, &GUI::guiEvent);
+   // Store a vector with all widgets for later use
+   vector<ofxUIWidget*> widgets1 = canvas1->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
+   vector<ofxUIWidget*> widgets2 = canvas2->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
+   vector<ofxUIWidget*> widgets3 = canvas3->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
+   vector<ofxUIWidget*> widgets4 = canvas4->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
+   vector<ofxUIWidget*> widgets5 = canvas5->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
+   allSliders->reserve(widgets1.size() + widgets2.size() + widgets3.size() + widgets4.size() + widgets5.size());
+   allSliders->insert(allSliders->end(), widgets1.begin(), widgets1.end());
+   allSliders->insert(allSliders->end(), widgets2.begin(), widgets2.end());
+   allSliders->insert(allSliders->end(), widgets3.begin(), widgets3.end());
+   allSliders->insert(allSliders->end(), widgets4.begin(), widgets4.end());
+   allSliders->insert(allSliders->end(), widgets5.begin(), widgets5.end());
+
+   // Add event listener
+	ofAddListener(canvas1->newGUIEvent, this, &GUI::guiEvent);
+	ofAddListener(canvas2->newGUIEvent, this, &GUI::guiEvent);
+	ofAddListener(canvas3->newGUIEvent, this, &GUI::guiEvent);
+	ofAddListener(canvas4->newGUIEvent, this, &GUI::guiEvent);
+	ofAddListener(canvas5->newGUIEvent, this, &GUI::guiEvent);
 }
 
 void GUI::guiEvent(ofxUIEventArgs &e){

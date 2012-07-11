@@ -18,15 +18,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#pragma once
+
 #include <iostream>
 #include <cmath>
 
 class MidiUtilities {
    public:
-      void initMidiNotes();
+      // Singleton "constructor"
+      static MidiUtilities& getInstance(){
+         static MidiUtilities instance;
+         return instance;
+      }
+
       float midiNote2Pitch(short int midiNote);
 
    private:
+      // Singleton, don't copy, provate constructor
+      MidiUtilities(MidiUtilities const&);
+      void operator=(MidiUtilities const&);
+      MidiUtilities();
+
+      void initMidiNotes();
       float midiNotes[127];
 };
 
