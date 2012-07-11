@@ -35,6 +35,6 @@ USER_COMPILER_OPTIMIZATION = -march=native -mtune=native -O3
 EXCLUDE_FROM_SOURCE="bin,.xcodeproj,obj"
 
 run:
-	# make cleanDebug
-	make Debug
+	# +make cleanDebug
+	+make Debug
 	cd bin && ./Morphasynth_debug
