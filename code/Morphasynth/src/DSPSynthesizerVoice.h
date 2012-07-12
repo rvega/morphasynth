@@ -35,18 +35,41 @@ using namespace stk;
 
 class DSPSynthesizerVoice{
    private:
+      // State
       short int currentNote;
+      StkFloat currentNoteFrequency;
       bool silence;
+
+      // Internal signals:
+      StkFloat output;
+      StkFloat freq;
       
+      // Parameters
+      StkFloat noiseLevel;
+
+      StkFloat oscillator1Amplitude;
+      StkFloat oscillator1Waveform;
+      StkFloat oscillator1Finetune;
+
+      StkFloat lfo1Waveform;
+      StkFloat lfo1Frequency;
+      StkFloat lfo1ToAmplitude;
+      StkFloat lfo1ToFrequency;
+
+      StkFloat envelopeAttack;
+      StkFloat envelopeDecay;
+      StkFloat envelopeSustain;
+      StkFloat envelopeRelease;
+
       // DSP Blocks:
       DSPNoiseWithLevel* noise;
       DSPOscillator* oscillator1;
+      DSPOscillator* lfo1;
       //    DSPLoPass* lopass;
       //    DSPHiPass* hipass;
       ADSR* envelope;
-      
-      // Some intermediate signals:
-      StkFloat output;
+
+      StkFloat calculateFrequency(short int midiNote, StkFloat finetune);
 
    public:
       DSPSynthesizerVoice();

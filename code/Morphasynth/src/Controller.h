@@ -38,7 +38,6 @@ class Controller{
       void addGUIEvent(GuiEvent e);
 
    private:
-      std::map<Parameter, float> parameters;
       GUI* gui;
       DSPSynthesizer* synth;
       AudioIO* audioIO;

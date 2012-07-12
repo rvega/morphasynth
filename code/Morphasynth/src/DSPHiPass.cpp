@@ -40,22 +40,16 @@ DSPHiPass::~DSPHiPass(){
 }
 
 void DSPHiPass::setSampleRate(unsigned int sr){
-   if(sr > 192000.0) sr = 192000.0;
-   else if(sr < 1.0) sr = 1.0;
    sampleRate = sr;
 
    fConst0 = (6.283185307179586f / sampleRate);
 }
 
 void DSPHiPass::setGain(StkFloat g){
-   if(g > 2.0) g = 2.0;
-   else if(g < 0.0) g = 0.0;
    gain = g;
 }
 
 void DSPHiPass::setFrequency(StkFloat freq){
-   if(freq > 22000.0) freq=22000.0;
-   else if(freq < 10.0) freq=10.0;
    frequency = freq;
 }
 

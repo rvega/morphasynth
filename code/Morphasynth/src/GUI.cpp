@@ -113,7 +113,7 @@ void GUI::setup(){
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC1_WAVEFORM);
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC1_FREQUENCY);  //TODO: logarithmic
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC1_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC1_TO_FREQUENCY); //TODO: logarithmic
+   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC1_TO_FREQUENCY); //TODO: logarithmic
 
    canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
