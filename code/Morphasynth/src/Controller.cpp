@@ -57,7 +57,7 @@ void Controller::setInitialParameters(){
    // TODO: This should be loaded from a preset file.
    std::map<Parameter, float> initialParameters;
 
-   initialParameters[NOISE_LEVEL] = 0.3;
+   initialParameters[NOISE_LEVEL] = 0.0;
 
    initialParameters[OSCILLATOR1_AMPLITUDE] = 0.5;
    initialParameters[OSCILLATOR1_WAVEFORM] = 0.5;
