@@ -21,10 +21,9 @@
 #include "MidiIO.h"
 
 MidiIO::MidiIO(MidiMap* mmap):
-   midiIn(new RtMidiIn(RtMidi::UNIX_JACK, APPLICATION_NAME)),
    midiMap(mmap)
 {
-   //Constructor
+   // Constructor
 }
 
 MidiIO::~MidiIO(){
@@ -32,25 +31,36 @@ MidiIO::~MidiIO(){
 }
 
 void MidiIO::stop(){
-   midiIn->closePort();
+   if(midiIn != 0){
+      midiIn->closePort();
+   }
 }
 
 void MidiIO::start(){
-   // // Debug. Show available ports and connect automatically
-   // unsigned int nPorts = midiIn->getPortCount();
-   // if ( nPorts == 0 ) {
-   //    std::cout << "Could not connect to midi device" << "\n";
-   //    return;
-   // }
-   // std::cout << "Available Midi ports:" << "\n";
-   // for (int i = 0; i < nPorts; i++) {
-   //    std::string name = midiIn->getPortName(i);
-   //    std::cout << "(" << i << ") " << name << "\n";
-   // }
-   // midiIn->openPort(2, "MIDI In");
+   try{
+      midiIn = new RtMidiIn(RtMidi::UNIX_JACK, APPLICATION_NAME);
 
-   midiIn->openVirtualPort("MIDI In");
-   midiIn->setCallback(&MidiIO::_midiCallback, this);
+      // Debug. Show available ports and connect automatically
+      // unsigned int nPorts = midiIn->getPortCount();
+      // if ( nPorts == 0 ) {
+      //    std::cout << "Could not connect to midi device" << "\n";
+      //    return;
+      // }
+      // std::cout << "Available Midi ports:" << "\n";
+      // for (int i = 0; i < nPorts; i++) {
+      //    std::string name = midiIn->getPortName(i);
+      //    std::cout << "(" << i << ") " << name << "\n";
+      // }
+      // midiIn->openPort(2, "MIDI In");
+      
+      midiIn->openVirtualPort("MIDI In");
+      midiIn->setCallback(&MidiIO::_midiCallback, this);
+   }
+   catch(RtError& e){
+      midiIn = 0;
+      std::cout << "Could not start midi port. Is Jack running?." << "\n";
+      std::cout << e.getMessage() << "\n";
+   }
 }
 
 void MidiIO::midiCallback(double deltatime, std::vector< unsigned char > *message, void *userData){

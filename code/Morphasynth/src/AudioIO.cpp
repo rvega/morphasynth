@@ -32,7 +32,7 @@ AudioIO::~AudioIO(){
 
 void AudioIO::start(){
    if ( dac->getDeviceCount() == 0 ){
-      std::cout << "Could not connect to audio device" << "\n";
+      std::cout << "Could not connect to audio device. Is Jack running?" << "\n";
       return;
    } 
 
@@ -59,7 +59,7 @@ void AudioIO::start(){
       std::cout << "Started audio stream. Sample rate is " << sampleRate << ". Buffer size is " << bufferFrames << ".\n";
    }
    catch ( RtError& e ) {
-      std::cout << "Could not start audio connection." << "\n";
+      std::cout << "Could not start audio connection. Is Jack Running?" << "\n";
       std::cout << e.getMessage() << "\n";
    }
 }
