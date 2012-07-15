@@ -25,7 +25,7 @@ void MorphasynthApp::setup(){
    // ofSetVerticalSync(true); 
    // ofEnableSmoothing(); 
 	// ofEnableBlendMode(OF_BLENDMODE_ALPHA);     
-
+   ofSetFrameRate(15);
    controller = new Controller();
 }
 
