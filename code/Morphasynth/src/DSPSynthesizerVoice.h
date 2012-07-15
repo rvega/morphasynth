@@ -42,7 +42,12 @@ class DSPSynthesizerVoice{
 
       // Internal signals:
       StkFloat output;
+      StkFloat oscillators;
+      StkFloat lfo1Out;
+      StkFloat lfo2Out;
+      StkFloat lfo3Out;
       StkFloat freq;
+      StkFloat amp;
       
       // Parameters
       StkFloat noiseLevel;
@@ -56,6 +61,52 @@ class DSPSynthesizerVoice{
       StkFloat lfo1ToAmplitude;
       StkFloat lfo1ToFrequency;
 
+      StkFloat oscillator2Amplitude;
+      StkFloat oscillator2Waveform;
+      StkFloat oscillator2Finetune;
+
+      StkFloat lfo2Waveform;
+      StkFloat lfo2Frequency;
+      StkFloat lfo2ToAmplitude;
+      StkFloat lfo2ToFrequency;
+
+      StkFloat oscillator3Amplitude;
+      StkFloat oscillator3Waveform;
+      StkFloat oscillator3Finetune;
+
+      StkFloat lfo3Waveform;
+      StkFloat lfo3Frequency;
+      StkFloat lfo3ToAmplitude;
+      StkFloat lfo3ToFrequency;
+
+      StkFloat hiPassFrequency;
+      StkFloat hiPassResonance;
+      StkFloat hiPassKeyFollow;
+      StkFloat hiPassContour;
+
+      StkFloat hiPassAttack;
+      StkFloat hiPassDecay;
+      StkFloat hiPassSustain;
+      StkFloat hiPassRelease;
+
+      StkFloat lfoHiPassWaveform;
+      StkFloat lfoHiPassFrequency;
+      StkFloat lfoHiPassAmplitude;
+
+      StkFloat loPassFrequency;
+      StkFloat loPassResonance;
+      StkFloat loPassKeyFollow;
+      StkFloat loPassContour;
+
+      StkFloat loPassAttack;
+      StkFloat loPassDecay;
+      StkFloat loPassSustain;
+      StkFloat loPassRelease;
+
+      StkFloat lfoLoPassWaveform;
+      StkFloat lfoLoPassFrequency;
+      StkFloat lfoLoPassAmplitude;
+
       StkFloat envelopeAttack;
       StkFloat envelopeDecay;
       StkFloat envelopeSustain;
@@ -65,11 +116,17 @@ class DSPSynthesizerVoice{
       DSPNoiseWithLevel* noise;
       DSPOscillator* oscillator1;
       DSPOscillator* lfo1;
-      //    DSPLoPass* lopass;
-      //    DSPHiPass* hipass;
+      DSPOscillator* oscillator2;
+      DSPOscillator* lfo2;
+      DSPOscillator* oscillator3;
+      DSPOscillator* lfo3;
+      DSPHiPass* hiPass;
+      ADSR* hiPassEnvelope;
+      DSPOscillator* lfoHiPass;
+      DSPLoPass* loPass;
+      ADSR* loPassEnvelope;
+      DSPOscillator* lfoLoPass;
       ADSR* envelope;
-
-      StkFloat calculateFrequency(short int midiNote, StkFloat finetune);
 
    public:
       DSPSynthesizerVoice();

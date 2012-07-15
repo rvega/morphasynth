@@ -121,7 +121,7 @@ void GUI::setup(){
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC2_WAVEFORM);
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC2_FREQUENCY);  //TODO: logarithmic
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC2_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC2_TO_FREQUENCY); //TODO: logarithmic
+   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC2_TO_FREQUENCY); //TODO: logarithmic
 
    canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
@@ -129,7 +129,7 @@ void GUI::setup(){
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC3_WAVEFORM);
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC3_FREQUENCY);  //TODO: logarithmic
    canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC3_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC3_TO_FREQUENCY); //TODO: logarithmic
+   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC3_TO_FREQUENCY); //TODO: logarithmic
 
    canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
@@ -140,10 +140,10 @@ void GUI::setup(){
    canvas3->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
 
    canvas3->addWidgetDown(new ofxUILabel("HIGH PASS FILTER", OFX_UI_FONT_MEDIUM));
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "FREQUENCY")) -> setID(HI_PASS_FREQUENCY);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 0.0, "FREQUENCY")) -> setID(HI_PASS_FREQUENCY);
    canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "RESONANCE")) -> setID(HI_PASS_RESONANCE);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "KEYFOLLOW")) -> setID(HI_PASS_KEYFOLLOW);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "KEYFOLLOW")) -> setID(HI_PASS_KEYFOLLOW);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, -5.0, 5.0, 0.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);
 
    canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
@@ -157,8 +157,8 @@ void GUI::setup(){
    
    canvas3->addWidgetDown(new ofxUILabel("LFO FOR HIGH PASS", OFX_UI_FONT_MEDIUM));
    canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_HI_PASS_WAVEFORM);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 22000.0, 0.0, "FREQUENCY")) -> setID(LFO_HI_PASS_FREQUENCY);// TODO: logarithmic
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "AMPLITUDE")) -> setID(LFO_HI_PASS_AMPLITUDE);
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_HI_PASS_FREQUENCY);// TODO: logarithmic
+   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 5.0, 0.0, "AMPLITUDE")) -> setID(LFO_HI_PASS_AMPLITUDE);
    
    //=============//
    //  LOW PASS  //
@@ -167,25 +167,25 @@ void GUI::setup(){
    canvas4->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
 
    canvas4->addWidgetDown(new ofxUILabel("LOW PASS FILTER", OFX_UI_FONT_MEDIUM));
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "FREQUENCY")) -> setID(LOW_PASS_FREQUENCY);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "RESONANCE")) -> setID(LOW_PASS_RESONANCE);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "KEYFOLLOW")) -> setID(LOW_PASS_KEYFOLLOW);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 359.99, 0.0, "CONTOUR")) -> setID(LOW_PASS_CONTOUR);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 20000.0, "FREQUENCY")) -> setID(LO_PASS_FREQUENCY);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.75, "RESONANCE")) -> setID(LO_PASS_RESONANCE);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "KEYFOLLOW")) -> setID(LO_PASS_KEYFOLLOW);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, -5.0, 5.0, 0.0, "CONTOUR")) -> setID(LO_PASS_CONTOUR);
 
    canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
    canvas4->addWidgetDown(new ofxUILabel("LOW PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
-	canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(LOW_PASS_ATTACK); // TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(LOW_PASS_DECAY);// TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(LOW_PASS_SUSTAIN);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(LOW_PASS_RELEASE);// TODO: logarithmic
+	canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(LO_PASS_ATTACK); // TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(LO_PASS_DECAY);// TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(LO_PASS_SUSTAIN);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(LO_PASS_RELEASE);// TODO: logarithmic
 
    canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
    
    canvas4->addWidgetDown(new ofxUILabel("LFO FOR LOW PASS", OFX_UI_FONT_MEDIUM));
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_LOW_PASS_WAVEFORM);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 22000.0, 0.0, "FREQUENCY")) -> setID(LFO_LOW_PASS_FREQUENCY);// TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "AMPLITUDE")) -> setID(LFO_LOW_PASS_AMPLITUDE);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_LO_PASS_WAVEFORM);
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_LO_PASS_FREQUENCY);// TODO: logarithmic
+   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 5.0, 0.0, "AMPLITUDE")) -> setID(LFO_LO_PASS_AMPLITUDE);
 
    
    //============//

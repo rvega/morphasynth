@@ -68,6 +68,49 @@ void Controller::setInitialParameters(){
    initialParameters[LFO_OSC1_TO_AMPLITUDE] = 0.0;
    initialParameters[LFO_OSC1_TO_FREQUENCY] = 0.0;
 
+   initialParameters[OSCILLATOR2_AMPLITUDE] = 0.0;
+   initialParameters[OSCILLATOR2_WAVEFORM] = 0.5;
+   initialParameters[OSCILLATOR2_FINETUNE] = 0.0;
+
+   initialParameters[LFO_OSC2_WAVEFORM] = 0.0;
+   initialParameters[LFO_OSC2_FREQUENCY] = 5.0;
+   initialParameters[LFO_OSC2_TO_AMPLITUDE] = 0.0;
+   initialParameters[LFO_OSC2_TO_FREQUENCY] = 0.0;
+   
+   initialParameters[OSCILLATOR3_AMPLITUDE] = 0.0;
+   initialParameters[OSCILLATOR3_WAVEFORM] = 0.5;
+   initialParameters[OSCILLATOR3_FINETUNE] = 0.0;
+
+   initialParameters[LFO_OSC3_WAVEFORM] = 0.0;
+   initialParameters[LFO_OSC3_FREQUENCY] = 5.0;
+   initialParameters[LFO_OSC3_TO_AMPLITUDE] = 0.0;
+   initialParameters[LFO_OSC3_TO_FREQUENCY] = 0.0;
+
+   initialParameters[HI_PASS_FREQUENCY] = 10.0;
+   initialParameters[HI_PASS_RESONANCE] = 0.02;
+   initialParameters[HI_PASS_KEYFOLLOW] = 1.0;
+   initialParameters[HI_PASS_CONTOUR] = 0.0;
+
+   initialParameters[HI_PASS_ATTACK] = 0.001;
+   initialParameters[HI_PASS_DECAY] = 0.001;
+   initialParameters[HI_PASS_SUSTAIN] = 1.0;
+   initialParameters[HI_PASS_RELEASE] = 0.001;
+
+   initialParameters[ENVELOPE_ATTACK] = 0.001;
+   initialParameters[ENVELOPE_DECAY] = 0.001;
+   initialParameters[ENVELOPE_SUSTAIN] = 1.0;
+   initialParameters[ENVELOPE_RELEASE] = 0.001;
+
+   initialParameters[LO_PASS_FREQUENCY] = 20000.0;
+   initialParameters[LO_PASS_RESONANCE] = 0.75;
+   initialParameters[LO_PASS_KEYFOLLOW] = 1.0;
+   initialParameters[LO_PASS_CONTOUR] = 0.0;
+
+   initialParameters[LO_PASS_ATTACK] = 0.001;
+   initialParameters[LO_PASS_DECAY] = 0.001;
+   initialParameters[LO_PASS_SUSTAIN] = 1.0;
+   initialParameters[LO_PASS_RELEASE] = 0.001;
+
    initialParameters[ENVELOPE_ATTACK] = 0.001;
    initialParameters[ENVELOPE_DECAY] = 0.001;
    initialParameters[ENVELOPE_SUSTAIN] = 1.0;
