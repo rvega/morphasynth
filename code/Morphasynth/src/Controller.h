@@ -25,7 +25,7 @@
 #include "MidiIO.h"
 #include "GUI.h"
 #include "ringbuffer.h"
-#include "GuiEvent.h"
+#include "GUIEvent.h"
 #include "Parameter.h"
 #include "MidiMap.h"
 
@@ -43,7 +43,6 @@ class Controller{
       AudioIO* audioIO;
       MidiMap* midiMap;
       MidiIO* midiIO;
-      // jack_ringbuffer_t* midiEvents;
 
       void setInitialParameters();
 };

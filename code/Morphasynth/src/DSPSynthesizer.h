@@ -24,7 +24,7 @@
 #include <string.h>
 
 #include "ringbuffer.h"
-#include "GuiEvent.h"
+#include "GUIEvent.h"
 #include "MidiEvent.h"
 #include "DSPSynthesizerVoice.h"
 
