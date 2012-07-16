@@ -22,27 +22,35 @@
 
 #include "ofxUI.h"
 #include "GUIEvent.h"
-#include "GUITimbre.h"
-#include "GUIMorph.h"
-#include "GUIPresets.h"
 
+class GUI;
 class Controller;
 
-class GUI{
+class GUITimbre{
    public:
-      GUI(Controller* cont);
-      ~GUI();
+      GUITimbre(Controller* cont, GUI* superV, int x, int y, int w, int h);
+      ~GUITimbre();
 
       void addEvent(GuiEvent e);
 
+      void show();
+      void hide();
+
    private:
       Controller* controller;
-      ofxUICanvas* topBar;
-      GUITimbre* guiTimbre;
-      GUIMorph* guiMorph;
-      GUIPresets* guiPresets;
+      GUI* superView;
+      ofxUICanvas* canvas1;
+      ofxUICanvas* canvas2;
+      ofxUICanvas* canvas3;
+      ofxUICanvas* canvas4;
+      ofxUICanvas* canvas5;
+      int x,y,w,h;
+      std::vector<ofxUIWidget*>* allSliders;
+
+      bool isVisible;
 
       void setup();
-      void onDraw(ofEventArgs &data);
       void guiEvent(ofxUIEventArgs &e);
+      void sendEventToController(ofxUIWidget* w);
+      void onDraw(ofEventArgs &data);
 };

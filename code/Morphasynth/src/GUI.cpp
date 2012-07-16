@@ -23,225 +23,79 @@
 #include "Controller.h"
 
 GUI::GUI(Controller* cont): 
-   controller(cont),
-   allSliders(new vector<ofxUIWidget*>())   
+   controller(cont)
 {
    setup();
    ofAddListener(ofEvents.draw, this, &GUI::onDraw);
+   guiTimbre = new GUITimbre(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
+   guiMorph = new GUIMorph(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
+   guiPresets = new GUIPresets(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
+
+   guiTimbre->show(); 
+   guiMorph->hide(); 
+   guiPresets->hide(); 
 }
 
 GUI::~GUI(){
-   delete allSliders;
-   delete canvas1;
-   delete canvas2;
-   delete canvas3;
-   delete canvas4;
-   delete canvas5;
+   delete guiTimbre;
+   delete guiMorph;
+   delete guiPresets;
 }
 
 void GUI::addEvent(GuiEvent e){
-   // Iterate all widgets and set the value to the one that matches id
-   for (std::vector<ofxUIWidget*>::iterator i = allSliders->begin(); i!=allSliders->end(); ++i) {
-      ofxUISlider* widget = (ofxUISlider*) *i;
-      if(widget->getID() == e.parameter){
-         widget->setValue(e.value);
-         break;
-      }
-   }
+   guiTimbre->addEvent(e);
 }
 
 void GUI::onDraw(ofEventArgs &data) {
+   // Top horizontal line
    ofSetColor(241, 209, 205);
-   ofLine(9, 40, ofGetWidth()-9, 40); // Top horizontal
-   ofLine(409, 81, 409, 650); // Left vertical
-   ofLine(817, 81, 817, 610); // Right vertical
+   ofLine(9, 47, ofGetWidth()-9, 47); 
 }
 
 void GUI::setup(){
-   // We're using the first digit in the id to determine which dsp module the parameter corresponds to.
-   const int totalWidth = ofGetWidth();
-   const int totalHeight = ofGetHeight();
-   const int padding = 9;
-   const int topPadding = 35;
-   const int width = totalWidth/5 - 2*padding;
-   const int itemHeight = 15;
-   const int spacerHeight = 15;
-   const int largeSpacerHeight = 56;
    const ofColor bgColor = ofColor(210, 47, 24);
+   const int totalWidth = ofGetWidth();
 
-   //=========//
-   //  TITLE  //
-   //=========//
-   canvas1 = new ofxUICanvas(0, 0, width + 2*padding, totalHeight);
-   canvas1->addWidgetDown(new ofxUILabel("MORPHASYNTH v0.1", OFX_UI_FONT_LARGE));
-   canvas1->addWidgetDown(new ofxUISpacer(1,6)) -> setColorFill(bgColor);
+   // TITLE
+   topBar = new ofxUICanvas(0, 0, totalWidth, 47);
+   topBar->addWidget(new ofxUILabel(9, 15, "MORPHASYNTH v0.1", OFX_UI_FONT_LARGE));
+   topBar->addWidgetRight(new ofxUISpacer(635, 1)) -> setColorFill(bgColor);
 
-   //===============//
-   //  OSCILLATORS  //
-   //===============//
-   canvas1->addWidgetDown(new ofxUILabel("OSCILLATOR 1", OFX_UI_FONT_MEDIUM));
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR1_WAVEFORM);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR1_AMPLITUDE);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, -1.0, 1.0, 0.0, "FINETUNE")) -> setID(OSCILLATOR1_FINETUNE);
+   // RADIOS
+   std::vector<std::string> radios;
+	radios.push_back("TIMBRE");
+	radios.push_back("MORPH");
+	radios.push_back("PRESETS");	
+   ofxUIRadio* radio = new ofxUIRadio(15, 15, "", radios, OFX_UI_ORIENTATION_HORIZONTAL);
+   radio->activateToggle("TIMBRE"); 
+   topBar->addWidgetRight(radio);
 
-   canvas1->addWidgetDown(new ofxUISpacer(width, largeSpacerHeight)) -> setColorFill(bgColor);
+   // PANIC
+   topBar->addWidgetRight(new ofxUISpacer(1, 1)) -> setColorFill(bgColor);
+	topBar->addWidgetRight(new ofxUILabelButton(false, "PANIC !!!", OFX_UI_FONT_MEDIUM));
 
-   canvas1->addWidgetDown(new ofxUILabel("OSCILLATOR 2", OFX_UI_FONT_MEDIUM));
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR2_WAVEFORM);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR2_AMPLITUDE);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, -1.0, 1.0, 0.0, "FINETUNE")) -> setID(OSCILLATOR2_FINETUNE);
-
-   canvas1->addWidgetDown(new ofxUISpacer(width, largeSpacerHeight)) -> setColorFill(bgColor);
-
-   canvas1->addWidgetDown(new ofxUILabel("SUB OSCILLATOR", OFX_UI_FONT_MEDIUM));
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(OSCILLATOR3_WAVEFORM);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "AMPLITUDE")) -> setID(OSCILLATOR3_AMPLITUDE);
-   canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, -1.0, 1.0, 0.0, "FINETUNE")) -> setID(OSCILLATOR3_FINETUNE);
-
-   canvas1->addWidgetDown(new ofxUISpacer(width, 1.5*spacerHeight)) -> setColorFill(bgColor);
-
-   canvas1->addWidgetDown(new ofxUILabel("NOISE", OFX_UI_FONT_MEDIUM));
-	canvas1->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "AMPLITUDE")) -> setID(NOISE_LEVEL);
-
-   //========================//
-   //  LFOS FOR OSCILLATORS  //
-   //========================//
-   canvas2 = new ofxUICanvas(width+2*padding, 0, width+2*padding, totalHeight);
-   canvas2->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
-
-   canvas2->addWidgetDown(new ofxUILabel("LFO FOR OSC 1", OFX_UI_FONT_MEDIUM));
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC1_WAVEFORM);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC1_FREQUENCY);  //TODO: logarithmic
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC1_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC1_TO_FREQUENCY); //TODO: logarithmic
-
-   canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-
-   canvas2->addWidgetDown(new ofxUILabel("LFO FOR OSC 2", OFX_UI_FONT_MEDIUM));
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC2_WAVEFORM);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC2_FREQUENCY);  //TODO: logarithmic
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC2_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC2_TO_FREQUENCY); //TODO: logarithmic
-
-   canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-
-   canvas2->addWidgetDown(new ofxUILabel("LFO FOR SUB OSC", OFX_UI_FONT_MEDIUM));
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_OSC3_WAVEFORM);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_OSC3_FREQUENCY);  //TODO: logarithmic
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "TO AMPLITUDE")) -> setID(LFO_OSC3_TO_AMPLITUDE);
-   canvas2->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 3.0, 0.0, "TO FREQUENCY")) -> setID(LFO_OSC3_TO_FREQUENCY); //TODO: logarithmic
-
-   canvas2->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-
-   //=============//
-   //  HIGH PASS  //
-   //=============//
-   canvas3 = new ofxUICanvas(2*width+4*padding, 0, width+2*padding, totalHeight);
-   canvas3->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
-
-   canvas3->addWidgetDown(new ofxUILabel("HIGH PASS FILTER", OFX_UI_FONT_MEDIUM));
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 0.0, "FREQUENCY")) -> setID(HI_PASS_FREQUENCY);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "RESONANCE")) -> setID(HI_PASS_RESONANCE);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "KEYFOLLOW")) -> setID(HI_PASS_KEYFOLLOW);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, -5.0, 5.0, 0.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);
-
-   canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-
-   canvas3->addWidgetDown(new ofxUILabel("HIGH PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
-	canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(HI_PASS_ATTACK); // TODO: logarithmic
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(HI_PASS_DECAY);// TODO: logarithmic
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(HI_PASS_SUSTAIN);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(HI_PASS_RELEASE);// TODO: logarithmic
-
-   canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-   
-   canvas3->addWidgetDown(new ofxUILabel("LFO FOR HIGH PASS", OFX_UI_FONT_MEDIUM));
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_HI_PASS_WAVEFORM);
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_HI_PASS_FREQUENCY);// TODO: logarithmic
-   canvas3->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 5.0, 0.0, "AMPLITUDE")) -> setID(LFO_HI_PASS_AMPLITUDE);
-   
-   //=============//
-   //  LOW PASS  //
-   //=============//
-   canvas4 = new ofxUICanvas(3*width+6*padding, 0, width+2*padding, totalHeight);
-   canvas4->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
-
-   canvas4->addWidgetDown(new ofxUILabel("LOW PASS FILTER", OFX_UI_FONT_MEDIUM));
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 20000.0, 20000.0, "FREQUENCY")) -> setID(LO_PASS_FREQUENCY);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.75, "RESONANCE")) -> setID(LO_PASS_RESONANCE);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.0, "KEYFOLLOW")) -> setID(LO_PASS_KEYFOLLOW);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, -5.0, 5.0, 0.0, "CONTOUR")) -> setID(LO_PASS_CONTOUR);
-
-   canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-
-   canvas4->addWidgetDown(new ofxUILabel("LOW PASS ENVELOPE", OFX_UI_FONT_MEDIUM));
-	canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(LO_PASS_ATTACK); // TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(LO_PASS_DECAY);// TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(LO_PASS_SUSTAIN);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(LO_PASS_RELEASE);// TODO: logarithmic
-
-   canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
-   
-   canvas4->addWidgetDown(new ofxUILabel("LFO FOR LOW PASS", OFX_UI_FONT_MEDIUM));
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.5, "WAVEFORM")) -> setID(LFO_LO_PASS_WAVEFORM);
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 200.0, 0.0, "FREQUENCY")) -> setID(LFO_LO_PASS_FREQUENCY);// TODO: logarithmic
-   canvas4->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 5.0, 0.0, "AMPLITUDE")) -> setID(LFO_LO_PASS_AMPLITUDE);
-
-   
-   //============//
-   //  ENVELOPE  //
-   //============//
-   canvas5 = new ofxUICanvas(4*width+8*padding, 0, width+2*padding, totalHeight);
-   canvas5->addWidgetDown(new ofxUISpacer(width, topPadding)) -> setColorFill(bgColor);
-
-   canvas5->addWidgetDown(new ofxUILabel("ENVELOPE", OFX_UI_FONT_MEDIUM));
-	canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "ATTACK TIME")) -> setID(ENVELOPE_ATTACK); 
-   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "DECAY TIME")) -> setID(ENVELOPE_DECAY);
-   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.0, 1.0, 0.8, "SUSTAIN LEVEL")) -> setID(ENVELOPE_SUSTAIN);
-   canvas5->addWidgetDown(new ofxUISlider(width, itemHeight, 0.001, 10.0, 0.001, "RELEASE TIME")) -> setID(ENVELOPE_RELEASE);
-
-
-   //============//
-   //  PLUMBING  //
-   //============//
-
-   // Store a vector with all widgets for later use
-   vector<ofxUIWidget*> widgets1 = canvas1->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   vector<ofxUIWidget*> widgets2 = canvas2->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   vector<ofxUIWidget*> widgets3 = canvas3->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   vector<ofxUIWidget*> widgets4 = canvas4->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   vector<ofxUIWidget*> widgets5 = canvas5->getWidgetsOfType(OFX_UI_WIDGET_SLIDER_H);
-   allSliders->reserve(widgets1.size() + widgets2.size() + widgets3.size() + widgets4.size() + widgets5.size());
-   allSliders->insert(allSliders->end(), widgets1.begin(), widgets1.end());
-   allSliders->insert(allSliders->end(), widgets2.begin(), widgets2.end());
-   allSliders->insert(allSliders->end(), widgets3.begin(), widgets3.end());
-   allSliders->insert(allSliders->end(), widgets4.begin(), widgets4.end());
-   allSliders->insert(allSliders->end(), widgets5.begin(), widgets5.end());
-
-   // Add event listener
-	ofAddListener(canvas1->newGUIEvent, this, &GUI::guiEvent);
-	ofAddListener(canvas2->newGUIEvent, this, &GUI::guiEvent);
-	ofAddListener(canvas3->newGUIEvent, this, &GUI::guiEvent);
-	ofAddListener(canvas4->newGUIEvent, this, &GUI::guiEvent);
-	ofAddListener(canvas5->newGUIEvent, this, &GUI::guiEvent);
+	ofAddListener(topBar->newGUIEvent, this, &GUI::guiEvent);
 }
 
 void GUI::guiEvent(ofxUIEventArgs &e){
-   sendEventToController(e.widget);
-}
-
-void GUI::sendEventToController(ofxUIWidget* w){
-   // Get value according to widget type
-   float value = 0.0;
-   if(w->getKind() == OFX_UI_WIDGET_SLIDER_H){
-      value = ((ofxUISlider *)w)->getScaledValue();
+	string name = e.widget->getName(); 
+   if(name == "TIMBRE"){
+      guiTimbre->show(); 
+      guiMorph->hide(); 
+      guiPresets->hide(); 
    }
-   else{ //if(w.getKind() == OFX_UI_WIDGET_LABELTOGGLE){
-      value = ((ofxUILabelToggle *)w)->getValue();
+   else if(name == "MORPH"){
+      guiTimbre->hide(); 
+      guiMorph->show(); 
+      guiPresets->hide(); 
    }
-
-   GuiEvent event;
-   event.value = value;
-   event.parameter = (Parameter)w->getID();
-   controller->addGUIEvent(event);
+   else if(name == "PRESETS"){
+      guiTimbre->hide(); 
+      guiMorph->hide(); 
+      guiPresets->show(); 
+   }
+   else if(name == "PANIC"){
+      // TODO;
+      std::cout << "PANIC!!" << "\n";
+   }
 }

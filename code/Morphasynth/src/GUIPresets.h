@@ -22,27 +22,26 @@
 
 #include "ofxUI.h"
 #include "GUIEvent.h"
-#include "GUITimbre.h"
-#include "GUIMorph.h"
-#include "GUIPresets.h"
 
+class GUI;
 class Controller;
 
-class GUI{
+class GUIPresets{
    public:
-      GUI(Controller* cont);
-      ~GUI();
+      GUIPresets(Controller* cont, GUI* superV, int x, int y, int w, int h);
+      ~GUIPresets();
 
-      void addEvent(GuiEvent e);
+      void show();
+      void hide();
 
    private:
       Controller* controller;
-      ofxUICanvas* topBar;
-      GUITimbre* guiTimbre;
-      GUIMorph* guiMorph;
-      GUIPresets* guiPresets;
+      GUI* superView;
+      ofxUICanvas* canvas1;
+      int x,y,w,h;
+
+      bool isVisible;
 
       void setup();
       void onDraw(ofEventArgs &data);
-      void guiEvent(ofxUIEventArgs &e);
 };
