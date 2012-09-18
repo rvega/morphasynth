@@ -41,19 +41,19 @@ void MidiIO::start(){
       midiIn = new RtMidiIn(RtMidi::UNIX_JACK, APPLICATION_NAME);
 
       // Debug. Show available ports and connect automatically
-      // unsigned int nPorts = midiIn->getPortCount();
-      // if ( nPorts == 0 ) {
-      //    std::cout << "Could not connect to midi device" << "\n";
-      //    return;
-      // }
-      // std::cout << "Available Midi ports:" << "\n";
-      // for (int i = 0; i < nPorts; i++) {
-      //    std::string name = midiIn->getPortName(i);
-      //    std::cout << "(" << i << ") " << name << "\n";
-      // }
-      // midiIn->openPort(2, "MIDI In");
+      unsigned int nPorts = midiIn->getPortCount();
+      if ( nPorts == 0 ) {
+         std::cout << "Could not connect to midi device" << "\n";
+         return;
+      }
+      std::cout << "Available Midi ports:" << "\n";
+      for (int i = 0; i < nPorts; i++) {
+         std::string name = midiIn->getPortName(i);
+         std::cout << "(" << i << ") " << name << "\n";
+      }
+      midiIn->openPort(2, "MIDI In");
       
-      midiIn->openVirtualPort("MIDI In");
+      // midiIn->openVirtualPort("MIDI In");
       midiIn->setCallback(&MidiIO::_midiCallback, this);
    }
    catch(RtError& e){

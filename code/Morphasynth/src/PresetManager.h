@@ -20,29 +20,9 @@
 
 #pragma once
 
-#include "ofxUI.h"
-#include "GUIEvent.h"
-
-class GUI;
-class Controller;
-
-class GUIPresets{
-   public:
-      GUIPresets(Controller* cont, GUI* superV, int x, int y, int w, int h);
-      ~GUIPresets();
-
-      void show();
-      void hide();
-
-   private:
-      Controller* controller;
-      GUI* superView;
-      ofxUICanvas* canvas1;
-      ofxUICanvas* canvas2;
-      int x,y,w,h;
-
-      bool isVisible;
-
-      void setup();
-      void onDraw(ofEventArgs &data);
-};
+class PresetManager{
+	public:
+      static std::vector<std::string> getAllCategories();
+      static std::vector<std::string> getAllPresetNamesForCategory(std::string categoryName);
+      static std::vector<std::string> getParametersForPreset(std::string presetName);
+}
