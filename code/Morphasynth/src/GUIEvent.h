@@ -24,5 +24,5 @@
 
 typedef struct GuiEvent{
    Parameter parameter;
-   float value;   
+   float value;
 } GuiEvent;

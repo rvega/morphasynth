@@ -1,0 +1,106 @@
+#include "PotSlider.h"
+
+
+
+//----------------------------------------------------------------
+  
+ PotSlider::PotSlider(float w, float h, float _min, float _max, float _value, string _name){
+	
+	return new ofxUISlider(w,h, 0.0, 255.0, 200, "RED"); 
+
+}
+  
+
+//--------------------------------------------------------------
+void PotSlider::setup()
+{
+	
+      
+    
+}
+
+//--------------------------------------------------------------
+void PotSlider::update()
+{
+
+}
+
+//--------------------------------------------------------------
+void PotSlider::draw()
+{    
+	
+}
+//--------------------------------------------------------------
+void PotSlider::guiEvent(ofxUIEventArgs &e)
+{
+	string name = e.widget->getName(); 
+	int kind = e.widget->getKind(); 
+	
+	
+		ofxUISlider *slider = (ofxUISlider *) e.widget; 
+		red = slider->getScaledValue(); 
+        cout << "value: " << slider->getScaledValue() << endl; 
+	
+}
+//--------------------------------------------------------------
+void PotSlider::exit()
+{
+    delete gui; 
+}
+//--------------------------------------------------------------
+void PotSlider::keyPressed(int key)
+{
+   
+}
+//--------------------------------------------------------------
+void PotSlider::keyReleased(int key){
+
+}
+//--------------------------------------------------------------
+float PotSlider::getScaledValue(float value)
+	{
+		
+		return ofMap(value, 0.0, 1.0, 10, 20, true); 
+	}
+    
+
+//--------------------------------------------------------------
+void PotSlider::mouseMoved(int x, int y )
+{ 
+	
+}
+
+//--------------------------------------------------------------
+void PotSlider::mouseDragged(int x, int y, int button)
+{
+ 
+}
+
+//--------------------------------------------------------------
+void PotSlider::mousePressed(int x, int y, int button)
+{
+
+}
+
+//--------------------------------------------------------------
+void PotSlider::mouseReleased(int x, int y, int button)
+{
+
+}
+
+//--------------------------------------------------------------
+void PotSlider::windowResized(int w, int h)
+{
+ 
+
+}
+
+//--------------------------------------------------------------
+void PotSlider::gotMessage(ofMessage msg){
+
+}
+
+//--------------------------------------------------------------
+void PotSlider::dragEvent(ofDragInfo dragInfo){ 
+
+}

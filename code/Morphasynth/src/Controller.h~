@@ -20,38 +20,29 @@
 
 #pragma once
 
-#include "ofxUI.h"
+#include "AudioIO.h"
+#include "DSPSynthesizer.h"
+#include "MidiIO.h"
+#include "GUI.h"
+#include "ringbuffer.h"
 #include "GUIEvent.h"
-#include "SliderPot.h"
+#include "Parameter.h"
+#include "MidiMap.h"
 
-class GUI;
-class Controller;
+class Controller{
+	public:
+      Controller();
+      ~Controller();
 
-class GUITimbre{
-   public:
-      GUITimbre(Controller* cont, GUI* superV, int x, int y, int w, int h);
-      ~GUITimbre();
-
-      void addEvent(GuiEvent e);
-
-      void show();
-      void hide();
+		void addMidiEvent(MidiEvent e);
+      void addGUIEvent(GuiEvent e);
 
    private:
-      Controller* controller;
-      GUI* superView;
-      ofxUICanvas* canvas1;
-      ofxUICanvas* canvas2;
-      ofxUICanvas* canvas3;
-      ofxUICanvas* canvas4;
-      ofxUICanvas* canvas5;
-      int x,y,w,h;
-      std::vector<ofxUIWidget*>* allSliders;
+      GUI* gui;
+      DSPSynthesizer* synth;
+      AudioIO* audioIO;
+      MidiMap* midiMap;
+      MidiIO* midiIO;
 
-      bool isVisible;
-
-      void setup();
-      void guiEvent(ofxUIEventArgs &e);
-      void sendEventToController(ofxUIWidget* w);
-      void onDraw(ofEventArgs &data);
+      void setInitialParameters();
 };

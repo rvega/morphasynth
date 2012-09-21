@@ -19,39 +19,11 @@
  */
 
 #pragma once
+   
+#include "Parameter.h"
 
-#include "ofxUI.h"
-#include "GUIEvent.h"
-#include "SliderPot.h"
-
-class GUI;
-class Controller;
-
-class GUITimbre{
-   public:
-      GUITimbre(Controller* cont, GUI* superV, int x, int y, int w, int h);
-      ~GUITimbre();
-
-      void addEvent(GuiEvent e);
-
-      void show();
-      void hide();
-
-   private:
-      Controller* controller;
-      GUI* superView;
-      ofxUICanvas* canvas1;
-      ofxUICanvas* canvas2;
-      ofxUICanvas* canvas3;
-      ofxUICanvas* canvas4;
-      ofxUICanvas* canvas5;
-      int x,y,w,h;
-      std::vector<ofxUIWidget*>* allSliders;
-
-      bool isVisible;
-
-      void setup();
-      void guiEvent(ofxUIEventArgs &e);
-      void sendEventToController(ofxUIWidget* w);
-      void onDraw(ofEventArgs &data);
-};
+typedef struct GuiEvent{
+   Parameter parameter;
+   float value; // va al sintetizador de rafael este es el potenciado
+   float valueGui; // va a la interfaz de lina, y es el normal    
+} GuiEvent;

@@ -105,7 +105,7 @@ void GUITimbre::setup(){
    const int padding = 40; //nuevo=4 viejo=9
    const int topPadding = -5; //n=-2 v=-5
    const int width = totalWidth/5 - 2*padding;
-   const int itemHeight = 10; //6 nuevo=6 viejo=15
+   const int itemHeight = 15; //6 nuevo=6 viejo=15
    const int spacerHeight = 15; //igual q arriba
    const int largeSpacerHeight = 56;//n=23 v=56
    const ofColor bgColor = ofColor(210, 47, 24);
