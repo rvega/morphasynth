@@ -1,3 +1,5 @@
+/*Slider potencial @LinaMarce*/
+
 #ifndef SLIDERPOT
 #define SLIDERPOT
 
