@@ -32,8 +32,6 @@ GUITimbre::GUITimbre(Controller* cont, GUI* superV, int x, int y, int w, int h):
    w(w),
    h(h),
    allSliders(new vector<ofxUIWidget*>()),
-
-
    isVisible(true)   
 {
    setup();
@@ -42,38 +40,29 @@ GUITimbre::GUITimbre(Controller* cont, GUI* superV, int x, int y, int w, int h):
 
 GUITimbre::~GUITimbre(){
    delete allSliders;
-
    delete canvas1;
-/*
    delete canvas2;
    delete canvas3;
    delete canvas4;
    delete canvas5;
-*/
 }
 
 void GUITimbre::show(){
    isVisible = true;
    canvas1->setVisible(true);
-/*
    canvas2->setVisible(true);
    canvas3->setVisible(true);
    canvas4->setVisible(true);
    canvas5->setVisible(true);
-*/
 }
 
 void GUITimbre::hide(){
    isVisible = false;
    canvas1->setVisible(false);
-
-/*
    canvas2->setVisible(false);
    canvas3->setVisible(false);
    canvas4->setVisible(false);
    canvas5->setVisible(false);
-
-*/
 }
 
 void GUITimbre::addEvent(GuiEvent e){
@@ -278,12 +267,10 @@ void GUITimbre::guiEvent(ofxUIEventArgs &e){
 }
 
 void GUITimbre::sendEventToController(ofxUIWidget* w){
-
-
-   //float value = ((ofxUISlider *)w)->getScaledValue();//bck
    float value = ((SliderPot *)w)->getMapValue();
 	
-	std::cout << "valor mapeado--> " << value << "/n" ;
+   // Debug:
+	// std::cout << "valor mapeado--> " << value << "\n" ;
 
    GuiEvent event;
    event.value = value;
