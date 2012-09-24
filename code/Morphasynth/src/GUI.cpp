@@ -31,9 +31,9 @@ GUI::GUI(Controller* cont):
    guiMorph = new GUIMorph(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
    guiPresets = new GUIPresets(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
 
-   guiTimbre->hide(); 
+   guiTimbre->show(); 
    guiMorph->hide(); 
-   guiPresets->show(); 
+   guiPresets->hide(); 
 }
 
 GUI::~GUI(){

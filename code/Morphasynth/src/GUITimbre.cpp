@@ -290,18 +290,3 @@ void GUITimbre::sendEventToController(ofxUIWidget* w){
    event.parameter = (Parameter)w->getID();
    controller->addGUIEvent(event);
 }
-
-/* Lina, pseudocodigo:
-vector<Parameter> getAllParameters(){
-   vector<Parameter> allParams;
-   for(allSliders as slider){
-      paramName = slider->getId();
-      paramValue = slider->getValue();
-      parameter = new Parameter(paramName, paramValue);
-      allParams << parameter;
-   }
-
-   return allParams;
-}
-      
-*/

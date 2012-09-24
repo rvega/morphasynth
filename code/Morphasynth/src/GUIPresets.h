@@ -38,7 +38,6 @@ class GUIPresets{
       Controller* controller;
       GUI* superView;
       ofxUICanvas* canvas1;
-      ofxUICanvas* canvas2;
       int x,y,w,h;
 
       bool isVisible;

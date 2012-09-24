@@ -37,7 +37,6 @@ GUIPresets::GUIPresets(Controller* cont, GUI* superV, int x, int y, int w, int h
 
 GUIPresets::~GUIPresets(){
    delete canvas1;
-   delete canvas2;
 }
 
 void GUIPresets::show(){
@@ -57,64 +56,7 @@ void GUIPresets::onDraw(ofEventArgs &data) {
 }
 
 void GUIPresets::setup(){
-   canvas1 = new ofxUICanvas(x, y, w, 200);
-   canvas1->addWidgetDown(new ofxUILabel("CREATE A NEW PRESET", OFX_UI_FONT_MEDIUM));
-   canvas1->addWidgetDown(new ofxUITextInput(300, "CATEGORY_INPUT", "CATEGORY", OFX_UI_FONT_SMALL));
-   canvas1->addWidgetDown(new ofxUITextInput(300, "NAME_INPUT", "NAME", OFX_UI_FONT_SMALL));
-	canvas1->addWidgetDown(new ofxUILabelButton(false, "SAVE", OFX_UI_FONT_SMALL));
-
-
-   canvas1->addWidgetDown(new ofxUISpacer(300, 1));
-   canvas1->addWidgetDown(new ofxUILabel("AVAILABLE PRESETS:", OFX_UI_FONT_MEDIUM));
-   canvas2 = new ofxUIScrollableCanvas(x, y+200, w, h-200);
-
-   // Lina: aqui va un monton de pseudo codigo:
-   /*
-    categorias = PresetManager::getAllCategories();
-    for (categorias as categoria){
-      dibuje un label dentro de canvas2("Nombre De La Categoria")
-      presetNames = PresetManager::getPresetNamesForCategory(categoria)
-      for(presetNames as presetName){
-         dibuje Un label dentro de canvas2("Nombre del preset")
-         Dibuje un boton a la derecha del label("load preset")
-      }
-    }
-   
-    agregue un event handler para los eventos de gui (los botones de "load preset")
-   */
-
-
+   canvas1 = new ofxUICanvas(x, y, w, h);
+   canvas1->addWidget(new ofxUILabel(80, 300, "AQUI VA UNA TABLA CON SCROLL PARA LOS PRESETS EXISTENTES (POR CATEGORIAS),", OFX_UI_FONT_LARGE));
+   canvas1->addWidget(new ofxUILabel(180, 350, "CAMPOS PARA NOMBRE Y CATEGORIA Y UN BOTON PARA GUARDAR.", OFX_UI_FONT_LARGE));
 }
-
-/*
-   Lina:
-   eventHandlerBotonSave(foo, bar){
-      parameters = guiTimbre->getAllParameters()
-      name = canvas1->whatsTheName();
-      category = canvas1->whatsTheCategory();
-
-      filename = un nombre "safe" para el sistema de archivos basado en categoria y nombre .xml
-      // Usar api de ofXML() para escribir el archivo xml. Ya tiene el nombre, la cat y los params.
-   }
-   
-
-*/
-
-/* Lina:
-   eventHandlerClickBotonesLoadPreset(foo, bar, baz){
-      nombrePreset = nosequecosaDelEvento.miraAVerComoRelacionasElIdDelBotonConElNombreDelPreset()
-      parametros = PresetManager::getParametersForPreset(nombrePreset)
-      for(parametros as parametro){
-         e = new Event(parametro.foo, parametro.bar);  // maybe: Aqui hay un buque, pregunte cuando llegue aqui.
-         controller->addMidiEvent(e);
-         controller->addGUIEvent(e);
-      }
-   }
-   
-*/
-
-
-
-
-
-
