@@ -38,3 +38,8 @@ run:
 	# +make cleanDebug
 	+make Debug
 	cd bin && ./Morphasynth_debug
+
+debugger:
+	+make Debug
+	cd bin && gdb ./Morphasynth_debug
+

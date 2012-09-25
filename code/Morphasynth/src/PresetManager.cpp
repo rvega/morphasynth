@@ -21,31 +21,37 @@
 #include "PresetManager.h"
 #include "Controller.h"
 
-PresetManager::PresetManager(Controller* cont):
-   controller(cont)
-{
+/**
+ * Read all xml files in data/presets directory and return a vector of strings with category names
+ */
+std::vector<std::string> PresetManager::getAllCategories(){
+   std::vector<std::string> categoryNames;
+   ofDirectory dir("presets/");
+   dir.allowExt("xml");
+   dir.listDir();
+   for(int i = 0; i < dir.numFiles(); i++){
+      ofxXmlSettings xmlFile;
+      xmlFile.loadFile(dir.getPath(i));
+      std::string categoryName = xmlFile.getValue("preset:category", "No Category");
+      categoryNames.push_back(categoryName);
+   }
+
+   std::sort(categoryNames.begin(), categoryNames.end());
+   categoryNames.erase( std::unique(categoryNames.begin(), categoryNames.end()), categoryNames.end());
+   return categoryNames;
 }
 
-PresetManager::~PresetManager(){
-}
-
-//Lina: look at http://www.openframeworks.cc/documentation/ofxXmlSettings/ofxXmlSettings.html
-      
-static std::vector<std::string> PresetManager::getAllCategories(){
-   //Lina: Read all xml files in data/presets directory and return a vector of strings with category names
-}
-
-static std::vector<std::string> PresetManager::getAllPresetNamesForCategory(std::string categoryName){
-   //Lina: Read all xml files in data/presets directory and return vector of strings with preset names
-}
-
-static std::vector<Parameter> PresetManager::getParametersForPreset(std::string presetName){
-   //Lina: Read xml file that contains the named preset and return vector of Parameters
-}
-      
-static void PresetManager::savePreset(std::string name, std::string category, std::vector<Parameter> parameters){
-   // Lina: Write (or overwrite) a new xml file
-}
+// static std::vector<std::string> PresetManager::getAllPresetNamesForCategory(std::string categoryName){
+//    //Lina: Read all xml files in data/presets directory and return vector of strings with preset names
+// }
+// 
+// static std::vector<Parameter> PresetManager::getParametersForPreset(std::string presetName){
+//    //Lina: Read xml file that contains the named preset and return vector of Parameters
+// }
+//       
+// static void PresetManager::savePreset(std::string name, std::string category, std::vector<Parameter> parameters){
+//    // Lina: Write (or overwrite) a new xml file
+// }
 
 //Lina: Other supporting methods (will probably be private and static). 
 //

@@ -21,6 +21,7 @@
 #include "GUI.h"
 #include "Parameter.h"
 #include "Controller.h"
+#include "PresetManager.h"
 
 GUIPresets::GUIPresets(Controller* cont, GUI* superV, int x, int y, int w, int h): 
    controller(cont),
@@ -68,10 +69,14 @@ void GUIPresets::setup(){
    canvas1->addWidgetDown(new ofxUILabel("AVAILABLE PRESETS:", OFX_UI_FONT_MEDIUM));
    canvas2 = new ofxUIScrollableCanvas(x, y+200, w, h-200);
 
-   // Lina: aqui va un monton de pseudo codigo:
+   // Draw a section for each preset category 
+   std::vector<std::string> categories = PresetManager::getAllCategories();
+   for(std::vector<std::string>::size_type i = 0; i < categories.size(); i++){
+      std::string category = categories[i];
+
+      std::cout << category << "\n";
+   }
    /*
-    categorias = PresetManager::getAllCategories();
-    for (categorias as categoria){
       dibuje un label dentro de canvas2("Nombre De La Categoria")
       presetNames = PresetManager::getPresetNamesForCategory(categoria)
       for(presetNames as presetName){

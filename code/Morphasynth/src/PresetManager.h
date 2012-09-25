@@ -20,9 +20,12 @@
 
 #pragma once
 
+#include <vector>
+#include <string>
+
 class PresetManager{
 	public:
       static std::vector<std::string> getAllCategories();
       static std::vector<std::string> getAllPresetNamesForCategory(std::string categoryName);
       static std::vector<std::string> getParametersForPreset(std::string presetName);
-}
+};
