@@ -19,11 +19,15 @@
  */
 
 #pragma once
-   
-#include "Parameter.h"
 
-typedef struct GuiEvent{
-   Parameter parameter;
-   float value; // va al sintetizador de rafael este es el potenciado
-   float valueGui; // va a la interfaz de lina, y es el normal    
-} GuiEvent;
+#include <vector>
+#include <string>
+
+#include "GUIEvent.h"
+
+class PresetManager{
+	public:
+      static std::vector<std::string> getAllCategories();
+      static std::vector<std::string> getPresetNamesForCategory(std::string categoryName);
+      static std::vector<GuiEvent> getParametersForPreset(std::string presetName);
+};

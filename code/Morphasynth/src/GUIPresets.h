@@ -38,10 +38,12 @@ class GUIPresets{
       Controller* controller;
       GUI* superView;
       ofxUICanvas* canvas1;
+      ofxUIScrollableCanvas* canvas2;
       int x,y,w,h;
 
       bool isVisible;
 
       void setup();
       void onDraw(ofEventArgs &data);
+      void guiEvent(ofxUIEventArgs &e);
 };

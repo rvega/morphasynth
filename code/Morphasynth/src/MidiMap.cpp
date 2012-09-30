@@ -70,5 +70,5 @@ void MidiMap::process(double deltatime, std::vector< unsigned char > *bytes){
    //    value = bytes->at(2);
    // }
    
-   controller->addMidiEvent(event);
+   controller->sendEventToSynth(event);
 }

@@ -68,9 +68,9 @@ void GUITimbre::hide(){
 void GUITimbre::addEvent(GuiEvent e){
    // Iterate all widgets and set the value to the one that matches id
    for (std::vector<ofxUIWidget*>::iterator i = allSliders->begin(); i!=allSliders->end(); ++i) {
-
       SliderPot* widget = (SliderPot*) *i;
       if(widget->getID() == e.parameter){
+         std::cout << e.parameter << " AAA " << e.value << "\n";
          widget->setValue(e.value);
          break;
       }
@@ -275,5 +275,5 @@ void GUITimbre::sendEventToController(ofxUIWidget* w){
    GuiEvent event;
    event.value = value;
    event.parameter = (Parameter)w->getID();
-   controller->addGUIEvent(event);
+   controller->sendEventToSynth(event);
 }

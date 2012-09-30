@@ -34,8 +34,11 @@ class Controller{
       Controller();
       ~Controller();
 
-		void addMidiEvent(MidiEvent e);
-      void addGUIEvent(GuiEvent e);
+      // void sendEventToGui(MidiEvent e);
+      void sendEventToSynth(MidiEvent e);
+
+      void sendEventToGui(GuiEvent e);
+      void sendEventToSynth(GuiEvent e);
 
    private:
       GUI* gui;

@@ -21,6 +21,7 @@
 #include "GUI.h"
 #include "Parameter.h"
 #include "Controller.h"
+#include "PresetManager.h"
 
 GUIPresets::GUIPresets(Controller* cont, GUI* superV, int x, int y, int w, int h): 
    controller(cont),
@@ -42,11 +43,13 @@ GUIPresets::~GUIPresets(){
 void GUIPresets::show(){
    isVisible = true;
    canvas1->setVisible(true);
+   canvas2->setVisible(true);
 }
 
 void GUIPresets::hide(){
    isVisible = false;
    canvas1->setVisible(false);
+   canvas2->setVisible(false);
 }
 
 void GUIPresets::onDraw(ofEventArgs &data) {
@@ -56,7 +59,63 @@ void GUIPresets::onDraw(ofEventArgs &data) {
 }
 
 void GUIPresets::setup(){
-   canvas1 = new ofxUICanvas(x, y, w, h);
-   canvas1->addWidget(new ofxUILabel(80, 300, "AQUI VA UNA TABLA CON SCROLL PARA LOS PRESETS EXISTENTES (POR CATEGORIAS),", OFX_UI_FONT_LARGE));
-   canvas1->addWidget(new ofxUILabel(180, 350, "CAMPOS PARA NOMBRE Y CATEGORIA Y UN BOTON PARA GUARDAR.", OFX_UI_FONT_LARGE));
+   canvas1 = new ofxUICanvas(x, y, w, 150);
+   canvas1->addWidgetDown(new ofxUILabel("CREATE A NEW PRESET", OFX_UI_FONT_MEDIUM));
+   canvas1->addWidgetDown(new ofxUITextInput(300, "CATEGORY_INPUT", "CATEGORY", OFX_UI_FONT_SMALL));
+   canvas1->addWidgetDown(new ofxUITextInput(300, "NAME_INPUT", "NAME", OFX_UI_FONT_SMALL));
+	canvas1->addWidgetDown(new ofxUILabelButton(false, "SAVE", OFX_UI_FONT_SMALL));
+
+   canvas1->addWidgetDown(new ofxUISpacer(300, 1));
+	ofAddListener(canvas1->newGUIEvent, this, &GUIPresets::guiEvent);
+
+   canvas2 = new ofxUIScrollableCanvas(x, y+150, w, h-150);
+   canvas2->setScrollableDirections(false, true);
+   canvas2->setScrollArea(x, y+150, w, h-150);
+   
+   // Draw a section for each preset category 
+   std::vector<std::string> categories = PresetManager::getAllCategories();
+   for(std::vector<std::string>::size_type i = 0; i < categories.size(); i++){
+      std::string category = categories[i];
+      canvas2->addWidgetDown(new ofxUILabel(ofToUpper(category), OFX_UI_FONT_MEDIUM));
+
+      // Draw a label and a button for each preset
+      std::vector<std::string> presetNames = PresetManager::getPresetNamesForCategory(category);
+      for(std::vector<std::string>::size_type j = 0; j < presetNames.size(); j++){
+         std::string presetName = presetNames[j];
+         canvas2->addWidgetDown(new ofxUILabelButton(false, ofToUpper(presetName), OFX_UI_FONT_SMALL));
+      }
+      canvas2->addWidgetDown(new ofxUISpacer(300, 1));
+   }
+
+   canvas2->autoSizeToFitWidgets();
+   canvas2->getRect()->setWidth(w);
+	ofAddListener(canvas2->newGUIEvent, this, &GUIPresets::guiEvent);
 }
+
+void GUIPresets::guiEvent(ofxUIEventArgs &e){
+   ofxUILabelButton* button = (ofxUILabelButton*)e.widget;
+   if(!button->getValue()) return;
+   
+   std::string parameterName = ofToUpper(button->getName());
+   std::vector<GuiEvent> parameters = PresetManager::getParametersForPreset(parameterName);
+   for(std::vector<GuiEvent>::size_type i = 0; i < parameters.size(); i++){
+      GuiEvent event = parameters[i];
+      controller->sendEventToSynth(event);
+      controller->sendEventToGui(event);
+   }
+}
+
+
+/*
+   Lina:
+   eventHandlerBotonSave(foo, bar){
+      parameters = guiTimbre->getAllParameters()
+      name = canvas1->whatsTheName();
+      category = canvas1->whatsTheCategory();
+
+      filename = un nombre "safe" para el sistema de archivos basado en categoria y nombre .xml
+      // Usar api de ofXML() para escribir el archivo xml. Ya tiene el nombre, la cat y los params.
+   }
+   
+
+*/

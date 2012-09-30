@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<preset>
+   <morphasynth-version>0.1</morphasynth-version>   
+   <name>Preset One</name>
+   <category>The Category</category>
+   <parameters>
+      <parameter name="NOISE_LEVEL" value="0.5"/>
+
+      <parameter name="OSCILLATOR1_AMPLITUDE" value="0.5" />
+      <parameter name="OSCILLATOR1_WAVEFORM" value="0.5" />
+      <parameter name="OSCILLATOR1_FINETUNE" value="0.5" />
+
+      <parameter name="OSCILLATOR2_AMPLITUDE" value="0.5" />
+      <parameter name="OSCILLATOR2_WAVEFORM" value="0.5" />
+      <parameter name="OSCILLATOR2_FINETUNE" value="0.5" />
+
+      <parameter name="OSCILLATOR3_AMPLITUDE" value="0.5" />
+      <parameter name="OSCILLATOR3_WAVEFORM" value="0.5" />
+      <parameter name="OSCILLATOR3_FINETUNE" value="0.5" />
+
+      <parameter name="LFO_OSC1_WAVEFORM" value="0.5" />
+      <parameter name="LFO_OSC1_FREQUENCY" value="0.5" />
+      <parameter name="LFO_OSC1_TO_AMPLITUDE" value="0.5" />
+      <parameter name="LFO_OSC1_TO_FREQUENCY" value="0.5" />
+
+      <parameter name="LFO_OSC2_WAVEFORM" value="0.5" />
+      <parameter name="LFO_OSC2_FREQUENCY" value="0.5" />
+      <parameter name="LFO_OSC2_TO_AMPLITUDE" value="0.5" />
+      <parameter name="LFO_OSC2_TO_FREQUENCY" value="0.5" />
+
+      <parameter name="LFO_OSC3_WAVEFORM" value="0.5" />
+      <parameter name="LFO_OSC3_FREQUENCY" value="0.5" />
+      <parameter name="LFO_OSC3_TO_AMPLITUDE" value="0.5" />
+      <parameter name="LFO_OSC3_TO_FREQUENCY" value="0.5" />
+
+      <parameter name="HI_PASS_FREQUENCY" value="0.5" />
+      <parameter name="HI_PASS_RESONANCE" value="0.5" />
+      <parameter name="HI_PASS_KEYFOLLOW" value="0.5" />
+      <parameter name="HI_PASS_CONTOUR" value="0.5" />
+
+      <parameter name="HI_PASS_ATTACK" value="0.5" />
+      <parameter name="HI_PASS_DECAY" value="0.5" />
+      <parameter name="HI_PASS_SUSTAIN" value="0.5" />
+      <parameter name="HI_PASS_RELEASE" value="0.5" />
+
+      <parameter name="LFO_HI_PASS_WAVEFORM" value="0.5" />
+      <parameter name="LFO_HI_PASS_FREQUENCY" value="0.5" />
+      <parameter name="LFO_HI_PASS_AMPLITUDE" value="0.5" />
+
+      <parameter name="LO_PASS_FREQUENCY" value="0.5" />
+      <parameter name="LO_PASS_RESONANCE" value="0.5" />
+      <parameter name="LO_PASS_KEYFOLLOW" value="0.5" />
+      <parameter name="LO_PASS_CONTOUR" value="0.5" />
+
+      <parameter name="LO_PASS_ATTACK" value="0.5" />
+      <parameter name="LO_PASS_DECAY" value="0.5" />
+      <parameter name="LO_PASS_SUSTAIN" value="0.5" />
+      <parameter name="LO_PASS_RELEASE" value="0.5" />
+
+      <parameter name="LFO_LO_PASS_WAVEFORM" value="0.5" />
+      <parameter name="LFO_LO_PASS_FREQUENCY" value="0.5" />
+      <parameter name="LFO_LO_PASS_AMPLITUDE" value="0.5" />
+
+      <parameter name="ENVELOPE_ATTACK" value="0.5" />
+      <parameter name="ENVELOPE_DECAY" value="0.5" />
+      <parameter name="ENVELOPE_SUSTAIN" value="0.5" />
+      <parameter name="ENVELOPE_RELEASE" value="0.5" />
+   </parameters>
+</preset>
