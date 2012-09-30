@@ -23,9 +23,11 @@
 #include <vector>
 #include <string>
 
+#include "GUIEvent.h"
+
 class PresetManager{
 	public:
       static std::vector<std::string> getAllCategories();
-      static std::vector<std::string> getAllPresetNamesForCategory(std::string categoryName);
-      static std::vector<std::string> getParametersForPreset(std::string presetName);
+      static std::vector<std::string> getPresetNamesForCategory(std::string categoryName);
+      static std::vector<GuiEvent> getParametersForPreset(std::string presetName);
 };

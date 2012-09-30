@@ -42,14 +42,19 @@ Controller::~Controller(){
    delete midiMap;
 }
 
-void Controller::addMidiEvent(MidiEvent e){
+// void sendEventToGui(MidiEvent e){
+// 
+// }
+
+void Controller::sendEventToSynth(MidiEvent e){
    synth->addMidiEvent(e);
 }
 
-/**
- * Receives an event from the GUI and forwards the event to the audio thread.
- */
-void Controller::addGUIEvent(GuiEvent e){
+void Controller::sendEventToGui(GuiEvent e){
+   gui->addEvent(e);
+}
+
+void Controller::sendEventToSynth(GuiEvent e){
    synth->addGUIEvent(e);
 }
 

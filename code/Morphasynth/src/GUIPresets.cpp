@@ -44,11 +44,13 @@ GUIPresets::~GUIPresets(){
 void GUIPresets::show(){
    isVisible = true;
    canvas1->setVisible(true);
+   canvas2->setVisible(true);
 }
 
 void GUIPresets::hide(){
    isVisible = false;
    canvas1->setVisible(false);
+   canvas2->setVisible(false);
 }
 
 void GUIPresets::onDraw(ofEventArgs &data) {
@@ -58,38 +60,53 @@ void GUIPresets::onDraw(ofEventArgs &data) {
 }
 
 void GUIPresets::setup(){
-   canvas1 = new ofxUICanvas(x, y, w, 200);
+   canvas1 = new ofxUICanvas(x, y, w, 150);
    canvas1->addWidgetDown(new ofxUILabel("CREATE A NEW PRESET", OFX_UI_FONT_MEDIUM));
    canvas1->addWidgetDown(new ofxUITextInput(300, "CATEGORY_INPUT", "CATEGORY", OFX_UI_FONT_SMALL));
    canvas1->addWidgetDown(new ofxUITextInput(300, "NAME_INPUT", "NAME", OFX_UI_FONT_SMALL));
 	canvas1->addWidgetDown(new ofxUILabelButton(false, "SAVE", OFX_UI_FONT_SMALL));
 
-
    canvas1->addWidgetDown(new ofxUISpacer(300, 1));
-   canvas1->addWidgetDown(new ofxUILabel("AVAILABLE PRESETS:", OFX_UI_FONT_MEDIUM));
-   canvas2 = new ofxUIScrollableCanvas(x, y+200, w, h-200);
+	ofAddListener(canvas1->newGUIEvent, this, &GUIPresets::guiEvent);
+   // canvas1->addWidgetDown(new ofxUILabel("AVAILABLE PRESETS:", OFX_UI_FONT_MEDIUM));
 
+   canvas2 = new ofxUIScrollableCanvas(x, y+150, w, h-150);
+   canvas2->setScrollableDirections(false, true);
+   canvas2->setScrollArea(x, y+150, w, h-150);
+   
    // Draw a section for each preset category 
    std::vector<std::string> categories = PresetManager::getAllCategories();
    for(std::vector<std::string>::size_type i = 0; i < categories.size(); i++){
       std::string category = categories[i];
+      canvas2->addWidgetDown(new ofxUILabel(ofToUpper(category), OFX_UI_FONT_MEDIUM));
 
-      std::cout << category << "\n";
-   }
-   /*
-      dibuje un label dentro de canvas2("Nombre De La Categoria")
-      presetNames = PresetManager::getPresetNamesForCategory(categoria)
-      for(presetNames as presetName){
-         dibuje Un label dentro de canvas2("Nombre del preset")
-         Dibuje un boton a la derecha del label("load preset")
+      // Draw a label and a button for each preset
+      std::vector<std::string> presetNames = PresetManager::getPresetNamesForCategory(category);
+      for(std::vector<std::string>::size_type j = 0; j < presetNames.size(); j++){
+         std::string presetName = presetNames[j];
+         canvas2->addWidgetDown(new ofxUILabelButton(false, ofToUpper(presetName), OFX_UI_FONT_SMALL));
       }
-    }
-   
-    agregue un event handler para los eventos de gui (los botones de "load preset")
-   */
+      canvas2->addWidgetDown(new ofxUISpacer(300, 1));
+   }
 
-
+   canvas2->autoSizeToFitWidgets();
+   canvas2->getRect()->setWidth(w);
+	ofAddListener(canvas2->newGUIEvent, this, &GUIPresets::guiEvent);
 }
+
+void GUIPresets::guiEvent(ofxUIEventArgs &e){
+   ofxUILabelButton* button = (ofxUILabelButton*)e.widget;
+   if(!button->getValue()) return;
+   
+   std::string parameterName = ofToUpper(button->getName());
+   std::vector<GuiEvent> parameters = PresetManager::getParametersForPreset(parameterName);
+   for(std::vector<GuiEvent>::size_type i = 0; i < parameters.size(); i++){
+      GuiEvent event = parameters[i];
+      controller->sendEventToSynth(event);
+      controller->sendEventToGui(event);
+   }
+}
+
 
 /*
    Lina:
@@ -103,19 +120,6 @@ void GUIPresets::setup(){
    }
    
 
-*/
-
-/* Lina:
-   eventHandlerClickBotonesLoadPreset(foo, bar, baz){
-      nombrePreset = nosequecosaDelEvento.miraAVerComoRelacionasElIdDelBotonConElNombreDelPreset()
-      parametros = PresetManager::getParametersForPreset(nombrePreset)
-      for(parametros as parametro){
-         e = new Event(parametro.foo, parametro.bar);  // maybe: Aqui hay un buque, pregunte cuando llegue aqui.
-         controller->addMidiEvent(e);
-         controller->addGUIEvent(e);
-      }
-   }
-   
 */
 
 

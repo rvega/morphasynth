@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <preset>
    <morphasynth-version>0.1</morphasynth-version>   
-   <name>Preset One</name>
+   <name>Preset Two</name>
    <category>The Category</category>
    <parameters>
       <parameter name="NOISE_LEVEL" value="0.5"/>

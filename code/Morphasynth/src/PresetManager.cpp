@@ -20,6 +20,7 @@
 
 #include "PresetManager.h"
 #include "Controller.h"
+#include "Parameter.h"
 
 /**
  * Read all xml files in data/presets directory and return a vector of strings with category names
@@ -29,6 +30,7 @@ std::vector<std::string> PresetManager::getAllCategories(){
    ofDirectory dir("presets/");
    dir.allowExt("xml");
    dir.listDir();
+
    for(int i = 0; i < dir.numFiles(); i++){
       ofxXmlSettings xmlFile;
       xmlFile.loadFile(dir.getPath(i));
@@ -41,14 +43,63 @@ std::vector<std::string> PresetManager::getAllCategories(){
    return categoryNames;
 }
 
-// static std::vector<std::string> PresetManager::getAllPresetNamesForCategory(std::string categoryName){
-//    //Lina: Read all xml files in data/presets directory and return vector of strings with preset names
-// }
-// 
-// static std::vector<Parameter> PresetManager::getParametersForPreset(std::string presetName){
-//    //Lina: Read xml file that contains the named preset and return vector of Parameters
-// }
-//       
+std::vector<std::string> PresetManager::getPresetNamesForCategory(std::string categoryName){
+   std::vector<std::string> presetNames;
+   ofDirectory dir("presets/");
+   dir.allowExt("xml");
+   dir.listDir();
+   for(int i = 0; i < dir.numFiles(); i++){
+      ofxXmlSettings xmlFile;
+      xmlFile.loadFile(dir.getPath(i));
+      std::string catName = xmlFile.getValue("preset:category", "No Category");
+      std::string presetName = xmlFile.getValue("preset:name", "No Name");
+      if(catName == categoryName){
+         presetNames.push_back(presetName);
+      }
+   }
+
+   std::sort(presetNames.begin(), presetNames.end());
+   presetNames.erase( std::unique(presetNames.begin(), presetNames.end()), presetNames.end());
+   return presetNames;
+}
+
+std::vector<GuiEvent> PresetManager::getParametersForPreset(std::string presetName){
+   std::vector<GuiEvent> parameters;
+
+   // Iterate xml files
+   ofDirectory dir("presets/");
+   dir.allowExt("xml");
+   dir.listDir();
+   for(int i = 0; i < dir.numFiles(); i++){
+      
+      // Iterate parameters in xml file
+      ofxXmlSettings xmlFile;
+      xmlFile.loadFile(dir.getPath(i));
+      std::string pstName = xmlFile.getValue("preset:name", "No Name");
+      if(ofToUpper(pstName) == ofToUpper(presetName)){
+         std::cout << presetName << "\n";
+         xmlFile.pushTag("preset");
+         xmlFile.pushTag("parameters");
+         int numberOfParameters = xmlFile.getNumTags("parameter");
+
+         for(int j = 0; j < numberOfParameters; j++){
+            Parameter parameter = String2Parameter(xmlFile.getAttribute("parameter", "name", "???", j));
+            float value = xmlFile.getAttribute("parameter", "value", -1.0, j);
+
+            GuiEvent e;
+            e.parameter = parameter;
+            e.value = value;
+            parameters.push_back(e);
+         }
+         xmlFile.popTag();
+         xmlFile.popTag();
+         break;
+      }
+   }
+
+   return parameters;
+}
+      
 // static void PresetManager::savePreset(std::string name, std::string category, std::vector<Parameter> parameters){
 //    // Lina: Write (or overwrite) a new xml file
 // }

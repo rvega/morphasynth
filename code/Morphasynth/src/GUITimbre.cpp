@@ -68,6 +68,7 @@ void GUITimbre::addEvent(GuiEvent e){
    for (std::vector<ofxUIWidget*>::iterator i = allSliders->begin(); i!=allSliders->end(); ++i) {
       ofxUISlider* widget = (ofxUISlider*) *i;
       if(widget->getID() == e.parameter){
+         std::cout << e.parameter << " " << e.value << "\n";
          widget->setValue(e.value);
          break;
       }
@@ -257,7 +258,7 @@ void GUITimbre::sendEventToController(ofxUIWidget* w){
    GuiEvent event;
    event.value = value;
    event.parameter = (Parameter)w->getID();
-   controller->addGUIEvent(event);
+   controller->sendEventToSynth(event);
 }
 
 /* Lina, pseudocodigo:
