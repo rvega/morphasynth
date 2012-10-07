@@ -120,5 +120,5 @@ void PresetManager::savePreset(std::string name, std::string category, std::vect
 
    xml.popTag();
    xml.popTag();
-   xml.saveFile("presets/asdf.xml");
+   xml.saveFile("presets/" + category + "_" + name + ".xml");
 }
