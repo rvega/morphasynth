@@ -21,6 +21,8 @@ OF_INSTALL_SCRIPTS = libs/openFrameworks/scripts/linux/ubuntu
 STK_RELEASE_URL = http://ccrma.stanford.edu/software/stk/release/stk-4.4.3.tar.gz
 RTMIDI_RELEASE_URL = http://www.music.mcgill.ca/~gary/rtmidi/release/rtmidi-2.0.0.tar.gz # The version of RtMidi included in the stk does not fully support Jack Midi
 
+nothing:
+
 download_dependencies: 
 	sudo ls
 	# Download, uncompress and compile openframeworks:

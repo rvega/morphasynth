@@ -30,6 +30,7 @@ GUI::GUI(Controller* cont):
    guiTimbre = new GUITimbre(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
    guiMorph = new GUIMorph(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
    guiPresets = new GUIPresets(cont, this, 0, 47, ofGetWidth(), ofGetHeight()-47);
+   guiPresets->setGuiTimbre(guiTimbre);
 
    guiTimbre->show(); 
    guiMorph->hide(); 

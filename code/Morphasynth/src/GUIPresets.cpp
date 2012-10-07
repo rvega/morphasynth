@@ -40,6 +40,10 @@ GUIPresets::~GUIPresets(){
    delete canvas1;
 }
 
+void GUIPresets::setGuiTimbre(GUITimbre* t){
+   this->guiTimbre = t;
+}
+
 void GUIPresets::show(){
    isVisible = true;
    canvas1->setVisible(true);
@@ -94,8 +98,13 @@ void GUIPresets::setup(){
 
 void GUIPresets::guiEvent(ofxUIEventArgs &e){
    ofxUILabelButton* button = (ofxUILabelButton*)e.widget;
+   if(!button->getValue()) return; // Prevent triggering the event twice
+   if(button->getName() == "SAVE") savePreset();
+   else loadPreset(button);
+}
+
+void GUIPresets::loadPreset(ofxUILabelButton* button){
    if(!button->getValue()) return;
-   
    std::string parameterName = ofToUpper(button->getName());
    std::vector<GuiEvent> parameters = PresetManager::getParametersForPreset(parameterName);
    for(std::vector<GuiEvent>::size_type i = 0; i < parameters.size(); i++){
@@ -105,17 +114,9 @@ void GUIPresets::guiEvent(ofxUIEventArgs &e){
    }
 }
 
-
-/*
-   Lina:
-   eventHandlerBotonSave(foo, bar){
-      parameters = guiTimbre->getAllParameters()
-      name = canvas1->whatsTheName();
-      category = canvas1->whatsTheCategory();
-
-      filename = un nombre "safe" para el sistema de archivos basado en categoria y nombre .xml
-      // Usar api de ofXML() para escribir el archivo xml. Ya tiene el nombre, la cat y los params.
-   }
-   
-
-*/
+void GUIPresets::savePreset(){
+   std::vector<GuiEvent> parameters = guiTimbre->getAllParameters();
+   std::string category = ((ofxUITextInput*)canvas1->getWidget("CATEGORY_INPUT"))->getTextString();
+   std::string name = ((ofxUITextInput*)canvas1->getWidget("NAME_INPUT"))->getTextString();
+   PresetManager::savePreset(name, category, parameters);
+}

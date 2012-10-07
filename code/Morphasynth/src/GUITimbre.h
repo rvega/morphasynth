@@ -33,6 +33,7 @@ class GUITimbre{
       ~GUITimbre();
 
       void addEvent(GuiEvent e);
+      std::vector<GuiEvent> getAllParameters();
 
       void show();
       void hide();

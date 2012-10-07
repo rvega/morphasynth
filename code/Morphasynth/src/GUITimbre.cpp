@@ -70,13 +70,25 @@ void GUITimbre::addEvent(GuiEvent e){
    for (std::vector<ofxUIWidget*>::iterator i = allSliders->begin(); i!=allSliders->end(); ++i) {
       SliderPot* widget = (SliderPot*) *i;
       if(widget->getID() == e.parameter){
-         std::cout << e.parameter << " AAA " << e.value << "\n";
          widget->setValue(e.value);
          break;
       }
    }
+}
 
+std::vector<GuiEvent> GUITimbre::getAllParameters(){
+   std::vector<GuiEvent> parameters;
 
+   for(std::vector<ofxUIWidget*>::size_type i = 0; i < allSliders->size(); i++){
+      ofxUIWidget* slider = allSliders->at(i);
+      Parameter parameter = (Parameter) ((SliderPot*)slider)->getID();
+      float value = ((SliderPot*)slider)->getValue();
+      GuiEvent evt;
+      evt.parameter = parameter;
+      evt.value = value;
+      parameters.push_back(evt);
+   }
+   return parameters;
 }
 
 void GUITimbre::onDraw(ofEventArgs &data) {

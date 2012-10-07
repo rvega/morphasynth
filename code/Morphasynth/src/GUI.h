@@ -33,6 +33,7 @@ class GUI{
       GUI(Controller* cont);
       ~GUI();
 
+      std::vector<GuiEvent> getAllParameters();
       void addEvent(GuiEvent e);
 
    private:

@@ -99,14 +99,26 @@ std::vector<GuiEvent> PresetManager::getParametersForPreset(std::string presetNa
    return parameters;
 }
       
-// static void PresetManager::savePreset(std::string name, std::string category, std::vector<Parameter> parameters){
-//    // Lina: Write (or overwrite) a new xml file
-// }
+void PresetManager::savePreset(std::string name, std::string category, std::vector<GuiEvent> parameters){
+   ofxXmlSettings xml;
+   xml.addTag("preset");
+   xml.pushTag("preset");
 
-//Lina: Other supporting methods (will probably be private and static). 
-//
-//
-// Si la vuelta se pone lenta al leer todos los archivos varias veces, tal vez poner variables instermedias
-// que se compartan entre metodos (variables de clase) y que eviten tener que abrir los archivos mas de 1 vez????
-// (especulando).
+   xml.addValue("morphasynth-version", 0.1);
+   xml.addValue("name", name);
+   xml.addValue("category", category);
 
+   xml.addTag("parameters");
+   xml.pushTag("parameters");
+
+   for(std::vector<GuiEvent>::size_type i = 0; i < parameters.size(); i++){
+      GuiEvent event = parameters[i];
+      xml.addTag("parameter");
+      xml.addAttribute("parameter", "name", Parameter2String[event.parameter], i);
+      xml.addAttribute("parameter", "value", (double)event.value, i);
+   }
+
+   xml.popTag();
+   xml.popTag();
+   xml.saveFile("presets/asdf.xml");
+}

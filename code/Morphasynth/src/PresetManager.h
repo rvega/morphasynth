@@ -30,4 +30,5 @@ class PresetManager{
       static std::vector<std::string> getAllCategories();
       static std::vector<std::string> getPresetNamesForCategory(std::string categoryName);
       static std::vector<GuiEvent> getParametersForPreset(std::string presetName);
+      static void savePreset(std::string name, std::string category, std::vector<GuiEvent> parameters);
 };

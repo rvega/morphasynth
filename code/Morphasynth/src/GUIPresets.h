@@ -33,10 +33,12 @@ class GUIPresets{
 
       void show();
       void hide();
+      void setGuiTimbre(GUITimbre* t);
 
    private:
       Controller* controller;
       GUI* superView;
+      GUITimbre* guiTimbre;
       ofxUICanvas* canvas1;
       ofxUIScrollableCanvas* canvas2;
       int x,y,w,h;
@@ -46,4 +48,6 @@ class GUIPresets{
       void setup();
       void onDraw(ofEventArgs &data);
       void guiEvent(ofxUIEventArgs &e);
+      void loadPreset(ofxUILabelButton* button);
+      void savePreset();
 };
