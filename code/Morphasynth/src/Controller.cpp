@@ -64,34 +64,34 @@ void Controller::setInitialParameters(){
 
    initialParameters[NOISE_LEVEL] = 0.0;
 
-   initialParameters[OSCILLATOR1_AMPLITUDE] = 0.5;
-   initialParameters[OSCILLATOR1_WAVEFORM] = 0.5;
-   initialParameters[OSCILLATOR1_FINETUNE] = 0.0;
+   initialParameters[OSCILLATOR1_AMPLITUDE] = 1.0;
+   initialParameters[OSCILLATOR1_WAVEFORM] = 0.0;
+   initialParameters[OSCILLATOR1_FINETUNE] = 0.5;
 
    initialParameters[LFO_OSC1_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC1_FREQUENCY] = 5.0;
+   initialParameters[LFO_OSC1_FREQUENCY] = 0.0;
    initialParameters[LFO_OSC1_TO_AMPLITUDE] = 0.0;
    initialParameters[LFO_OSC1_TO_FREQUENCY] = 0.0;
 
    initialParameters[OSCILLATOR2_AMPLITUDE] = 0.0;
-   initialParameters[OSCILLATOR2_WAVEFORM] = 0.5;
+   initialParameters[OSCILLATOR2_WAVEFORM] = 0.0;
    initialParameters[OSCILLATOR2_FINETUNE] = 0.0;
 
    initialParameters[LFO_OSC2_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC2_FREQUENCY] = 5.0;
+   initialParameters[LFO_OSC2_FREQUENCY] = 0.0;
    initialParameters[LFO_OSC2_TO_AMPLITUDE] = 0.0;
    initialParameters[LFO_OSC2_TO_FREQUENCY] = 0.0;
    
    initialParameters[OSCILLATOR3_AMPLITUDE] = 0.0;
-   initialParameters[OSCILLATOR3_WAVEFORM] = 0.5;
+   initialParameters[OSCILLATOR3_WAVEFORM] = 0.0;
    initialParameters[OSCILLATOR3_FINETUNE] = 0.0;
 
    initialParameters[LFO_OSC3_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC3_FREQUENCY] = 5.0;
+   initialParameters[LFO_OSC3_FREQUENCY] = 0.0;
    initialParameters[LFO_OSC3_TO_AMPLITUDE] = 0.0;
    initialParameters[LFO_OSC3_TO_FREQUENCY] = 0.0;
 
-   initialParameters[HI_PASS_FREQUENCY] = 10.0;
+   initialParameters[HI_PASS_FREQUENCY] = 0.0;
    initialParameters[HI_PASS_RESONANCE] = 0.02;
    initialParameters[HI_PASS_KEYFOLLOW] = 1.0;
    initialParameters[HI_PASS_CONTOUR] = 0.0;

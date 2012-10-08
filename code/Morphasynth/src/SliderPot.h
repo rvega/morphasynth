@@ -372,7 +372,6 @@ float map(float value, float low1, float high1, float low2, float high2) {
 		value = ofMap(value, min, max, 0.0, 1.0, true);
 				
 		updateLabel(); 		
-      triggerEvent(this);
 	}
 		
 	float getValue()

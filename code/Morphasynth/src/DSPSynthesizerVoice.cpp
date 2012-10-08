@@ -242,7 +242,7 @@ void DSPSynthesizerVoice::setParameter(Parameter param, float value){
          hiPassKeyFollow = checkRange(value, 0.0, 1.0);
          break;
       case(HI_PASS_CONTOUR):
-         hiPassContour = checkRange(value, -5.0, 5.0);
+         hiPassContour = checkRange(value, -100.0, 100.0);
          break;
 
       case(HI_PASS_ATTACK):
@@ -285,7 +285,7 @@ void DSPSynthesizerVoice::setParameter(Parameter param, float value){
          loPassKeyFollow = checkRange(value, 0.0, 1.0);
          break;
       case(LO_PASS_CONTOUR):
-         loPassContour = checkRange(value, -5.0, 5.0);
+         loPassContour = checkRange(value, -100.0, 100.0);
          break;
 
       case(LO_PASS_ATTACK):
