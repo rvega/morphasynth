@@ -324,7 +324,6 @@ float map(float value, float low1, float high1, float low2, float high2) {
 		{
 
 			valuePow = pow(value, nPow);
-			//value = ofMap(valuePow, min, max, 0.0, 1.0, true);
 			label->setLabel(name + ": " + ofToString(valuePow,labelPrecision)); 		
 		}		
 	}
@@ -368,9 +367,7 @@ float map(float value, float low1, float high1, float low2, float high2) {
 	
 	void setValue(float _value)
 	{	
-		
-		value = ofMap(value, min, max, 0.0, 1.0, true);
-				
+      value = _value;
 		updateLabel(); 		
 	}
 		

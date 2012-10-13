@@ -184,7 +184,7 @@ void GUITimbre::setup(){
    canvas3->addWidgetDown(new SliderPot(width, itemHeight, 20.0, 20000.0, 0.5, 3.0, "FREQUENCY")) -> setID(HI_PASS_FREQUENCY);//20 a 20000, n=3
    canvas3->addWidgetDown(new SliderPot(width, itemHeight, 0.0, 1.0, 0.5, 1.0, "RESONANCE")) -> setID(HI_PASS_RESONANCE);//0 a 1, n=1
    canvas3->addWidgetDown(new SliderPot(width, itemHeight, 0.0, 1.0, 0.5, 1.0, "KEYFOLLOW")) -> setID(HI_PASS_KEYFOLLOW);//0 a 1, n=1
-   canvas3->addWidgetDown(new SliderPot(width, itemHeight, -100, 100, 0.5, 1.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);//-5 a 5, n=1
+   canvas3->addWidgetDown(new SliderPot(width, itemHeight, -5, 5, 0.5, 1.0, "CONTOUR")) -> setID(HI_PASS_CONTOUR);//-5 a 5, n=1
 
    canvas3->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
@@ -212,7 +212,7 @@ void GUITimbre::setup(){
    canvas4->addWidgetDown(new SliderPot(width, itemHeight, 20.0, 20000.0, 0.5, 3.0, "FREQUENCY")) -> setID(LO_PASS_FREQUENCY);
    canvas4->addWidgetDown(new SliderPot(width, itemHeight, 0.0, 1.0, 0.5, 1.0, "RESONANCE")) -> setID(LO_PASS_RESONANCE);
    canvas4->addWidgetDown(new SliderPot(width, itemHeight, 0.0, 1.0, 0.5, 1.0, "KEYFOLLOW")) -> setID(LO_PASS_KEYFOLLOW);
-   canvas4->addWidgetDown(new SliderPot(width, itemHeight, -100.0, 100.0, 0.0, 1.0, "CONTOUR")) -> setID(LO_PASS_CONTOUR); 
+   canvas4->addWidgetDown(new SliderPot(width, itemHeight, -5.0, 5.0, 0.0, 1.0, "CONTOUR")) -> setID(LO_PASS_CONTOUR); 
 
    canvas4->addWidgetDown(new ofxUISpacer(width, spacerHeight)) -> setColorFill(bgColor);
 
@@ -282,7 +282,7 @@ void GUITimbre::sendEventToController(ofxUIWidget* w){
    float value = ((SliderPot *)w)->getMapValue();
 	
    // Debug:
-	std::cout << "valor mapeado --> " << value << "\n" ;
+	// std::cout << "valor mapeado --> " << value << "\n" ;
 
    GuiEvent event;
    event.value = value;

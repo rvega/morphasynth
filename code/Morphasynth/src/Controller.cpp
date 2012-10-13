@@ -42,10 +42,6 @@ Controller::~Controller(){
    delete midiMap;
 }
 
-// void sendEventToGui(MidiEvent e){
-// 
-// }
-
 void Controller::sendEventToSynth(MidiEvent e){
    synth->addMidiEvent(e);
 }
@@ -59,77 +55,10 @@ void Controller::sendEventToSynth(GuiEvent e){
 }
 
 void Controller::setInitialParameters(){
-   // TODO: This should be loaded from a preset file.
-   std::map<Parameter, float> initialParameters;
-
-   initialParameters[NOISE_LEVEL] = 0.0;
-
-   initialParameters[OSCILLATOR1_AMPLITUDE] = 1.0;
-   initialParameters[OSCILLATOR1_WAVEFORM] = 0.0;
-   initialParameters[OSCILLATOR1_FINETUNE] = 0.5;
-
-   initialParameters[LFO_OSC1_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC1_FREQUENCY] = 0.0;
-   initialParameters[LFO_OSC1_TO_AMPLITUDE] = 0.0;
-   initialParameters[LFO_OSC1_TO_FREQUENCY] = 0.0;
-
-   initialParameters[OSCILLATOR2_AMPLITUDE] = 0.0;
-   initialParameters[OSCILLATOR2_WAVEFORM] = 0.0;
-   initialParameters[OSCILLATOR2_FINETUNE] = 0.0;
-
-   initialParameters[LFO_OSC2_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC2_FREQUENCY] = 0.0;
-   initialParameters[LFO_OSC2_TO_AMPLITUDE] = 0.0;
-   initialParameters[LFO_OSC2_TO_FREQUENCY] = 0.0;
-   
-   initialParameters[OSCILLATOR3_AMPLITUDE] = 0.0;
-   initialParameters[OSCILLATOR3_WAVEFORM] = 0.0;
-   initialParameters[OSCILLATOR3_FINETUNE] = 0.0;
-
-   initialParameters[LFO_OSC3_WAVEFORM] = 0.0;
-   initialParameters[LFO_OSC3_FREQUENCY] = 0.0;
-   initialParameters[LFO_OSC3_TO_AMPLITUDE] = 0.0;
-   initialParameters[LFO_OSC3_TO_FREQUENCY] = 0.0;
-
-   initialParameters[HI_PASS_FREQUENCY] = 0.0;
-   initialParameters[HI_PASS_RESONANCE] = 0.02;
-   initialParameters[HI_PASS_KEYFOLLOW] = 1.0;
-   initialParameters[HI_PASS_CONTOUR] = 0.0;
-
-   initialParameters[HI_PASS_ATTACK] = 0.001;
-   initialParameters[HI_PASS_DECAY] = 0.001;
-   initialParameters[HI_PASS_SUSTAIN] = 1.0;
-   initialParameters[HI_PASS_RELEASE] = 0.001;
-
-   initialParameters[ENVELOPE_ATTACK] = 0.001;
-   initialParameters[ENVELOPE_DECAY] = 0.001;
-   initialParameters[ENVELOPE_SUSTAIN] = 1.0;
-   initialParameters[ENVELOPE_RELEASE] = 0.001;
-
-   initialParameters[LO_PASS_FREQUENCY] = 20000.0;
-   initialParameters[LO_PASS_RESONANCE] = 0.75;
-   initialParameters[LO_PASS_KEYFOLLOW] = 1.0;
-   initialParameters[LO_PASS_CONTOUR] = 0.0;
-
-   initialParameters[LO_PASS_ATTACK] = 0.001;
-   initialParameters[LO_PASS_DECAY] = 0.001;
-   initialParameters[LO_PASS_SUSTAIN] = 1.0;
-   initialParameters[LO_PASS_RELEASE] = 0.001;
-
-   initialParameters[ENVELOPE_ATTACK] = 0.001;
-   initialParameters[ENVELOPE_DECAY] = 0.001;
-   initialParameters[ENVELOPE_SUSTAIN] = 1.0;
-   initialParameters[ENVELOPE_RELEASE] = 0.001;
-
-   for (std::map<Parameter,float>::iterator i = initialParameters.begin(); i!=initialParameters.end(); ++i) {
-      Parameter p = i->first;
-      float v = i->second; // second es next 
-
-      // Send to synth thread
-      GuiEvent e;
-      e.parameter = p;
-      e.value = v; // es el del sinte y va potenciado pues cambio en el GUITimbre
-      synth->addGUIEvent(e);
-      gui->addEvent(e);
+   std::vector<GuiEvent> parameters = PresetManager::getParametersForPreset("1. SIMPLE SINE");
+   for(std::vector<GuiEvent>::size_type i = 0; i < parameters.size(); i++){
+      GuiEvent event = parameters[i];
+      sendEventToSynth(event);
+      sendEventToGui(event);
    }
 }

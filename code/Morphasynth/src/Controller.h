@@ -28,6 +28,7 @@
 #include "GUIEvent.h"
 #include "Parameter.h"
 #include "MidiMap.h"
+#include "PresetManager.h"
 
 class Controller{
 	public:
