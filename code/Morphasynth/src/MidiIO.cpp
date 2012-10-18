@@ -64,5 +64,12 @@ void MidiIO::start(){
 }
 
 void MidiIO::midiCallback(double deltatime, std::vector< unsigned char > *message, void *userData){
+   int s = message->size();
+   std::cout << s << " ";
+   // for(int i=0; i<message->size(); i++) {
+   //    std::cout << message->at(i) << " ";
+   // }
+   // std::cout << "\n";
+
    midiMap->process(deltatime, message);
 }

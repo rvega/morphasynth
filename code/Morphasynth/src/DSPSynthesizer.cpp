@@ -30,15 +30,17 @@ DSPSynthesizer::DSPSynthesizer():
       jack_ringbuffer_mlock(guiEventsBuffer);
    
       voices = new std::vector<DSPSynthesizerVoice*>;
-      DSPSynthesizerVoice* aVoice = new DSPSynthesizerVoice(); // Just one voice for now
-      voices->push_back(aVoice);
+      for (int i=0; i<10; i++) {
+         DSPSynthesizerVoice* aVoice = new DSPSynthesizerVoice();
+         voices->push_back(aVoice);
+      }
 }
 
 DSPSynthesizer::~DSPSynthesizer(){
    jack_ringbuffer_free(guiEventsBuffer);
    jack_ringbuffer_free(midiEventsBuffer);
 
-   for(int i=0; i<voices->size(); ++i){
+   for(int i=0; i<10; ++i){
       delete voices->at(i);
    }
    delete voices;
@@ -48,27 +50,42 @@ void DSPSynthesizer::setSampleRate(unsigned int sampleRate){
    this->sampleRate = sampleRate;
    Stk::setSampleRate( (StkFloat)sampleRate ); // Sets the sample rate for all STK objects
    
-   for(int i=0; i<voices->size(); ++i){
+   for(int i=0; i<10; ++i){
       voices->at(i)->setSampleRate(sampleRate);
    }
 }
 
 void DSPSynthesizer::processGuiEvent(GuiEvent* event){
-   for(int i = 0; i<voices->size(); i++) {
+   for(int i = 0; i<10; i++) {
       voices->at(i)->setParameter(event->parameter, event->value);
    }
 }
 
-void DSPSynthesizer::processMidiEvent(MidiEvent* event){
+inline void DSPSynthesizer::processMidiEvent(MidiEvent* event){
    switch(event->command){
       case(NOTE_ON):
-         voices->at(0)->noteOn(event->value1, event->value2);
+         // Look for an available voice
+         for(int i=0; i<10; ++i){
+            voice = voices->at(i);
+            if(voice->isSilent()){
+               // std::cout << "Note on voice " << i << " " << event->value1 << "\n";
+               voice->noteOn(event->value1, event->value2);
+               break;
+            }
+         }
          break;
 
       case(NOTE_OFF):
-         if(voices->at(0)->getCurrentNote() == event->value1){
-            voices->at(0)->noteOff();
+         for(int i=0; i<10; ++i){
+            voice = voices->at(i);
+            // std::cout << "Note off voice " << i << " " << event->value1 << " " << voice->getCurrentNote() << "\n";
+            if(!voice->isSilent() && voice->getCurrentNote() == event->value1){
+               voice->noteOff();
+               // std::cout << "Y" << "\n";
+               // break;
+            }
          }
+         // std::cout << "off break 2" << "\n";
          break;
 
       case(PITCH_BEND):
@@ -81,12 +98,6 @@ void DSPSynthesizer::processMidiEvent(MidiEvent* event){
    }
 }
 int DSPSynthesizer::process(void *outBuffer, void *inBuffer, unsigned int bufferSize){
-   // Process events from MIDI
-   while(jack_ringbuffer_read_space(midiEventsBuffer) >= sizeof(MidiEvent)){ // If there's at least one event to read
-      jack_ringbuffer_read(midiEventsBuffer, (char*)&midiEvent, sizeof(MidiEvent));
-      processMidiEvent(&midiEvent);
-   }
-
    // Process events from GUI
    while(jack_ringbuffer_read_space(guiEventsBuffer) >= sizeof(GuiEvent)){ 
       jack_ringbuffer_read(guiEventsBuffer, (char*)&guiEvent, sizeof(GuiEvent));
@@ -94,7 +105,27 @@ int DSPSynthesizer::process(void *outBuffer, void *inBuffer, unsigned int buffer
    }
 
    // Make some sound
-   voices->at(0)->process((StkFloat*) outBuffer, bufferSize); // Only one voice for now
+   out = (StkFloat*) outBuffer;
+   for(int i=0; i<bufferSize; i++){
+
+      // Process events from MIDI
+      while(jack_ringbuffer_read_space(midiEventsBuffer) >= sizeof(MidiEvent)){ // If there's at least one event to read
+         jack_ringbuffer_read(midiEventsBuffer, (char*)&midiEvent, sizeof(MidiEvent));
+         processMidiEvent(&midiEvent);
+      }
+
+      voiceOut = 0;
+      for(int j=0; j<10; ++j){
+         voice = voices->at(j);
+         if(!voice->isSilent()){
+            voiceOut += voice->tick(); 
+         }
+         // voiceOut = voiceOut/10.0;
+      }
+      // std::cout << voiceOut << "\n";
+      *out++ = voiceOut;
+      *out++ = voiceOut;
+   }
    return 0;
 }
 

@@ -44,6 +44,8 @@ class DSPSynthesizer{
       MidiEvent midiEvent; 
       GuiEvent guiEvent; 
       StkFloat* out;
+      StkFloat voiceOut;
+      DSPSynthesizerVoice* voice;
 
    public:
       DSPSynthesizer();

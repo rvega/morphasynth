@@ -31,6 +31,10 @@
 #include "DSPLoPass.h"
 #include "DSPHiPass.h"
 
+#define checkMax(x,y) (((x)>=(y)) ? (x) : (y))
+#define checkMin(x,y) (((x)<(y)) ? (x) : (y))
+#define checkRange(value, min, max) checkMax(min, checkMin(max, value))
+
 using namespace stk;
 
 class DSPSynthesizerVoice{
@@ -132,10 +136,74 @@ class DSPSynthesizerVoice{
       DSPSynthesizerVoice();
       ~DSPSynthesizerVoice();
 
+      bool isSilent();
       void setSampleRate(unsigned int sampleRate);
       short int getCurrentNote();
       void setParameter(Parameter param, float value);
       void noteOn(short int noteNumber, short int velocity);
       void noteOff();
-      void process(StkFloat* out, unsigned int bufferSize);
+      inline StkFloat tick();
 };
+
+
+//============================//
+//  DSP BLOCKS & CONNECTIONS  //
+//============================//
+inline StkFloat DSPSynthesizerVoice::tick(){
+   // Silence?
+   if(envelope->getState() == ADSR::IDLE) {
+      silence = true;
+      return 0.0;
+   }
+   // if(silence){
+   //    for(int i=0; i<bufferSize; i++){
+   //       *out++ = 0.0;
+   //       *out++ = 0.0;
+   //    }
+   //    return;
+   // }
+
+   // Sound
+   // for(int i=0; i<bufferSize; i++){
+      // Oscillator 1
+      lfo1Out = lfo1->tick();
+      freq = currentNoteFrequency * pow( 2, (oscillator1Finetune/12.0)+(lfo1ToFrequency * lfo1Out) );
+      amp = oscillator1Amplitude * (1 + lfo1ToAmplitude*lfo1Out);
+      oscillator1->setFrequency(freq);
+      oscillator1->setAmplitude(amp);
+
+      // Oscillator 2
+      lfo2Out = lfo2->tick();
+      freq = currentNoteFrequency * pow( 2, (oscillator2Finetune/12.0)+(lfo2ToFrequency * lfo2Out) );
+      amp = oscillator2Amplitude * (1 + lfo2ToAmplitude*lfo2Out);
+      oscillator2->setFrequency(freq);
+      oscillator2->setAmplitude(amp);
+
+      // Oscillator 3
+      lfo3Out = lfo3->tick();
+      freq = currentNoteFrequency * pow( 2, (oscillator3Finetune/12.0)+(lfo3ToFrequency * lfo3Out) );
+      freq = freq / 2.0;
+      amp = oscillator3Amplitude * (1 + lfo3ToAmplitude*lfo3Out);
+      oscillator3->setFrequency(freq);
+      oscillator3->setAmplitude(amp);
+
+      oscillators = oscillator1->tick() + oscillator2->tick() + oscillator3->tick() + noise->tick() ;
+
+      //Hi Pass
+      freq = (hiPassFrequency + (currentNoteFrequency * hiPassKeyFollow)) \
+             * pow (2, (hiPassEnvelope->tick()*hiPassContour) + ((1.0+lfoHiPass->tick()) * lfoHiPassAmplitude)); 
+      hiPass->setFrequency( checkMin(20000.0, freq) );
+
+      // Lo Pass
+      freq = (loPassFrequency + (currentNoteFrequency * loPassKeyFollow)) \
+             * pow (2, (loPassEnvelope->tick()*loPassContour) + ((1.0+lfoLoPass->tick()) * lfoLoPassAmplitude)); 
+      loPass->setFrequency( checkMin(20000.0, freq) );
+
+      // All together, now!
+      output = loPass->tick( hiPass->tick(oscillators) ) * envelope->tick();
+
+      return output;
+      // *out++ = output;
+      // *out++ = output;
+   // }
+}
