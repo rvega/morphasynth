@@ -1,15 +1,7 @@
-*.swp
 *.un~
-/code/tags
-
-/code/libs/*
-!/code/libs/emptyFolder
-/code/Morphasynth/bin/*
-!/code/Morphasynth/bin/data
-/code/Morphasynth/obj
-// /code/Morphasynth/bin/libs/libfmodex.so
-// /code/Morphasynth/bin/libs/libfmodexp64.so
-/faust/filter.cpp
-/faust/filter
-/faust/HPF
-/faust/HPF.cpp
+*.swp
+*.swo
+*.o
+obj
+bin
+Makefile
