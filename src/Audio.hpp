@@ -1,14 +1,14 @@
 #include <jack/jack.h>
 
-class MainWindow;
-
 class Audio {
    public:
-      explicit Audio(const MainWindow& _window);
+      explicit Audio();
       virtual ~Audio();
 
       void start();
       void stop();
+      void setSampleRate(unsigned int sr);
+      unsigned int getSampleRate();
 
    private:
       Audio(const Audio&);
@@ -17,6 +17,5 @@ class Audio {
       void initJack();
       void initPd();
 
-      const MainWindow& window;
       unsigned int sampleRate;
 };

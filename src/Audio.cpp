@@ -1,37 +1,65 @@
+#include <jack/midiport.h>
 #include <QResource>
 #include <iostream>
-
 #include "z_libpd.h"
 #include "Audio.hpp"
-#include "MainWindow.hpp"
-
 
 /**********************************************************************************************************
  * Jack callbacks are here (C style functions and variables)
  **********************************************************************************************************/
 
 jack_port_t *outputPort;
+jack_port_t *inputPort;
 jack_client_t *jackClient;
 
 /**
  * This is the audio callback
  */
 int process(jack_nframes_t nframes, void *) {
-	jack_default_audio_sample_t *out = (jack_default_audio_sample_t *) jack_port_get_buffer(outputPort, nframes);
+   
+   // Catch incoming midi events
+   unsigned char byte1, byte2, byte3;
+   jack_midi_event_t midiEvent;
+	void* in = jack_port_get_buffer(inputPort, nframes);
+   jack_nframes_t eventCount = jack_midi_get_event_count(in);
+   for (unsigned int i=0; i<eventCount; i++) {
+      jack_midi_event_get(&midiEvent, in, i);
+      byte1 = (unsigned char) ( *(midiEvent.buffer) );
+      byte2 = (unsigned char) ( *(midiEvent.buffer + sizeof(char)) );
+      byte3 = (unsigned char) ( *(midiEvent.buffer + 2*sizeof(char)) );
 
-   // Libpd processes 64 samples each tick
-   unsigned int numTicks = nframes/64; 
-   // for(unsigned int i=0; i<numBlocks; i++){
-   libpd_process_float(numTicks, 0, out);
-   // }
+      // TODO: detect and send all midi event types supported by pd
+      // Note off
+      byte1 = byte1 & 0xF0;
+      if(byte1==0x80){
+         libpd_noteon(0, byte2, 0); //Note on with velocity 0
+      }
+      // Note on
+      else if(byte1==0x90){
+         libpd_noteon(0, byte2, byte3);
+      }
+      // Pitch bend
+      // else if(byte1==0xE0){
+         // Pitchwheel bytess use 2 bytes to express a value between -8192 and 8191
+         // Byte 2 is the most significant one
+         // event.command = PITCH_BEND;
+         // event.value1 = ((bytes->at(2) << 7) | bytes->at(1)) - 8192;
+      // }
+   }
+
+   // Generate sound 
+	jack_default_audio_sample_t *out = (jack_default_audio_sample_t *) jack_port_get_buffer(outputPort, nframes);
+   libpd_process_float(nframes/64, 0, out); // Libpd processes 64 samples each tick
+
 	return 0;      
 }
 
 /**
  * Called when jack server changes the sample rate
  */
-int sampleRateChanged (jack_nframes_t nframes, void *) {
-   std::cout << "Sample rate is now: " << nframes << "\n";
+int sampleRateChanged (jack_nframes_t nframes, void * arg) {
+   Audio* audio = static_cast<Audio*>(arg);
+   audio->setSampleRate(nframes);
 	return 0;
 }
 
@@ -50,15 +78,17 @@ void jackError(const char *desc) {
    std::cerr << "Jack Error" << "\n" << desc << "\n";
 }
 
+void pdPrint(const char *s) {
+   std::cout << s;
+}
+
 /**********************************************************************************************************
  * Audio C++ class
  **********************************************************************************************************/
 /**
- * Constructor
+ * Constructor, destructor & init
  */
-Audio::Audio(const MainWindow& _window):
-   window(_window)
-{
+Audio::Audio() {
    initJack();
    initPd();
 }
@@ -88,15 +118,12 @@ void Audio::initJack(){
    jack_set_process_callback(jackClient, process, this);
    jack_set_sample_rate_callback(jackClient, sampleRateChanged, this);
    jack_on_shutdown(jackClient, jackShutdown, this);
-   outputPort = jack_port_register(jackClient, "output", JACK_DEFAULT_AUDIO_TYPE, JackPortIsOutput|JackPortIsTerminal, 0);
-
-   sampleRate = jack_get_sample_rate(jackClient);
-   std::cout << "initial sample rate: " << sampleRate << "\n";
+   outputPort = jack_port_register(jackClient, "out", JACK_DEFAULT_AUDIO_TYPE, JackPortIsOutput|JackPortIsTerminal, 0);
+   inputPort = jack_port_register(jackClient, "in", JACK_DEFAULT_MIDI_TYPE, JackPortIsInput|JackPortIsTerminal, 0);
 }
 
 void Audio::initPd(){
-   // libpd_printhook = (t_libpd_printhook) pdprint;
-   // libpd_noteonhook = (t_libpd_noteonhook) pdnoteon;
+   libpd_printhook = (t_libpd_printhook) pdPrint;
    libpd_init();
    libpd_init_audio(0, 1, sampleRate); // 0 inputs, 1 output
    libpd_openfile("main_patch.pd", "../res/pd");
@@ -105,4 +132,12 @@ void Audio::initPd(){
    libpd_start_message(1);
    libpd_add_float(1.0f);
    libpd_finish_message("pd", "dsp");
+}
+
+unsigned int Audio::getSampleRate(){
+   return sampleRate;
+}
+
+void Audio::setSampleRate(unsigned int sr){
+   sampleRate = sr;
 }

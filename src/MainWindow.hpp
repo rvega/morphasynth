@@ -4,6 +4,8 @@
 #include <QApplication>
 #include <QtWebKit>
 
+class Audio;
+
 class MainWindow : public QMainWindow {
    Q_OBJECT
    
@@ -22,7 +24,6 @@ class MainWindow : public QMainWindow {
 
       const QApplication& app;
       QWebView webView;
-
       const int width;
       const int height;
 };

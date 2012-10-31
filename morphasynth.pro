@@ -3,8 +3,8 @@ CONFIG += qt debug threaded
 QT += webkit
 TEMPLATE = app
 
-# Optimize harder
-QMAKE_CXXFLAGS += -O3
+# Optimize harder, use c++ 2011 standard
+QMAKE_CXXFLAGS += -O3 -std=c++0x
 
 # Input
 HEADERS += src/*.hpp

@@ -26,9 +26,9 @@ int main(int argv, char **args) {
 
    MainWindow window(app);
    window.connect(&app, SIGNAL(aboutToQuit()), &window, SLOT(stop()));
-   window.start();
+   Audio audio;
 
-   Audio audio(window);
+   window.start();
    audio.start();
 
    return app.exec();
