@@ -3,11 +3,15 @@
 #include <iostream>
 #include "z_libpd.h"
 #include "Audio.hpp"
+#include "m_pd.h"
+
+// These guys are defined in c files in the src/externals directory
+extern "C" void moog_lopass_tilde_setup();
+extern "C" void expr_setup();
 
 /**********************************************************************************************************
  * Jack callbacks are here (C style functions and variables)
  **********************************************************************************************************/
-
 jack_port_t *outputPort;
 jack_port_t *inputPort;
 jack_client_t *jackClient;
@@ -16,7 +20,6 @@ jack_client_t *jackClient;
  * This is the audio callback
  */
 int process(jack_nframes_t nframes, void *) {
-   
    // Catch incoming midi events
    unsigned char byte1, byte2, byte3;
    jack_midi_event_t midiEvent;
@@ -122,9 +125,15 @@ void Audio::initJack(){
    inputPort = jack_port_register(jackClient, "in", JACK_DEFAULT_MIDI_TYPE, JackPortIsInput|JackPortIsTerminal, 0);
 }
 
+
 void Audio::initPd(){
    libpd_printhook = (t_libpd_printhook) pdPrint;
    libpd_init();
+
+   // Manually initialize externals
+   moog_lopass_tilde_setup();
+   expr_setup();
+
    libpd_init_audio(0, 1, sampleRate); // 0 inputs, 1 output
    libpd_openfile("main_patch.pd", "../res/pd");
 
