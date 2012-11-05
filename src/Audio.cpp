@@ -7,7 +7,9 @@
 
 // These guys are defined in c files in the src/externals directory
 extern "C" void moog_lopass_tilde_setup();
+extern "C" void resonant_hipass_tilde_setup();
 extern "C" void expr_setup();
+extern "C" void limit_setup();
 
 /**********************************************************************************************************
  * Jack callbacks are here (C style functions and variables)
@@ -132,7 +134,9 @@ void Audio::initPd(){
 
    // Manually initialize externals
    moog_lopass_tilde_setup();
+   resonant_hipass_tilde_setup();
    expr_setup();
+   limit_setup();
 
    libpd_init_audio(0, 1, sampleRate); // 0 inputs, 1 output
    libpd_openfile("main_patch.pd", "../res/pd");

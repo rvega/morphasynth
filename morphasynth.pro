@@ -23,6 +23,20 @@ MOC_DIR += ./obj
 # Link with jack libraries
 LIBS += -ljack
 
+# Compile limit external and link statically
+PRE_TARGETDEPS += libs/maxlib/limit.a
+limit.target = libs/maxlib/limit.a
+limit.commands = cd libs/maxlib && make
+QMAKE_EXTRA_TARGETS += limit
+LIBS += libs/maxlib/limit.a
+
+# Compile hppass external and link statically
+PRE_TARGETDEPS += libs/resonant_hipass/bin/resonant_hipass.a
+hpf.target = libs/resonant_hipass/bin/resonant_hipass.a
+hpf.commands = cd libs/resonant_hipass && make
+QMAKE_EXTRA_TARGETS += hpf
+LIBS += libs/resonant_hipass/bin/resonant_hipass.a
+
 # Compile lowpass external and link statically
 PRE_TARGETDEPS += libs/moog_lopass/bin/moog_lopass.a
 lpf.target = libs/moog_lopass/bin/moog_lopass.a
@@ -50,3 +64,6 @@ run.target = run
 run.commands = cd bin && ./morphasynth
 run.depends = $(TARGET)
 QMAKE_EXTRA_TARGETS += run
+
+
+  

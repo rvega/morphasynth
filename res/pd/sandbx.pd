@@ -1,0 +1,8 @@
+#N canvas 651 252 450 300 10;
+#X obj -333 -166 zlider aa 20 20000 1 3;
+#X obj -275 -38 send aa;
+#X obj -157 -65 receive _aa;
+#X floatatom -148 -23 8 0 0 0 - - -;
+#X msg -276 -73 0.8;
+#X connect 2 0 3 0;
+#X connect 4 0 1 0;
