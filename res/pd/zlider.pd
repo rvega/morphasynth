@@ -1,6 +1,6 @@
-#N canvas 306 397 802 550 10;
+#N canvas 135 186 802 550 10;
 #X obj 105 118 hsl 175 15 0 1 0 0 empty empty empty -2 -8 0 9 -262144
--1 -1 17400 1;
+-1 -1 8700 1;
 #X floatatom 149 137 7 0 0 0 - - -;
 #X text 440 -127 Upper range;
 #X text 350 -122 Lower range;
@@ -22,6 +22,7 @@ upper range \, initial value \, pow;
 #X text 264 196 Signal Name;
 #X obj 259 -176 t b b b b b;
 #X obj 257 -204 loadbang;
+#X obj 73 173 s __\$1;
 #X connect 0 0 16 0;
 #X connect 1 0 17 0;
 #X connect 4 0 1 0;
@@ -35,6 +36,7 @@ upper range \, initial value \, pow;
 #X connect 14 0 5 2;
 #X connect 15 0 0 0;
 #X connect 16 0 6 0;
+#X connect 16 0 21 0;
 #X connect 19 0 11 0;
 #X connect 19 1 12 0;
 #X connect 19 2 13 0;

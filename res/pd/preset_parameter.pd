@@ -1,0 +1,21 @@
+#N canvas 1037 592 446 255 10;
+#X obj -340 -4 inlet;
+#X obj -340 85 list append;
+#X obj -340 110 list trim;
+#X obj -340 27 symbol \$1;
+#X msg -340 57 add \$1;
+#X obj -267 57 r __\$1;
+#X obj -340 138 outlet;
+#X text -342 -84 Creation parameter is the name of a signal (one parameter
+of the synth) Inlet is a bang Outlet is a message to be sent to the
+textfile object: "add signalname 0.44";
+#X text -342 -36 Second inlet (optional) is an arbitrary value to store
+;
+#X obj -277 -5 inlet;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 1;
+#X connect 9 0 1 1;

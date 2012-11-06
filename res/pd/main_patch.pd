@@ -1,21 +1,21 @@
-#N canvas 142 24 1382 810 10;
+#N canvas -7 24 1314 739 10;
 #X obj -1173 -547 cnv 15 210 200 empty empty OSC1 20 12 0 10 -233017
 -66577 0;
 #X text -1037 -428 WAVEFORM;
-#X obj -783 -71 cnv 15 100 190 empty empty Magic 20 12 0 10 -233017
+#X obj -798 -73 cnv 15 100 140 empty empty Magic 20 12 0 10 -233017
 -66577 0;
-#X obj -767 -42 notein;
-#X obj -767 7 pack f f;
-#X obj -767 46 synthesizer;
+#X obj -782 -44 notein;
+#X obj -782 -20 pack f f;
+#X obj -782 2 synthesizer;
 #X text -1037 -369 FINETUNE;
 #X obj -1173 -344 cnv 15 210 260 empty empty LFO1 20 12 0 10 -233017
 -66577 0;
-#X obj -1172 -71 cnv 15 210 270 empty empty ENVELOPE 20 12 0 10 -233017
+#X obj -1172 -81 cnv 15 210 270 empty empty ENVELOPE 20 12 0 10 -233017
 -66577 0;
-#X text -1013 -6 ATTACK;
-#X text -1008 56 DECAY;
-#X text -1025 115 SUSTAIN;
-#X text -1019 174 RELEASE;
+#X text -1013 -16 ATTACK;
+#X text -1008 46 DECAY;
+#X text -1025 105 SUSTAIN;
+#X text -1019 164 RELEASE;
 #X text -1036 -284 FREQUENCY;
 #X text -1030 -224 WAVEFORM;
 #X text -1054 -105 TO FREQUENCY;
@@ -66,8 +66,48 @@
 #X text 61 -425 WAVEFORM;
 #X text 67 -366 AMPLITUDE;
 #X text -821 -488 AMPLITUDE;
-#X obj -510 -526 zlider lp-freq 20 20000 1 3;
 #X obj -1166 -525 zlider osc1-amplitude 0 1 0.5 1;
+#X obj -952 -73 cnv 15 150 140 empty empty DEBUG 20 12 0 10 -233017
+-66577 0;
+#X floatatom -944 -32 7 0 0 0 - - -;
+#X floatatom -945 6 7 0 0 0 - - -;
+#X obj -310 -266 cnv 15 225 270 empty empty HI_PASS_ENVELOPE 20 12
+0 10 -233017 -66577 0;
+#X text -136 -202 ATTACK;
+#X text -128 -140 DECAY;
+#X text -165 -82 SUSTAIN;
+#X text -139 -22 RELEASE;
+#X obj -82 -266 cnv 15 210 270 empty empty HI_PASS_LFO 20 12 0 10 -233017
+-66577 0;
+#X text 56 -202 FREQUENCY;
+#X text 61 -143 WAVEFORM;
+#X text 67 -84 AMPLITUDE;
+#X obj -783 24 dac~ 1;
+#X obj -944 -52 r _lp_total_frequency;
+#X obj -945 -13 r _hp_total_frequency;
+#X floatatom -944 45 7 0 0 0 - - -;
+#X obj -944 25 r _midi-freq;
+#X obj -694 -74 cnv 15 150 60 empty empty Presets 20 12 0 10 -233017
+-66577 0;
+#N canvas 25 659 672 290 presets 1;
+#X obj 12 2 presets;
+#X obj 97 -22 r preset-load;
+#X obj 12 -22 r preset-save;
+#X obj 183 -22 r preset-id;
+#X obj 268 -22 r preset-name;
+#X obj 354 -39 r preset-category;
+#X obj 439 -19 r preset-author;
+#X obj 543 -15 r preset-comments;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 0 2;
+#X connect 4 0 0 3;
+#X connect 5 0 0 4;
+#X connect 6 0 0 5;
+#X connect 7 0 0 6;
+#X restore -675 -51 pd presets;
+#X text -677 -33 Open this subpatch!;
+#X obj -510 -526 zlider lp-freq 20 20000 1 3;
 #X obj -1166 -465 zlider osc1-waveform 0 1 0 1;
 #X obj -1162 -322 zlider lfo1-freq 0 200 0 2;
 #X obj -1162 -263 zlider lfo1-waveform 0 1 0 1;
@@ -101,25 +141,10 @@
 #X obj -69 -523 zlider lp-lfo-freq 0 200 0 2;
 #X obj -69 -464 zlider lp-lfo-waveform 0 1 0 1;
 #X obj -81 -405 zlider lp-lfo-amplitude -5 5 0.5 1;
-#X obj -1162 -45 zlider envelope-a 0 10000 0.1 3;
-#X obj -1161 17 zlider envelope-d 0 10000 0.1 3;
-#X obj -1162 136 zlider envelope-r 0 10000 0.1 3;
-#X obj -1162 76 zlider envelope-s 0 1 1 1;
-#X obj -949 -71 cnv 15 150 200 empty empty DEBUG 20 12 0 10 -233017
--66577 0;
-#X floatatom -941 -13 7 0 0 0 - - -;
-#X floatatom -942 42 7 0 0 0 - - -;
-#X obj -310 -266 cnv 15 225 270 empty empty HI_PASS_ENVELOPE 20 12
-0 10 -233017 -66577 0;
-#X text -136 -202 ATTACK;
-#X text -128 -140 DECAY;
-#X text -165 -82 SUSTAIN;
-#X text -139 -22 RELEASE;
-#X obj -82 -266 cnv 15 210 270 empty empty HI_PASS_LFO 20 12 0 10 -233017
--66577 0;
-#X text 56 -202 FREQUENCY;
-#X text 61 -143 WAVEFORM;
-#X text 67 -84 AMPLITUDE;
+#X obj -1162 -55 zlider envelope-a 0 10000 0.1 3;
+#X obj -1161 7 zlider envelope-d 0 10000 0.1 3;
+#X obj -1162 126 zlider envelope-r 0 10000 0.1 3;
+#X obj -1162 66 zlider envelope-s 0 1 1 1;
 #X obj -302 -241 zlider hp-envelope-a 0 10000 0.1 3;
 #X obj -301 -179 zlider hp-envelope-d 0 10000 0.1 3;
 #X obj -301 -121 zlider hp-envelope-s 0 1 1 1;
@@ -127,16 +152,11 @@
 #X obj -69 -241 zlider hp-lfo-freq 0 200 0 2;
 #X obj -69 -182 zlider hp-lfo-waveform 0 1 0 1;
 #X obj -81 -123 zlider hp-lfo-amplitude -5 5 0.5 1;
-#X obj -768 91 dac~ 1;
-#X obj -941 -43 r _lp_total_frequency;
-#X obj -942 12 r _hp_total_frequency;
 #X obj -511 -186 zlider hp-resonance 0 1 1 1;
-#X floatatom -941 102 7 0 0 0 - - -;
-#X obj -941 72 r _midi-freq;
 #X connect 3 0 4 0;
 #X connect 3 1 4 1;
 #X connect 4 0 5 0;
-#X connect 5 0 113 0;
-#X connect 114 0 95 0;
-#X connect 115 0 96 0;
-#X connect 118 0 117 0;
+#X connect 5 0 68 0;
+#X connect 69 0 57 0;
+#X connect 70 0 58 0;
+#X connect 72 0 71 0;
