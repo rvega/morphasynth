@@ -1,17 +1,58 @@
 MORPHASYNTH
 ===========
 
-A synthesizer written in C++ with Open Frameworks (OF), The Synthesis Toolkit (STK), ofxUI, RTAudio, jack_ring_buffer.  
+An audio synthesizer written in C++, Pd and HTML/javascript.  
 Currently only running as a jack client on Linux (please port).  
 All the parameters in the synthesizer are continuous (no switches, only knobs), this will allow for interpolation of timbres. 
 
 Linux Build Instructions
 ------------------------
 
-cd /path/to/repo/code  
-make download_dependencies  
-cd Morphasynth  
-make Debug  
+### 0. Get dependencies
+
+Tested in Ubuntu 12.04 only
+
+    sudo apt-get install build-essential qt4-qmake qt4-dev-tools puredata-dev  libjack-dev
+
+### 1. Get the code
+
+    git clone https://github.com/rvega/morphasynth.git repo
+    cd repo 
+    git submodule init
+    git submodule update
+
+### 2. Compile it
+
+    qmake 
+    make
+
+### 3. Run it
+
+    make run
+
+Interesting stuff in the code
+-----------------------------
+
+* How to build Pd externals easily with faust.
+* Write dsp/synthesis algorithms in Pd and embed them in a C++ application.
+* How to compile freely available externals for use with libpd.
+* Build HTML/javascript interfaces and embed them into a C++ application.
+* Build a jack audio application.
+
+How to edit/debug the DSP code
+------------------------------
+
+Install pd-extended from http://puredata.info/downloads, install our externals and open the repo/res/pd/main_patch.pd file
+
+To install our externals do this:
+    
+    cd repo/libs/moog_lopass
+    make 
+    make install
+
+    cd repo/libs/resonant_hipass
+    make 
+    make install
 
 License
 -------
