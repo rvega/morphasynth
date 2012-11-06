@@ -1,0 +1,10 @@
+body, html{
+   background-color: #000000;
+}
+
+h1{color:#AAA;}
+
+#slider{
+   width:300px;
+   margin:10px;
+}
