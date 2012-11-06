@@ -2,6 +2,8 @@
 *.swp
 *.swo
 *.o
-obj
-bin
+*.a
+*.pd_linux
+/obj/*
+/bin/*
 /Makefile
