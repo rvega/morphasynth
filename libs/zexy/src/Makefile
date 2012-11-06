@@ -70,11 +70,13 @@ $(LIBNAME): $(TARGETS) z_zexy.c z_zexy.h
 
 $(TARGETS): %.o : %.c
 	$(CC) $(Z_CFLAGS) $(ARCH_FLAG) -c -o $@ $*.c
+	ar rcu $*.a $*.o
 
 externals: $(OBJECTS)
 
 clean:
 	-rm -f *.$(EXT) *.o 
+	-rm -f *.$(EXT) *.a
 
 realclean: clean alias-clean
 	-rm -f *~ _* config.*

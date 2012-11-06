@@ -44,6 +44,13 @@ lpf.commands = cd libs/moog_lopass && make
 QMAKE_EXTRA_TARGETS += lpf
 LIBS += libs/moog_lopass/bin/moog_lopass.a
 
+# Compile list2symbol external and link statically
+PRE_TARGETDEPS += libs/zexy/src/list2symbol.a
+list2symbol.target = libs/zexy/src/list2symbol.a
+list2symbol.commands = cd libs/zexy/src && make
+QMAKE_EXTRA_TARGETS += list2symbol
+LIBS += libs/zexy/src/list2symbol.a
+
 # Compile expr external and link statically
 PRE_TARGETDEPS += libs/libpd/pure-data/extra/expr~/expr.a
 expr.target = libs/libpd/pure-data/extra/expr~/expr.a

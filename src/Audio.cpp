@@ -10,6 +10,7 @@ extern "C" void moog_lopass_tilde_setup();
 extern "C" void resonant_hipass_tilde_setup();
 extern "C" void expr_setup();
 extern "C" void limit_setup();
+extern "C" void list2symbol_setup();
 
 /**********************************************************************************************************
  * Jack callbacks are here (C style functions and variables)
@@ -137,6 +138,7 @@ void Audio::initPd(){
    resonant_hipass_tilde_setup();
    expr_setup();
    limit_setup();
+   list2symbol_setup();
 
    libpd_init_audio(0, 1, sampleRate); // 0 inputs, 1 output
    libpd_openfile("main_patch.pd", "../res/pd");
@@ -145,6 +147,12 @@ void Audio::initPd(){
    libpd_start_message(1);
    libpd_add_float(1.0f);
    libpd_finish_message("pd", "dsp");
+   
+   // test save a file
+   // libpd_float("osc1-amplitude", 0.77);
+   // libpd_bang("save");
+   // libpd_bang("load");
+   
 }
 
 unsigned int Audio::getSampleRate(){
