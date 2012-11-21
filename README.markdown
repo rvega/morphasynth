@@ -54,6 +54,12 @@ To install our externals do this:
     make 
     make install
 
+    cd repo/libs/directory
+    make 
+    make install
+
+You may need to add the ~/pd-externals and ~/pd-externals/directory paths to PD's path usinf the File->Path menu.
+
 License
 -------
 
