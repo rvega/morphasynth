@@ -1,7 +1,7 @@
 all: obj/moog_lopass.cpp
-	g++ -DPD -Wall -O3 -c -Dmydsp=moog_lopass -o obj/moog_lopass.o obj/moog_lopass.cpp
+	g++ -DPD -Wall -O3 -c -msse -Dmydsp=moog_lopass -o obj/moog_lopass.o obj/moog_lopass.cpp
 	ar rcu bin/moog_lopass.a obj/moog_lopass.o
-	g++ -DPD -Wall -fPIC -O3 -shared -Dmydsp=moog_lopass -o bin/moog_lopass~.pd_linux obj/moog_lopass.cpp
+	g++ -DPD -Wall -fPIC -O3 -shared -msse -Dmydsp=moog_lopass -o bin/moog_lopass~.pd_linux obj/moog_lopass.cpp
 	chmod 775 bin/moog_lopass.a
 	chmod 775 bin/moog_lopass~.pd_linux
 
