@@ -32,7 +32,7 @@
 #X obj 667 410 r \$0-sustain;
 #X obj 651 389 r \$0-velocity;
 #X obj 652 436 *;
-#X obj 365 660 outlet~;
+#X obj 364 666 outlet~;
 #X obj 457 131 r \$0-velocity;
 #X obj 457 176 sel 1 0;
 #X obj 12 13 inlet velocity;
@@ -59,6 +59,10 @@
 #X text 684 32 full volume = 127;
 #X obj 457 155 > 0;
 #X obj 151 310 sel 0;
+#X obj 104 48 clip 1 10000;
+#X obj 292 76 clip 1 10000;
+#X obj 189 73 clip 1 10000;
+#X obj 364 644 *~;
 #X connect 0 0 26 4;
 #X connect 1 0 18 0;
 #X connect 2 0 5 1;
@@ -76,7 +80,8 @@
 #X connect 12 0 13 0;
 #X connect 13 0 17 0;
 #X connect 14 0 13 2;
-#X connect 15 0 33 0;
+#X connect 15 0 63 0;
+#X connect 15 0 63 1;
 #X connect 16 0 9 0;
 #X connect 16 1 12 0;
 #X connect 17 0 15 0;
@@ -98,10 +103,10 @@
 #X connect 35 0 6 0;
 #X connect 35 1 1 1;
 #X connect 36 0 56 0;
-#X connect 37 0 44 0;
-#X connect 38 0 45 0;
+#X connect 37 0 60 0;
+#X connect 38 0 62 0;
 #X connect 39 0 46 0;
-#X connect 40 0 47 0;
+#X connect 40 0 61 0;
 #X connect 41 0 26 1;
 #X connect 42 0 28 1;
 #X connect 43 0 26 3;
@@ -114,3 +119,7 @@
 #X connect 56 0 55 0;
 #X connect 58 0 35 0;
 #X connect 59 1 29 0;
+#X connect 60 0 44 0;
+#X connect 61 0 47 0;
+#X connect 62 0 45 0;
+#X connect 63 0 33 0;
