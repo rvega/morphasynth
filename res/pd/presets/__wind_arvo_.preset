@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0.224138;
+id ;
 name arvo;
 author Daniel;
 category wind;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0.270115;
 envelope-s 0.706897;

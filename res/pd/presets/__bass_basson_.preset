@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0;
+id ;
 name basson;
 author daniel;
 category bass;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0.404598;
 envelope-s 0;

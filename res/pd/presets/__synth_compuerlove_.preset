@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0.224138;
+id ;
 name compuerlove;
 author Daniel;
 category synth;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0;
 envelope-s 0.701149;

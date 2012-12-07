@@ -1,8 +1,9 @@
-id symbol;
-name out in the forest;
+noise-amplitude 0;
+id ;
+name out_in_the_forest;
 author Daniel;
 category key;
-comments symbol;
+comments ;
 envelope-a 0.195402;
 envelope-d 0.209195;
 envelope-s 0.712644;

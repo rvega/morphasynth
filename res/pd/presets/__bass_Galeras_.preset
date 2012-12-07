@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0;
+id ;
 name Galeras;
 author Daniel;
 category bass;
-comments symbol;
+comments ;
 envelope-a 0.137931;
 envelope-d 0.68046;
 envelope-s 0.425287;

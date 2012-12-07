@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0;
+id ;
 name caribou;
 author Daniel;
 category key;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0.732184;
 envelope-s 0;

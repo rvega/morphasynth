@@ -1,8 +1,9 @@
-id symbol;
+noise-amplitude 0;
+id ;
 name rustyflute;
 author Daniel;
 category lead;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0.266667;
 envelope-s 0.724138;

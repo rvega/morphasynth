@@ -1,11 +1,12 @@
-id symbol;
+noise-amplitude 0;
+id ;
 name DistortFMTimp;
 author Daniel;
 category percussion;
-comments symbol;
+comments ;
 envelope-a 0;
 envelope-d 0.68046;
-envelope-s 0.425287;
+envelope-s 0;
 envelope-r 0.844828;
 hp-freq 0;
 hp-resonance 0;
