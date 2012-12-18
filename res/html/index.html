@@ -3,38 +3,245 @@
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
+   <link rel="stylesheet" href="css/vendor/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
    <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8">
-   <!-- <link rel="stylesheet" href="css/overcast/jQueryUI.css" type="text/css" charset="utf-8"> -->
 
-
+   <script src="js/vendor/jquery.js" type="text/javascript" charset="utf-8"></script>
+   <script src="css/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/vendor/raphael.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/morphasynth.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
-   <h1>Hello QtHTML!</h1>
-   <h2>A slider:<h2>
-   <div id="slider"></div>
-
-   <!-- <script src="js/jQuery.js" type="text/javascript" charset="utf-8"></script> -->
-   <!-- <script src="js/jQueryUI.js" type="text/javascript" charset="utf-8"></script> -->
-   <!-- <script src="js/ContainerWindow.js" type="text/javascript" charset="utf-8"></script> -->
-
-   <!-- <script type="text/javascript" charset="utf-8"> -->
-   <!--    ContainerWindow.ready = function(){ -->
-   <!--       // Here's where you initialize stuff before c++ starts sending events to js. -->
-   <!--       $('#slider').slider({ -->
-   <!--          min:0, -->
-   <!--          max:1, -->
-   <!--          step:0.001, -->
-   <!--          slide:function(e,ui){ -->
-   <!--             ContainerWindow.log(ui.value); -->
-   <!--             //console.log(e); -->
-   <!--             // console.log(ui); -->
-   <!--          } -->
-   <!--       }); -->
-   <!--    } -->
-
-   <!--    ContainerWindow.didReceiveEvent = function(evt){ -->
-   <!--       // Here's where you handle events coming from c++ -->
-   <!--    } -->
-   <!-- </script> -->
+<body id="main-container">
+   <div id="timbre-space"></div>
+   <div id="piano-scroll">
+      <div id="piano">
+         <div class="octave" data-octave="0"> 
+            <div class="key white" data-note-number="0"><span>C -5</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="1"> 
+            <div class="key white" data-note-number="0"><span>C -4</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="2"> 
+            <div class="key white" data-note-number="0"><span>C -3</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="3"> 
+            <div class="key white" data-note-number="0"><span>C -2</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="4"> 
+            <div class="key white" data-note-number="0"><span>C -1</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="5"> 
+            <div class="key white" data-note-number="0"><span>C 0</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="6"> 
+            <div class="key white" data-note-number="0"><span>C 1</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="7"> 
+            <div class="key white" data-note-number="0"><span>C 2</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="8"> 
+            <div class="key white" data-note-number="0"><span>C 3</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="9"> 
+            <div class="key white" data-note-number="0"><span>C 4</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+         <div class="octave" data-octave="10"> 
+            <div class="key white" data-note-number="0"><span>C 5</span></div>
+            <div class="key white" data-note-number="2"></div>
+            <div class="key white" data-note-number="4"></div>
+            <div class="key white" data-note-number="5"></div>
+            <div class="key white" data-note-number="7"></div>
+            <div class="key white" data-note-number="9"></div>
+            <div class="key white" data-note-number="11"></div>
+            <div class="blacks">
+               <div class="key" data-note-number="1"></div>
+               <div class="key more-margin" data-note-number="3"></div>
+               <div class="key" data-note-number="6"></div>
+               <div class="key" data-note-number="8"></div>
+               <div class="key" data-note-number="10"></div>
+            </div>
+         </div>
+      </div> 
+   </div>
+   <button class="btn btn-mini" id="options-button" data-target="#options" data-toggle="modal"><i class="icon-wrench"></i></button>
+   <div class="modal hide fade" id="options">
+      <div class="modal-header">
+         <i class="icon-wrench"></i>
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+         <form>
+            <label>X:
+               <select id="select-x">
+                  <option value="0">Attack Time</option>
+                  <option value="1">Mfcc 1</option>
+                  <option value="2">Mfcc 2</option>
+                  <option value="3">Mfcc 3</option>
+                  <option value="4">Mfcc 4</option>
+                  <option value="5">Mfcc 5</option>
+                  <option value="6">Mfcc 6</option>
+                  <option value="7">Mfcc 7</option>
+                  <option value="8">Mfcc 8</option>
+                  <option value="9">Mfcc 9</option>
+                  <option value="10">Mfcc 10</option>
+                  <option value="11">Mfcc 11</option>
+                  <option value="12">Mfcc 12</option>
+                  <option value="13">Mfcc 13</option>
+               </select>
+            </label>
+            <label>Y:
+               <select id="select-y">
+                  <option value="0">Attack Time</option>
+                  <option value="1">Mfcc 1</option>
+                  <option value="2">Mfcc 2</option>
+                  <option value="3">Mfcc 3</option>
+                  <option value="4">Mfcc 4</option>
+                  <option value="5">Mfcc 5</option>
+                  <option value="6">Mfcc 6</option>
+                  <option value="7">Mfcc 7</option>
+                  <option value="8">Mfcc 8</option>
+                  <option value="9">Mfcc 9</option>
+                  <option value="10">Mfcc 10</option>
+                  <option value="11">Mfcc 11</option>
+                  <option value="12">Mfcc 12</option>
+                  <option value="13">Mfcc 13</option>
+               </select>
+            </label>
+         </form>
+      </div>
+      <div class="modal-footer">
+         <button class="btn-primary btn-mini" data-dismiss="modal"><i class="icon-ok"></i></button>
+      </div>
+   </div>
 </body>
 </html>

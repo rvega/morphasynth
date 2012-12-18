@@ -18,6 +18,11 @@ class MainWindow : public QMainWindow {
    public slots:
       void stop();
 
+   protected slots:
+      void print(QString message);
+      void htmlDidLoad();
+      void connectToJS();
+
    private:
       MainWindow(const MainWindow&);
       MainWindow& operator=(const MainWindow&);

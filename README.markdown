@@ -34,6 +34,7 @@ Interesting stuff in the code
 -----------------------------
 
 * How to build Pd externals easily with faust.
+* How to build Pd externals from scratch with C.
 * Write dsp/synthesis algorithms in Pd and embed them in a C++ application.
 * How to compile freely available externals for use with libpd.
 * Build HTML/javascript interfaces and embed them into a C++ application.

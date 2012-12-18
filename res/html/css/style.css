@@ -1,10 +1,92 @@
-body, html{
-   background-color: #000000;
+html{
+   height:100%;
 }
 
-h1{color:#AAA;}
+#options-button{
+   position:absolute;
+   right:4px;
+   bottom:24%;
+}
 
-#slider{
-   width:300px;
-   margin:10px;
+.modal{
+   width: 450px;
+   margin-left: -225px;
+}
+
+#main-container{
+   position:relative;
+   margin: 0px;
+   padding:0px;
+   /* height: 100%; */
+
+   /* Computer size */
+   height: 668px;
+   width: 488px;
+   border: 1px solid grey;
+
+   /* iPad size */
+   /* height: 1024px; */
+   /* width: 748px; */
+}
+
+#timbre-space{
+   height: 76.5%;
+}
+
+#piano-scroll{
+   height: 23.5%;
+   width: 100%;
+   overflow-y: hidden;
+   overflow-x: auto;
+}
+
+#piano{
+   height:100%;
+   width: 800%;
+}
+
+.octave{
+   position:relative;
+   height: 100%;
+   width: 8.8%;
+   float:left;
+   background: url(../img/piano.png) no-repeat center center;
+   /* -webkit-background-size: cover; */
+   background-size: 100% 100%;
+}
+
+.key{
+   float: left;
+}
+
+.white{
+   width: 14.28%;
+   height: 100%;
+}
+
+.white > span{
+   display:block;
+   margin-top: 242%;
+   margin-left:26%;
+}
+
+.blacks{
+   height: 66%;
+   width: 81%;
+   position: absolute;
+   left:9.7%;
+}
+
+.blacks > .key{
+   z-index: 2;
+   width: 11.7%;
+   height: 100%;
+   margin-right: 6%;
+}
+
+.blacks > .key.more-margin{
+   margin-right:23.5%;
+}
+.blacks > .key:last-child{
+   margin-right: 0px;
 }
