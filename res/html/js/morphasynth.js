@@ -1,39 +1,5 @@
 Morphasynth = {}
 
-// if(typeof Morphasynth.ContainerApp == "undefined"){
-//    /*
-//     * Mock class, simulates the C++ app that contains the webkit instance where this script runs
-//     * If ran within the C++ app, this object will be provided to us
-//     */ 
-//    Morphasynth.ContainerApp = function(){
-//       $('html').hide();
-//       this.getPoints = function(){
-//          var points = new Array();
-//          for(var i = 0; i<100; i++) {
-//             var point = {x: Math.random(), y:Math.random()}
-//             points.push(point);
-//          }
-//          return points;
-//       };
-// 
-//       this.print = function(message){
-//          console.log(message);
-//       }
-// 
-//       this.htmlDidLoad = function(){
-//          main();
-//       }
-//    }
-// 
-//    ContainerApp = new Morphasynth.ContainerApp();
-// }
-
-/*
- * Tell the container app that we're ready
- */
-$(document).ready(function(){
-   ContainerApp.htmlDidLoad();
-});
 
 /*
  * Manages the options
@@ -73,7 +39,6 @@ Morphasynth.Keyboard = function(){
       var key = $(event.target);
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
-      console.log(noteNumber);
    };
 }
 
@@ -81,14 +46,17 @@ Morphasynth.Keyboard = function(){
  * Manages the 2D space
  */
 Morphasynth.TimbreSpace = function(){
+   this.presets = null;
    this.canvas = null;
    this.height = 0;
    this.width = 0;
 
    this.init = function(){
-      self = this;
+      // Load presets
+      this.presets = JSON.parse(ContainerApp.getPresets());
 
       // Bind mouse events
+      self = this;
       $('#timbre-space').bind('doubleclick', function(event){
          if(event.which == 3){ // Right click
             self.rightDoubleClick.call(self);
@@ -97,7 +65,6 @@ Morphasynth.TimbreSpace = function(){
             self.leftDoubleClick.call(self);
          }
       });
-      
       $('#timbre-space').bind('click', function(event){
          if(event.which == 3){
             self.rightClick.call(self);
@@ -107,25 +74,22 @@ Morphasynth.TimbreSpace = function(){
          }
       });
 
-   
       // Create drawing surface
       var ts = $('#timbre-space');
       this.width = ts.width();
       this.height = ts.height();
       this.canvas = Raphael('timbre-space', ts.width(), ts.height());
-      console.log(this.canvas);
 
       // Draw the points
       this.drawPoints();
    };
 
    this.drawPoints = function(points){
-      var p, x, y;
-      var points = ContainerApp.getPoints();  
+      var point, x, y;
       for(var i=0; i<points.length; i++) {
-         p = points[i];
-         x = p.x * this.width;
-         y = p.y * this.height;
+         point = points[i];
+         x = point.x * this.width;
+         y = point.y * this.height;
          this.canvas.circle(x, y, 5);
       }
    };
@@ -147,13 +111,42 @@ Morphasynth.TimbreSpace = function(){
    }
 }
 
+/*
+ * Mock class, simulates the C++ app that contains the webkit instance where this script runs
+ * If ran within the C++ app, this object will be provided to us
+ */ 
+function createMockContainerApp(){
+   Morphasynth.ContainerApp = function(){
+      this.getPresets = function(){
+         var keys = ["osc1-amplitude", "osc1-waveform", "osc1-finetune", "lfo1-freq", "lfo1-waveform", "lfo1-to-amplitude", "lfo1-to-freq", "osc2-amplitude", "osc2-waveform", "osc2-finetune", "lfo2-freq", "lfo2-waveform", "lfo2-to-amplitude", "lfo2-to-freq", "osc3-amplitude", "osc3-waveform", "osc3-finetune", "lfo3-freq", "lfo3-waveform", "lfo3-to-amplitude", "lfo3-to-freq", "noise-amplitude", "lp-freq", "lp-resonance", "lp-keyfollow", "lp-contour", "lp-envelope-a", "lp-envelope-d", "lp-envelope-s", "lp-envelope-r", "lp-lfo-freq", "lp-lfo-waveform", "lp-lfo-amplitude", "hp-freq", "hp-resonance", "hp-keyfollow", "hp-contour", "hp-envelope-a", "hp-envelope-d", "hp-envelope-s", "hp-envelope-r", "hp-lfo-freq", "hp-lfo-waveform", "hp-lfo-amplitude", "envelope-a", "envelope-d", "envelope-s", "envelope-r", "mfcc-1", "mfcc-2", "mfcc-3", "mfcc-4", "mfcc-5", "mfcc-6", "mfcc-7", "mfcc-8", "mfcc-9", "mfcc-10", "mfcc-11", "mfcc-12", "mfcc-13"];
+
+         var presets = new Array();
+         for(var i = 0; i<50; i++) {
+            var preset = {};
+            for(var j = 0; j<keys.length; j++) {
+               preset[keys[j]] = Math.random();
+            }
+            presets.push(preset);
+         }
+         return JSON.stringify(presets);
+      };
+
+      this.print = function(message){
+         console.log(message);
+      }
+
+      this.htmlDidLoad = function(){
+         main();
+      }
+   }
+
+   ContainerApp = new Morphasynth.ContainerApp();
+}
 
 /*
  * Main
  */
 function main(){
-   ContainerApp.print("hello from js");
-
    Keyboard = new Morphasynth.Keyboard();
    Keyboard.init();
 
@@ -163,3 +156,14 @@ function main(){
    Options = new Morphasynth.Options();
    Options.init();
 }
+
+/*
+ * Tell the container app that we're ready
+ */
+$(document).ready(function(){
+   if(typeof ContainerApp == "undefined"){
+      createMockContainerApp();
+   }
+
+   ContainerApp.htmlDidLoad();
+});

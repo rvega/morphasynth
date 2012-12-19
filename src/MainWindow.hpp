@@ -20,8 +20,9 @@ class MainWindow : public QMainWindow {
 
    protected slots:
       void print(QString message);
-      void htmlDidLoad();
       void connectToJS();
+      void htmlDidLoad();
+      QString getPresets();
 
    private:
       MainWindow(const MainWindow&);

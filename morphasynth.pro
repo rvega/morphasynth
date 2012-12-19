@@ -9,7 +9,6 @@ QMAKE_CXXFLAGS += -O3 -std=c++0x
 # Input
 HEADERS += src/*.hpp
 SOURCES += src/*.cpp
-RESOURCES += res/resources.qrc
 
 # Output
 TARGET = ./bin/morphasynth
@@ -19,6 +18,12 @@ DEPENDPATH += .
 OBJECTS_DIR += ./obj
 RCC_DIR += ./obj
 MOC_DIR += ./obj
+
+# Copy reources
+res.path = bin/res
+res.files += res/html
+res.files += res/pd
+INSTALLS += res
 
 # Link with jack libraries
 LIBS += -ljack
@@ -68,7 +73,7 @@ LIBS += ./libs/libpd/libs/libpd.a
 
 # Run
 run.target = run
-run.commands = cd bin && ./morphasynth
+run.commands = make install && cd bin && ./morphasynth
 run.depends = $(TARGET)
 QMAKE_EXTRA_TARGETS += run
 

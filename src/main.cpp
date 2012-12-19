@@ -28,8 +28,8 @@ int main(int argv, char **args) {
    window.connect(&app, SIGNAL(aboutToQuit()), &window, SLOT(stop()));
    Audio audio;
 
-   window.start();
    audio.start();
+   window.start();
 
    return app.exec();
 }

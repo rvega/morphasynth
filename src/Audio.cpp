@@ -141,7 +141,7 @@ void Audio::initPd(){
    list2symbol_setup();
 
    libpd_init_audio(0, 1, sampleRate); // 0 inputs, 1 output
-   libpd_openfile("main_patch.pd", "../res/pd");
+   libpd_openfile("main_patch.pd", "res/pd");
 
    // send "dsp 1" message 
    libpd_start_message(1);
