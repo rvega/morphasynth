@@ -1,15 +1,15 @@
-#N canvas 103 406 419 178 10;
+#N canvas 246 354 484 215 10;
 #X obj -1184 -539 cnv 15 320 140 empty empty ~~MAGIC~~ 20 12 0 11 -260097
 -66577 0;
 #X obj -1090 -496 inlet;
 #X obj -1090 -431 outlet~;
-#X text -1146 -497 MIDI IN;
+#X text -1052 -498 MIDI IN;
 #X text -1157 -431 AUDIO OUT;
 #X obj -1090 -466 pd/synthesizer;
 #X obj -987 -423 pd/morpher;
 #X obj -987 -516 r which-mfcc-x;
 #X obj -968 -492 r which-mfcc-y;
-#N canvas 67 224 1277 571 parameters 0;
+#N canvas 185 228 1265 571 parameters 0;
 #X obj -1130 -543 cnv 15 200 135 empty empty OSC1 20 12 0 11 -233017
 -66577 0;
 #X text -1126 -488 WAVEFORM;
@@ -138,9 +138,29 @@
 #X obj -859 -515 iemmatrix 0.2;
 #X obj -949 -469 r xpos;
 #X obj -930 -446 r ypos;
+#N canvas 1 87 450 300 panic 0;
+#X obj 87 217 until;
+#X obj 110 161 t b b;
+#X obj 118 244 counter;
+#X msg 87 193 128;
+#X text 174 243 counts out 0 to 127 (all notes);
+#X obj 118 314 outlet;
+#X msg 118 278 \$1 0;
+#X obj 110 128 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 2;
+#X connect 2 0 6 0;
+#X connect 3 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X restore -1153 -496 pd panic;
+#X obj -1153 -518 inlet;
 #X connect 1 0 5 0;
 #X connect 5 0 2 0;
 #X connect 7 0 6 0;
 #X connect 8 0 6 1;
 #X connect 11 0 6 2;
 #X connect 12 0 6 3;
+#X connect 13 0 5 0;
+#X connect 14 0 13 0;

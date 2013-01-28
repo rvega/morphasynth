@@ -1,4 +1,4 @@
-#N canvas 383 126 833 653 10;
+#N canvas 18 81 1135 692 10;
 #X obj -177 33 cnv 15 160 140 empty empty DEBUG 20 12 0 10 -233017
 -66577 0;
 #X floatatom -169 74 7 0 0 0 - - -;
@@ -15,15 +15,13 @@
 -66577 0;
 #X obj -431 -196 cnv 15 450 40 empty empty SYNTH 20 12 0 11 -261682
 -66577 0;
-#X msg -277 -293 60;
-#X obj -378 -238 inlet;
-#X obj -277 -266 makenote 50 1000;
+#X obj -304 -257 inlet;
+#X obj -290 -310 makenote 50 1000;
 #X obj -169 -343 pd/keyboard;
 #X obj -269 -184 2.DSP;
-#X obj -277 -237 pack f f;
 #X obj -451 -397 cnv 15 1 1 empty empty MORPHASYNTH_v0.2 20 12 0 30
 -262144 -66577 0;
-#N canvas 190 408 672 290 presets 0;
+#N canvas 591 345 672 290 presets 1;
 #X obj 97 -22 r preset-load;
 #X obj 12 -22 r preset-save;
 #X obj 525 -25 r filename;
@@ -44,7 +42,7 @@
 #X restore -148 -66 pd presets;
 #X obj -177 -31 cnv 15 120 60 empty empty SYNTH_PARAMS 20 12 0 11 -203904
 -66577 0;
-#N canvas 0 54 1280 746 sliders 0;
+#N canvas 604 98 1265 718 sliders 1;
 #X obj -1120 -533 cnv 15 190 195 empty empty OSC1 20 12 0 10 -233017
 -66577 0;
 #X text -989 -417 WAVEFORM;
@@ -176,40 +174,21 @@
 -204786 -66577 0;
 #X text -413 -79 Drag to Morphasize!!!;
 #X obj -273 -46 nbx 2 14 1 13 0 0 which-mfcc-x empty MFCC-X 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj -222 -46 nbx 2 14 1 13 0 0 which-mfcc-y empty MFCC-Y 0 -8 0
-10 -262144 -1 -1 1 256;
-#N canvas 600 138 400 352 panic 0;
-#X obj 87 217 until;
-#X obj 110 161 t b b;
-#X obj 118 244 counter;
-#X obj 103 103 bng 44 250 50 0 empty empty PANIC! 50 22 0 10 -260097
--1 -1;
-#X msg 87 193 128;
-#X text 174 243 counts out 0 to 127 (all notes);
-#X obj 118 314 outlet;
-#X msg 118 278 \$1 0;
-#X connect 0 0 2 0;
-#X connect 1 0 4 0;
-#X connect 1 1 2 2;
-#X connect 2 0 7 0;
-#X connect 3 0 1 0;
-#X connect 4 0 0 0;
-#X connect 7 0 6 0;
-#X coords 0 -1 1 1 90 50 2 100 100;
-#X restore -414 -324 pd panic;
+10 -262144 -1 -1 4 256;
 #X obj -226 -142 output~;
 #X obj -288 -141 outlet~;
-#X obj -336 -266 notein;
-#X obj -336 -238 pack f f;
-#X obj -416 -18 gcanvas 200 200;
+#X obj -242 -258 notein;
+#X obj -242 -230 pack f f;
+#X obj -416 -20 gcanvas 200 200;
 #X obj -416 -43 r canvas;
 #X obj -320 187 clip 0 200;
 #X obj -416 188 clip 0 200;
 #X obj -416 208 s xpos;
 #X obj -320 209 s ypos;
 #X floatatom -223 204 5 0 0 0 - - -;
-#N canvas 1 83 862 716 paint 0;
+#N canvas 401 83 862 716 paint 0;
 #X obj 118 506 list split;
 #X obj 249 506 list split;
 #X obj 146 528 list split 1;
@@ -289,25 +268,34 @@
 #X connect 36 0 26 0;
 #X coords 0 716 1 715 180 19 0;
 #X restore -416 228 pd paint in gcanvas;
+#X obj -406 -293 bng 44 250 50 0 empty empty PANIC! 50 22 0 10 -260097
+-1 -1;
+#X text -265 -331 Single MIDI NOTE;
+#X obj -86 194 ctlin 1;
+#X obj -12 196 ctlin 2;
+#X floatatom -86 235 5 0 0 0 - - -;
+#X msg -290 -330 40;
+#X obj 150 -142 pd/scope;
 #X connect 4 0 1 0;
 #X connect 5 0 2 0;
 #X connect 6 0 3 0;
-#X connect 11 0 13 0;
-#X connect 12 0 15 0;
-#X connect 13 0 16 0;
-#X connect 13 1 16 1;
-#X connect 14 0 15 0;
-#X connect 15 0 26 1;
-#X connect 15 0 26 0;
-#X connect 15 0 27 0;
-#X connect 16 0 15 0;
-#X connect 25 0 15 0;
-#X connect 28 0 29 0;
-#X connect 28 1 29 1;
-#X connect 29 0 15 0;
-#X connect 30 0 33 0;
-#X connect 30 1 32 0;
-#X connect 30 2 36 0;
-#X connect 31 0 30 0;
-#X connect 32 0 35 0;
-#X connect 33 0 34 0;
+#X connect 11 0 14 1;
+#X connect 12 0 26 0;
+#X connect 12 1 26 1;
+#X connect 13 0 14 1;
+#X connect 14 0 23 1;
+#X connect 14 0 23 0;
+#X connect 14 0 24 0;
+#X connect 14 0 41 0;
+#X connect 25 0 26 0;
+#X connect 25 1 26 1;
+#X connect 26 0 14 1;
+#X connect 27 0 30 0;
+#X connect 27 1 29 0;
+#X connect 27 2 33 0;
+#X connect 28 0 27 0;
+#X connect 29 0 32 0;
+#X connect 30 0 31 0;
+#X connect 35 0 14 0;
+#X connect 37 0 39 0;
+#X connect 40 0 12 0;
