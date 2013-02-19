@@ -1,12 +1,14 @@
+/*
+ * Global namespace for the app
+ */
 Morphasynth = {}
-
 
 /*
  * Manages the options
  */
 Morphasynth.Options = function(){
-   this.x = 0;
-   this.y = 1;
+   this.x = 'envelope-a';
+   this.y = 'mfcc-1';
 
    this.init = function(){
       $('#select-x').val(0);
@@ -39,6 +41,9 @@ Morphasynth.Keyboard = function(){
       var key = $(event.target);
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
+
+      // Debug:
+      console.log("MIDI note on: " + noteNumber);
    };
 }
 
@@ -84,12 +89,14 @@ Morphasynth.TimbreSpace = function(){
       this.drawPoints();
    };
 
-   this.drawPoints = function(points){
-      var point, x, y;
-      for(var i=0; i<points.length; i++) {
-         point = points[i];
-         x = point.x * this.width;
-         y = point.y * this.height;
+   this.drawPoints = function(){
+      var preset, x, y, xDescriptor, yDescriptor;
+      for(var i=0; i<this.presets.length; i++) {
+         preset = this.presets[i];
+         xDescriptor = Options.x;
+         yDescriptor = Options.y;
+         x = preset[xDescriptor] * this.width;
+         y = preset[yDescriptor] * this.height;
          this.canvas.circle(x, y, 5);
       }
    };
@@ -150,11 +157,11 @@ function main(){
    Keyboard = new Morphasynth.Keyboard();
    Keyboard.init();
 
-   Space = new Morphasynth.TimbreSpace();
-   Space.init();
-
    Options = new Morphasynth.Options();
    Options.init();
+
+   Space = new Morphasynth.TimbreSpace();
+   Space.init();
 }
 
 /*
