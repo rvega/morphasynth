@@ -4,7 +4,7 @@
 *.o
 *.a
 *.pd_linux
-/obj/*
-/bin/*
+/wrappers/linux/obj/*
+/wrappers/linux/bin/*
 /Makefile
 /res/pd/sandbox
