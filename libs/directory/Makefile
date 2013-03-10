@@ -57,7 +57,7 @@ LIBRARY_VERSION = $(shell sed -n 's|^\#X text [0-9][0-9]* [0-9][0-9]* VERSION \(
 
 ALL_CFLAGS += -DPD -DVERSION='"$(LIBRARY_VERSION)"'
 
-PD_INCLUDE = $(PD_PATH)/include/pd
+PD_INCLUDE = $(PD_PATH)/include/pdextended
 # where to install the library, overridden below depending on platform
 prefix = ~
 libdir = $(prefix)
