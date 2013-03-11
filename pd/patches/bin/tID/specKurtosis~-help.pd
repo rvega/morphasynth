@@ -1,0 +1,73 @@
+#N canvas 214 185 908 572 10;
+#X obj 161 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 77 493 10 0 0 0 - - -;
+#X text 527 298 See timbreID helpfile:;
+#X obj 529 318 timbreID;
+#X text 208 263 Bang continuously;
+#X obj 187 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 399 125 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X obj 78 43 noise~;
+#X obj 77 460 specKurtosis~ 4096;
+#X obj 179 114 *~;
+#X obj 215 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 179 85 osc~ 880;
+#X obj 78 177 +~;
+#X text 184 221 Bang to output kurtosis;
+#X obj 1 -5 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -5 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 399 165 Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#N canvas 414 83 706 394 other-settings 0;
+#X obj 54 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 106 window_function \$1;
+#X msg 175 238 power_spectrum \$1;
+#X obj 175 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 54 315 outlet;
+#X text 52 49 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X text 316 238 Use power spectrum. (default: magnitude);
+#X msg 130 165 window 2048;
+#X text 128 144 Change window size;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 7 0 4 0;
+#X restore 250 380 pd other-settings;
+#X obj 187 286 metro 250;
+#X floatatom 135 40 5 0 0 2 Q - -;
+#X obj 135 59 * 10;
+#X obj 78 114 *~;
+#X obj 114 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 78 85 bp~ 1000 1;
+#X text 399 43 Spectral kurtosis measures the peakedness of a spectrum.
+The kurtosis of a single sinusoid will be extremely high \, while that
+of noise will be extremely low. Raise the Q on the band-passed noise
+to make its spectrum more and more peaked and see how kurtosis reflects
+the changes.;
+#X connect 0 0 8 0;
+#X connect 5 0 18 0;
+#X connect 7 0 23 0;
+#X connect 8 0 1 0;
+#X connect 9 0 12 1;
+#X connect 10 0 9 1;
+#X connect 11 0 9 0;
+#X connect 12 0 8 0;
+#X connect 17 0 8 0;
+#X connect 18 0 8 0;
+#X connect 19 0 20 0;
+#X connect 20 0 23 2;
+#X connect 21 0 12 0;
+#X connect 22 0 21 1;
+#X connect 23 0 21 0;

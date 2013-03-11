@@ -1,0 +1,69 @@
+#N canvas 347 101 742 746 10;
+#X msg 295 301 1;
+#X msg 327 301 0;
+#X obj 401 247 loadbang;
+#X obj 223 161 inlet~;
+#X obj 295 214 inlet;
+#X obj 292 612 s graph;
+#N canvas 202 86 952 647 graph 0;
+#X msg 98 553 \; graph const 0 \;;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array graph 470 float 0;
+#X coords 0 1 469 -1 700 500 1;
+#X restore 98 35 graph;
+#X restore 82 317 pd graph;
+#X obj 292 588 list prepend 0;
+#X text 363 516 This accumulates the list of feature \; data as it
+is banged out successively.;
+#X obj 223 666 outlet;
+#X text 38 28 Identifying timbre based on a single analysis snapshot
+taken after an attack is not the best approach for every situation.
+Since timbre varies over time \, it makes sense to have an analysis
+strategy that captures that information. Here \, 10 successive analysis
+frames result in 10 BFCC analyses spaced apart by 64 samples (about
+1.5ms). This works extremely well with some sound sets \, and is much
+more accurate than attempting to classify with a single analysis taken
+immediately after an attack.;
+#X obj 295 341 metro 1.45125;
+#X text 37 165 Connect an input signal \; to this subpatch in the \;
+parent window to try it \; out. The feature vector \; is graphed in
+real time \; in the graph subpatch \; below. Notice how \; consistent
+BFCCs are in \; terms of shape over all \; 10 frames.;
+#X obj 223 483 bfcc~ 1024 0.5;
+#X obj 327 439 f;
+#X obj 357 439 + 1;
+#X msg 356 410 0;
+#X obj 223 522 featureAccum 10 47 0;
+#X obj 295 363 t b b;
+#X obj 401 291 / 44.1;
+#X msg 401 270 64;
+#X text 440 334 Open the floodgate for metro \; and make sure to shut
+it off \; after 10 snapshots are taken. \; This creates 10 snapshots
+\; spaced 64 samples apart in time. \; Take fewer or more snapshots
+\; with different spacing based \; on your specific needs.;
+#X obj 2 1 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 2 1 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 356 370 select 10;
+#X text 294 196 Onset report from bonk~ or bark~;
+#X connect 0 0 11 0;
+#X connect 1 0 11 0;
+#X connect 2 0 20 0;
+#X connect 3 0 13 0;
+#X connect 4 0 0 0;
+#X connect 7 0 5 0;
+#X connect 11 0 18 0;
+#X connect 13 0 17 0;
+#X connect 14 0 15 0;
+#X connect 14 0 24 0;
+#X connect 15 0 14 1;
+#X connect 16 0 14 1;
+#X connect 17 0 7 0;
+#X connect 17 0 9 0;
+#X connect 18 0 13 0;
+#X connect 18 1 14 0;
+#X connect 19 0 11 1;
+#X connect 20 0 19 0;
+#X connect 24 0 16 0;
+#X connect 24 0 1 0;

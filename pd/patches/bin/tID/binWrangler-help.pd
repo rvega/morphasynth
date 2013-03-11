@@ -1,0 +1,72 @@
+#N canvas 434 79 797 662 10;
+#X msg 122 268 clear;
+#X msg 148 324 length 7;
+#X text 302 538 To clear memory \, send the "clear" message. Note that
+changing the expected list length with the "length" message automatically
+clears memory.;
+#X obj 50 165 bfcc~;
+#X obj 125 66 tgl 15 0 empty empty Analyze 17 7 0 12 -262144 -1 -1
+0 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array bw-graph 235 float 0;
+#X coords 0 1 234 -1 400 140 1;
+#X restore 304 67 graph;
+#X text 48 515 Also see:;
+#X obj 50 532 featureAccum;
+#X msg 138 294 num_frames 6;
+#X obj 50 452 s bw-graph;
+#X obj 50 429 list prepend 0;
+#X text 302 347 After the specified number of frames have been accumulated
+\, [binWrangler] outputs a list containing the columns of the database
+from top to bottom \, left to right \, and clears internal memory.
+Click the "Analyze" toggle at left to see this behavior (DSP must be
+on).;
+#X obj 73 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 79 207 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 79 227 spew \$1;
+#X obj 50 42 adc~;
+#X obj 125 96 metro 100;
+#X obj 125 117 t b b;
+#X obj 169 144 f;
+#X obj 199 144 + 1;
+#X msg 227 49 0;
+#X obj 227 29 select 4;
+#X text 302 493 Creation arguments are the number of frames to expect
+\, the length of the feature \, and a flag for "spew" mode.;
+#X text 302 245 [binWrangler] accumulates a database of lists sent
+to its inlet. The purpose of this object in the timbreID library is
+to take in several frames of a feature vector (like BFCCs) \, then
+output the time varying information ordered by bin number. The features
+in all frames must be of a common length N \, specified at creation
+time \, or with the "length" message. It's ok for length to be 1;
+#X text 302 424 If the optional "spew" mode is activated \, featureAccum
+outputs the total concatenated list each time it receives a new analysis
+frame. It acts as a sliding buffer for time-based feature capture.
+;
+#X obj 50 396 binWrangler 5 47 0;
+#X obj 1 -5 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -5 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 25 0;
+#X connect 1 0 25 0;
+#X connect 3 0 25 0;
+#X connect 4 0 16 0;
+#X connect 8 0 25 0;
+#X connect 10 0 9 0;
+#X connect 12 0 3 0;
+#X connect 13 0 14 0;
+#X connect 14 0 25 0;
+#X connect 15 0 3 0;
+#X connect 16 0 17 0;
+#X connect 17 0 3 0;
+#X connect 17 1 18 0;
+#X connect 18 0 19 0;
+#X connect 18 0 21 0;
+#X connect 19 0 18 1;
+#X connect 20 0 18 1;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;
+#X connect 25 0 10 0;

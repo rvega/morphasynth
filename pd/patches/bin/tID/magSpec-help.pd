@@ -1,0 +1,105 @@
+#N canvas 260 22 931 749 10;
+#X obj 48 300 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array waveform 1024 float 0;
+#X coords 0 1 1023 -1 200 140 1;
+#X restore 45 37 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array magSpec 513 float 0;
+#X coords 0 0.25 512 0 200 140 1;
+#X restore 311 37 graph;
+#X obj 48 662 list prepend 0;
+#X text 70 297 Bang to analyze the entire array.;
+#X text 101 369 Analyze a window starting at sample 44100 that is 1024
+samples long (samples 44100 - 45123). Window lengths that are not a
+power of 2 will result in zero-padded windows sized to the next largest
+power of two.;
+#N canvas 666 270 552 163 soundfile 0;
+#X obj 50 83 soundfiler;
+#X obj 50 24 loadbang;
+#X msg 50 58 read -skip 120000 testing.wav magSpec-sample;
+#X obj 185 100 table magSpec-sample 130000;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X restore 653 76 pd soundfile;
+#X msg 105 475 analyze \$1 1024;
+#N canvas 723 239 304 333 waveform 0;
+#X obj 46 61 inlet;
+#X obj 46 241 tabletool waveform;
+#X obj 46 82 t f f;
+#X obj 46 164 pack f f;
+#X obj 91 131 + 1024;
+#X msg 46 200 copy_range 0 magSpec-sample \$1 \$2;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 1 0;
+#X restore 653 128 pd waveform;
+#X obj 48 233 hsl 800 25 0 128000 0 0 scrub-bar empty Scrub-bar -2
+-8 0 12 -191407 -1 -1 0 1;
+#X obj 653 106 r scrub-bar;
+#X obj 105 453 r scrub-bar;
+#X obj 48 683 s magSpec;
+#X obj 616 458 magSpec~;
+#X msg 92 349 analyze 44100 1024;
+#X obj 1 -7 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -7 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#N canvas 390 114 846 638 other-settings 0;
+#X obj 54 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 106 window_function \$1;
+#X obj 110 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 110 166 normalize \$1;
+#X msg 150 218 set another-sample-array;
+#X msg 189 274 samplerate 48000;
+#X msg 246 382 max_window 65536;
+#X text 338 217 Read from a different array;
+#X msg 215 327 power_spectrum \$1;
+#X obj 215 309 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 385 376 Specify the largest power of 2 window size you want
+to allow. Default is 131072 (about 3 seconds at 44.1 kHz);
+#X obj 54 575 outlet;
+#X text 216 166 Normalize spectrum (default: ON);
+#X text 52 49 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X text 323 273 Specify your sample's sampling rate. (default: 44100)
+;
+#X text 356 327 Use power spectrum. (default: magnitude);
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 2 0 3 0;
+#X connect 3 0 11 0;
+#X connect 4 0 11 0;
+#X connect 5 0 11 0;
+#X connect 6 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X restore 150 518 pd other-settings;
+#X obj 172 625 list length;
+#X obj 172 647 change;
+#X obj 48 608 t l l;
+#X msg 172 670 \; magSpec resize \$1 \;;
+#X text 614 409 See the real-time version for more \; information on
+magnitude spectrum \; in general.;
+#X obj 48 586 magSpec magSpec-sample;
+#X text 247 579 Creation argument is the name of the sample array to
+read from;
+#X connect 0 0 23 0;
+#X connect 3 0 12 0;
+#X connect 7 0 23 0;
+#X connect 10 0 8 0;
+#X connect 11 0 7 0;
+#X connect 14 0 23 0;
+#X connect 17 0 23 0;
+#X connect 18 0 19 0;
+#X connect 19 0 21 0;
+#X connect 20 0 3 0;
+#X connect 20 1 18 0;
+#X connect 23 0 20 0;
