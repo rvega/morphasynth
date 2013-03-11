@@ -3,11 +3,12 @@ SOURCES = bark.c bark~.c barkSpec.c barkSpec~.c bfcc.c bfcc~.c binWrangler.c cep
 LIBRARY_NAME := $(shell basename `pwd`)
 
 # ****SUPPLY THE LOCATION OF PD SOURCE****
-pd_src = /Applications/Pd-0.42-6.app/Contents/Resources
+# pd_src = /Applications/Pd-0.42-6.app/Contents/Resources
+pd_src = /usr/include/pdextended
 
-objectsdir = $(pd_src)/extra
+objectsdir = ../../../pd/externals/bin
 
-CFLAGS = -DPD -I$(pd_src)/src -Wall -W -g
+CFLAGS = -DPD -I$(pd_src) -Wall -W -g
 LDFLAGS =
 LIBS =
 
@@ -46,6 +47,7 @@ endif
 
 CFLAGS += $(OPT_CFLAGS)
 
+.NOTPARALLEL: install
 
 .PHONY = install libdir_install single_install install-doc install-exec clean dist etags
 
@@ -74,7 +76,7 @@ install: libdir_install
 # actually there.  Those files are not optional, then need to be there.
 libdir_install: $(SOURCES:.c=.$(EXTENSION)) install-doc install-exec
 	install -d $(objectsdir)/$(LIBRARY_NAME)
-	install -m644 -p $(LIBRARY_NAME)-meta.pd $(objectsdir)/$(LIBRARY_NAME)
+	# install -m644 -p $(LIBRARY_NAME)-meta.pd $(objectsdir)/$(LIBRARY_NAME)
 	install -m644 -p $(SOURCES:.c=.$(EXTENSION)) $(objectsdir)/$(LIBRARY_NAME)
 
 # install library linked as single binary
@@ -84,11 +86,11 @@ single_install: $(LIBRARY_NAME) install-doc install-exec
 
 install-doc:
 	install -d $(objectsdir)/$(LIBRARY_NAME)
-#	install -m644 -p $(SOURCES:.c=-help.pd) $(objectsdir)/$(LIBRARY_NAME)
+	#	install -m644 -p $(SOURCES:.c=-help.pd) $(objectsdir)/$(LIBRARY_NAME)
 	install -m644 -p $(wildcard *.pd) $(objectsdir)/$(LIBRARY_NAME)
-	install -m644 -p README $(objectsdir)/$(LIBRARY_NAME)/README.txt
-	install -m644 -p VERSION $(objectsdir)/$(LIBRARY_NAME)/VERSION
-	install -m644 -p CHANGES $(objectsdir)/$(LIBRARY_NAME)/CHANGES.txt
+	# install -m644 -p README $(objectsdir)/$(LIBRARY_NAME)/README.txt
+	# install -m644 -p VERSION $(objectsdir)/$(LIBRARY_NAME)/VERSION
+	# install -m644 -p CHANGES $(objectsdir)/$(LIBRARY_NAME)/CHANGES.txt
 
 install-exec:
 	install -d $(objectsdir)/$(LIBRARY_NAME)
