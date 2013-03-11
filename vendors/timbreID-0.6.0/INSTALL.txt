@@ -1,0 +1,1 @@
+To install, just drop the tID directory into a directory of your choosing and type "make". In Pd's preferences, set your path to point to the tID directory.

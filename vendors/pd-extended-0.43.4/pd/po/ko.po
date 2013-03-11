@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <gnoownow10@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2013-01-01 08:39+0000\n"
+"Last-Translator: gnoownow10 <gnoownow10@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s 글꼴"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s 속성"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) 알 수 없는 명령어:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) 닫는 괄호 '}'가 없음:"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) 닫는 괄호 ']'가 없음: "
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) 미처리 오류:"
+
+msgid "(same as input device) ..............      "
+msgstr "(입력 장치와 같음 ... )"
+
+msgid "(use arrow keys for history)"
+msgstr "방향키로 이전 메시지를 불러올 수 있습니다"
+
+msgid "-----------output-range:-----------"
+msgstr "        출력 범위"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "        크기(픽셀)"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "      크기(픽셀) x (픽셀)"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "        깜빡하는 시간(ms) (ms)"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "        크기 (자릿 수) x (픽셀)"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "        잡히는 영역 (픽셀)"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "        보이는 영역(픽셀) x (픽셀)"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI 설정"
+
+msgid "About Pd"
+msgstr "Pd는?"
+
+msgid "Add new library"
+msgstr "라이브러리 추가"
+
+msgid "Appearance on parent patch"
+msgstr "부모에게 보이기"
+
+msgid "Apply"
+msgstr "적용"
+
+msgid "Array"
+msgstr "배열"
+
+msgid "Array Properties"
+msgstr "배열 속성"
+
+msgid "Atom Box Properties"
+msgstr "단위 데이터 박스 속성"
+
+msgid "Audio Settings"
+msgstr "오디오 설정"
+
+msgid "Audio Settings..."
+msgstr "오디오 설정 ..."
+
+msgid "Autopatch"
+msgstr "자동 연결"
+
+msgid "Autotips"
+msgstr "팁 보여주기"
+
+msgid "Background"
+msgstr "배경"
+
+msgid "Background color"
+msgstr "배경 색상"
+
+msgid "Bang"
+msgstr "박치기"
+
+msgid "Bezier curve"
+msgstr "베지어 곡선으로 잇기"
+
+msgid "Block size:"
+msgstr "블록 크기"
+
+msgid "Bottom"
+msgstr "아래에"
+
+msgid "Bring All to Front"
+msgstr "모두 앞으로 불러오기"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "GUI 설정 파일을 읽을 수 없습니다."
+
+msgid "Canvas"
+msgstr "캔버스"
+
+msgid "Canvas Properties"
+msgstr "캔버스 속성"
+
+msgid "Channels:"
+msgstr "채널:"
+
+msgid "Clear Console"
+msgstr "콘솔 비우기"
+
+msgid "Clear Menu"
+msgstr "메뉴 비우기"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Close this window?"
+msgstr "진짜로 닫겠습니까??"
+
+msgid "Colors"
+msgstr "색상"
+
+msgid "Comment"
+msgstr "주석"
+
+msgid "Compose color"
+msgstr "색상 고르기"
+
+msgid "Configuring Info.plist..."
+msgstr "Info.plist 설정 중 ..."
+
+msgid "Copy"
+msgstr "복사"
+
+msgid "Copying current patch..."
+msgstr "현재 패치 복사 중 ..."
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "%s를 '%s'에서 찾을 수 없습니다"
+
+msgid "Cut"
+msgstr "잘라내기"
+
+msgid "DSP"
+msgstr "오디오 신호 처리"
+
+msgid "DSP Off"
+msgstr "오디오 신호 처리 중단"
+
+msgid "DSP On"
+msgstr "오디오 신호 처리 시작"
+
+msgid "Data Properties"
+msgstr "자료 속성"
+
+msgid "Defeat real-time scheduling"
+msgstr "실시간 스케줄링 중단시키기"
+
+msgid "Delay (msec):"
+msgstr "지연시간(msec)"
+
+msgid "Delete array"
+msgstr "배열 지우기"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "'%s'를 이대로 저장하지 말까요?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "'%s'를 이대로 저장할까요?"
+
+msgid "Draw as:"
+msgstr "그래프 모양"
+
+msgid "Duplicate"
+msgstr "복제"
+
+msgid "Edit"
+msgstr "E)편집"
+
+msgid "Edit Mode"
+msgstr "편집 모드"
+
+msgid "Edit library"
+msgstr "라이브러리 편집"
+
+msgid "File"
+msgstr "F)파일"
+
+msgid "Find"
+msgstr "찾기"
+
+msgid "Find Again"
+msgstr "또 찾기"
+
+msgid "Find Last Error"
+msgstr "최근 오류"
+
+msgid "Find..."
+msgstr "찾기..."
+
+msgid "Font"
+msgstr "글꼴"
+
+msgid "Font Size"
+msgstr "글자 크기"
+
+msgid "Foreground color"
+msgstr "전경 색상"
+
+msgid "Front"
+msgstr "전경"
+
+msgid "Graph"
+msgstr "그래프"
+
+msgid "Graph-On-Parent"
+msgstr "그래프로 엎히기"
+
+msgid "Help"
+msgstr "도움말"
+
+msgid "Help Browser"
+msgstr "도움말 탐색기"
+
+msgid "Hide object name and arguments"
+msgstr "객체 이름과 인수를 숨기기"
+
+msgid "Hradio"
+msgstr "가로 라디오 버튼"
+
+msgid "Hslider"
+msgstr "가로 슬라이더"
+
+msgid "IN"
+msgstr "입력"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "%s를 무시함. Pd 파일이 아닌듯. "
+
+msgid "In Ports:"
+msgstr "들어오는 포트"
+
+msgid "Init"
+msgstr "저장"
+
+msgid "Input device 1:"
+msgstr "입력 장치 1:"
+
+msgid "Input device 2:"
+msgstr "입력 장치2:"
+
+msgid "Input device 3:"
+msgstr "입력 장치 3:"
+
+msgid "Input device 4:"
+msgstr "입력 장치 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Jack이 실행되고 있지 않아 Pd 확장판을 Jack에 연결할 수 없습니다."
+
+msgid "Jack not installed!"
+msgstr "Jack이 설치되지 않았습니다!"
+
+msgid "Jack not running!"
+msgstr "Jack이 실행 중이 아닙니다!"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX가 제대로 설치되지 않았습니다. Pd-확장판은 JackOSX 없이 Jack을 사용할 수 없습니다."
+
+msgid "Jump on click"
+msgstr "클릭으로 조절 가능"
+
+msgid "Label"
+msgstr "라벨"
+
+msgid "Label color"
+msgstr "라벨 색상"
+
+msgid "Last graph"
+msgstr "최근 그래프"
+
+msgid "Left   "
+msgstr "왼쪽에"
+
+msgid "Limits"
+msgstr "한계치"
+
+msgid "Load Meter"
+msgstr "CPU 부하량 측정기"
+
+msgid "Log:"
+msgstr "로그: "
+
+msgid "Lower:"
+msgstr "최소"
+
+msgid "MIDI Settings"
+msgstr "MIDI 설정"
+
+msgid "MIDI Settings..."
+msgstr "MIDI 설정 ..."
+
+msgid "Magic Glass"
+msgstr "투시경"
+
+msgid "Make app from folder..."
+msgstr "폴더에서 어플리케이션 만들기"
+
+msgid "Make app from patch..."
+msgstr "패치를 어플리케이션으로 만들기"
+
+msgid "Margin:"
+msgstr "여백: "
+
+msgid "Match whole word only"
+msgstr "단어 전체가 일치하는 경우만 찾기"
+
+msgid "Media"
+msgstr "M)장치"
+
+msgid "Message"
+msgstr "메시지 상자"
+
+msgid "Message..."
+msgstr "메시지 보내기"
+
+msgid "Messages"
+msgstr "수신/발신"
+
+msgid "Minimize"
+msgstr "최소화"
+
+msgid "Name:"
+msgstr "이름:"
+
+msgid "New"
+msgstr "새 파일"
+
+msgid "New graph"
+msgstr "새 그래프"
+
+msgid "Next Window"
+msgstr "다음 창"
+
+msgid "No init"
+msgstr "저장 안함"
+
+msgid "Number"
+msgstr "숫자"
+
+msgid "Number2"
+msgstr "화려한 숫자 박스"
+
+msgid "OK"
+msgstr "확인"
+
+msgid "OK (Ctrl t)"
+msgstr "확인(Ctrl + t)"
+
+msgid "OUT"
+msgstr "출력"
+
+msgid "Object"
+msgstr "객체"
+
+msgid "Open"
+msgstr "열기"
+
+msgid "Open List View..."
+msgstr "값 목록 ..."
+
+msgid "Open Recent"
+msgstr "최근 작업"
+
+msgid "Out Ports:"
+msgstr "내보내는 포트"
+
+msgid "Output device 1:"
+msgstr "출력 장치 1:"
+
+msgid "Output device 2:"
+msgstr "출력 장치 2:"
+
+msgid "Output device 3:"
+msgstr "출력 장치 3:"
+
+msgid "Output device 4:"
+msgstr "출력 장치 4:"
+
+msgid "Parent Window"
+msgstr "부모 창"
+
+msgid "Paste"
+msgstr "붙여넣기"
+
+msgid "Pd Help Browser..."
+msgstr "Pd 도움말 탐색기 ..."
+
+msgid "Pd libraries to load on startup"
+msgstr "처음에 적재할 라이브러리"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "객체, 도움말, 글꼴, 기타 파일을 찾을 경로"
+
+msgid "Pd window"
+msgstr "Pd 창"
+
+msgid "Pd-extended"
+msgstr "Pd-확장판 "
+
+msgid "Perf Mode"
+msgstr "연주 모드"
+
+msgid "Points"
+msgstr "점으로 찍기"
+
+msgid "Polygon"
+msgstr "직선으로 잇기"
+
+msgid "Preferences"
+msgstr "선택사항"
+
+msgid "Previous Window"
+msgstr "이전 창"
+
+msgid "Print..."
+msgstr "인쇄 ..."
+
+msgid "Properties"
+msgstr "속성"
+
+msgid "Put"
+msgstr "P)넣기"
+
+msgid "Put array into:"
+msgstr "배열을 넣을 곳"
+
+msgid "Quit"
+msgstr "나가기"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Pd-확장판을 종료한 뒤 Jack을 실행하고 다시 시도해보세요"
+
+msgid "Range and size"
+msgstr "범위와 크기"
+
+msgid "Real-time scheduling"
+msgstr "실시간 스케줄링"
+
+msgid "Receive symbol:"
+msgstr "여기에서 수신"
+
+msgid "Redo"
+msgstr "재실행"
+
+msgid "Redo clear"
+msgstr "도로 비우기"
+
+msgid "Redo connect"
+msgstr "도로 연결"
+
+msgid "Redo cut"
+msgstr "도로 잘라내기"
+
+msgid "Redo disconnect"
+msgstr "도로 끊기"
+
+msgid "Redo duplicate"
+msgstr "도로 복제하기"
+
+msgid "Redo motion"
+msgstr "도로 옮기기"
+
+msgid "Redo paste"
+msgstr "도로 붙여넣기"
+
+msgid "Redo typing"
+msgstr "도로 입력"
+
+msgid "Report a bug"
+msgstr "버그 신고"
+
+msgid "Reset to Defaults"
+msgstr "기본값으로 되돌리기"
+
+msgid "Right"
+msgstr "오른쪽에"
+
+msgid "Sample rate:"
+msgstr "샘플링 속도"
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Save As..."
+msgstr "다른 이름으로 저장 ..."
+
+msgid "Save application to..."
+msgstr "어플리케이션으로 저장하기 ..."
+
+msgid "Save contents"
+msgstr "내용 저장하기"
+
+msgid "Scale"
+msgstr "축적"
+
+msgid "Search in"
+msgstr "찾을 곳: "
+
+msgid "Select All"
+msgstr "모두 선택"
+
+msgid "Select name for app to build...\n"
+msgstr "어플리케이션 이름을 선택하세요 ...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "보내기(Ctrl + s)"
+
+msgid "Send a Pd message"
+msgstr "Pd 메시지 보내기"
+
+msgid "Send symbol:"
+msgstr "이곳으로 발신"
+
+msgid "Setting embedded preferences..."
+msgstr "내장된 선택 사항 설정 중 ..."
+
+msgid "Setting patch name..."
+msgstr "패치 이름 설정 중 ..."
+
+msgid "Size:"
+msgstr "크기:"
+
+msgid "Start Here!"
+msgstr "뭐가 뭔지 모르겠다면 여기로!"
+
+msgid "Startup flags:"
+msgstr "시작 플래그"
+
+msgid "Steady on click"
+msgstr "드래그로만 조절 가능"
+
+msgid "Stretch"
+msgstr "늘이기"
+
+msgid "Symbol"
+msgstr "문자"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "오디오 및 MIDI 점검"
+
+msgid "Test label"
+msgstr "라벨 견본"
+
+msgid "Tidy Up"
+msgstr "정돈"
+
+msgid "Toggle"
+msgstr "토글"
+
+msgid "Top"
+msgstr "위에"
+
+msgid "Undo"
+msgstr "실행취소"
+
+msgid "Undo clear"
+msgstr "비우기 취소"
+
+msgid "Undo connect"
+msgstr "연결 취소"
+
+msgid "Undo cut"
+msgstr "잘라내기 취소"
+
+msgid "Undo disconnect"
+msgstr "끊기 취소"
+
+msgid "Undo duplicate"
+msgstr "복제 취소"
+
+msgid "Undo motion"
+msgstr "옮기기 취소"
+
+msgid "Undo paste"
+msgstr "붙여넣기 취소"
+
+msgid "Undo typing"
+msgstr "입력 취소"
+
+msgid "Upper:"
+msgstr "최대"
+
+msgid "Use callbacks"
+msgstr "콜백(callback) 사용하기"
+
+msgid "Use multiple ALSA devices"
+msgstr "여러 ALSA 장치를 쓰기"
+
+msgid "Use multiple devices"
+msgstr "여러 장치 쓰기:"
+
+msgid "Use standard extensions"
+msgstr "표준 경로를 사용합니다"
+
+msgid "VU Meter"
+msgstr "음량계"
+
+msgid "Verbose"
+msgstr "자세히"
+
+msgid "Vradio"
+msgstr "세로 라디오 버튼"
+
+msgid "Vslider"
+msgstr "세로 슬라이더"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "경고: pdtk_canvas_dialog에서 알 수 없는 graphme 플래그를 받았습니다"
+
+msgid "Width:"
+msgstr "너비"
+
+msgid "Window"
+msgstr "W)창"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr "Jack을 다운로드 받을 수 있는 JackOSX.com으로 들어가보시겠습니까?"
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr "JackPilot을 열어서 Jack을 시작하겠습니까?"
+
+msgid "X and Y"
+msgstr "가로 세로"
+
+msgid "X offset"
+msgstr "오른쪽으로 밀기"
+
+msgid "X only"
+msgstr "가로만"
+
+msgid "X range, from"
+msgstr "X의 범위, 여기부터:"
+
+msgid "X units per pixel:"
+msgstr "픽셀 당 X 단위 수"
+
+msgid "Y offset"
+msgstr "세로로 밀기"
+
+msgid "Y only"
+msgstr "세로만"
+
+msgid "Y range, from"
+msgstr "Y의 범위, 여기부터:"
+
+msgid "Y units per pixel:"
+msgstr "픽셀 당 Y 단위 수"
+
+msgid "Zoom"
+msgstr "확대/축소"
+
+msgid "all"
+msgstr "모두"
+
+msgid "audio I/O error"
+msgstr "오디오 입출력 오류"
+
+msgid "bottom:"
+msgstr "하:"
+
+msgid "debug"
+msgstr "디버그"
+
+msgid "error"
+msgstr "오류"
+
+msgid "fatal"
+msgstr "치명적 오류"
+
+msgid "for:"
+msgstr "검색어: "
+
+msgid "height:"
+msgstr "높이: "
+
+msgid "hold:"
+msgstr "켜지는 시간"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "끼어들 시 꺼지는 시간"
+
+msgid "left:"
+msgstr "좌:"
+
+msgid "lin"
+msgstr "선형"
+
+msgid "log"
+msgstr "로그"
+
+msgid "log-height:"
+msgstr "로그 높이"
+
+msgid "max:"
+msgstr "최대 값:"
+
+msgid "min:"
+msgstr "최소 값:"
+
+msgid "normal"
+msgstr "정상"
+
+msgid "really quit?"
+msgstr "진짜로 나가겠습니까?"
+
+msgid "right:"
+msgstr "우:"
+
+msgid "size:"
+msgstr "크기:"
+
+msgid "to"
+msgstr "여기까지:"
+
+msgid "top:"
+msgstr "상:"
+
+msgid "value:"
+msgstr "깂: "
+
+msgid "width:"
+msgstr "너비: "

@@ -1,0 +1,67 @@
+#N canvas 278 130 873 515 10;
+#X obj 148 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 94 413 10 0 0 0 - - -;
+#X text 499 369 See timbreID helpfile:;
+#X obj 501 389 timbreID;
+#X obj 42 78 *~;
+#X obj 71 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 107 78 *~;
+#X obj 136 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 42 47 noise~;
+#X obj 107 47 osc~ 440;
+#X obj 94 377 specRolloff~ 1024 0.85;
+#X msg 194 218 concentration 0.9;
+#X text 193 200 Set concentration.;
+#X obj 93 134 +~;
+#X text 400 182 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X text 400 222 Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#X obj 1 -5 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -5 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#N canvas 415 84 706 394 other-settings 0;
+#X obj 54 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 106 window_function \$1;
+#X msg 173 225 power_spectrum \$1;
+#X obj 173 207 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 54 315 outlet;
+#X text 52 49 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X text 314 225 Use power spectrum. (default: magnitude);
+#X msg 130 165 window 2048;
+#X text 128 144 Change window size;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 7 0 4 0;
+#X restore 230 294 pd other-settings;
+#X text 145 153 Bang to output rolloff;
+#X text 400 42 Spectral Rolloff is the frequency below which a certain
+amount of total spectral energy is concentrated. The default concentration
+is 0.85 \, but you can change this with the concentration message below.
+Keep in mind that roll-off reports the frequency associated with the
+spectral bin in question. Bin frequency resolution depends on window
+size (N) and sampling rate (SR) \, and all bin frequencies will be
+multiples of SR/N. The rolloff for the single 440 Hz sinusoid at left
+is actually 473.73 Hz when N=1024 and SR=44100.;
+#X connect 0 0 10 0;
+#X connect 4 0 13 0;
+#X connect 5 0 4 1;
+#X connect 6 0 13 1;
+#X connect 7 0 6 1;
+#X connect 8 0 4 0;
+#X connect 9 0 6 0;
+#X connect 10 0 1 0;
+#X connect 11 0 10 0;
+#X connect 13 0 10 0;
+#X connect 18 0 10 0;

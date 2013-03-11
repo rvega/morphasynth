@@ -1,0 +1,29 @@
+Source: pd-extended
+Version: 0.43.1~git1-1
+Section: sound
+Priority: optional
+Maintainer: Hans-Christoph Steiner <hans@eds.org>
+Homepage: http://puredata.info
+Package: pd-extended
+Architecture: i386
+Depends: xterm | x-terminal-emulator, ttf-dejavu-core, tk8.5, lua5.1
+Provides: pd
+Recommends: xdg-utils, puredata-dev, puredata-utils, pulseaudio-utils, x-ttcidfont-conf, tcllib
+Conflicts: pdextended, cyclist, puredata (<< 0.43)
+Replaces: pdextended, cyclist
+Description: Pure Data with patches and a large collection of externals
+ Pd (aka Pure Data) is a real-time graphical programming environment for
+ audio, video, and graphical processing. It is the third major branch of the
+ family of patcher programming languages known as Max (Max/FTS, ISPW Max,
+ Max/MSP, jMax, etc.) originally developed by Miller Puckette and company at
+ IRCAM. The core of Pd is written and maintained by Miller Puckette and
+ includes the work of many developers, making the whole package very much a
+ community effort.
+ .
+ Pd was created to explore ideas of how to further refine the Max paradigm
+ with the core ideas of allowing data to be treated in a more open-ended way
+ and opening it up to applications outside of audio and MIDI, such as graphics
+ and video.
+ .
+ This distribution of Pd includes a wide array of libraries that allow
+ you to work with HIDs, video, OpenGL 3D graphics, and more.

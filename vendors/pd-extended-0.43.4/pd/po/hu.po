@@ -1,0 +1,872 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <muranyia@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-22 23:34+0000\n"
+"Last-Translator: muranyia <muranyia@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/puredata/language/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s betűkészlet"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s tulajdonságai"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s kész!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' már be van töltve, %s mellőzve"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) HIBÁS PARANCSNÉV:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) HIÁNYZÓ ZÁRÓJEL '}':"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) HIÁNYZÓ ZÁRÓJEL ']':"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) KEZELETLEN HIBA:"
+
+msgid "(same as input device) ..............      "
+msgstr "(ugyanaz mint a bemeneti eszköz) ..............      "
+
+msgid "(use arrow keys for history)"
+msgstr "(előzmények a nyíl billentyűkkel érhetőek el)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------kimeneti-tartomány:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------kiterjedés(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------kiterjedés(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------villanás-idő(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------kiterjedés(számjegy)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------kijelölhető_kiterjedés(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------látható-terület(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI beállítások"
+
+msgid "About Pd"
+msgstr "A Pd-ről"
+
+msgid "Add new library"
+msgstr "Új könyvtár hozzáadása"
+
+msgid "Appearance on parent patch"
+msgstr "Megjelenés a szülő patch-en"
+
+msgid "Apply"
+msgstr "Alkalmaz"
+
+msgid "Array"
+msgstr "Tömb"
+
+msgid "Array Properties"
+msgstr "Tömb tulajdonságai"
+
+msgid "Associated Files"
+msgstr "Társított fájlok"
+
+msgid "Atom Box Properties"
+msgstr "Atom Box tulajdonságai"
+
+msgid "Audio Settings"
+msgstr "Hang beállítások"
+
+msgid "Audio Settings..."
+msgstr "Hang beállítások..."
+
+msgid "Autopatch"
+msgstr "Önműködő kábelezés"
+
+msgid "Autotips"
+msgstr "Cimkék"
+
+msgid "Background"
+msgstr "Háttér"
+
+msgid "Background color"
+msgstr "Háttérszín"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Bezier görbe"
+
+msgid "Block size:"
+msgstr "Blokk méret:"
+
+msgid "Bottom"
+msgstr "Lent"
+
+msgid "Bring All to Front"
+msgstr "Mindent előtérbe hoz"
+
+msgid "Cancel"
+msgstr "Mégsem"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Nem sikerül a GUI beállításokat olvasni:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Nem sikerül a plugin mappát olvasni: '%s'"
+
+msgid "Canvas"
+msgstr "Canvas"
+
+msgid "Canvas Properties"
+msgstr "Canvas tulajdonságai"
+
+msgid "Channels:"
+msgstr "Csatornák:"
+
+msgid "Clear Console"
+msgstr "Konzolt ürít"
+
+msgid "Clear Menu"
+msgstr "Menüt ürít"
+
+msgid "Close"
+msgstr "Bezár"
+
+msgid "Close this window?"
+msgstr "Bezárja ezt az ablakot?"
+
+msgid "Colors"
+msgstr "Színek"
+
+msgid "Comment"
+msgstr "Megjegyzés"
+
+msgid "Compose color"
+msgstr "Színkeverés"
+
+msgid "Configuring Info.plist..."
+msgstr "Info.plist beállítása..."
+
+msgid "Copy"
+msgstr "Másol"
+
+msgid "Copying current patch..."
+msgstr "Az aktuális patch másolása..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr "Nem sikerült a regisztrációs fájlt feldolgozni: '%s'"
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Nem található '%s' itt: %s"
+
+msgid "Cut"
+msgstr "Kivág"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP ki"
+
+msgid "DSP On"
+msgstr "DSP be"
+
+msgid "Data Properties"
+msgstr "Adat tulajdonságai"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Alapértelmezett betűtípus: %s"
+
+msgid "Defeat real-time scheduling"
+msgstr "Valós idejű ütemezés ki"
+
+msgid "Delay (msec):"
+msgstr "Késés (ms):"
+
+msgid "Delete array"
+msgstr "Tömböt töröl"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "Beállítás fájl törlése: %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Elveti '%s' változtatásait?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "El akarja menteni '%s' változásait?"
+
+msgid "Draw as:"
+msgstr "Megjelenítés:"
+
+msgid "Duplicate"
+msgstr "Duplikál"
+
+msgid "Edit"
+msgstr "Szerkeszt"
+
+msgid "Edit Mode"
+msgstr "Szerkesztő üzemmód"
+
+msgid "Edit library"
+msgstr "Könyvtár szerkesztése"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "NEM SIKERÜLT BETÖLTENI: %s"
+
+msgid "File"
+msgstr "Fájl"
+
+msgid "Find"
+msgstr "Keres"
+
+msgid "Find Again"
+msgstr "Újra keres"
+
+msgid "Find Last Error"
+msgstr "Legutóbbi hiba helye"
+
+msgid "Find..."
+msgstr "Keres..."
+
+msgid "Font"
+msgstr "Betű"
+
+msgid "Font Size"
+msgstr "Betűméret"
+
+msgid "Foreground color"
+msgstr "Szín"
+
+msgid "Front"
+msgstr "Előtér"
+
+msgid "Graph"
+msgstr "Gráf"
+
+msgid "Graph-On-Parent"
+msgstr "Megjelenítés a szülőn (GOP)"
+
+msgid "Help"
+msgstr "Súgó"
+
+msgid "Help Browser"
+msgstr "Súgó böngésző"
+
+msgid "Hide object name and arguments"
+msgstr "Objektumnév és paraméterek elrejtése"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hslider"
+
+msgid "IN"
+msgstr "BE"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Kihagyva '%s': nem tűnik Pd fájlnak"
+
+msgid "In Ports:"
+msgstr "Bejövő portok:"
+
+msgid "Init"
+msgstr "Kezdőérték"
+
+msgid "Input device 1:"
+msgstr "1. bemeneti eszköz:"
+
+msgid "Input device 2:"
+msgstr "2. bemeneti eszköz:"
+
+msgid "Input device 3:"
+msgstr "3. bemeneti eszköz:"
+
+msgid "Input device 4:"
+msgstr "4. bemeneti eszköz:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Úgy tűnik, nem fut a Jack, így a Pd-extended nem tud hozzá csatlakozni."
+
+msgid "Jack not installed!"
+msgstr "A Jack nincs telepítve!"
+
+msgid "Jack not running!"
+msgstr "A Jack nem fut!"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "A JackOSX nincs megfelelően telepítve, nélküle a Pd-extended nem tudja a Jacket használni."
+
+msgid "Jump on click"
+msgstr "Kattintásra ugorjon"
+
+msgid "Label"
+msgstr "Címke"
+
+msgid "Label color"
+msgstr "Címkeszín"
+
+msgid "Last graph"
+msgstr "Legutóbbi gráf"
+
+msgid "Left   "
+msgstr "Bal"
+
+msgid "Limits"
+msgstr "Korlátok"
+
+msgid "Load Meter"
+msgstr "Terhelésmérő"
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Plugin betöltése: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Fordítások betöltése: %s"
+
+msgid "Log:"
+msgstr "Napló:"
+
+msgid "Lower:"
+msgstr "Alsó:"
+
+msgid "MIDI Settings"
+msgstr "MIDI beállítások"
+
+msgid "MIDI Settings..."
+msgstr "MIDI beállítások..."
+
+msgid "Magic Glass"
+msgstr "Varázsszemüveg"
+
+msgid "Make app from folder..."
+msgstr "App készítése mappából..."
+
+msgid "Make app from patch..."
+msgstr "App készítése patch-ből..."
+
+msgid "Making App"
+msgstr "App készítése"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "App készítése itt: %s"
+
+msgid "Margin:"
+msgstr "Margó:"
+
+msgid "Match whole word only"
+msgstr "Csak egész szavas egyezés"
+
+msgid "Max Binary Files"
+msgstr "Max bináris fájlok"
+
+msgid "Max Help Files"
+msgstr "Max súgó fájlok"
+
+msgid "Max Patch Files"
+msgstr "Max patch fájlok"
+
+msgid "Max Text Files"
+msgstr "Max szöveg fájlok"
+
+msgid "Media"
+msgstr "Média"
+
+msgid "Message"
+msgstr "Üzenet"
+
+msgid "Message..."
+msgstr "Üzenet..."
+
+msgid "Messages"
+msgstr "Üzenetek"
+
+msgid "Minimize"
+msgstr "Kicsinyít"
+
+msgid "Name:"
+msgstr "Név:"
+
+msgid "New"
+msgstr "Új"
+
+msgid "New graph"
+msgstr "Új gráf"
+
+msgid "Next Window"
+msgstr "Következő ablak"
+
+msgid "No init"
+msgstr "Nincs kezdőérték"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
+
+msgid "Number"
+msgstr "Szám"
+
+msgid "Number2"
+msgstr "Szám2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr "KI"
+
+msgid "Object"
+msgstr "Objektum"
+
+msgid "Open"
+msgstr "Megnyit"
+
+msgid "Open List View..."
+msgstr "Lista nézet megnyitása..."
+
+msgid "Open Recent"
+msgstr "Legutóbbi fájlok"
+
+msgid "Out Ports:"
+msgstr "Kimenő portok:"
+
+msgid "Output device 1:"
+msgstr "1. kimeneti eszköz:"
+
+msgid "Output device 2:"
+msgstr "2. kimeneti eszköz:"
+
+msgid "Output device 3:"
+msgstr "3. kimeneti eszköz:"
+
+msgid "Output device 4:"
+msgstr "4. kimeneti eszköz:"
+
+msgid "Parent Window"
+msgstr "Szülő ablak"
+
+msgid "Paste"
+msgstr "Beilleszt"
+
+msgid "Pd Files"
+msgstr "Pd fájlok"
+
+msgid "Pd Help Browser..."
+msgstr "Pd súgó böngésző..."
+
+msgid "Pd libraries to load on startup"
+msgstr "A Pd indításakor betöltendő könyvtárak"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "A Pd keresési útvonala objektumokhoz, a súgóhoz, fontokhoz, és más fájlokhoz"
+
+msgid "Pd window"
+msgstr "Pd ablak"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Futtató üzemmód"
+
+msgid "Points"
+msgstr "Pontok"
+
+msgid "Polygon"
+msgstr "Sokszög"
+
+msgid "Preferences"
+msgstr "Beállítások"
+
+msgid "Previous Window"
+msgstr "Előző ablak"
+
+msgid "Print..."
+msgstr "Nyomtat..."
+
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+msgid "Put"
+msgstr "Új"
+
+msgid "Put array into:"
+msgstr "Tömb helye:"
+
+msgid "Quit"
+msgstr "Kilép"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Lépj ki a Pd-extendedből, indítsd el a Jacket, és utána próbáld újra."
+
+msgid "Range and size"
+msgstr "Tartomány és méret"
+
+msgid "Real-time scheduling"
+msgstr "Valós idejű ütemezés"
+
+msgid "Receive symbol:"
+msgstr "Fogadott szimbólum:"
+
+msgid "Redo"
+msgstr "Mégis!"
+
+msgid "Redo clear"
+msgstr "Mégis töröl"
+
+msgid "Redo connect"
+msgstr "Mégis csatlakoztat"
+
+msgid "Redo cut"
+msgstr "Mégis kivág"
+
+msgid "Redo disconnect"
+msgstr "Mégis törli a csatlakozást"
+
+msgid "Redo duplicate"
+msgstr "Mégis duplikál"
+
+msgid "Redo motion"
+msgstr "Mégis mozgat"
+
+msgid "Redo paste"
+msgstr "Mégis beilleszt"
+
+msgid "Redo typing"
+msgstr "Mégis ír"
+
+msgid "Report a bug"
+msgstr "Hibabejelentés"
+
+msgid "Reset to Defaults"
+msgstr "Vissza az alapbeállításokhoz"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
+msgid "Right"
+msgstr "Jobb"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Futtatás: '%s %s'"
+
+msgid "Sample rate:"
+msgstr "Mintavétel (Hz):"
+
+msgid "Save"
+msgstr "Ment"
+
+msgid "Save As..."
+msgstr "Ment új néven..."
+
+msgid "Save application to..."
+msgstr "Alkalmazás mentése mint..."
+
+msgid "Save contents"
+msgstr "Tartalom mentése"
+
+msgid "Scale"
+msgstr "Méretarány"
+
+msgid "Search in"
+msgstr "Keresés itt:"
+
+msgid "Select All"
+msgstr "Mindent kijelöl"
+
+msgid "Select name for app to build...\n"
+msgstr "Létrehozandó alkalmazás nevének kiválasztása...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Küld (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Pd üzenet küldése"
+
+msgid "Send symbol:"
+msgstr "Küldött szimbólum:"
+
+msgid "Setting embedded preferences..."
+msgstr "Súgó"
+
+msgid "Setting patch name..."
+msgstr "Patch nevének beállítása..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr "%s/Contents/Info.plist beállítása"
+
+msgid "Size:"
+msgstr "Méret:"
+
+msgid "Start Here!"
+msgstr "Itt kezdd!"
+
+msgid "Startup flags:"
+msgstr "Indító paraméterek:"
+
+msgid "Steady on click"
+msgstr "Kattintásra várjon"
+
+msgid "Stretch"
+msgstr "Nyújtás"
+
+msgid "Symbol"
+msgstr "Szimbólum"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Hang és MIDI tesztelése..."
+
+msgid "Test label"
+msgstr "Teszt címke"
+
+msgid "Tidy Up"
+msgstr "Elrendez"
+
+msgid "Toggle"
+msgstr "kapcsoló"
+
+msgid "Top"
+msgstr "Fent"
+
+msgid "Undo"
+msgstr "Mégsem"
+
+msgid "Undo clear"
+msgstr "Mégsem töröl"
+
+msgid "Undo connect"
+msgstr "Mégsem csatlakoztat"
+
+msgid "Undo cut"
+msgstr "Mégsem vág ki"
+
+msgid "Undo disconnect"
+msgstr "Mégsem törli a csatlakozást"
+
+msgid "Undo duplicate"
+msgstr "Mégsem duplikál"
+
+msgid "Undo motion"
+msgstr "Mégsem mozgat"
+
+msgid "Undo paste"
+msgstr "Mégsem illeszt be"
+
+msgid "Undo typing"
+msgstr "Mégsem ír"
+
+msgid "Upper:"
+msgstr "Felső:"
+
+msgid "Use callbacks"
+msgstr "Callback-ek használata"
+
+msgid "Use multiple ALSA devices"
+msgstr "Több ALSA eszköz használata"
+
+msgid "Use multiple devices"
+msgstr "Több eszköz használata"
+
+msgid "Use standard extensions"
+msgstr "A standard kiterjesztések használata"
+
+msgid "VU Meter"
+msgstr "Kivezérlésjelző"
+
+msgid "Verbose"
+msgstr "Bőbeszédű"
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vslider"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "FIGYELEM: pdtk_canvas_dialog ismeretlen graphme flaget kapott"
+
+msgid "Width:"
+msgstr "Szélesség:"
+
+msgid "Window"
+msgstr "Ablak"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X és Y"
+
+msgid "X offset"
+msgstr "X offszet"
+
+msgid "X only"
+msgstr "csak X"
+
+msgid "X range, from"
+msgstr "X tartomány kezdete"
+
+msgid "X units per pixel:"
+msgstr "X egység képpontonként:"
+
+msgid "Y offset"
+msgstr "Y offszet"
+
+msgid "Y only"
+msgstr "csak Y"
+
+msgid "Y range, from"
+msgstr "Y tartomány kezdete"
+
+msgid "Y units per pixel:"
+msgstr "Y egység képpontonként:"
+
+msgid "Zoom"
+msgstr "Nagyító"
+
+msgid "all"
+msgstr "minden"
+
+msgid "audio I/O error"
+msgstr "hang I/O hiba"
+
+msgid "bottom:"
+msgstr "alja:"
+
+msgid "converted Max binary to text format:"
+msgstr "Max bináris szöveggé konvertálva:"
+
+msgid "debug"
+msgstr "hibakeresés"
+
+msgid "error"
+msgstr "hiba"
+
+msgid "fatal"
+msgstr "végzetes"
+
+msgid "for:"
+msgstr "erre:"
+
+msgid "height:"
+msgstr "magasság:"
+
+msgid "hold:"
+msgstr "tart:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "megszakít:"
+
+msgid "left:"
+msgstr "bal:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "log-magasság:"
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normál"
+
+msgid "really quit?"
+msgstr "tényleg kilép?"
+
+msgid "right:"
+msgstr "jobb:"
+
+msgid "size:"
+msgstr "méret:"
+
+msgid "to"
+msgstr "vége"
+
+msgid "top:"
+msgstr "teteje:"
+
+msgid "value:"
+msgstr "érték:"
+
+msgid "width:"
+msgstr "szélesség:"

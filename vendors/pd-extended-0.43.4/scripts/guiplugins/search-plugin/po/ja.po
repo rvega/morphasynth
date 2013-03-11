@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# Hans-Christoph Steiner <hans@eds.org>, 2013.
+# Sei Matsumura <serv@low-tech-ism.com>, 2012-2013.
+# TransReformer  <>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-05 22:51-0500\n"
+"PO-Revision-Date: 2013-01-08 02:28+0000\n"
+"Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Advanced search options"
+msgstr "上級検索オプション"
+
+msgid "All About Pd"
+msgstr "Pdのすべてについて"
+
+msgid "All documents"
+msgstr "すべてのドキュメント"
+
+msgid "Audio Signals"
+msgstr "オーディオシグナル"
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "%s%s を閲覧"
+
+msgid "Browse Advanced Topics"
+msgstr "上級トピックの閲覧"
+
+msgid "Browse Introductory Topics"
+msgstr "導入トピックの閲覧"
+
+msgid "Browse the Documentation"
+msgstr "ドキュメントを閲覧"
+
+msgid "Control Structure"
+msgstr "コントロールストラクチャ"
+
+msgid "Data Structures"
+msgstr "データストラクチャ"
+
+msgid "Dynamic Patching"
+msgstr "ダイナミックパッチング"
+
+msgid "Enter search terms"
+msgstr "検索語句を入力"
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr "検索語句を入力。ドロップダウンメニューでカテゴリー別検索。"
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "External Pd libraries"
+msgstr "外部のPdライブラリ"
+
+msgid "External libraries"
+msgstr "エクスターナルライブラリ"
+
+msgid "Found "
+msgstr "検索結果"
+
+msgid "GUI"
+msgstr "GUI"
+
+msgid "HTML manual for Pure Data"
+msgstr "Pure Data HTMLマニュアル"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "Implementation Details"
+msgstr "Pure Data実装の詳細"
+
+msgid "Keywords:"
+msgstr "キーワード:"
+
+msgid "MIDI"
+msgstr "MIDI"
+
+msgid "Manual"
+msgstr "マニュアル"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr "多くのヘルプドキュメントはタグで分類されています。同一タグのファイルを検索するために、以下のリンクをクリックしてください。"
+
+msgid "Match all terms"
+msgstr "すべての語句に適合"
+
+msgid "Match whole words"
+msgstr "全単語適合検索"
+
+msgid "Networking"
+msgstr "ネットワーキング"
+
+msgid "No DESCRIPTION tag."
+msgstr "記述のタグがありません"
+
+msgid "Object Help Patches"
+msgstr "オブジェクトのヘルプパッチ"
+
+#, tcl-format
+msgid "Open %s"
+msgstr "%s を開く"
+
+msgid "Pd Manual"
+msgstr "Pdのマニュアル"
+
+msgid "Pure Data Search"
+msgstr "Pure Dataの検索"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Search and Browse Documentation"
+msgstr "ドキュメントの検索と閲覧"
+
+msgid "Search by Category"
+msgstr "カテゴリー別の検索"
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "パターン検索:%s"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr "このオブエジェクトライブラリのREAD MEファイルが見つかりません"
+
+msgid "The \"doc\" directory"
+msgstr "\"文書\"ディレクトリ"
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "Pd検索ツールは入力された語句を検索できません。Tclインタープリターのエラー:"
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "入力された検索語句は適切なtclリスト形式でなければなりません。カッコや不適切な引用などの特殊文字を検索語句に使うとこの警告が表示されます。Tclリストについての情報:"
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "Tclでは適切な正規表現の構文の検索語句を入力してください。複雑な正規表現を特殊文字を使って記述しているとこの警告が表示されます。Tclでの正規表現の情報:"
+
+msgid "This help patch is for an internal Pd class"
+msgstr "Pdの内部クラスのためのヘルプパッチ"
+
+msgid "Tutorials"
+msgstr "チュートリアル"
+
+msgid "Uncategorized"
+msgstr "未分類"
+
+msgid "Writing Externals"
+msgstr "エクスターナルの開発"
+
+msgid "abstraction"
+msgstr "abstraction"
+
+msgid "abstraction_op"
+msgstr "abstraction_op"
+
+msgid "analysis"
+msgstr "analysis"
+
+msgid "analyze the incoming signal or value"
+msgstr "入力オーディオシグナルまたは入力値の分析"
+
+msgid "anything_op"
+msgstr "anything_op"
+
+msgid "array"
+msgstr "array"
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr "オーディオ用オブジェクト(通称\"チルダ\"オブジェクト)"
+
+msgid "bandlimited"
+msgstr "bandlimited"
+
+msgid "block_oriented"
+msgstr "block_oriented"
+
+msgid "canvas_op"
+msgstr "canvas_op"
+
+msgid "control"
+msgstr "control"
+
+msgid "control rate objects"
+msgstr "コントロール用のオブジェクト"
+
+msgid "conversion"
+msgstr "conversion"
+
+msgid "convert from one set of units to another"
+msgstr "ある値のセットを別のものに変換する。"
+
+msgid "create a ramp between a starting and ending value"
+msgstr "始点から終点のカーブをつくるオブジェクト"
+
+msgid "create or manage data structures"
+msgstr "データストラクチャの作成／管理"
+
+msgid "create or manipulate an array"
+msgstr "アレイの作成または操作"
+
+msgid "creating graphical objects in Pure Data"
+msgstr "Pure Dataでのグラフィカルオブジェクトの開発"
+
+msgid "data_structure"
+msgstr "data_structure"
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr "オブジェクトやパッチを動的に接続／切断する"
+
+msgid "dynamic_patching"
+msgstr "dynamic_patching"
+
+msgid "file format specification, license text, etc."
+msgstr "フォーマット仕様、ライセンス記述、その他"
+
+msgid "filesystem"
+msgstr "filesystem"
+
+msgid "filter"
+msgstr "filter"
+
+msgid "general information from the author"
+msgstr "作者からの一般情報"
+
+msgid "graphical user interface"
+msgstr "グラフィカルユーザーインターフェイス"
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr "右クリック-ヘルプでは表示できないヘルプパッチ"
+
+msgid "how to code control and signal objects in C"
+msgstr "C言語でのコントロール／オーディオシグナルオブジェクト開発方法"
+
+msgid "list_op"
+msgstr "list_op"
+
+msgid "manipulate or store a symbol"
+msgstr "シンボルの操作または保存"
+
+msgid "measure and/or manipulate time"
+msgstr "時間の測定または操作"
+
+msgid "network"
+msgstr "network"
+
+msgid "no DESCRIPTION tag or values."
+msgstr "該当するタグまたは値が見つかりません"
+
+msgid "nonlocal"
+msgstr "nonlocal"
+
+msgid "object describes itself as being bandlimited"
+msgstr "一定の範囲制限を実行するオブジェクト"
+
+msgid "object itself is written in Pure Data"
+msgstr "Pure Dataのみで作られたオブジェクト"
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr "サウンドファイルを再生／操作／保存するオブジェクト(wav, ogg, flac, mp3, その他)"
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr "Pdの動作に関連するグローバルデータを表示または操作する"
+
+msgid "object that filters incoming data"
+msgstr "入力データをフィルタリングするオブジェクト"
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr "リストの操作／出力／保存をするオブジェクト"
+
+msgid "object that provides MIDI functionality"
+msgstr "MIDI機能を実行するオブジェクト"
+
+msgid "object that reads from and/or writes to the file system"
+msgstr "ファイルの読み込みと書き込みをするオブジェクト"
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr "パッチのファイル操作でのみ有効なオブジェクト"
+
+msgid "object whose main function is to store data"
+msgstr "データを保存するためのオブジェクト"
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr "キャンバスの内容のみで有効なオブジェクトのふるまい"
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr "アブストラクション内部のみで有効なオブジェクトのふるまい"
+
+msgid "orphan"
+msgstr "orphan"
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr "%s のドキュメントがありません"
+
+msgid "output a random value, list, signal, or other random data"
+msgstr "ランダムな値／リスト／オーディオシグナル／その他のデータを出力する"
+
+msgid "pass messages or data without patch wires"
+msgstr "ラインなしでメッセージまたはデータを送る"
+
+msgid "patchfile_op"
+msgstr "patchfile_op"
+
+msgid "pd_op"
+msgstr "pd_op"
+
+msgid "programmatically create/destroy Pd objects"
+msgstr "プログラムによるPdオブジェクトの作成と削除"
+
+msgid "provide trigonometric functionality"
+msgstr "三角関数の機能を実行するオブジェクト"
+
+msgid "provides access to or sends/receives data over a network"
+msgstr "ネットワークでのデータ通信を実現する"
+
+msgid "ramp"
+msgstr "ramp"
+
+msgid "random"
+msgstr "random"
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr "Pdの概念と設定のための参照パッチ"
+
+msgid "sending data over networks with Pd"
+msgstr "Pdにおけるネットワークデータ送信"
+
+msgid "signal"
+msgstr "signal"
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr "ブロック単位のサンプル操作を実行するオーディオシグナルオブジェクト"
+
+msgid "soundfile"
+msgstr "soundfile"
+
+msgid "storage"
+msgstr "storage"
+
+msgid "store or manipulate any type of data"
+msgstr "データタイプの保存または操作"
+
+msgid "symbol_op"
+msgstr "symbol_op"
+
+msgid "text of the license for this software"
+msgstr "ソフトウェアライセンスの記述"
+
+msgid "time"
+msgstr "time"
+
+msgid "trigonometry"
+msgstr "trigonometry"
+
+msgid "tutorials for audio signals"
+msgstr "オーディオシグナルのチュートリアル"
+
+msgid "tutorials for control objects"
+msgstr "コントロールオブジェクトのチュートリアル"

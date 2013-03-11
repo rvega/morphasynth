@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# Hans-Christoph Steiner <hans@eds.org>, 2013.
+#   <kt@labyrinthos.gr>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 21:04-0500\n"
+"PO-Revision-Date: 2013-01-01 18:01+0000\n"
+"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Advanced search options"
+msgstr "Προχωρημένες επιλογές αναζήτησης"
+
+msgid "All About Pd"
+msgstr "Όλα σχετικά με το Pd"
+
+msgid "All documents"
+msgstr "Όλα τα έγγραφα"
+
+msgid "Audio Signals"
+msgstr "Σήματα Ήχου"
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "Ξεφύλλισμα %s%s"
+
+msgid "Browse Advanced Topics"
+msgstr "Ξεφύλλισμα Προχωρημένων Θεμάτων"
+
+msgid "Browse Introductory Topics"
+msgstr "Ξεφύλλισμα Εισαγωγικών Θεμάτων"
+
+msgid "Browse the Documentation"
+msgstr "Ξεφυλλίστε την Τεκμηρίωση"
+
+msgid "Control Structure"
+msgstr "Δομή Ελέγχου"
+
+msgid "Data Structures"
+msgstr "Δομές Δεδομένων"
+
+msgid "Dynamic Patching"
+msgstr "Δυναμικό Patching"
+
+msgid "Enter search terms"
+msgstr "Εισάγετε όρους αναζήτησης"
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr "Εισάγετε όρους παραπάνω. Χρησιμοποιήστε την εξελισσόμενη λίστα επιλογών για να φιλτράρετε ανά κατηγορία."
+
+msgid "Error"
+msgstr "Λάθος"
+
+msgid "External Pd libraries"
+msgstr "Εξωτερικές βιβλιοθήκες Pd"
+
+msgid "External libraries"
+msgstr "Εξωτερικές βιβλιοθήκες"
+
+msgid "Found "
+msgstr "Βρέθηκαν"
+
+msgid "HTML manual for Pure Data"
+msgstr "Εγχειρίδιο HTML για Pure Data"
+
+msgid "Help"
+msgstr "Βοήθεια"
+
+msgid "Home"
+msgstr "Αρχική"
+
+msgid "Implementation Details"
+msgstr "Λεπτομέρειες Υλοποίησης"
+
+msgid "Keywords:"
+msgstr "Λέξεις-κλειδιά:"
+
+msgid "Manual"
+msgstr "Εγχειρίδιο"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr ""
+
+msgid "Match all terms"
+msgstr "Αντιστοιχία όλων των όρων"
+
+msgid "Match whole words"
+msgstr "Αντιστοιχία ολόκληρων λέξεων"
+
+msgid "Networking"
+msgstr "Δικτύωση"
+
+msgid "No DESCRIPTION tag."
+msgstr "Καμία ετικέττα ΠΕΡΙΓΡΑΦΗΣ."
+
+msgid "Object Help Patches"
+msgstr "Patches βοήθειας για αντικείμενα "
+
+#, tcl-format
+msgid "Open %s"
+msgstr "Άνοιξε %s"
+
+msgid "Pd Manual"
+msgstr "Εγχειρίδιο Pd"
+
+msgid "Pure Data Search"
+msgstr "Αναζήτηση Pure Data"
+
+msgid "Report a bug"
+msgstr "Αναφορά ενός σφάλματος"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "Search and Browse Documentation"
+msgstr "Αναζήτηση και Ξεφύλλισμα Τεκμηρίωσης"
+
+msgid "Search by Category"
+msgstr ""
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "Αναζήτηση για υπόδειγμα: %s"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr "Συγγνώμη, δεν βρέθηκε ένα αρχείο README για τη βιβλιοθήκη αυτού του αντικειμένου."
+
+msgid "The \"doc\" directory"
+msgstr "Ο φάκελος \"εγγραφων\""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "Το Εργαλείο Αναζήτησης Pd δεν μπορεί να χρησιμοποιήσει τον όρο αναζήτησης που εισαγάγατε. Ο διερμηνέας tcl έδωσε το ακόλουθο σφάλμα:"
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "Ο όρος αναζήτησης που εισάγετε πρέπει να μορφοποιηθεί ως κατάλληλος κατάλογος tcl. Αυτό δεν αποτελεί συνήθως ζήτημα εκτός αν χρησιμοποιείτε μερικούς ειδικούς χαρακτήρες όπως οι {} ή τα χωρίς ταίρι \" στην αναζήτησή σας. Για περισσότερες πληροφορίες στους καταλόγους tcl, δείτε:"
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "Ο όρος αναζήτησης που εισάγετε πρέπει να έχει την κατάλληλη σύνταξη για μια κανονική έκφραση σε Tcl.Αυτό δεν αποτελεί συνήθως ζήτημα εκτός αν χρησιμοποιείτε ειδικούς χαρακτήρες για να δημιουργήσετε μια σύνθετη κανονική έκφραση. Για περισσότερες πληροφορίες στις κανονικές εκφράσεις σε Tcl, δείτε:"
+
+msgid "This help patch is for an internal Pd class"
+msgstr "Αυτό το patch βοήθειας είναι για μια εσωτερική κλάση Pd"
+
+msgid "Tutorials"
+msgstr "Παιδαγωγικά"
+
+msgid "Uncategorized"
+msgstr "Μη-κατηγοριοποιημένο"
+
+msgid "Writing Externals"
+msgstr "Εγγραφή Εξωτερικών (κλάσσεων)"
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr "Αντικείμενο με χρονο-δρομολόγηση ήχου (αντικείμενο~)"
+
+msgid "control rate objects"
+msgstr "αντικείμενα με χρονοδρομολόγηση ελέγχου"
+
+msgid "convert from one set of units to another"
+msgstr "μετατρέπουν από ένα σύνολο μονάδων σε ένα άλλο"
+
+msgid "create a ramp between a starting and ending value"
+msgstr "παραγωγή μιας ράμπας μεταξύ μιας αρχικής και μιας τελικής τιμής"
+
+msgid "create or manage data structures"
+msgstr "δημιουργούν ή χειρίζονται δομές δεδομένων"
+
+msgid "create or manipulate an array"
+msgstr "δημιουργία ή χειρισμός ενός πίνακα"
+
+msgid "creating graphical objects in Pure Data"
+msgstr "δημιουργία γραφικών αντικειμένων σε Pure Data"
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr "δυναμική δημιουργία/διαγραφή περίπτωσης αντικειμένων ή patches"
+
+msgid "file format specification, license text, etc."
+msgstr "χαρακτηριστικά τύπου αρχείου, κείμενο άδειας, κτλ."
+
+msgid "general information from the author"
+msgstr "γενικές πληροφορίες από τον συντάκτη"
+
+msgid "graphical user interface"
+msgstr "γραφική διεπαφή χρήστη"
+
+msgid ""
+"help patches that are still under construction or otherwise are incomplete"
+msgstr "patches βοήθειας που είναι ακόμα υπό κατασκευή ή με οποιοδήποτε τρόπο ελλιπή"
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr "patches βοήθειας που δεν μπορούν να προσεγγιστούν με δεξί-κλίκ στη \"βοήθεια\" για το αντίστοιχο αντικείμενο"
+
+msgid "how to code control and signal objects in C"
+msgstr "Πως να προγραμματίζετε αντικείμενα ελέγχου και σήματος σε C"
+
+msgid "manipulate or store a symbol"
+msgstr "χειρισμός ή αποθήκευση ενός συμβόλου"
+
+msgid "measure and/or manipulate time"
+msgstr "μέτρηση και/ή χειρισμός χρόνου"
+
+msgid "no DESCRIPTION tag or values."
+msgstr "καμία ετικέττα ή τιμές ΠΕΡΙΓΡΑΦΗΣ."
+
+msgid "object describes itself as being bandlimited"
+msgstr "το αντικείμενο περιγράφει τον εαυτό του ως περιορισμένου-εύρους"
+
+msgid "object itself is written in Pure Data"
+msgstr "το αντικείμενο είναι γραμμένο σε Pure Data"
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr "αντικείμενα που μπορούν να παίξουν, χειριστούν και/ή να καταγράψουν ένα αρχείο ήχου (wav, ogg, flac, mp3, κτλ.)"
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr "αντικείμενο που μπορεί να αναφέρει σχετικά με ή να μεταχειριστεί καθολικά δεδομένα που συνδέονται με την τρέχουσα περίπτωση του Pd"
+
+msgid "object that filters incoming data"
+msgstr "αντικείμενο που φιλτράρει εισερχόμενα δεδομένα"
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr "αντικείμενο που μεταχειρίζεται, εξάγει, ή αποθηκεύει μια λίστα"
+
+msgid "object that provides MIDI functionality"
+msgstr "αντικείμενο που παρέχει λειτουργίες MIDI"
+
+msgid "object that reads from and/or writes to the file system"
+msgstr "αντικείμενο που διαβάζει από και/ή γράφει στο σύστημα αρχείων"
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr "αντικείμενο του οποίου η συμπεριφορά έχει νόημα μόνο ως ένα patch Pure Data"
+
+msgid "object whose main function is to store data"
+msgstr "αντικείμενα των οποίων βασική λειτουργία είναι η αποθήκευση δεδομένων"
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr "η συμπεριφορά του αντικειμένου έχει νόημα μόνο στο περιεχόμενο ενός καμβά"
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr "η συμπεριφορά του αντικειμένου έχει νόημα μόνο μέσα σε ένα abstraction (patch που επιτρέπει πολλές περιπτώσεις του)"
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr "από %s έγγραφα"
+
+msgid "output a random value, list, signal, or other random data"
+msgstr "εξάγουν μια τυχαία τιμή, κατάλογο, σήμα, ή άλλα τυχαία δεδομένα"
+
+msgid "pass messages or data without patch wires"
+msgstr "στέλνουν μηνύματα ή δεδομένα χωρίς καλώδια σύνδεσης"
+
+msgid "perform some sort of analysis on the incoming signal or value"
+msgstr "εκτελούν κάποιου είδους ανάλυση στο εισερχόμενο σήμα ή τιμή"
+
+msgid "programmatically create/destroy Pd objects"
+msgstr "προγραμματιστικά δημιουργούν/καταστρέφουν αντικείμενα Pd"
+
+msgid "provide trigonometric functionality"
+msgstr ""
+
+msgid "provides access to or sends/receives data over a network"
+msgstr "παρέχει πρόσβαση σε, ή στέλνει/δέχεται δεδομένα μέσα από ένα, δίκτυο"
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr "patches αναφοράς για κεντρικές ιδέες και παραμέτρους του Pd"
+
+msgid "sending data over networks with Pd"
+msgstr "αποστολή δεδομένων μέσω δικτύων με το Pd"
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr "αντικείμενο σήματος που εκτελεί λειτουργίες εύρους-μπλόκ (σε αντιδιαστολή με την επανάληψη της ίδιας λειτουργίας για κάθε δείγμα του μπλοκ (ομάδα δεδομένων))"
+
+msgid "store or manipulate any type of data"
+msgstr ""
+
+msgid "text of the license for this software"
+msgstr "Κείμενο άδειας για αυτό το λογισμικό"
+
+msgid "tutorials for audio signals"
+msgstr "παιδαγωγικά για σήματα ήχου"
+
+msgid "tutorials for control objects"
+msgstr "παιδαγωγικά για αντικείμενα ελέγχου"

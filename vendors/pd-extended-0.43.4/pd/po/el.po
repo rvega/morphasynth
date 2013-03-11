@@ -1,0 +1,872 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#  <subscriber@labyrinthos.gr>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-18 03:30+0000\n"
+"Last-Translator: ktsoukalas <subscriber@labyrinthos.gr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "Γραμματοσειρά %s"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Ιδιότητες"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "To %s είναι ολοκληρωμένο!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' ήδη φορτωμένο, αγνόηση του %s"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) ΑΚΥΡΟ ΟΝΟΜΑ ΕΝΤΟΛΗΣ:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) ΈΛΛΕΙΨΗ ΤΙΡΑΝΤΩΝ ΤΕΛΟΥΣ '}': "
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) ΈΛΛΕΙΨΗ ΑΓΚΥΛΗΣ ΤΕΛΟΥΣ ']': "
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) ΜΗ ΔΙΑΧΕΙΡΙΣΙΜΟ ΣΦΑΛΜΑ:"
+
+msgid "(same as input device) ..............      "
+msgstr "(ομοίως με συσκευή εισόδου) .............."
+
+msgid "(use arrow keys for history)"
+msgstr "(χρήση πλήκτρων-βέλη για ιστορικό)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------εύρος-εξόδου:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------διαστάσεις(εικ/εία):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "-----διαστάσεις(εικ/εία)(εικ/εία):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------χρόνος-αναλαμπής(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------διαστάσεις(ψηφία)(εικ/εία):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------επιλεγόμενες_διαστάσεις(εικ/εία):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------ορατό_παραλληλόγραμμο(εικ/εία)(εικ/εία):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "Ρυθμίσεις ALSA MIDI"
+
+msgid "About Pd"
+msgstr "Περί Pd"
+
+msgid "Add new library"
+msgstr "Προσθήκη νέας βιβλιοθήκης"
+
+msgid "Appearance on parent patch"
+msgstr "Εμφάνιση στο γονικό patch"
+
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+msgid "Array"
+msgstr "Πίνακας"
+
+msgid "Array Properties"
+msgstr "Ιδιότητες Πίνακα"
+
+msgid "Associated Files"
+msgstr "Σχετικά αρχεία"
+
+msgid "Atom Box Properties"
+msgstr "Ιδιότητες κουτιού Atom"
+
+msgid "Audio Settings"
+msgstr "Ρυθμίσεις Ήχου"
+
+msgid "Audio Settings..."
+msgstr "Ρυθμίσεις Ήχου..."
+
+msgid "Autopatch"
+msgstr "Αυτόματη σύνδεση"
+
+msgid "Autotips"
+msgstr "Αυτόματη βοήθεια"
+
+msgid "Background"
+msgstr "Φόντο"
+
+msgid "Background color"
+msgstr "Χρώμα φόντου"
+
+msgid "Bang"
+msgstr "Ενεργοποίηση"
+
+msgid "Bezier curve"
+msgstr "Καμπύλη Bezier"
+
+msgid "Block size:"
+msgstr "Μέγεθος Μπλοκ:"
+
+msgid "Bottom"
+msgstr "Κάτω"
+
+msgid "Bring All to Front"
+msgstr "Μεταφορά Όλων στο Προσκήνιο"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Αδυναμία ανάγνωσης αρχείου προτιμήσεων GUI: "
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Αδυναμία ανάγνωσης φακέλου plugins: '%s'"
+
+msgid "Canvas"
+msgstr "Καμβάς"
+
+msgid "Canvas Properties"
+msgstr "Ιδιότητες Καμβά"
+
+msgid "Channels:"
+msgstr "Κανάλια:"
+
+msgid "Clear Console"
+msgstr "Καθαρισμός Κονσόλας"
+
+msgid "Clear Menu"
+msgstr "Καθαρισμός Μενού"
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "Close this window?"
+msgstr "Κλείσιμο αυτού του παραθύρου;"
+
+msgid "Colors"
+msgstr "Χρώματα"
+
+msgid "Comment"
+msgstr "Σχόλιο"
+
+msgid "Compose color"
+msgstr "Σύνθεση χρώματος"
+
+msgid "Configuring Info.plist..."
+msgstr "Διαμόρφωση του Info.plist..."
+
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+msgid "Copying current patch..."
+msgstr "Αντιγραφή του τρέχοντος patch..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Αδυναμία εύρεσης του '%s' στο %s"
+
+msgid "Cut"
+msgstr "Αποκοπή"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "Απενεργοποίση DSP"
+
+msgid "DSP On"
+msgstr "Ενεργοποίηση DSP"
+
+msgid "Data Properties"
+msgstr "Ιδιότητες δεδομένων"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Προκαθορισμένη γραμματοσειρά: %s"
+
+msgid "Defeat real-time scheduling"
+msgstr "Πρόβλημα στην εκτέλεση σε πραγματικό χρόνο "
+
+msgid "Delay (msec):"
+msgstr "Καθυστέρηση (msec):"
+
+msgid "Delete array"
+msgstr "Διαγραφή πίνακα"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "Διαγραφή αρχείου προτιμήσεων: %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Απόρριψη αλλαγών στο '%s';"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Θέλετε να αποθηκεύσετε τις αλλαγές που πραγματοποιήσατε στο '%s';"
+
+msgid "Draw as:"
+msgstr "Σχεδίαση ως:"
+
+msgid "Duplicate"
+msgstr "Αντίγραφο"
+
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+msgid "Edit Mode"
+msgstr "Κατάσταση Επεξεργασίας"
+
+msgid "Edit library"
+msgstr "Επεξεργασία βιβλιοθήκης"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "ΑΠΟΤΥΧΙΑ ΦΟΡΤΩΣΗΣ %s"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "Find"
+msgstr "Εύρεση"
+
+msgid "Find Again"
+msgstr "Εύρεση Ξανά"
+
+msgid "Find Last Error"
+msgstr "Εύρεση Τελευταίου Σφάλματος"
+
+msgid "Find..."
+msgstr "Εύρεση..."
+
+msgid "Font"
+msgstr "Γραμματοσειρά"
+
+msgid "Font Size"
+msgstr "Μέγεθος Γραμματοσειράς"
+
+msgid "Foreground color"
+msgstr "Χρώμα προσκηνίου"
+
+msgid "Front"
+msgstr "Πρόσοψη"
+
+msgid "Graph"
+msgstr "Γράφημα"
+
+msgid "Graph-On-Parent"
+msgstr "Διάγραμμα-Στο-Γονικό"
+
+msgid "Help"
+msgstr "Βοήθεια"
+
+msgid "Help Browser"
+msgstr "Πλοηγός βοήθειας"
+
+msgid "Hide object name and arguments"
+msgstr "Απόκρυψη ονόματος και ορισμάτων του αντικειμένου"
+
+msgid "Hradio"
+msgstr "Οριζόντιο κουτί επιλογών"
+
+msgid "Hslider"
+msgstr "Ρυθμιστής οριζόντιας ολίσθησης"
+
+msgid "IN"
+msgstr "ΕΙΣΟΔΟΣ"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Αγνόηση του  '%s': δε φαίνεται να είναι ένα αρχείο τύπου Pd"
+
+msgid "In Ports:"
+msgstr "Θύρες Εισόδου:"
+
+msgid "Init"
+msgstr "Αρχικοποίηση"
+
+msgid "Input device 1:"
+msgstr "Συσκευή εισόδου 1:"
+
+msgid "Input device 2:"
+msgstr "Συσκευή εισόδου 2:"
+
+msgid "Input device 3:"
+msgstr "Συσκευή εισόδου 3:"
+
+msgid "Input device 4:"
+msgstr "Συσκευή εισόδου 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Το Jack φαίνεται να μη λειτουργεί, έτσι το Pd-extended δεν μπορεί να συνδεθεί με αυτό."
+
+msgid "Jack not installed!"
+msgstr "Δεν είναι  εγκατεστημένο το Jack!"
+
+msgid "Jack not running!"
+msgstr "Δε λειτουργεί το Jack!"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "Το JackOSX δεν είναι πλήρως εγκατεστημένο, to Pd-extended δεν μπορεί να χρησιμοποιήσει το Jack χωρίς αυτό."
+
+msgid "Jump on click"
+msgstr "Υπερπήδηση μετά από κλικ"
+
+msgid "Label"
+msgstr "Ετικέτα"
+
+msgid "Label color"
+msgstr "Χρώμα ετικέτας"
+
+msgid "Last graph"
+msgstr "Τελευταίο γράφημα"
+
+msgid "Left   "
+msgstr "Αριστερό"
+
+msgid "Limits"
+msgstr "Όρια"
+
+msgid "Load Meter"
+msgstr "Μετρητής Φορτίου"
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Φόρτωση plugin: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Φόρτωση μεταφράσεων για %s"
+
+msgid "Log:"
+msgstr "Ημερολόγιο:"
+
+msgid "Lower:"
+msgstr "Κατώτερο:"
+
+msgid "MIDI Settings"
+msgstr "Ρυθμίσεις MIDI"
+
+msgid "MIDI Settings..."
+msgstr "Ρυθμίσεις MIDI..."
+
+msgid "Magic Glass"
+msgstr "Προβολή διερχόμενων δεδομένων"
+
+msgid "Make app from folder..."
+msgstr "Φτιάξε εφαρμογή από φάκελο..."
+
+msgid "Make app from patch..."
+msgstr "Φτιάξε εφαρμογή από patch..."
+
+msgid "Making App"
+msgstr "Δημιουργία Εφαρμογής"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "Δημιουργία Εφαρμογής σε %s..."
+
+msgid "Margin:"
+msgstr "Περιθώριο:"
+
+msgid "Match whole word only"
+msgstr "Ταύτιση μόνο ολόκληρης λέξης"
+
+msgid "Max Binary Files"
+msgstr "Δυαδικά αρχεία του Max"
+
+msgid "Max Help Files"
+msgstr "Αρχεία βοήθειας του Max"
+
+msgid "Max Patch Files"
+msgstr "Αρχεία patch του Max"
+
+msgid "Max Text Files"
+msgstr "Αρχεία κειμένου του Max"
+
+msgid "Media"
+msgstr "Μέσα"
+
+msgid "Message"
+msgstr "Μήνυμα"
+
+msgid "Message..."
+msgstr "Μήνυμα..."
+
+msgid "Messages"
+msgstr "Μηνύματα"
+
+msgid "Minimize"
+msgstr "Ελαχιστοποιήση"
+
+msgid "Name:"
+msgstr "Όνομα:"
+
+msgid "New"
+msgstr "Νέο"
+
+msgid "New graph"
+msgstr "Νέο γράφημα"
+
+msgid "Next Window"
+msgstr "Επόμενο Παράθυρο"
+
+msgid "No init"
+msgstr "Χωρίς αρχικοποίηση"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
+
+msgid "Number"
+msgstr "Αριθμός"
+
+msgid "Number2"
+msgstr "Αριθμός2"
+
+msgid "OK"
+msgstr "ΟΚ"
+
+msgid "OK (Ctrl t)"
+msgstr "ΕΝΤΑΞΕΙ (Ctrl t)"
+
+msgid "OUT"
+msgstr "ΕΞΟΔΟΣ"
+
+msgid "Object"
+msgstr "Αντικείμενο"
+
+msgid "Open"
+msgstr "Άνοιγμα"
+
+msgid "Open List View..."
+msgstr "Άνοιγμα Προβολής Λίστας..."
+
+msgid "Open Recent"
+msgstr "Άνοιγμα Πρόσφατου"
+
+msgid "Out Ports:"
+msgstr "Θύρες Εξόδου:"
+
+msgid "Output device 1:"
+msgstr "Συσκευή εξόδου 1:"
+
+msgid "Output device 2:"
+msgstr "Συσκευή εξόδου 2:"
+
+msgid "Output device 3:"
+msgstr "Συσκευή εξόδου 3:"
+
+msgid "Output device 4:"
+msgstr "Συσκευή εξόδου 4:"
+
+msgid "Parent Window"
+msgstr "Γονικό Παράθυρο"
+
+msgid "Paste"
+msgstr "Επικόλληση"
+
+msgid "Pd Files"
+msgstr "Αρχεία Pd"
+
+msgid "Pd Help Browser..."
+msgstr "Πλοηγός Βοήθειας Pd..."
+
+msgid "Pd libraries to load on startup"
+msgstr "Βιβλιοθήκες Pd που φορτώνονται κατα την εκκίνηση"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Διαδρομή αναζήτησης του Pd για αρχεία (αντικείμενα κτλ.)"
+
+msgid "Pd window"
+msgstr "Παράθυρο Pd"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Κατάσταση Τέλεσης"
+
+msgid "Points"
+msgstr "Σημεία"
+
+msgid "Polygon"
+msgstr "Πολύγωνο"
+
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+msgid "Previous Window"
+msgstr "Προηγούμενο Παράθυρο"
+
+msgid "Print..."
+msgstr "Εκτύπωση..."
+
+msgid "Properties"
+msgstr "Ιδιότητες"
+
+msgid "Put"
+msgstr "Προσθήκη"
+
+msgid "Put array into:"
+msgstr "Προσθήκη πίνακα σε:"
+
+msgid "Quit"
+msgstr "Έξοδος"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Κλείστε το Pd-extended, ξεκινήστε το Jack, και προσπαθήστε ξανά."
+
+msgid "Range and size"
+msgstr "Περιοχή και μέγεθος"
+
+msgid "Real-time scheduling"
+msgstr "Δρομολόγηση σε πραγματικό χρόνο"
+
+msgid "Receive symbol:"
+msgstr "Λήψη συμβόλου:"
+
+msgid "Redo"
+msgstr "Ακύρωση Αναίρεσης"
+
+msgid "Redo clear"
+msgstr "Ακύρωση αναίρεσης διαγραφής"
+
+msgid "Redo connect"
+msgstr "Ακύρωση αναίρεσης σύνδεσης"
+
+msgid "Redo cut"
+msgstr "Ακύρωση αναίρεσης αποκοπής"
+
+msgid "Redo disconnect"
+msgstr "Ακύρωση αναίρεσης διακοπής σύνδεσης"
+
+msgid "Redo duplicate"
+msgstr "Ακύρωση αναίρεσης διπλοτύπου"
+
+msgid "Redo motion"
+msgstr "Ακύρωση αναίρεσης κίνησης"
+
+msgid "Redo paste"
+msgstr "Ακύρωση αναίρεσης επικόλλησης"
+
+msgid "Redo typing"
+msgstr "Ακύρωση αναίρεσης εγγραφής"
+
+msgid "Report a bug"
+msgstr "Αναφορά ενός σφάλματος"
+
+msgid "Reset to Defaults"
+msgstr "Προκαθορισμένα"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
+msgid "Right"
+msgstr "Δεξί"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Λειτουργεί: '%s %s'"
+
+msgid "Sample rate:"
+msgstr "Τιμή δειγματοληψίας:"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Save As..."
+msgstr "Αποθήκευση Ως..."
+
+msgid "Save application to..."
+msgstr "Αποθήκευση εφαρμογής στο..."
+
+msgid "Save contents"
+msgstr "Αποθήκευση περιεχομένων"
+
+msgid "Scale"
+msgstr "Κλίμακα"
+
+msgid "Search in"
+msgstr "Αναζήτηση σε"
+
+msgid "Select All"
+msgstr "Επιλογή Όλων"
+
+msgid "Select name for app to build...\n"
+msgstr "Επιλέξτε όνομα για την εφαρμογή...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Αποστολή (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Αποστολή ενός μηνύματος Pd "
+
+msgid "Send symbol:"
+msgstr "Αποστολή συμβόλου:"
+
+msgid "Setting embedded preferences..."
+msgstr "Ρύθμιση ενσωματωμένων προτιμήσεων..."
+
+msgid "Setting patch name..."
+msgstr "Προσδιορισμός ονόματος του patch..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr ""
+
+msgid "Size:"
+msgstr "Μέγεθος:"
+
+msgid "Start Here!"
+msgstr "Αρχίστε Εδώ!"
+
+msgid "Startup flags:"
+msgstr "Σημαίες εκκίνησης:"
+
+msgid "Steady on click"
+msgstr "Αμετακίνητο μετά από κλικ"
+
+msgid "Stretch"
+msgstr "Τέντωμα"
+
+msgid "Symbol"
+msgstr "Σύμβολο"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Έλεγχος 'Ηχου και MIDI..."
+
+msgid "Test label"
+msgstr "Ετικέτα δοκιμής"
+
+msgid "Tidy Up"
+msgstr "Τακτοποίηση"
+
+msgid "Toggle"
+msgstr "Διακόπτης"
+
+msgid "Top"
+msgstr "Πάνω"
+
+msgid "Undo"
+msgstr "Αναίρεση"
+
+msgid "Undo clear"
+msgstr "Αναίρεση διαγραφής"
+
+msgid "Undo connect"
+msgstr "Αναίρεση σύνδεσης"
+
+msgid "Undo cut"
+msgstr "Αναίρεση αποκοπής"
+
+msgid "Undo disconnect"
+msgstr "Αναίρεση διακοπής σύνδεσης"
+
+msgid "Undo duplicate"
+msgstr "Αναίρεση διπλότυπου"
+
+msgid "Undo motion"
+msgstr "Αναίρεση κίνησης"
+
+msgid "Undo paste"
+msgstr "Αναίρεση επικόλλησης"
+
+msgid "Undo typing"
+msgstr "Αναίρεση εγγραφής"
+
+msgid "Upper:"
+msgstr "Ανώτερο:"
+
+msgid "Use callbacks"
+msgstr "Χρήση επανακλήσεων"
+
+msgid "Use multiple ALSA devices"
+msgstr "Χρήση πολλαπλών συσκευών ALSA"
+
+msgid "Use multiple devices"
+msgstr "Χρήση πολλαπλών συσκευών"
+
+msgid "Use standard extensions"
+msgstr "Χρήση κοινών επεκτάσεων"
+
+msgid "VU Meter"
+msgstr "Μετρητής VU"
+
+msgid "Verbose"
+msgstr "Λεπτομερές"
+
+msgid "Vradio"
+msgstr "Κάθετο κουτί επιλογών"
+
+msgid "Vslider"
+msgstr "Ρυθμιστής κάθετης ολίσθησης"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Εύρος:"
+
+msgid "Window"
+msgstr "Παράθυρο"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "Χ και Y"
+
+msgid "X offset"
+msgstr "Μετατόπιση Χ"
+
+msgid "X only"
+msgstr "Μόνο Χ"
+
+msgid "X range, from"
+msgstr "περιοχή Χ, από"
+
+msgid "X units per pixel:"
+msgstr "Χ μονάδες ανά εικονοστοιχείο:"
+
+msgid "Y offset"
+msgstr "Μετατόπιση Υ"
+
+msgid "Y only"
+msgstr "Μόνο Y"
+
+msgid "Y range, from"
+msgstr "περιοχή Y, από"
+
+msgid "Y units per pixel:"
+msgstr "Υ μονάδες ανά εικονοστοιχείο:"
+
+msgid "Zoom"
+msgstr "Ζουμ"
+
+msgid "all"
+msgstr "όλα"
+
+msgid "audio I/O error"
+msgstr "σφάλμα ήχου Ι/Ο "
+
+msgid "bottom:"
+msgstr "βάση:"
+
+msgid "converted Max binary to text format:"
+msgstr "μετατράπηκε η δυαδική σε μορφή κειμένου του Max:"
+
+msgid "debug"
+msgstr "αποσφαλμάτωση"
+
+msgid "error"
+msgstr "σφάλμα"
+
+msgid "fatal"
+msgstr "καίριο"
+
+msgid "for:"
+msgstr "για:"
+
+msgid "height:"
+msgstr "ύψος:"
+
+msgid "hold:"
+msgstr "κράτηση:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "διακοπή:"
+
+msgid "left:"
+msgstr "αριστερά:"
+
+msgid "lin"
+msgstr "γραμμικό"
+
+msgid "log"
+msgstr "Ημερολόγιο"
+
+msgid "log-height:"
+msgstr "ύψος ημερολογίου:"
+
+msgid "max:"
+msgstr "μέγιστο:"
+
+msgid "min:"
+msgstr "ελάχιστο:"
+
+msgid "normal"
+msgstr "κανονικό"
+
+msgid "really quit?"
+msgstr "Οριστικό κλείσιμο;"
+
+msgid "right:"
+msgstr "δεξιά:"
+
+msgid "size:"
+msgstr "μέγεθος:"
+
+msgid "to"
+msgstr "σε"
+
+msgid "top:"
+msgstr "κορυφή:"
+
+msgid "value:"
+msgstr "τιμή:"
+
+msgid "width:"
+msgstr "πλάτος:"

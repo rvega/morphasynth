@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Шрифт"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Свойства"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr "(такое же как устпройство ввода) .............."
+
+msgid "(use arrow keys for history)"
+msgstr "(использовать клавиши стрелок для истории)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI Настройки"
+
+msgid "About Pd"
+msgstr ""
+
+msgid "Add new library"
+msgstr "Добавить новую библиотеку"
+
+msgid "Appearance on parent patch"
+msgstr "Внешность при родительском патче"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "Array"
+msgstr ""
+
+msgid "Array Properties"
+msgstr "Своства таблицы"
+
+msgid "Atom Box Properties"
+msgstr "Свойства Atom Box"
+
+msgid "Audio Settings"
+msgstr "Звуковые Настройки"
+
+msgid "Audio Settings..."
+msgstr ""
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Фон"
+
+msgid "Background color"
+msgstr "Цвет фона"
+
+msgid "Bang"
+msgstr ""
+
+msgid "Bezier curve"
+msgstr "Кривая Безье"
+
+msgid "Block size:"
+msgstr "Размер блока"
+
+msgid "Bottom"
+msgstr "Ніз"
+
+msgid "Bring All to Front"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Адмяніць"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr ""
+
+msgid "Canvas Properties"
+msgstr "Свойства Холста"
+
+msgid "Channels:"
+msgstr "Каналы:"
+
+msgid "Clear Console"
+msgstr ""
+
+msgid "Clear Menu"
+msgstr ""
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Close this window?"
+msgstr ""
+
+msgid "Colors"
+msgstr "Колеры"
+
+msgid "Comment"
+msgstr ""
+
+msgid "Compose color"
+msgstr "Составить цвет"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Copying current patch..."
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Не удалось найти '%s' в %s"
+
+msgid "Cut"
+msgstr ""
+
+msgid "DSP"
+msgstr ""
+
+msgid "DSP Off"
+msgstr ""
+
+msgid "DSP On"
+msgstr ""
+
+msgid "Data Properties"
+msgstr "Свойства Данных"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Задержка (мсек)"
+
+msgid "Delete array"
+msgstr "Удалить таблицу"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr ""
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr ""
+
+msgid "Draw as:"
+msgstr "Рисовать как:"
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Mode"
+msgstr ""
+
+msgid "Edit library"
+msgstr "Изменить библиотеку"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Find"
+msgstr "Найти"
+
+msgid "Find Again"
+msgstr ""
+
+msgid "Find Last Error"
+msgstr ""
+
+msgid "Find..."
+msgstr ""
+
+msgid "Font"
+msgstr ""
+
+msgid "Font Size"
+msgstr "Размер Шрифта"
+
+msgid "Foreground color"
+msgstr "Цвет переднего плана"
+
+msgid "Front"
+msgstr "Шрифт"
+
+msgid "Graph"
+msgstr "Графік"
+
+msgid "Graph-On-Parent"
+msgstr "Графа-При-Родителе"
+
+msgid "Help"
+msgstr "Дапамога"
+
+msgid "Help Browser"
+msgstr "Просмотр справки"
+
+msgid "Hide object name and arguments"
+msgstr "Спрятать имя и аргументв объекта"
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr ""
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr ""
+
+msgid "In Ports:"
+msgstr "Вводящиее порты:"
+
+msgid "Init"
+msgstr "Инициализовать"
+
+msgid "Input device 1:"
+msgstr "Устпройство ввода 1:"
+
+msgid "Input device 2:"
+msgstr "Устпройство ввода 2:"
+
+msgid "Input device 3:"
+msgstr "Устпройство ввода 3:"
+
+msgid "Input device 4:"
+msgstr "Устпройство ввода 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Прыгать при щелчке"
+
+msgid "Label"
+msgstr "Ярлык"
+
+msgid "Label color"
+msgstr "Цвет ярлыков"
+
+msgid "Last graph"
+msgstr "Последняя графа"
+
+msgid "Left   "
+msgstr "Лево"
+
+msgid "Limits"
+msgstr "Ограничения"
+
+msgid "Load Meter"
+msgstr ""
+
+msgid "Log:"
+msgstr ""
+
+msgid "Lower:"
+msgstr "Нижний:"
+
+msgid "MIDI Settings"
+msgstr "MIDI Настройки"
+
+msgid "MIDI Settings..."
+msgstr ""
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Запас:"
+
+msgid "Match whole word only"
+msgstr "Подбирать только целое слово"
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr "Паведамленне"
+
+msgid "Message..."
+msgstr ""
+
+msgid "Messages"
+msgstr "Сообщения"
+
+msgid "Minimize"
+msgstr ""
+
+msgid "Name:"
+msgstr "Иия:"
+
+msgid "New"
+msgstr ""
+
+msgid "New graph"
+msgstr "Новая графа"
+
+msgid "Next Window"
+msgstr ""
+
+msgid "No init"
+msgstr "Не инициализовать"
+
+msgid "Number"
+msgstr ""
+
+msgid "Number2"
+msgstr ""
+
+msgid "OK"
+msgstr "ОК"
+
+msgid "OK (Ctrl t)"
+msgstr "ОК (Кнтрл t)"
+
+msgid "OUT"
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Open List View..."
+msgstr "Открыть Вид Списка..."
+
+msgid "Open Recent"
+msgstr ""
+
+msgid "Out Ports:"
+msgstr "Выводящиее порты:"
+
+msgid "Output device 1:"
+msgstr "Устпройство вывода 1:"
+
+msgid "Output device 2:"
+msgstr "Устпройство вывода 2:"
+
+msgid "Output device 3:"
+msgstr "Устпройство вывода 3:"
+
+msgid "Output device 4:"
+msgstr "Устпройство вывода 4:"
+
+msgid "Parent Window"
+msgstr ""
+
+msgid "Paste"
+msgstr "Вставить"
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr "Загружать Пд библиотеки при запуске"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Пд поисковой адрес для объектов, справки, шрифтов и других файлов"
+
+msgid "Pd window"
+msgstr "Пд окно"
+
+msgid "Pd-extended"
+msgstr ""
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Точки"
+
+msgid "Polygon"
+msgstr "Многоугольник"
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Previous Window"
+msgstr ""
+
+msgid "Print..."
+msgstr ""
+
+msgid "Properties"
+msgstr ""
+
+msgid "Put"
+msgstr ""
+
+msgid "Put array into:"
+msgstr "Вставить таблицу в:"
+
+msgid "Quit"
+msgstr ""
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Диапазон и размер"
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr "Принять символ:"
+
+msgid "Redo"
+msgstr ""
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr ""
+
+msgid "Redo cut"
+msgstr ""
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr ""
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr ""
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr ""
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "Право"
+
+msgid "Sample rate:"
+msgstr "Частота дискретизации"
+
+msgid "Save"
+msgstr "Захаваць"
+
+msgid "Save As..."
+msgstr "Захаваць як..."
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr "Сохранить содержание"
+
+msgid "Scale"
+msgstr "Масштаб"
+
+msgid "Search in"
+msgstr "Искать в"
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Отправить (Кнтрл S)"
+
+msgid "Send a Pd message"
+msgstr "Послать Пд сообщение"
+
+msgid "Send symbol:"
+msgstr "Отправить символ:"
+
+msgid "Setting embedded preferences..."
+msgstr "Дапамога"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Размер:"
+
+msgid "Start Here!"
+msgstr ""
+
+msgid "Startup flags:"
+msgstr "Запускные флаги:"
+
+msgid "Steady on click"
+msgstr "Стабилизировать при щелчке"
+
+msgid "Stretch"
+msgstr "Разтянуть"
+
+msgid "Symbol"
+msgstr ""
+
+msgid "Tcl:"
+msgstr ""
+
+msgid "Test Audio and MIDI..."
+msgstr ""
+
+msgid "Test label"
+msgstr "Пробный ярлык"
+
+msgid "Tidy Up"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr "Верх"
+
+msgid "Undo"
+msgstr ""
+
+msgid "Undo clear"
+msgstr ""
+
+msgid "Undo connect"
+msgstr ""
+
+msgid "Undo cut"
+msgstr ""
+
+msgid "Undo disconnect"
+msgstr ""
+
+msgid "Undo duplicate"
+msgstr ""
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr ""
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr "Высший:"
+
+msgid "Use callbacks"
+msgstr "Использовать обратные вызовы"
+
+msgid "Use multiple ALSA devices"
+msgstr "Использовать несколько ALSA устройств."
+
+msgid "Use multiple devices"
+msgstr "Использовать несколько устройств"
+
+msgid "Use standard extensions"
+msgstr "Использовать стандартные разширения"
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr "Многословный"
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ПРЕДУПРЕЖДЕНИЕ: неизвесные graphme флаги приняты в pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Ширина:"
+
+msgid "Window"
+msgstr ""
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X и Y"
+
+msgid "X offset"
+msgstr "X смещение"
+
+msgid "X only"
+msgstr "Только X"
+
+msgid "X range, from"
+msgstr "X диапозон, от"
+
+msgid "X units per pixel:"
+msgstr "Х единиц на пиксель:"
+
+msgid "Y offset"
+msgstr "Y смещение"
+
+msgid "Y only"
+msgstr "Только Y"
+
+msgid "Y range, from"
+msgstr "Y диапозон, от"
+
+msgid "Y units per pixel:"
+msgstr "Y единиц на пиксель:"
+
+msgid "Zoom"
+msgstr ""
+
+msgid "all"
+msgstr ""
+
+msgid "audio I/O error"
+msgstr ""
+
+msgid "bottom:"
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr "для:"
+
+msgid "height:"
+msgstr ""
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr ""
+
+msgid "left:"
+msgstr ""
+
+msgid "lin"
+msgstr ""
+
+msgid "log"
+msgstr ""
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr ""
+
+msgid "min:"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "really quit?"
+msgstr ""
+
+msgid "right:"
+msgstr ""
+
+msgid "size:"
+msgstr ""
+
+msgid "to"
+msgstr "до"
+
+msgid "top:"
+msgstr ""
+
+msgid "value:"
+msgstr ""
+
+msgid "width:"
+msgstr ""

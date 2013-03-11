@@ -1,0 +1,873 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <mathiasbredholt@gmail.com>, 2012.
+# Mathias Bredholt <mathiasbredholt@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-23 10:15+0000\n"
+"Last-Translator: mathiasbredholt <mathiasbredholt@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Skrifttype"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "Egenskaber for %s"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s er færdig!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' er allerede indlæst, ignorerer %s"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) UGYLDIGT KOMMANDO NAVN"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) MANGLER LUKKE-TUBORGKLAMME '}':"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) MANGLER LUKKEKLAMME ']':"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) UHÅNDTERET FEJL"
+
+msgid "(same as input device) ..............      "
+msgstr "(det samme som indgangs enhed) .............."
+
+msgid "(use arrow keys for history)"
+msgstr "(brug piltasterne for historien)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------output-område:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------dimensioner(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------dimensioner(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------blinke-tid(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensioner(tal)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------valgbare_dimensioner(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------synlig_rektangel(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI Indstillinger"
+
+msgid "About Pd"
+msgstr "Om Pd"
+
+msgid "Add new library"
+msgstr "Tilføj nyt bibliotek"
+
+msgid "Appearance on parent patch"
+msgstr "Udseende på det overliggende patch"
+
+msgid "Apply"
+msgstr "Anvend"
+
+msgid "Array"
+msgstr "Array"
+
+msgid "Array Properties"
+msgstr "Indstillinger for Array"
+
+msgid "Associated Files"
+msgstr "Associerede filer"
+
+msgid "Atom Box Properties"
+msgstr "Egenskaber for Atom Box"
+
+msgid "Audio Settings"
+msgstr "Lydindstillinger"
+
+msgid "Audio Settings..."
+msgstr "Lyd Indstillinger..."
+
+msgid "Autopatch"
+msgstr "Autopatch"
+
+msgid "Autotips"
+msgstr "Autotips"
+
+msgid "Background"
+msgstr "Baggrund"
+
+msgid "Background color"
+msgstr "Baggrundsfarve"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Kurve"
+
+msgid "Block size:"
+msgstr "Blokstørrelse:"
+
+msgid "Bottom"
+msgstr "Bund"
+
+msgid "Bring All to Front"
+msgstr "Bring alt forrest"
+
+msgid "Cancel"
+msgstr "Fortryd"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Kan ikke læse GUI indstillingsfil:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Kan ikke læse plugins mappen: '%s'"
+
+msgid "Canvas"
+msgstr "Canvas"
+
+msgid "Canvas Properties"
+msgstr "Egenskaber for canvas"
+
+msgid "Channels:"
+msgstr "Kanaler:"
+
+msgid "Clear Console"
+msgstr "Ryd konsol"
+
+msgid "Clear Menu"
+msgstr "Ryd menu"
+
+msgid "Close"
+msgstr "Luk"
+
+msgid "Close this window?"
+msgstr "Luk dette vindue?"
+
+msgid "Colors"
+msgstr "Farver"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Compose color"
+msgstr "Komponer farve"
+
+msgid "Configuring Info.plist..."
+msgstr "Konfigurerer Info.plist"
+
+msgid "Copy"
+msgstr "Kopiér"
+
+msgid "Copying current patch..."
+msgstr "Kopierer nuværende patch..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Kun ikke finde '%s' i %s"
+
+msgid "Cut"
+msgstr "Klip"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP Slukket"
+
+msgid "DSP On"
+msgstr "DSP Tændt"
+
+msgid "Data Properties"
+msgstr "Egenskaber for data"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Standard skrifttype: %s"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Forsinkelse (mili sek.):"
+
+msgid "Delete array"
+msgstr "Slet array"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Kasser ændringerne i '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Vil du gemme dine ændringer i '%s'?"
+
+msgid "Draw as:"
+msgstr "Tegn som:"
+
+msgid "Duplicate"
+msgstr "Dupliker"
+
+msgid "Edit"
+msgstr "Rediger"
+
+msgid "Edit Mode"
+msgstr "Redigeringsmodus"
+
+msgid "Edit library"
+msgstr "Rediger bibliotek"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "MISLYKKEDES AT INDLÆSE %s"
+
+msgid "File"
+msgstr "Filer"
+
+msgid "Find"
+msgstr "Find"
+
+msgid "Find Again"
+msgstr "Find Igen"
+
+msgid "Find Last Error"
+msgstr "Find Sidste Fejl"
+
+msgid "Find..."
+msgstr "Find..."
+
+msgid "Font"
+msgstr "Skrifttype"
+
+msgid "Font Size"
+msgstr "Skriftstørrelse"
+
+msgid "Foreground color"
+msgstr "Forgrundsfarve"
+
+msgid "Front"
+msgstr "Forrest"
+
+msgid "Graph"
+msgstr "Graf"
+
+msgid "Graph-On-Parent"
+msgstr "Graf-På-Parent"
+
+msgid "Help"
+msgstr "Hjælp"
+
+msgid "Help Browser"
+msgstr "Hjælpebrowser"
+
+msgid "Hide object name and arguments"
+msgstr "Skjul objektnavn og argumenter"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hslider"
+
+msgid "IN"
+msgstr "IND"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Ignorerer '%s': den ligner ikke en Pd-fil"
+
+msgid "In Ports:"
+msgstr "Indgange:"
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Input device 1:"
+msgstr "Indgangs enhed 1:"
+
+msgid "Input device 2:"
+msgstr "Indgangs enhed 2:"
+
+msgid "Input device 3:"
+msgstr "Indgangs enhed 3:"
+
+msgid "Input device 4:"
+msgstr "Indgangs enhed 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Jack ser ikke ud til at køre, så Pd-extended kan ikke forbindes til det."
+
+msgid "Jack not installed!"
+msgstr "Jack er ikke installeret!"
+
+msgid "Jack not running!"
+msgstr "Jack kører ikke!"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX er ikke fuldtud installeret, Pd-extended kan ikke bruge Jack uden det."
+
+msgid "Jump on click"
+msgstr "Hop ved klik"
+
+msgid "Label"
+msgstr "Etiket"
+
+msgid "Label color"
+msgstr "Etiket farve"
+
+msgid "Last graph"
+msgstr "Sidste graf"
+
+msgid "Left   "
+msgstr "Venstre"
+
+msgid "Limits"
+msgstr "Grænser"
+
+msgid "Load Meter"
+msgstr "CPU-brug"
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Indlæser plugin %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Indlæser oversættelser af %s"
+
+msgid "Log:"
+msgstr "Log:"
+
+msgid "Lower:"
+msgstr "Nedre:"
+
+msgid "MIDI Settings"
+msgstr "MIDI Indstillinger"
+
+msgid "MIDI Settings..."
+msgstr "MIDI Indstillinger..."
+
+msgid "Magic Glass"
+msgstr "Magiske briller"
+
+msgid "Make app from folder..."
+msgstr "Lav app fra mappe..."
+
+msgid "Make app from patch..."
+msgstr "Lav app fra patch..."
+
+msgid "Making App"
+msgstr "Laver App"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "Laver App i %s..."
+
+msgid "Margin:"
+msgstr "Margen:"
+
+msgid "Match whole word only"
+msgstr "Søg kun efter hele ord"
+
+msgid "Max Binary Files"
+msgstr "Max Binaryfiler"
+
+msgid "Max Help Files"
+msgstr "Max Hjælpefiler"
+
+msgid "Max Patch Files"
+msgstr "Max Patchfiler"
+
+msgid "Max Text Files"
+msgstr "Max Tekstfiler"
+
+msgid "Media"
+msgstr "Medier"
+
+msgid "Message"
+msgstr "Besked"
+
+msgid "Message..."
+msgstr "Besked..."
+
+msgid "Messages"
+msgstr "Beskeder"
+
+msgid "Minimize"
+msgstr "Minimer"
+
+msgid "Name:"
+msgstr "Navn:"
+
+msgid "New"
+msgstr "Ny"
+
+msgid "New graph"
+msgstr "Ny graf"
+
+msgid "Next Window"
+msgstr "Næste vindue"
+
+msgid "No init"
+msgstr "Ingen init"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr "Intet patch blev fundet! Vælg et åbent moderpatch med musen og prøv igen."
+
+msgid "Number"
+msgstr "Nummer"
+
+msgid "Number2"
+msgstr "Nummer2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr "UD"
+
+msgid "Object"
+msgstr "Objekt"
+
+msgid "Open"
+msgstr "Åben"
+
+msgid "Open List View..."
+msgstr "Åben Listeoversigt"
+
+msgid "Open Recent"
+msgstr "Åben seneste"
+
+msgid "Out Ports:"
+msgstr "Udgange:"
+
+msgid "Output device 1:"
+msgstr "Udgangs enhed 1:"
+
+msgid "Output device 2:"
+msgstr " Udgangs enhed 2:"
+
+msgid "Output device 3:"
+msgstr "Udgangs enhed 3:"
+
+msgid "Output device 4:"
+msgstr "Udgangs enhed 4:"
+
+msgid "Parent Window"
+msgstr "Overliggende vindue"
+
+msgid "Paste"
+msgstr "Sæt ind"
+
+msgid "Pd Files"
+msgstr "Pd Filer"
+
+msgid "Pd Help Browser..."
+msgstr "Pd Hjælpebrowser"
+
+msgid "Pd libraries to load on startup"
+msgstr "Pd biblioteker der skal indlæses ved opstart"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Pd søg på sti efter objekter, hjælp, skrifttyper og andre filer"
+
+msgid "Pd window"
+msgstr "Pd vindue"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Perf modus"
+
+msgid "Points"
+msgstr "Punkter"
+
+msgid "Polygon"
+msgstr "Polygon"
+
+msgid "Preferences"
+msgstr "Indstillinger"
+
+msgid "Previous Window"
+msgstr "Forrige vindue"
+
+msgid "Print..."
+msgstr "Udskriv..."
+
+msgid "Properties"
+msgstr "Egenskaber"
+
+msgid "Put"
+msgstr "Indsæt"
+
+msgid "Put array into:"
+msgstr "Sæt array ind i:"
+
+msgid "Quit"
+msgstr "Luk"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Luk Pd-extended, start Jack og prøv igen."
+
+msgid "Range and size"
+msgstr "Område og størrelse"
+
+msgid "Real-time scheduling"
+msgstr "Realtids planlægning"
+
+msgid "Receive symbol:"
+msgstr "Modtag symbol"
+
+msgid "Redo"
+msgstr "Gentag"
+
+msgid "Redo clear"
+msgstr "Gentag ryd"
+
+msgid "Redo connect"
+msgstr "Gentag forbind"
+
+msgid "Redo cut"
+msgstr "Gentag klip"
+
+msgid "Redo disconnect"
+msgstr "Gentag frakobling"
+
+msgid "Redo duplicate"
+msgstr "Gentag duplikering"
+
+msgid "Redo motion"
+msgstr "Gentag bevægelse"
+
+msgid "Redo paste"
+msgstr "Gentag sæt ind"
+
+msgid "Redo typing"
+msgstr "Gentag indtastning"
+
+msgid "Report a bug"
+msgstr "Rapporter en fejl"
+
+msgid "Reset to Defaults"
+msgstr "Nulstil til standardinstillinger"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
+msgid "Right"
+msgstr "Højre"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Kører: '%s %s'"
+
+msgid "Sample rate:"
+msgstr "Samplingfrekvens:"
+
+msgid "Save"
+msgstr "Gem"
+
+msgid "Save As..."
+msgstr "Gem som..."
+
+msgid "Save application to..."
+msgstr "Gem applikation til..."
+
+msgid "Save contents"
+msgstr "Gem indhold"
+
+msgid "Scale"
+msgstr "Skaler"
+
+msgid "Search in"
+msgstr "Søg i"
+
+msgid "Select All"
+msgstr "Vælg alle"
+
+msgid "Select name for app to build...\n"
+msgstr "Vælg navn til applikation til eksport...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Send (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Send en besked til Pd"
+
+msgid "Send symbol:"
+msgstr "Send symbol"
+
+msgid "Setting embedded preferences..."
+msgstr "Sætter vedhæftede indstillinger..."
+
+msgid "Setting patch name..."
+msgstr "Sætter patchnavn..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr "Indstiller %s/Contents/Info.plist"
+
+msgid "Size:"
+msgstr "Størrelse:"
+
+msgid "Start Here!"
+msgstr "Start her!"
+
+msgid "Startup flags:"
+msgstr "Opstartsflag:"
+
+msgid "Steady on click"
+msgstr "Passiv ved klik"
+
+msgid "Stretch"
+msgstr "Stræk"
+
+msgid "Symbol"
+msgstr "Symbol"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Test Lyd og MIDI"
+
+msgid "Test label"
+msgstr "Test etiket"
+
+msgid "Tidy Up"
+msgstr "Ryd op"
+
+msgid "Toggle"
+msgstr "Checkbox"
+
+msgid "Top"
+msgstr "Top"
+
+msgid "Undo"
+msgstr "Fortryd"
+
+msgid "Undo clear"
+msgstr "Fortryd ryd"
+
+msgid "Undo connect"
+msgstr "Fortryd forbind"
+
+msgid "Undo cut"
+msgstr "Fortryd klip"
+
+msgid "Undo disconnect"
+msgstr "Fortryd frakobling"
+
+msgid "Undo duplicate"
+msgstr "Fortryd duplikering"
+
+msgid "Undo motion"
+msgstr "Fortryd bevægelse"
+
+msgid "Undo paste"
+msgstr "Fortryd indsæt"
+
+msgid "Undo typing"
+msgstr "Fortryd indtastning"
+
+msgid "Upper:"
+msgstr "Øvre:"
+
+msgid "Use callbacks"
+msgstr "Brug callbacks"
+
+msgid "Use multiple ALSA devices"
+msgstr "Brug flere ALSA enheder"
+
+msgid "Use multiple devices"
+msgstr "Brug flere enheder"
+
+msgid "Use standard extensions"
+msgstr "Brug standard endelser"
+
+msgid "VU Meter"
+msgstr "VU Meter"
+
+msgid "Verbose"
+msgstr "Detaljeret"
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vslider"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr "ADVARSEL: Skrifttypefamilien '%s' blev ikke fundet, bruger standarden (%s)"
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ADVARSEL: ukendte  graphme flag modtaget i pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Bredde:"
+
+msgid "Window"
+msgstr "Vindue"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr "Vil du gå til JackOSC.com for at downloade Jack?"
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr "Vil du åbne JackPilot for at starte Jack?"
+
+msgid "X and Y"
+msgstr "X og Y"
+
+msgid "X offset"
+msgstr "X offset"
+
+msgid "X only"
+msgstr "Kun X"
+
+msgid "X range, from"
+msgstr "X område, fra"
+
+msgid "X units per pixel:"
+msgstr "X punkter pr. pixel"
+
+msgid "Y offset"
+msgstr "Y offset"
+
+msgid "Y only"
+msgstr "Kun Y"
+
+msgid "Y range, from"
+msgstr "Y område, fra"
+
+msgid "Y units per pixel:"
+msgstr "Y punkter pr. pixel"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "all"
+msgstr "alle"
+
+msgid "audio I/O error"
+msgstr "lyd I/O fejl"
+
+msgid "bottom:"
+msgstr "bund:"
+
+msgid "converted Max binary to text format:"
+msgstr ""
+
+msgid "debug"
+msgstr "fejlfinding"
+
+msgid "error"
+msgstr "fejl"
+
+msgid "fatal"
+msgstr "fatal"
+
+msgid "for:"
+msgstr "for:"
+
+msgid "height:"
+msgstr "højde:"
+
+msgid "hold:"
+msgstr "hold:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr "http://puredata.info/docs/StartHere"
+
+msgid "intrrpt:"
+msgstr "afbr:"
+
+msgid "left:"
+msgstr "venstre:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "log-højde:"
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "really quit?"
+msgstr "vil du virkelig lukke?"
+
+msgid "right:"
+msgstr "højre:"
+
+msgid "size:"
+msgstr "størrelse:"
+
+msgid "to"
+msgstr "til"
+
+msgid "top:"
+msgstr "top:"
+
+msgid "value:"
+msgstr "værdi:"
+
+msgid "width:"
+msgstr "bredde:"

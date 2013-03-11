@@ -1,0 +1,90 @@
+#N canvas 294 80 918 631 10;
+#X obj 87 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 171 226 window 2048;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array bfcc-graph 47 float 0;
+#X coords 0 1 46 -1 200 140 1;
+#X restore 480 343 graph;
+#X obj 54 486 list prepend 0;
+#X text 169 208 Change analysis window size.;
+#X obj 54 508 s bfcc-graph;
+#X obj 54 32 adc~;
+#X obj 54 370 bfcc~ 1024 0.5;
+#X text 158 153 Bang repeatedly...;
+#X obj 134 154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 134 173 metro 20;
+#X obj 655 537 timbreID;
+#X text 477 508 Send list of BFCCs to the classification external.
+;
+#X text 477 523 See timbreID helpfile:;
+#X obj 1 -13 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -13 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#N canvas 410 79 744 629 other-settings 0;
+#X obj 54 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 106 window_function \$1;
+#X obj 110 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 110 166 normalize \$1;
+#X msg 175 247 power_spectrum \$1;
+#X obj 175 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 234 314 filterbank 1;
+#X msg 277 382 filter_avg \$1;
+#X obj 277 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 384 382 Average energy in filters instead of summing.;
+#X obj 54 575 outlet;
+#X text 334 314 Construct a new filterbank with a specific spacing.
+;
+#X text 216 166 Normalize spectrum (default: ON);
+#X text 52 49 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X text 316 247 Use power spectrum. (default: magnitude);
+#X connect 0 0 1 0;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 3 0 10 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 6 0 10 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X restore 214 283 pd other-settings;
+#X text 478 124 This list can be sent to the timbreID external in order
+to identify percussive timbres in real time.;
+#X text 84 90 Bang to output BFCCs as a list.;
+#X text 478 34 Bark-frequency cepstrum is actually much different than
+raw cepstrum. The most significant differences are an emphasis on lower
+spectral content and the use of a DCT rather than an FT in the final
+step of the process. When bfcc~ receives a bang \, it spits out the
+BFCCs for the most recent analysis window as a list.;
+#X text 478 164 Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message. The second creation argument specifies the Bark-spacing
+of the filterbank. This can also be changed later with the "filterbank"
+message. The default half-Bark spacing produces a 47-component BFCC
+vector regardless of window size. BFCC components are normalized to
+be between 1 and -1 by default \, and the first BFCC will always have
+a value of 1;
+#X obj 199 431 list length;
+#X obj 199 453 change;
+#X obj 54 392 t l l;
+#X msg 199 476 \; bfcc-graph resize \$1 \;;
+#X connect 0 0 7 0;
+#X connect 1 0 7 0;
+#X connect 3 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 23 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 16 0 7 0;
+#X connect 21 0 22 0;
+#X connect 22 0 24 0;
+#X connect 23 0 3 0;
+#X connect 23 1 21 0;

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="text/x-puredata">
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.pd"/>
+	<alias type="application/x-puredata"/>
+	<magic priority="50">
+	  <match type="string" value="#N " offset="0"/>
+	</magic>
+    <comment>Pure Data Document</comment>
+	<comment xml:lang="en">Pure Data Document</comment>
+	<comment xml:lang="da">Pure Data Dokument</comment>
+	<comment xml:lang="de">Pure Data Dokument</comment>
+	<comment xml:lang="cy">Dogfen Pure Data</comment>
+    <comment xml:lang="el">Έγγραφο Pure Data</comment>
+	<comment xml:lang="fr">Fichier de Pure Data</comment>
+	<comment xml:lang="hu">Pure Data dokumentum</comment>
+	<comment xml:lang="ja">Pure Dataドキュメント</comment>
+	<comment xml:lang="nb">Pure Data-dokument</comment>
+	<comment xml:lang="nn">Pure Data-dokument</comment>
+	<comment xml:lang="fi">Pure Data-asiakirja</comment>
+	<comment xml:lang="cz">Pure Data Dokument</comment>
+	<comment xml:lang="sl">Dokument Pure Data</comment>
+	<comment xml:lang="fr">Pure Data Document</comment>
+	<comment xml:lang="es">Documento de Pure Data</comment>
+	<comment xml:lang="it">Documento Pure Data</comment>
+	<comment xml:lang="nb">Pure Data dokument</comment>
+	<comment xml:lang="da">Pure Data Dokument</comment>
+	<comment xml:lang="tr">Pure Data Belgesi</comment>
+	<comment xml:lang="ru">Документ Pure Data</comment>
+  </mime-type>
+  <mime-type type="text/x-puredata-help">
+    <sub-class-of type="text/x-puredata"/>
+    <glob pattern="*-help.pd"/>
+    <comment>Pure Data Help</comment>
+	<comment xml:lang="da">Pure Data Hjælp</comment>
+    <comment xml:lang="el">Βοήθεια Pure Data</comment>
+    <comment xml:lang="fr">Aide de Pure Data</comment>
+    <comment xml:lang="hu">Pure Data súgó</comment>
+    <comment xml:lang="ja">Pure Dataヘルプファイル</comment>
+  </mime-type>
+  <mime-type type="text/x-puredata-meta">
+    <sub-class-of type="text/x-puredata"/>
+    <glob pattern="*-meta.pd"/>
+    <comment>Pure Data Meta Marker for Libraries</comment>
+	<comment xml:lang="da">Pure Data Meta Marker for Biblioteker</comment>
+    <comment xml:lang="el">Μέτα Δείκτης Pure Data για Βιβλιοθήκες</comment>
+    <comment xml:lang="fr">Balise Meta pour librairie de Pure Data</comment>
+    <comment xml:lang="hu">Pure Data meta jelölő könyvárakhoz</comment>
+    <comment xml:lang="ja">ライブラリ用Pure Dataメタマーカー</comment>
+  </mime-type>
+  <mime-type type="application/x-puredata-external-linux">
+    <sub-class-of type="application/octet-stream"/>
+    <glob pattern="*.pd_linux"/>
+    <comment>Pure Data External (Linux Binary)</comment>
+	<comment xml:lang="da">Pure Data Udvidelse (Linux Binary)</comment>
+    <comment xml:lang="el">Εξωτερικό Pure Data (Δυαδικό Linux)</comment>
+    <comment xml:lang="fr">Extra de Pure Data (binaire pour Linux)</comment>
+    <comment xml:lang="hu">Pure Data external (Linux bináris)</comment>
+    <comment xml:lang="ja">Pure Dataエクスターナル(Linuxバイナリ)</comment>
+  </mime-type>
+  <mime-type type="application/x-puredata-external-darwin">
+    <sub-class-of type="application/octet-stream"/>
+    <glob pattern="*.pd_darwin"/>
+    <comment>Pure Data External (Mac OS X Binary)</comment>
+	<comment xml:lang="da">Pure Data External (Mac OS X Binary)</comment>
+    <comment xml:lang="el">Εξωτερικό Pure Data (Δυαδικό Mac OS X)</comment>
+    <comment xml:lang="fr">Extra de Pure Data (binaire pour Mac OS X)</comment>
+    <comment xml:lang="hu">Pure Data external (Mac OS X bináris)</comment>
+    <comment xml:lang="ja">Pure Dataエクスターナル(Mac OS Xバイナリ)</comment>
+  </mime-type>
+  <mime-type type="text/x-maxmsp">
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.mxt"/>
+    <comment>Max/MSP Text Document</comment>
+    <comment xml:lang="el">Max/MSP Έγγραφο κειμένου</comment>
+	<comment xml:lang="da">Max/MSP Tekstdokument</comment>
+    <comment xml:lang="fr">Fichier texte pour Max/MSP</comment>
+    <comment xml:lang="hu">Max/MSP szöveg dokumentum</comment>
+    <comment xml:lang="ja">Max/MSPテキストドキュメント</comment>
+	<magic priority="50">
+	  <match type="string" value="max v2;" offset="0"/>
+	</magic>
+  </mime-type>
+  <mime-type type="application/x-maxmsp">
+    <sub-class-of type="application/octet-stream"/>
+    <glob pattern="*.mxb"/>
+	<magic priority="50">
+	  <match type="string" value="pmax" offset="4"/>
+	</magic>
+    <comment>Max/MSP Binary Document</comment>
+	<comment xml:lang="da">Max/MSP Binarydokument</comment>
+    <comment xml:lang="el">Max/MSP Δυαδικό Έγγραφο</comment>
+    <comment xml:lang="fr">Fichier binaire pour Max/MSP</comment>
+    <comment xml:lang="hu">Max/MSP bináris dokumentum</comment>
+    <comment xml:lang="ja">Max/MSPバイナリドキュメント</comment>
+  </mime-type>
+</mime-info>

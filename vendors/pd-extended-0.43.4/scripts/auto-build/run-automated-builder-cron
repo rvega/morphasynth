@@ -1,0 +1,22 @@
+#!/bin/sh
+# this is the script to actually stick in the cron job
+
+# echo each command as its executed
+set -x
+
+# the source dir where this script is
+## this could be done more easily with ${0%/*}
+SCRIPT_DIR=$(echo $0 | sed 's|\(.*\)/.*$|\1|')
+. $SCRIPT_DIR/auto-build-common
+
+SCRIPT_DIR=${HOME}/auto-build/pd-extended/scripts/auto-build
+BUILD_SCRIPT=run-automated-builder
+LOGFILE=${HOME}/logs/${DATE}_${TIME}_${SYSTEM}_${HOSTNAME}_${BUILD_SCRIPT}.txt
+
+# update the script from SVN before running it
+svn cleanup $SCRIPT_DIR                  > $LOGFILE 2>&1
+svn revert -R $SCRIPT_DIR                > $LOGFILE 2>&1
+svn up $SCRIPT_DIR                       > $LOGFILE 2>&1
+
+# run the script from SVN as the 'pd' user.                                               
+/bin/bash ${SCRIPT_DIR}/${BUILD_SCRIPT}  > $LOGFILE 2>&1

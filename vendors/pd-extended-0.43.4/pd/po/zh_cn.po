@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s 字型"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s 內容"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) INVALID COMMAND NAME: "
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) MISSING CLOSE-BRACE '}': "
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) MISSING CLOSE-BRACKET ']': "
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) UNHANDLED ERROR: "
+
+msgid "(same as input device) ..............      "
+msgstr "(如同輸入設備).........."
+
+msgid "(use arrow keys for history)"
+msgstr "（使用方向鍵查看歷史訊息）"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------輸出範圍-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------dimensions(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------dimensions(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------flash-time(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensions(digits)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------selectable_dimensions(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------可見的矩形(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI 設定"
+
+msgid "About Pd"
+msgstr "關於 Pd"
+
+msgid "Add new library"
+msgstr "新增函式庫"
+
+msgid "Appearance on parent patch"
+msgstr "上層 patch 的顯示選項"
+
+msgid "Apply"
+msgstr "套用"
+
+msgid "Array"
+msgstr "Array"
+
+msgid "Array Properties"
+msgstr "Array 內容"
+
+msgid "Atom Box Properties"
+msgstr "Atom Box 內容"
+
+msgid "Audio Settings"
+msgstr "音效設定"
+
+msgid "Audio Settings..."
+msgstr "音效設定..."
+
+msgid "Autopatch"
+msgstr "自動連線"
+
+msgid "Autotips"
+msgstr "自動提示"
+
+msgid "Background"
+msgstr "背景"
+
+msgid "Background color"
+msgstr "背景顏色"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "貝茲曲線"
+
+msgid "Block size:"
+msgstr "區塊大小"
+
+msgid "Bottom"
+msgstr "下"
+
+msgid "Bring All to Front"
+msgstr "將此程式所有視窗移至最前"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Cannot read GUI prefs file: "
+
+msgid "Canvas"
+msgstr "Canvas"
+
+msgid "Canvas Properties"
+msgstr "Canvas 內容"
+
+msgid "Channels:"
+msgstr "頻道:"
+
+msgid "Clear Console"
+msgstr "清除控制台"
+
+msgid "Clear Menu"
+msgstr "清除選單"
+
+msgid "Close"
+msgstr "關閉"
+
+msgid "Close this window?"
+msgstr "關閉這個視窗？"
+
+msgid "Colors"
+msgstr "顏色"
+
+msgid "Comment"
+msgstr "Comment"
+
+msgid "Compose color"
+msgstr "制定顏色"
+
+msgid "Configuring Info.plist..."
+msgstr "設定 Info.plist..."
+
+msgid "Copy"
+msgstr "複製"
+
+msgid "Copying current patch..."
+msgstr "複製現在的 patch..."
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "「%s」無法在%s被搜尋到"
+
+msgid "Cut"
+msgstr "剪下"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "關閉 DSP"
+
+msgid "DSP On"
+msgstr "打開 DSP"
+
+msgid "Data Properties"
+msgstr "資料內容"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "延遲(微秒)"
+
+msgid "Delete array"
+msgstr "刪除 Array"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "忽略「%s」的更改"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "要儲存已修改過的「%s」嗎？"
+
+msgid "Draw as:"
+msgstr "描繪成"
+
+msgid "Duplicate"
+msgstr "重複"
+
+msgid "Edit"
+msgstr "編輯"
+
+msgid "Edit Mode"
+msgstr "編輯模式"
+
+msgid "Edit library"
+msgstr "編輯函式庫"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "Find"
+msgstr "搜尋"
+
+msgid "Find Again"
+msgstr "再尋找"
+
+msgid "Find Last Error"
+msgstr "尋找上次錯誤"
+
+msgid "Find..."
+msgstr "尋找..."
+
+msgid "Font"
+msgstr "字體"
+
+msgid "Font Size"
+msgstr "字體大小:"
+
+msgid "Foreground color"
+msgstr "前景顏色"
+
+msgid "Front"
+msgstr "字型"
+
+msgid "Graph"
+msgstr "Graph"
+
+msgid "Graph-On-Parent"
+msgstr "在上層顯示介面"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Help Browser"
+msgstr "Help Browser"
+
+msgid "Hide object name and arguments"
+msgstr "隱藏 object 名稱與參數"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hslider"
+
+msgid "IN"
+msgstr "IN"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "忽略 「%s」: 這不像是Pd檔案"
+
+msgid "In Ports:"
+msgstr "輸入埠："
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Input device 1:"
+msgstr "輸入設備 1:"
+
+msgid "Input device 2:"
+msgstr "輸入設備 2:"
+
+msgid "Input device 3:"
+msgstr "輸入設備 3:"
+
+msgid "Input device 4:"
+msgstr "輸入設備 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Jump on click"
+
+msgid "Label"
+msgstr "標籤"
+
+msgid "Label color"
+msgstr "標籤顏色"
+
+msgid "Last graph"
+msgstr "上一個 graph"
+
+msgid "Left   "
+msgstr "左"
+
+msgid "Limits"
+msgstr "範圍"
+
+msgid "Load Meter"
+msgstr "Load Meter"
+
+msgid "Log:"
+msgstr "Log:"
+
+msgid "Lower:"
+msgstr "最小值："
+
+msgid "MIDI Settings"
+msgstr "MIDI 設定"
+
+msgid "MIDI Settings..."
+msgstr "MIDI 設定..."
+
+msgid "Magic Glass"
+msgstr "Magic Glass"
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "邊框"
+
+msgid "Match whole word only"
+msgstr "完全吻合"
+
+msgid "Media"
+msgstr "媒體"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message..."
+msgstr "Message..."
+
+msgid "Messages"
+msgstr "Messages"
+
+msgid "Minimize"
+msgstr "最小化"
+
+msgid "Name:"
+msgstr "名稱:"
+
+msgid "New"
+msgstr "新增"
+
+msgid "New graph"
+msgstr "新 graph"
+
+msgid "Next Window"
+msgstr "下一個視窗"
+
+msgid "No init"
+msgstr "No init"
+
+msgid "Number"
+msgstr "Number"
+
+msgid "Number2"
+msgstr "Number2"
+
+msgid "OK"
+msgstr "確定"
+
+msgid "OK (Ctrl t)"
+msgstr "確認 (Ctrl t)"
+
+msgid "OUT"
+msgstr "OUT"
+
+msgid "Object"
+msgstr "Object"
+
+msgid "Open"
+msgstr "開啟"
+
+msgid "Open List View..."
+msgstr "檢視陣列資料表"
+
+msgid "Open Recent"
+msgstr "打開最近使用的檔案"
+
+msgid "Out Ports:"
+msgstr "輸出埠："
+
+msgid "Output device 1:"
+msgstr "輸出設備 1:"
+
+msgid "Output device 2:"
+msgstr "輸出設備 2:"
+
+msgid "Output device 3:"
+msgstr "輸出設備 3:"
+
+msgid "Output device 4:"
+msgstr "輸出設備 4:"
+
+msgid "Parent Window"
+msgstr "上層視窗"
+
+msgid "Paste"
+msgstr "貼上"
+
+msgid "Pd Help Browser..."
+msgstr "Pd Help Browser..."
+
+msgid "Pd libraries to load on startup"
+msgstr "啟動時載入函式庫"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "objects, help, 字型及其他檔案之搜尋路徑"
+
+msgid "Pd window"
+msgstr "Pd 主視窗"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Perf Mode"
+
+msgid "Points"
+msgstr "點"
+
+msgid "Polygon"
+msgstr "多邊形"
+
+msgid "Preferences"
+msgstr "偏好設定"
+
+msgid "Previous Window"
+msgstr "前一個視窗"
+
+msgid "Print..."
+msgstr "列印..."
+
+msgid "Properties"
+msgstr "內容"
+
+msgid "Put"
+msgstr "放置"
+
+msgid "Put array into:"
+msgstr "置入 Array"
+
+msgid "Quit"
+msgstr "離開"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "範圍與尺寸"
+
+msgid "Real-time scheduling"
+msgstr "Real-time scheduling"
+
+msgid "Receive symbol:"
+msgstr "接收 symbol："
+
+msgid "Redo"
+msgstr "重做"
+
+msgid "Redo clear"
+msgstr "重做清除"
+
+msgid "Redo connect"
+msgstr "重做連結"
+
+msgid "Redo cut"
+msgstr "重做剪下"
+
+msgid "Redo disconnect"
+msgstr "重做斷線"
+
+msgid "Redo duplicate"
+msgstr "重做複製"
+
+msgid "Redo motion"
+msgstr "重做動態"
+
+msgid "Redo paste"
+msgstr "重做貼上"
+
+msgid "Redo typing"
+msgstr "重做輸入"
+
+msgid "Report a bug"
+msgstr "回報錯誤"
+
+msgid "Reset to Defaults"
+msgstr "回復設定"
+
+msgid "Right"
+msgstr "右"
+
+msgid "Sample rate:"
+msgstr "取樣率"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Save As..."
+msgstr "另存新檔..."
+
+msgid "Save application to..."
+msgstr "儲存 app 到..."
+
+msgid "Save contents"
+msgstr "儲存"
+
+msgid "Scale"
+msgstr "縮放"
+
+msgid "Search in"
+msgstr "於"
+
+msgid "Select All"
+msgstr "全選"
+
+msgid "Select name for app to build...\n"
+msgstr "為 app 命名並建立...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "傳送（Ctrl s）"
+
+msgid "Send a Pd message"
+msgstr "送出 Pd message"
+
+msgid "Send symbol:"
+msgstr "傳送 symbol："
+
+msgid "Setting embedded preferences..."
+msgstr "Setting embedded preferences..."
+
+msgid "Setting patch name..."
+msgstr "設定 patch 名稱..."
+
+msgid "Size:"
+msgstr "大小:"
+
+msgid "Start Here!"
+msgstr "從這開始!"
+
+msgid "Startup flags:"
+msgstr "啟始參數"
+
+msgid "Steady on click"
+msgstr "Steady on click"
+
+msgid "Stretch"
+msgstr "延展"
+
+msgid "Symbol"
+msgstr "Symbol"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "聲音和 MIDI 測試..."
+
+msgid "Test label"
+msgstr "Test label"
+
+msgid "Tidy Up"
+msgstr "整理"
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Top"
+msgstr "上"
+
+msgid "Undo"
+msgstr "復原"
+
+msgid "Undo clear"
+msgstr "回復清除"
+
+msgid "Undo connect"
+msgstr "回復連結"
+
+msgid "Undo cut"
+msgstr "回復剪下"
+
+msgid "Undo disconnect"
+msgstr "回復斷線"
+
+msgid "Undo duplicate"
+msgstr "回復複製"
+
+msgid "Undo motion"
+msgstr "回復動態"
+
+msgid "Undo paste"
+msgstr "回復貼上"
+
+msgid "Undo typing"
+msgstr "回復輸入"
+
+msgid "Upper:"
+msgstr "最大值："
+
+msgid "Use callbacks"
+msgstr "使用 callbacks"
+
+msgid "Use multiple ALSA devices"
+msgstr "使用多個 ALSA 設備"
+
+msgid "Use multiple devices"
+msgstr "使用多組設備"
+
+msgid "Use standard extensions"
+msgstr "使用預設擴充套件"
+
+msgid "VU Meter"
+msgstr "VU Meter"
+
+msgid "Verbose"
+msgstr "額外套件"
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vslider"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "警告：unknown graphme flags received in pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "寬度:"
+
+msgid "Window"
+msgstr "視窗"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X 和 Y"
+
+msgid "X offset"
+msgstr "X 軸位移"
+
+msgid "X only"
+msgstr "只有 X"
+
+msgid "X range, from"
+msgstr "X範圍, 自"
+
+msgid "X units per pixel:"
+msgstr "單一像素的 X 單位: "
+
+msgid "Y offset"
+msgstr "Y 軸位移"
+
+msgid "Y only"
+msgstr "只有 Y"
+
+msgid "Y range, from"
+msgstr "Y範圍, 自"
+
+msgid "Y units per pixel:"
+msgstr "單一像素的 Y 單位: "
+
+msgid "Zoom"
+msgstr "放大"
+
+msgid "all"
+msgstr "全部"
+
+msgid "audio I/O error"
+msgstr "音訊 I/O 錯誤"
+
+msgid "bottom:"
+msgstr "下："
+
+msgid "debug"
+msgstr "除錯"
+
+msgid "error"
+msgstr "錯誤"
+
+msgid "fatal"
+msgstr "致命"
+
+msgid "for:"
+msgstr "搜尋"
+
+msgid "height:"
+msgstr "高："
+
+msgid "hold:"
+msgstr "暫停："
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "中斷："
+
+msgid "left:"
+msgstr "左："
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "log-height:"
+
+msgid "max:"
+msgstr "最大："
+
+msgid "min:"
+msgstr "最小："
+
+msgid "normal"
+msgstr "正常"
+
+msgid "really quit?"
+msgstr "確定要離開？"
+
+msgid "right:"
+msgstr "右："
+
+msgid "size:"
+msgstr "尺寸："
+
+msgid "to"
+msgstr "到"
+
+msgid "top:"
+msgstr "上："
+
+msgid "value:"
+msgstr "數值："
+
+msgid "width:"
+msgstr "寬度："

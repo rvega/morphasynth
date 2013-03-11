@@ -1,3 +1,3 @@
-[submodule "libs/libpd"]
-	path = libs/libpd
-	url = https://github.com/rvega/libpd.git
+[submodule "vendors/libpd"]
+	path = vendors/libpd
+	url = https://github.com/libpd/libpd.git

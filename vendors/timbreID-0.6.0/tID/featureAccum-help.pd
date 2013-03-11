@@ -1,0 +1,71 @@
+#N canvas 381 148 788 612 10;
+#X msg 134 255 clear;
+#X text 330 524 To clear memory \, send the "clear" message. Note that
+changing the expected list length with the "length" message automatically
+clears memory.;
+#X obj 58 58 adc~;
+#X obj 58 169 bfcc~;
+#X obj 133 61 tgl 15 0 empty empty Analyze 17 7 0 12 -262144 -1 -1
+0 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array facc-graph 235 float 0;
+#X coords 0 1 234 -1 400 140 1;
+#X restore 332 71 graph;
+#X obj 58 526 binWrangler;
+#X text 56 509 Also see:;
+#X obj 58 444 s facc-graph;
+#X obj 58 421 list prepend 0;
+#X text 330 351 After the specified number of frames have been accumulated
+\, [featureAccum] outputs the concatenated list and clears internal
+memory. Click the "Analyze" toggle at left to see this behavior (DSP
+must be on).;
+#X msg 150 281 num_frames 6;
+#X msg 160 311 length 7;
+#X obj 85 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 87 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 87 221 spew \$1;
+#X text 330 484 Creation arguments are the number of frames to expect
+\, the length of the feature \, and a flag for "spew" mode.;
+#X obj 133 90 metro 100;
+#X obj 133 111 t b b;
+#X obj 177 138 f;
+#X obj 207 138 + 1;
+#X msg 235 44 0;
+#X obj 235 24 select 4;
+#X text 330 259 [featureAccum] accumulates a database of lists sent
+to its inlet. The purpose of this object in the timbreID library is
+to take in several frames of a feature \, then output them as a single
+concatenated list. The features in all frames must be of a common length
+N \, specified at creation time \, or with the "length" message. It's
+ok for length to be 1;
+#X text 330 414 If the optional "spew" mode is activated \, featureAccum
+outputs the total concatenated list each time it receives a new analysis
+frame. It acts as a sliding buffer for time-based feature capture.
+;
+#X obj 58 383 featureAccum 5 47 0;
+#X obj 1 -4 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -4 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 25 0;
+#X connect 2 0 3 0;
+#X connect 3 0 25 0;
+#X connect 4 0 17 0;
+#X connect 9 0 8 0;
+#X connect 11 0 25 0;
+#X connect 12 0 25 0;
+#X connect 13 0 3 0;
+#X connect 14 0 15 0;
+#X connect 15 0 25 0;
+#X connect 17 0 18 0;
+#X connect 18 0 3 0;
+#X connect 18 1 19 0;
+#X connect 19 0 20 0;
+#X connect 19 0 22 0;
+#X connect 20 0 19 1;
+#X connect 21 0 19 1;
+#X connect 21 0 4 0;
+#X connect 22 0 21 0;
+#X connect 25 0 9 0;

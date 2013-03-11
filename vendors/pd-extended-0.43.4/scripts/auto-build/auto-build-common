@@ -1,0 +1,183 @@
+#!/bin/sh
+# these are common variables for the auto-build scripts
+
+SYSTEM=$(uname -s | sed 'y|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|')
+DATE=$(date +%Y-%m-%d)
+TIME=$(date +%H.%M.%S)
+HOSTNAME=$(hostname | sed 's|\([a-zA-Z0-9-]\)\..*|\1|' | sed 'y|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|')
+RSYNC_SERVER=apt@puredata.info
+
+# use the hostname from /etc/hostname in case we are a chroot build enviroment
+if [ -e /etc/hostname ]; then
+    HOSTNAME=`cat /etc/hostname`
+else
+    HOSTNAME=$(hostname | sed 's|\([a-zA-Z0-9-]\)\..*|\1|' | sed 'y|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|')
+fi
+
+## the following creates a spam-bot that sends emails to an address that has not asked for it
+## because of the spam-problem, i (jmz) have disabled it
+# recipient of any emails set from the scripts
+#RECIPIENT=pd-cvs@iem.at
+
+
+## if you want to send emails about the success of your build,
+## please create a file "auto-build-common.local" in this directory
+## and set the "RECIPIENT" address to some valid email-address
+#
+## please do NOT check your auto-build-common.local into the CVS
+#
+## another possibility is to set the "RECIPIENT" environmental variable before running
+## the autobuilder
+
+if [ -e ${HOME}/auto-build-common.local ]; then
+    . ${HOME}/auto-build-common.local
+    running_on_server=yes
+else
+    running_on_server=no
+    echo "Could not find local configuration in \"${HOME}/auto-build-common.local\""
+    echo "Skipping... (see ${HOME}/auto-build-common for instructions)"
+    echo
+fi
+
+# cygwin/Mingw don't have 'mail', but do have 'email' which is close enough.
+# To get around the troubles with mail servers, we'll contact the SMTP server
+# of the mailing lists directly (mail.iem.at).
+if [ -x /usr/bin/mail ]; then
+    MAIL_COMMAND=/usr/bin/mail
+elif [ -x /bin/mail ]; then
+    MAIL_COMMAND=/bin/mail
+else
+    MAIL_COMMAND="email --smtp-server mail.iem.at"
+fi
+
+
+#------------------------------------------------------------------------------#
+# print out ip addresses for debugging
+print_ip_address()
+{
+    echo -n "hostname: "
+    hostname
+    echo "---------------------------"
+    if [ -x /sbin/ifconfig ]; then
+        /sbin/ifconfig
+    else
+        ipconfig
+    fi
+}
+
+rsync_file()
+{
+    file=$1
+    subdir_file=$2
+    # if the rsync fails, ignore and carry on
+    (rsync -a --chmod=a+r -e ssh ${file} ${RSYNC_SERVER}:/home/apt/www/auto-build/$subdir_file  && \
+        echo "successfully uploaded: $(basename $file)") || \
+        true
+}
+
+rsync_distro()
+{
+# let rsync handle the cleanup with --delete
+    DISTRO=$(basename $1)
+    echo "rsyncing $DISTRO to ${1}:"
+    rsync -a --delete-before rsync://${RSYNC_SERVER}/distros/${DISTRO}/ ${1}/
+}
+
+# Mac OS X's included git or svn might be really old, so try Fink first
+find_git()
+{
+    if [ -x /sw/bin/git ]; then
+        echo /sw/bin/git
+    elif [ -x /usr/bin/git ]; then
+        echo /usr/bin/git
+    else
+        echo git
+    fi
+}
+
+find_svn()
+{
+    if [ -x /sw/bin/svn ]; then
+        echo /sw/bin/svn --non-interactive
+    elif [ -x /usr/bin/svn ]; then
+        echo /usr/bin/svn --non-interactive
+    else
+        echo svn --non-interactive
+    fi
+}
+
+remove_dead_svn_externals()
+{
+    cd "$1"
+    svn=$(find_svn)
+    svn_externals=`$svn propget -R svn:externals . | sed 's|^.* - ||' | awk '{print $1}'`
+    for external in `$svn status --no-ignore . | grep '^[X]' | awk '{print $2}'`; do
+        name=$(basename $external)
+        if [ -z "$(echo $svn_externals | grep $name)" ]; then
+            echo "TODO: remove defunct svn:external '$name' at '$external'"
+            $svn revert -R "$external"
+            $svn update "$external"
+        fi
+    done
+}
+
+clean_and_update_folder()
+{
+    cd "$1"
+    if [ -d ".git" ]; then
+        git=$(find_git)
+        $git reset --hard
+        $git clean -fdx
+        $git pull
+    elif [ -d ".svn" ]; then
+        svn=$(find_svn)
+        $svn cleanup .
+        $svn revert -R .
+        $svn status --no-ignore | \
+            grep -v '^X' | \
+            awk '{print $2}' | \
+            xargs rm -rf
+        $svn update
+        $svn update -N .
+    else
+        echo "no cleaning or updating done, unknown SCM"
+    fi
+}
+
+get_pd_version()
+{
+    PD_MAJOR_VERSION=$(grep PD_MAJOR_VERSION $1/pd/src/m_pd.h | \
+	sed 's|^.define *PD_MAJOR_VERSION *\([0-9]*\).*|\1|' )
+    PD_MINOR_VERSION=$(grep PD_MINOR_VERSION $1/pd/src/m_pd.h | \
+	sed 's|^.define *PD_MINOR_VERSION *\([0-9]*\).*|\1|' )
+    PD_BUGFIX_VERSION=$(grep PD_BUGFIX_VERSION $1/pd/src/m_pd.h | \
+	sed 's|^.define *PD_BUGFIX_VERSION *\([0-9]*\).*|\1|' )
+    PD_TEST_VERSION=$(grep PD_TEST_VERSION $1/pd/src/m_pd.h | \
+	sed 's|^.define *PD_TEST_VERSION *"\(.*\)".*|\1|' | \
+        sed 's|extended-||')
+    echo $PD_MAJOR_VERSION.$PD_MINOR_VERSION.$PD_BUGFIX_VERSION
+}
+
+make_source_tarball()
+{
+    rootdir=$1
+    tardir=$(basename $1)
+    tarballname=$2
+    debian_tarballname=`echo $2 | sed 's|\.tar\.|.debian.tar.|'`
+
+    # make source tarball without debian/
+    tar --directory $rootdir/.. \
+        --exclude-vcs --exclude=$tardir/debian \
+        -cjpf /tmp/$tarballname $tardir
+    # make separate tarball of debian/
+    tar --directory $rootdir --exclude-vcs \
+        -cjpf /tmp/$debian_tarballname debian
+}
+
+set_debian_changelog_version()
+{
+    version=$1
+    rootdir=$2
+    sed -i "s|^pd-extended (.*)|pd-extended ($version-1)|" \
+	$rootdir/debian/changelog
+}

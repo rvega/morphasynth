@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# dwan  <dwanafite@yahoo.fr>, 2012-2013.
+# Hans-Christoph Steiner <hans@eds.org>, 2013.
+# Pierre-Olivier Boulant <po.boulant@free.fr>, 2012-2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-05 22:51-0500\n"
+"PO-Revision-Date: 2013-01-17 18:46+0000\n"
+"Last-Translator: Pierre-Olivier Boulant <po.boulant@free.fr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Advanced search options"
+msgstr "Option de recherche avancée"
+
+msgid "All About Pd"
+msgstr "Tout au sujet de Pd"
+
+msgid "All documents"
+msgstr "Tous les documents"
+
+msgid "Audio Signals"
+msgstr "Signaux audio"
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "Naviguer %s%s"
+
+msgid "Browse Advanced Topics"
+msgstr "Naviguer dans les sujets avancés"
+
+msgid "Browse Introductory Topics"
+msgstr "Rechercher dans les sujets d'introduction"
+
+msgid "Browse the Documentation"
+msgstr "Parcourir la documentation"
+
+msgid "Control Structure"
+msgstr "Structure de contrôle"
+
+msgid "Data Structures"
+msgstr "Structures de données"
+
+msgid "Dynamic Patching"
+msgstr "Tissage dynamique"
+
+msgid "Enter search terms"
+msgstr "Entrer les termes à rechercher"
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr "Entrer les termes au-dessus. Utiliser le menu déroulant pour filtrer par catégorie."
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "External Pd libraries"
+msgstr "Librairie d'Extra de Pd"
+
+msgid "External libraries"
+msgstr "Librairies d'Extra"
+
+msgid "Found "
+msgstr "Trouvé"
+
+msgid "GUI"
+msgstr "Interface graphique"
+
+msgid "HTML manual for Pure Data"
+msgstr "Manuel HTML pour Pure Data"
+
+msgid "Help"
+msgstr "Aide"
+
+msgid "Home"
+msgstr "Origine"
+
+msgid "Implementation Details"
+msgstr "Détails d'implémentation"
+
+msgid "Keywords:"
+msgstr "Mots-clés :"
+
+msgid "MIDI"
+msgstr "MIDI"
+
+msgid "Manual"
+msgstr "Manuel"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr "De nombreux documents d'aide sont répertoriés par mots clés. Cliquer un des liens suivants pour trouver tous les documents avec ce mot clé."
+
+msgid "Match all terms"
+msgstr "Rechercher tous les termes"
+
+msgid "Match whole words"
+msgstr "Mots entiers seulement"
+
+msgid "Networking"
+msgstr "Réseau"
+
+msgid "No DESCRIPTION tag."
+msgstr "champ DESCRIPTION non-renseigné"
+
+msgid "Object Help Patches"
+msgstr "Patchs d'aide des objets"
+
+#, tcl-format
+msgid "Open %s"
+msgstr "Ouvrir %s"
+
+msgid "Pd Manual"
+msgstr "Manuel de Pd"
+
+msgid "Pure Data Search"
+msgstr "Recherche Pure Data"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "Search and Browse Documentation"
+msgstr "Rechercher et naviguer dans la documentation"
+
+msgid "Search by Category"
+msgstr "Rechercher par catégorie"
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "Rechercher des motifs : %s"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr "Désolé, le fichier LIZEZ MOI est introuvable pour cette librairie"
+
+msgid "The \"doc\" directory"
+msgstr "Répertoire \"doc\""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "L'outil de recherche de Pd ne peut pas utiliser le terme que vous avez tapé. L'interprète Tcl a renvoyé l'erreur :"
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "Le terme à rechercher doit être formaté comme une liste Tcl valide. Ce n'est en général pas un problème à moins d'utiliser des caractères spéciaux tels que des parenthèses ou des guillemets dans votre recherche. Pour plus d'informations sur les listes Tcl voir :"
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "Le terme à rechercher doit avoir la syntaxe d'une expression normale en Tcl. Ce n'est généralement pas un problème à moins d'utiliser des caractères spéciaux pour écrire une expression normale complexe. Pour plus d'information sur les expressions normales en Tcl, voir :"
+
+msgid "This help patch is for an internal Pd class"
+msgstr "Ce patch d'aide est pour une classe interne à Pd"
+
+msgid "Tutorials"
+msgstr "Tutoriels"
+
+msgid "Uncategorized"
+msgstr "Sans catégorie"
+
+msgid "Writing Externals"
+msgstr "Ecrire des Extras"
+
+msgid "abstraction"
+msgstr "abstraction"
+
+msgid "abstraction_op"
+msgstr "opération sur des abstractions"
+
+msgid "analysis"
+msgstr "analyse"
+
+msgid "analyze the incoming signal or value"
+msgstr "analyse le signal ou la valeur entrants"
+
+msgid "anything_op"
+msgstr "opération sur n'importe quel type"
+
+msgid "array"
+msgstr "table de valeurs"
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr "Objet à la cadence audio (objet \"tildé\")"
+
+msgid "bandlimited"
+msgstr "bande passante limitée"
+
+msgid "block_oriented"
+msgstr "traitement par bloc"
+
+msgid "canvas_op"
+msgstr "opération sur un canevas"
+
+msgid "control"
+msgstr "contrôle"
+
+msgid "control rate objects"
+msgstr "Objet à la cadence de contrôle"
+
+msgid "conversion"
+msgstr "conversion"
+
+msgid "convert from one set of units to another"
+msgstr "Convertir d'un ensemble d'unités à un autre"
+
+msgid "create a ramp between a starting and ending value"
+msgstr "Créer une rampe entre une valeur de départ et une valeur d'arrivée"
+
+msgid "create or manage data structures"
+msgstr "Créer ou gérer des structures de données"
+
+msgid "create or manipulate an array"
+msgstr "Créer ou manipuler une table"
+
+msgid "creating graphical objects in Pure Data"
+msgstr "Créer des objets graphiques dans Pure Data"
+
+msgid "data_structure"
+msgstr "structure de données"
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr "Instantiation/destruction dynamique d'objets ou de patchs"
+
+msgid "dynamic_patching"
+msgstr "patchage dynamique"
+
+msgid "file format specification, license text, etc."
+msgstr "Spécification du format de fichier, texte de licence, etc."
+
+msgid "filesystem"
+msgstr "système de fichiers"
+
+msgid "filter"
+msgstr "filtre"
+
+msgid "general information from the author"
+msgstr "Informations générales de la part de l'auteur"
+
+msgid "graphical user interface"
+msgstr "Interface graphique"
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr "Patch d'aide sans accès par un clic droit sur \"aide\" pour l'objet correspondant"
+
+msgid "how to code control and signal objects in C"
+msgstr "Comment écrire des objets de contrôle et de signaux en C"
+
+msgid "list_op"
+msgstr "opération sur une liste"
+
+msgid "manipulate or store a symbol"
+msgstr "Manipuler ou stocker un symbole"
+
+msgid "measure and/or manipulate time"
+msgstr "Mesure et/ou manipulation temporelle"
+
+msgid "network"
+msgstr "réseau"
+
+msgid "no DESCRIPTION tag or values."
+msgstr "pas de mot-clé ou de valeur pour le champ DESCRIPTION"
+
+msgid "nonlocal"
+msgstr "non-local"
+
+msgid "object describes itself as being bandlimited"
+msgstr "Objet se présentant comme ayant une bande passante limitée"
+
+msgid "object itself is written in Pure Data"
+msgstr "Cet objet est lui-même codé en Pure Data"
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr "Objet pouvant lire, manipuler et/ ou sauver un fichier son (wav, ogg, flac, mp3, etc.)"
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr "Objet qui peut retourner ou manipuler des données globales associées avec l'instance de Pd en fonctionnement"
+
+msgid "object that filters incoming data"
+msgstr "Objet filtrant des flux de données entrants"
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr "Objet manipulant, produisant ou stockant une liste"
+
+msgid "object that provides MIDI functionality"
+msgstr "Objet fournissant des fonctions MIDI"
+
+msgid "object that reads from and/or writes to the file system"
+msgstr "Objet lisant depuis ou écrivant vers le système de fichiers"
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr "Le comportement de cet objet n'a de sens que dans le cadre d'un patch Pure Data"
+
+msgid "object whose main function is to store data"
+msgstr "Objet dont la fonction principale est de stocker des données"
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr "Le comportement de cet objet n'a de sens qu'à l'intérieur d'un canevas"
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr "Le comportement de cet objet n'a de sens qu'à l'intérieur d'une abstraction"
+
+msgid "orphan"
+msgstr "orphelin"
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr "parmis %s documents"
+
+msgid "output a random value, list, signal, or other random data"
+msgstr "Produit une valeur, liste, signal aléatoire ou d'autres données aléatoire"
+
+msgid "pass messages or data without patch wires"
+msgstr "Transmet des messages ou données sans fil de patch"
+
+msgid "patchfile_op"
+msgstr "opérations sur des fichiers de patch"
+
+msgid "pd_op"
+msgstr "opération sur Pd"
+
+msgid "programmatically create/destroy Pd objects"
+msgstr "Programmer la création/destruction d'objets dans Pd"
+
+msgid "provide trigonometric functionality"
+msgstr "Fournit des fonctions trigonométriques"
+
+msgid "provides access to or sends/receives data over a network"
+msgstr "Donne accès ou envoie/reçoit des données sur un réseau"
+
+msgid "ramp"
+msgstr "rampe"
+
+msgid "random"
+msgstr "aléatoire"
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr "Patchs de référence pour des concepts fondamentaux et réglages de Pd"
+
+msgid "sending data over networks with Pd"
+msgstr "Envoyer des données par le réseau avec Pd"
+
+msgid "signal"
+msgstr "signal"
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr "Objet audio qui effectue des opérations par block (par opposition à la répétition d'une opération pour chaque échantillon du block)"
+
+msgid "soundfile"
+msgstr "fichier son"
+
+msgid "storage"
+msgstr "stockage"
+
+msgid "store or manipulate any type of data"
+msgstr "Stocke ou manipule des données de n'importe quel type"
+
+msgid "symbol_op"
+msgstr "opération sur des symboles"
+
+msgid "text of the license for this software"
+msgstr "Texte de la licence de ce logiciel"
+
+msgid "time"
+msgstr "temps"
+
+msgid "trigonometry"
+msgstr "trigonométrie"
+
+msgid "tutorials for audio signals"
+msgstr "Tutoriels pour les signaux audio"
+
+msgid "tutorials for control objects"
+msgstr "Tutoriel pour les objets de contrôle"

@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr ""
+
+#, tcl-format
+msgid "%s Properties"
+msgstr ""
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr "(toks pats kaip ir įvesties įrenginys)"
+
+msgid "(use arrow keys for history)"
+msgstr "(peržiūrėti istoriją naudokitės klaviatūros rodyklėmis)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI nustatymai"
+
+msgid "About Pd"
+msgstr ""
+
+msgid "Add new library"
+msgstr "Pridėti naują biblioteką"
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "Taikyti"
+
+msgid "Array"
+msgstr ""
+
+msgid "Array Properties"
+msgstr "Masyvo savybės"
+
+msgid "Atom Box Properties"
+msgstr "Atom'o dėžės savybės"
+
+msgid "Audio Settings"
+msgstr "Garso signalo nustatymai"
+
+msgid "Audio Settings..."
+msgstr "Audio nustatymai..."
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Fonas"
+
+msgid "Background color"
+msgstr "Fono spalva"
+
+msgid "Bang"
+msgstr ""
+
+msgid "Bezier curve"
+msgstr "Bezier kreivė"
+
+msgid "Block size:"
+msgstr "Bloko dydis"
+
+msgid "Bottom"
+msgstr "Apačia"
+
+msgid "Bring All to Front"
+msgstr "Viską iškelti į priekį"
+
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr ""
+
+msgid "Canvas Properties"
+msgstr "Darbalaukio savybės"
+
+msgid "Channels:"
+msgstr "Kanalai"
+
+msgid "Clear Console"
+msgstr ""
+
+msgid "Clear Menu"
+msgstr "Išvalyti meniu"
+
+msgid "Close"
+msgstr "Uždaryti"
+
+msgid "Close this window?"
+msgstr ""
+
+msgid "Colors"
+msgstr "Spalvos"
+
+msgid "Comment"
+msgstr ""
+
+msgid "Compose color"
+msgstr "Suformuoti spalvą"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopijuoti"
+
+msgid "Copying current patch..."
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr ""
+
+msgid "Cut"
+msgstr ""
+
+msgid "DSP"
+msgstr ""
+
+msgid "DSP Off"
+msgstr "Išjungti DSP"
+
+msgid "DSP On"
+msgstr "Įjungti DSP"
+
+msgid "Data Properties"
+msgstr "Duomenų savybės"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Delsa (ms):"
+
+msgid "Delete array"
+msgstr "Ištrinti masyvą"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr ""
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr ""
+
+msgid "Draw as:"
+msgstr "Brėžti kaip"
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Mode"
+msgstr ""
+
+msgid "Edit library"
+msgstr "Redaguoti biblioteką"
+
+msgid "File"
+msgstr ""
+
+msgid "Find"
+msgstr "Surasti"
+
+msgid "Find Again"
+msgstr ""
+
+msgid "Find Last Error"
+msgstr "Surasti paskutinę klaidą"
+
+msgid "Find..."
+msgstr ""
+
+msgid "Font"
+msgstr ""
+
+msgid "Font Size"
+msgstr "Šrifto dydis"
+
+msgid "Foreground color"
+msgstr "Priekinio plano spalva"
+
+msgid "Front"
+msgstr "Priekis"
+
+msgid "Graph"
+msgstr ""
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "Pagalba"
+
+msgid "Help Browser"
+msgstr ""
+
+msgid "Hide object name and arguments"
+msgstr ""
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr ""
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr ""
+
+msgid "In Ports:"
+msgstr "Įeinančios jungtys: "
+
+msgid "Init"
+msgstr ""
+
+msgid "Input device 1:"
+msgstr "Įvesties įrenginys 1:"
+
+msgid "Input device 2:"
+msgstr "Įvesties įrenginys 2:"
+
+msgid "Input device 3:"
+msgstr "Įvesties įrenginys 3:"
+
+msgid "Input device 4:"
+msgstr "Įvesties įrenginys 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Paspaudus peršokti"
+
+msgid "Label"
+msgstr "Etiketė"
+
+msgid "Label color"
+msgstr "Etiketės spalva"
+
+msgid "Last graph"
+msgstr "Paskutinis grafikas"
+
+msgid "Left   "
+msgstr "Kairė"
+
+msgid "Limits"
+msgstr "Apribojimai"
+
+msgid "Load Meter"
+msgstr "Įkėlimo metras"
+
+msgid "Log:"
+msgstr ""
+
+msgid "Lower:"
+msgstr "Žemiau:"
+
+msgid "MIDI Settings"
+msgstr "MIDI nustatymai"
+
+msgid "MIDI Settings..."
+msgstr "MIDI nustatymai..."
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Paraštė"
+
+msgid "Match whole word only"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Message..."
+msgstr ""
+
+msgid "Messages"
+msgstr "Pranešimai"
+
+msgid "Minimize"
+msgstr "Sumažinti"
+
+msgid "Name:"
+msgstr "Vardas"
+
+msgid "New"
+msgstr ""
+
+msgid "New graph"
+msgstr "Naujas grafikas"
+
+msgid "Next Window"
+msgstr "Kitas langas"
+
+msgid "No init"
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "Number2"
+msgstr ""
+
+msgid "OK"
+msgstr "Gerai"
+
+msgid "OK (Ctrl t)"
+msgstr "Gerai (Ctrl T)"
+
+msgid "OUT"
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Open List View..."
+msgstr "Peržiūrėti kaip sąrašą..."
+
+msgid "Open Recent"
+msgstr "Atverti "
+
+msgid "Out Ports:"
+msgstr "Išeinančios jungtys:"
+
+msgid "Output device 1:"
+msgstr "Išvesties įrenginys 1:"
+
+msgid "Output device 2:"
+msgstr "Išvesties įrenginys 2:"
+
+msgid "Output device 3:"
+msgstr "Išvesties įrenginys 3:"
+
+msgid "Output device 4:"
+msgstr "Išvesties įrenginys 4:"
+
+msgid "Parent Window"
+msgstr "Pagrindinis langas"
+
+msgid "Paste"
+msgstr "Įkelti"
+
+msgid "Pd Help Browser..."
+msgstr "Pd pagalbos naršyklė..."
+
+msgid "Pd libraries to load on startup"
+msgstr "Pd bibliotekos užkraunamos programos paleidimo metu"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Pd objektų, pagalbos, šriftų ir kitų bylų paieškos kelias"
+
+msgid "Pd window"
+msgstr "Pd langas"
+
+msgid "Pd-extended"
+msgstr ""
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Taškai"
+
+msgid "Polygon"
+msgstr "Daugiakampis"
+
+msgid "Preferences"
+msgstr "Nuostatos"
+
+msgid "Previous Window"
+msgstr ""
+
+msgid "Print..."
+msgstr ""
+
+msgid "Properties"
+msgstr ""
+
+msgid "Put"
+msgstr ""
+
+msgid "Put array into:"
+msgstr "Perkelti masyvą į:"
+
+msgid "Quit"
+msgstr "Baigti"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Sritis ir dydis"
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr "Gauti simbolį:"
+
+msgid "Redo"
+msgstr ""
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr ""
+
+msgid "Redo cut"
+msgstr ""
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr ""
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr ""
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr ""
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "Dešinė"
+
+msgid "Sample rate:"
+msgstr "Garso elemento dažnis:"
+
+msgid "Save"
+msgstr "Išsaugoti"
+
+msgid "Save As..."
+msgstr ""
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr "Išsaugoti turinį"
+
+msgid "Scale"
+msgstr "Skalė"
+
+msgid "Search in"
+msgstr "Ieškoti"
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Siųsti (Ctrl S)"
+
+msgid "Send a Pd message"
+msgstr "Siųsti Pd pranešimą"
+
+msgid "Send symbol:"
+msgstr "Siųsti simbolį:"
+
+msgid "Setting embedded preferences..."
+msgstr "Pagalba"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Dydis"
+
+msgid "Start Here!"
+msgstr "Pradėti čia!"
+
+msgid "Startup flags:"
+msgstr "Programos paleidimo žymekliai:"
+
+msgid "Steady on click"
+msgstr "Paspaudus nusistovėti"
+
+msgid "Stretch"
+msgstr "Ištempti"
+
+msgid "Symbol"
+msgstr ""
+
+msgid "Tcl:"
+msgstr ""
+
+msgid "Test Audio and MIDI..."
+msgstr "Bandyti Audio ir MIDI..."
+
+msgid "Test label"
+msgstr "Bandyti etiketę"
+
+msgid "Tidy Up"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr "Viršus"
+
+msgid "Undo"
+msgstr ""
+
+msgid "Undo clear"
+msgstr ""
+
+msgid "Undo connect"
+msgstr ""
+
+msgid "Undo cut"
+msgstr ""
+
+msgid "Undo disconnect"
+msgstr ""
+
+msgid "Undo duplicate"
+msgstr ""
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr ""
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr "Aukščiau:"
+
+msgid "Use callbacks"
+msgstr "Naudoti atgalinius kreipinius"
+
+msgid "Use multiple ALSA devices"
+msgstr "Naudoti keleta ALSA įrenginių"
+
+msgid "Use multiple devices"
+msgstr "Naudoti kelis įrenginius"
+
+msgid "Use standard extensions"
+msgstr "Naudoti standartinius plėtinius"
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr ""
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ĮSPĖJIMAS: gautas pdtk_canvas_dialog nežinomas graphme žymeklis "
+
+msgid "Width:"
+msgstr "Plotis:"
+
+msgid "Window"
+msgstr ""
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X ir Y"
+
+msgid "X offset"
+msgstr "X poslinkis"
+
+msgid "X only"
+msgstr "tik X"
+
+msgid "X range, from"
+msgstr "X sritis, nuo"
+
+msgid "X units per pixel:"
+msgstr "X vienetų pikselyje:"
+
+msgid "Y offset"
+msgstr "Y poslinkis"
+
+msgid "Y only"
+msgstr "tik Y"
+
+msgid "Y range, from"
+msgstr "Y sritis, nuo"
+
+msgid "Y units per pixel:"
+msgstr "Y vienetų pikselyje:"
+
+msgid "Zoom"
+msgstr "Priartinti"
+
+msgid "all"
+msgstr ""
+
+msgid "audio I/O error"
+msgstr ""
+
+msgid "bottom:"
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr ""
+
+msgid "height:"
+msgstr ""
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr ""
+
+msgid "left:"
+msgstr ""
+
+msgid "lin"
+msgstr ""
+
+msgid "log"
+msgstr ""
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr ""
+
+msgid "min:"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "really quit?"
+msgstr ""
+
+msgid "right:"
+msgstr ""
+
+msgid "size:"
+msgstr ""
+
+msgid "to"
+msgstr "iki"
+
+msgid "top:"
+msgstr ""
+
+msgid "value:"
+msgstr ""
+
+msgid "width:"
+msgstr ""

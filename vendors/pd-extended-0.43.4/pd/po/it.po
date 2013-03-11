@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <lorenzosulorenzo@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2013-01-01 08:39+0000\n"
+"Last-Translator: lorenzosu <lorenzosulorenzo@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Font"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Proprietà"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) NOME DEL COMANDO NON VALIDO"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) MANCA LA PARENTESI GRAFFA DI CHIUSURA '}': "
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) MANCA LA PARENTESI QUADRA DI CHIUSURA '}': "
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) UNHANDLED ERROR: "
+
+msgid "(same as input device) ..............      "
+msgstr "(lo stesso del dispositivo di ingresso)..........."
+
+msgid "(use arrow keys for history)"
+msgstr "(usa i tasti freccia per la storia)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------range-output:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------dimensioni(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------dimensioni(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------tempo-flash(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensioni(cifre)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------dimensioni_selezionabili(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------rettangolo_visibile(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "Settaggi ALSA MIDI"
+
+msgid "About Pd"
+msgstr "Informazioni su Pd..."
+
+msgid "Add new library"
+msgstr "Aggiungi una nuova libreria"
+
+msgid "Appearance on parent patch"
+msgstr "Aspetto sulla parent patch"
+
+msgid "Apply"
+msgstr "Applica"
+
+msgid "Array"
+msgstr "Array"
+
+msgid "Array Properties"
+msgstr "Proprietà Array"
+
+msgid "Atom Box Properties"
+msgstr "Proprietà Atom Box"
+
+msgid "Audio Settings"
+msgstr "Settaggi Audio"
+
+msgid "Audio Settings..."
+msgstr "Settaggi audio..."
+
+msgid "Autopatch"
+msgstr "Autopatch"
+
+msgid "Autotips"
+msgstr "Suggerimenti automatici"
+
+msgid "Background"
+msgstr "Colore sfondo"
+
+msgid "Background color"
+msgstr "Colore sfondo"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Curva bezier"
+
+msgid "Block size:"
+msgstr "Block size:"
+
+msgid "Bottom"
+msgstr "Sotto"
+
+msgid "Bring All to Front"
+msgstr "Porta tutto in primo piano"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Impossibile leggere file preferenze GUI:"
+
+msgid "Canvas"
+msgstr "Tavolozza"
+
+msgid "Canvas Properties"
+msgstr "Proprietà Canvas"
+
+msgid "Channels:"
+msgstr "Canali:"
+
+msgid "Clear Console"
+msgstr "Pulisci console"
+
+msgid "Clear Menu"
+msgstr "Pulisci menu"
+
+msgid "Close"
+msgstr "Chiudi"
+
+msgid "Close this window?"
+msgstr "Vuoi chiudere questa finestra?"
+
+msgid "Colors"
+msgstr "Colori"
+
+msgid "Comment"
+msgstr "Commento"
+
+msgid "Compose color"
+msgstr "Crea colore"
+
+msgid "Configuring Info.plist..."
+msgstr "Configurazione di Info.plist..."
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Copying current patch..."
+msgstr "Copio la patch corrente..."
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Non è possibile trovare '%s' in %s"
+
+msgid "Cut"
+msgstr "Taglia"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP Disattivato"
+
+msgid "DSP On"
+msgstr "DSP Attivo"
+
+msgid "Data Properties"
+msgstr "Proprietà Dati"
+
+msgid "Defeat real-time scheduling"
+msgstr "Forza a non utilizzare il real-time scheduling"
+
+msgid "Delay (msec):"
+msgstr "Ritardo (msec):"
+
+msgid "Delete array"
+msgstr "Cancella array"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Cestinare le modifiche apportate a '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Salvare le modifiche apportate a '%s'?"
+
+msgid "Draw as:"
+msgstr "Disegna come:"
+
+msgid "Duplicate"
+msgstr "Duplica"
+
+msgid "Edit"
+msgstr "Modifica"
+
+msgid "Edit Mode"
+msgstr "Modalità modifica"
+
+msgid "Edit library"
+msgstr "Modifica la libreria"
+
+msgid "File"
+msgstr "File"
+
+msgid "Find"
+msgstr "Trova"
+
+msgid "Find Again"
+msgstr "Cerca Ancora"
+
+msgid "Find Last Error"
+msgstr "Trova l'ultimo errore"
+
+msgid "Find..."
+msgstr "Trova"
+
+msgid "Font"
+msgstr "Carattere"
+
+msgid "Font Size"
+msgstr "Dimensione carattere:"
+
+msgid "Foreground color"
+msgstr "Colore primo piano"
+
+msgid "Front"
+msgstr "Primo piano"
+
+msgid "Graph"
+msgstr "Grafico"
+
+msgid "Graph-On-Parent"
+msgstr "Mostra sulla patent"
+
+msgid "Help"
+msgstr "Aiuto"
+
+msgid "Help Browser"
+msgstr "Browser di aiuto"
+
+msgid "Hide object name and arguments"
+msgstr "Nascondi il nome oggetto e gli argomenti"
+
+msgid "Hradio"
+msgstr "Radio orizzontale"
+
+msgid "Hslider"
+msgstr "Slider orizzontale"
+
+msgid "IN"
+msgstr "IN"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "'%s' è stato ignorato: non sembra un file di Pd"
+
+msgid "In Ports:"
+msgstr "Porte Ingresso:"
+
+msgid "Init"
+msgstr "Inizializza"
+
+msgid "Input device 1:"
+msgstr "Dispositivo di ingresso 1:"
+
+msgid "Input device 2:"
+msgstr "Dispositivo di ingresso 2:"
+
+msgid "Input device 3:"
+msgstr "Dispositivo di ingresso 3:"
+
+msgid "Input device 4:"
+msgstr "Dispositivo di ingresso 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "jack non sembra in esecuzione, quindi Pd-extended non può collegarsi"
+
+msgid "Jack not installed!"
+msgstr "jack non è installato"
+
+msgid "Jack not running!"
+msgstr "jack non è in esecuzione!"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX non è installto completamente, Pd-extended non può usare jack senza di esso"
+
+msgid "Jump on click"
+msgstr "Click imposta il valore"
+
+msgid "Label"
+msgstr "Etichetta"
+
+msgid "Label color"
+msgstr "Colore etichetta"
+
+msgid "Last graph"
+msgstr "Ultimo grafico"
+
+msgid "Left   "
+msgstr "Sinistra   "
+
+msgid "Limits"
+msgstr "Limiti"
+
+msgid "Load Meter"
+msgstr "Misura carico cpu"
+
+msgid "Log:"
+msgstr "Log:"
+
+msgid "Lower:"
+msgstr "Inferiore:"
+
+msgid "MIDI Settings"
+msgstr "Settaggi MIDI"
+
+msgid "MIDI Settings..."
+msgstr "Settaggi MIDI..."
+
+msgid "Magic Glass"
+msgstr "Vetro Magico"
+
+msgid "Make app from folder..."
+msgstr "Crea app da cartella..."
+
+msgid "Make app from patch..."
+msgstr "Creat app da patch..."
+
+msgid "Margin:"
+msgstr "Margine:"
+
+msgid "Match whole word only"
+msgstr "Solo parole intere"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "Message"
+msgstr "Messaggio"
+
+msgid "Message..."
+msgstr "Messaggio..."
+
+msgid "Messages"
+msgstr "Messaggi"
+
+msgid "Minimize"
+msgstr "Minimizza"
+
+msgid "Name:"
+msgstr "Nome:"
+
+msgid "New"
+msgstr "Nuovo File"
+
+msgid "New graph"
+msgstr "Nuovo grafico"
+
+msgid "Next Window"
+msgstr "Prossima Finestra"
+
+msgid "No init"
+msgstr "Non inizializzare"
+
+msgid "Number"
+msgstr "Numero"
+
+msgid "Number2"
+msgstr "Numero2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr "OUT"
+
+msgid "Object"
+msgstr "Oggetto"
+
+msgid "Open"
+msgstr "Apri File..."
+
+msgid "Open List View..."
+msgstr "Apri visualizzazione lista..."
+
+msgid "Open Recent"
+msgstr "Apri recenti"
+
+msgid "Out Ports:"
+msgstr "Porte Uscita:"
+
+msgid "Output device 1:"
+msgstr "Dispositivo di uscita 1:"
+
+msgid "Output device 2:"
+msgstr "Dispositivo di uscita 2:"
+
+msgid "Output device 3:"
+msgstr "Dispositivo di uscita 3:"
+
+msgid "Output device 4:"
+msgstr "Dispositivo di uscita 4:"
+
+msgid "Parent Window"
+msgstr "Finestra parent"
+
+msgid "Paste"
+msgstr "Incolla"
+
+msgid "Pd Help Browser..."
+msgstr "Browser di aiuto di Pd"
+
+msgid "Pd libraries to load on startup"
+msgstr "Librerie per Pd da caricare all'avvio"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Percorso di ricerca di Pd per oggetti, aiuto, fonts, e altri file"
+
+msgid "Pd window"
+msgstr "Finestra Pd"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Modalità Performance"
+
+msgid "Points"
+msgstr "Punti"
+
+msgid "Polygon"
+msgstr "Poligono"
+
+msgid "Preferences"
+msgstr "Preferenze"
+
+msgid "Previous Window"
+msgstr "Finestra Precedente"
+
+msgid "Print..."
+msgstr "Stampa..."
+
+msgid "Properties"
+msgstr "Proprietà"
+
+msgid "Put"
+msgstr "Inserisci"
+
+msgid "Put array into:"
+msgstr "Matty l'array in:"
+
+msgid "Quit"
+msgstr "Esci"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Esci da Pd-extended, avvia jack, e prova di nuovo."
+
+msgid "Range and size"
+msgstr "Intervallo e dimensioni"
+
+msgid "Real-time scheduling"
+msgstr "Scheduling in tempo reale"
+
+msgid "Receive symbol:"
+msgstr "Ricevi simbolo:"
+
+msgid "Redo"
+msgstr "Ripristina"
+
+msgid "Redo clear"
+msgstr "Cancella di nuovo"
+
+msgid "Redo connect"
+msgstr "Connetti di nuovo"
+
+msgid "Redo cut"
+msgstr "Taglia di nuovo"
+
+msgid "Redo disconnect"
+msgstr "Disconnetti di nuovo"
+
+msgid "Redo duplicate"
+msgstr "Duplica di nuovo"
+
+msgid "Redo motion"
+msgstr "Muovi di nuovo"
+
+msgid "Redo paste"
+msgstr "Incolla di nuovo"
+
+msgid "Redo typing"
+msgstr "Scrivi di nuovo"
+
+msgid "Report a bug"
+msgstr "Segnala un bug"
+
+msgid "Reset to Defaults"
+msgstr "Resetta predefiniti"
+
+msgid "Right"
+msgstr "Destra"
+
+msgid "Sample rate:"
+msgstr "Frequenza di campionamento"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Save As..."
+msgstr "Salva con nome..."
+
+msgid "Save application to..."
+msgstr "Salva applicazione con nome.."
+
+msgid "Save contents"
+msgstr "Salva contenuto"
+
+msgid "Scale"
+msgstr "Scala"
+
+msgid "Search in"
+msgstr "Cerca in"
+
+msgid "Select All"
+msgstr "Seleziona tutto"
+
+msgid "Select name for app to build...\n"
+msgstr "Seleziona un nome per la app da costruire...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Invia (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Invia un messaggio a Pd"
+
+msgid "Send symbol:"
+msgstr "Invia simbolo:"
+
+msgid "Setting embedded preferences..."
+msgstr "Settaggio preferenze embedded..."
+
+msgid "Setting patch name..."
+msgstr "Settaggio nome della patch..."
+
+msgid "Size:"
+msgstr "Dimensione:"
+
+msgid "Start Here!"
+msgstr "Comincia Qui!"
+
+msgid "Startup flags:"
+msgstr "Flag di avvio"
+
+msgid "Steady on click"
+msgstr "Click incrementa/decrementa"
+
+msgid "Stretch"
+msgstr "Allarga/riduci:"
+
+msgid "Symbol"
+msgstr "Simbolo"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Test Audio e MIDI"
+
+msgid "Test label"
+msgstr "Test etichetta"
+
+msgid "Tidy Up"
+msgstr "Allinea elementi"
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Top"
+msgstr "Sopra"
+
+msgid "Undo"
+msgstr "Annulla"
+
+msgid "Undo clear"
+msgstr "Annulla pulisci"
+
+msgid "Undo connect"
+msgstr "Annulla connetti"
+
+msgid "Undo cut"
+msgstr "Annulla taglia"
+
+msgid "Undo disconnect"
+msgstr "Annulla disconnetti"
+
+msgid "Undo duplicate"
+msgstr "Annulla duplica"
+
+msgid "Undo motion"
+msgstr "Annulla spostamento "
+
+msgid "Undo paste"
+msgstr "Annulla incolla"
+
+msgid "Undo typing"
+msgstr "Annulla inserimento"
+
+msgid "Upper:"
+msgstr "Superiore:"
+
+msgid "Use callbacks"
+msgstr "Usa callback"
+
+msgid "Use multiple ALSA devices"
+msgstr "Usa dispositivi ALSA multipli"
+
+msgid "Use multiple devices"
+msgstr "Usa dispositivi multipli"
+
+msgid "Use standard extensions"
+msgstr "Usa le estensioni standard"
+
+msgid "VU Meter"
+msgstr "Indicatore VU"
+
+msgid "Verbose"
+msgstr "Approfondito"
+
+msgid "Vradio"
+msgstr "Radio verticale"
+
+msgid "Vslider"
+msgstr "Slider verticale"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ATTENZIONE: ricevuto un flag graphme sconosciuto in pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Larghezza:"
+
+msgid "Window"
+msgstr "Finestra"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr "Vuoi aprire JackOSX.com e scaricare jack?"
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr "Vuoi aprire JackPilot per avviare Jack?"
+
+msgid "X and Y"
+msgstr "X e Y"
+
+msgid "X offset"
+msgstr "Spostamento X"
+
+msgid "X only"
+msgstr "Solo X"
+
+msgid "X range, from"
+msgstr "Intervallo X, da"
+
+msgid "X units per pixel:"
+msgstr "X unità per pixel"
+
+msgid "Y offset"
+msgstr "Spostamento Y"
+
+msgid "Y only"
+msgstr "Solo Y"
+
+msgid "Y range, from"
+msgstr "Intervallo Y, da"
+
+msgid "Y units per pixel:"
+msgstr "Y unità per pixel:"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "all"
+msgstr "tutto"
+
+msgid "audio I/O error"
+msgstr "errore I/O audio"
+
+msgid "bottom:"
+msgstr "basso:"
+
+msgid "debug"
+msgstr "debug"
+
+msgid "error"
+msgstr "errore"
+
+msgid "fatal"
+msgstr "fatale"
+
+msgid "for:"
+msgstr "per:"
+
+msgid "height:"
+msgstr "altezza:"
+
+msgid "hold:"
+msgstr "mantieni:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "interrotto:"
+
+msgid "left:"
+msgstr "sinistra:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "altezza-log:"
+
+msgid "max:"
+msgstr "massimo:"
+
+msgid "min:"
+msgstr "minimo:"
+
+msgid "normal"
+msgstr "normale"
+
+msgid "really quit?"
+msgstr "Uscire veramente?"
+
+msgid "right:"
+msgstr "destra:"
+
+msgid "size:"
+msgstr "dimensione:"
+
+msgid "to"
+msgstr "a"
+
+msgid "top:"
+msgstr "alto:"
+
+msgid "value:"
+msgstr "valore:"
+
+msgid "width:"
+msgstr "larghezza:"

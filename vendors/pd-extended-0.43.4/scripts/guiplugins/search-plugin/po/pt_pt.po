@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# João Pais <jmmmpais@googlemail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 21:04-0500\n"
+"PO-Revision-Date: 2013-01-03 18:36+0000\n"
+"Last-Translator: João Pais <jmmmpais@googlemail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Advanced search options"
+msgstr "Opções de busca avançada"
+
+msgid "All About Pd"
+msgstr "Tudo sobre Pd"
+
+msgid "All documents"
+msgstr "Todos os ficheiros"
+
+msgid "Audio Signals"
+msgstr "Sinais audio"
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "Navegar %s%s"
+
+msgid "Browse Advanced Topics"
+msgstr "Navegar nos tópicos avançados"
+
+msgid "Browse Introductory Topics"
+msgstr "Navegar nos tópicos introdutórios"
+
+msgid "Browse the Documentation"
+msgstr "Navegar na Documentação"
+
+msgid "Control Structure"
+msgstr "Estrutura de Controle"
+
+msgid "Data Structures"
+msgstr "Estruturas de Dados"
+
+msgid "Dynamic Patching"
+msgstr "Patching dinâmico"
+
+msgid "Enter search terms"
+msgstr "Inserir termos da busca"
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr "Insira os termos acima. Use o menu \"drop-down\" para filtrar por categoria."
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "External Pd libraries"
+msgstr "Bibliotecas Pd externas"
+
+msgid "External libraries"
+msgstr "Bibliotecas externas"
+
+msgid "Found "
+msgstr "Encontrado"
+
+msgid "HTML manual for Pure Data"
+msgstr "Manual HTML de Pure Data"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Home"
+msgstr "Casa"
+
+msgid "Implementation Details"
+msgstr "Detalhes de Implementação"
+
+msgid "Keywords:"
+msgstr "palavras-chave:"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr "Muitos documentos de ajuda estão categorizados por tags. Clique no link abaixo para encontrar todos os documentos com a tag desejada."
+
+msgid "Match all terms"
+msgstr "Encontrar todos os termos"
+
+msgid "Match whole words"
+msgstr "Encontrar palavras completas"
+
+msgid "Networking"
+msgstr "Trabalhar em rede"
+
+msgid "No DESCRIPTION tag."
+msgstr "tag sem descrição."
+
+msgid "Object Help Patches"
+msgstr "Patches de ajuda dos objectos"
+
+#, tcl-format
+msgid "Open %s"
+msgstr "Abrir %s"
+
+msgid "Pd Manual"
+msgstr "Manual Pd"
+
+msgid "Pure Data Search"
+msgstr "Pesquisa Pure Data"
+
+msgid "Report a bug"
+msgstr "Reportar um bug"
+
+msgid "Search"
+msgstr "Procurar"
+
+msgid "Search and Browse Documentation"
+msgstr "Procurar e navegar na Documentação"
+
+msgid "Search by Category"
+msgstr "Procurar por categoria"
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "Procurar por padrão: %s"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr "Desculpe, não foi possível encontrar um arquivo LEIA-ME para a biblioteca deste objeto"
+
+msgid "The \"doc\" directory"
+msgstr "O diretório \"doc\""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "A ferramenta de busca do Pd não encontrou o termo procurado. O interpretador do TCL retornou o seguinte erro:"
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "O termo que você buscou tem que estar formatado como uma lista TCL. Este não é um problema comum, exceto se você utilizou caracteres especiais ou não fechou aspas e colchetes na sua busca. Para mais informações sobre listas TCL, veja:"
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "O termo que você buscou precisa ter a sintaxe exata de uma expressão regular em TCL. Este não é um problema comum, exceto se você utilizou caracteres especiais para criar uma expressão regular complexa. Para mais informações sobre expressões regulares em TCL, veja:"
+
+msgid "This help patch is for an internal Pd class"
+msgstr "Este patch de ajuda é de uma classe interna do Pd"
+
+msgid "Tutorials"
+msgstr "Tutoriais"
+
+msgid "Uncategorized"
+msgstr "Sem categoria definida"
+
+msgid "Writing Externals"
+msgstr "Escrevendo externals"
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr "objeto de áudio (ditos objetos com \"til\")"
+
+msgid "control rate objects"
+msgstr "objetos de taxa de controle"
+
+msgid "convert from one set of units to another"
+msgstr "converter de um conjunto de unidades para outra"
+
+msgid "create a ramp between a starting and ending value"
+msgstr "criar uma rampa entre um valor inicial e final"
+
+msgid "create or manage data structures"
+msgstr "criar ou gerir estrutura de dados"
+
+msgid "create or manipulate an array"
+msgstr "criar ou manipular um vector"
+
+msgid "creating graphical objects in Pure Data"
+msgstr "creando objectos gráficos em Pure Data"
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr "instanciação/exclusão dinâmica de objetos ou patches"
+
+msgid "file format specification, license text, etc."
+msgstr "especificação de formato de arquivo, texto de licença, etc."
+
+msgid "general information from the author"
+msgstr "informação geral sobre o autor"
+
+msgid "graphical user interface"
+msgstr "interface gráfico de utilizador"
+
+msgid ""
+"help patches that are still under construction or otherwise are incomplete"
+msgstr "patches de ajuda ainda em construção ou incompletos"
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr "patches de ajuda que não podem ser encontrados pelo botão-direito -> menu \"ajuda\" do objeto correspondente"
+
+msgid "how to code control and signal objects in C"
+msgstr "como programar objectos de controle e sinal em C"
+
+msgid "manipulate or store a symbol"
+msgstr "manipular ou armazenar um símbolo"
+
+msgid "measure and/or manipulate time"
+msgstr "medir e/ou manipular o tempo"
+
+msgid "no DESCRIPTION tag or values."
+msgstr "tag sem descrição ou valor"
+
+msgid "object describes itself as being bandlimited"
+msgstr "Objecto se descreve como sendo \"bandlimited\""
+
+msgid "object itself is written in Pure Data"
+msgstr "objecto é escrito em Pure Data"
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr "objecto que pode tocar, manipular e/ou gravar um arquivo de áudio (wav, ogg, flac, mp3, etc.)"
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr "objecto que pode informar ou manipular dados globais associados à instância atual do Pd"
+
+msgid "object that filters incoming data"
+msgstr "objecto que filtra entrada de dados"
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr "objecto que manipula, dá saída ou armazena uma lista"
+
+msgid "object that provides MIDI functionality"
+msgstr "objecto que provém funcionalidades MIDI"
+
+msgid "object that reads from and/or writes to the file system"
+msgstr "objecto que lê e/ou grava no sistema de arquivos"
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr "objecto cujo comportamento só faz sentido em termos de um patch de Pure Data"
+
+msgid "object whose main function is to store data"
+msgstr "objecto cuja função principal é armazenar dados"
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr "comportamento do objecto só faz sentido dentro do contexto do Canvas"
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr "o comportamento do objecto só faz sentido dentro de uma abstração"
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr "fora do %s documentos"
+
+msgid "output a random value, list, signal, or other random data"
+msgstr "saída de um valor aleatório, lista, sinal ou outro dado aleatório"
+
+msgid "pass messages or data without patch wires"
+msgstr "envia mensagens ou dados sem cabos de patch"
+
+msgid "perform some sort of analysis on the incoming signal or value"
+msgstr "realizar algum tipo de análise no sinal ou valor recebidos"
+
+msgid "programmatically create/destroy Pd objects"
+msgstr "criar/destruir objetos Pd por programação"
+
+msgid "provide trigonometric functionality"
+msgstr "fornece funcionalidades trigonométricas"
+
+msgid "provides access to or sends/receives data over a network"
+msgstr "fornece acesso ou envia/recebe dados via rede"
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr "patches de referência para conceitos-chave e settings do Pd"
+
+msgid "sending data over networks with Pd"
+msgstr "enviando dados via redes com Pd"
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr "objeto de áudio que realiza operações no bloco inteiro (em vez de repetir a mesma operação para cada amostra do bloco)"
+
+msgid "store or manipulate any type of data"
+msgstr "armazenar ou manipular qualquer tipo de dado"
+
+msgid "text of the license for this software"
+msgstr "texto da licença deste software"
+
+msgid "tutorials for audio signals"
+msgstr "tutoriais para sinais audio"
+
+msgid "tutorials for control objects"
+msgstr "tutoriais para objectos de controle"

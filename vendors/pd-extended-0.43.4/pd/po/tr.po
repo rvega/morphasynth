@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Fontu"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Özellikleri"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr "(girdi aygıtıyla aynı) ..............      "
+
+msgid "(use arrow keys for history)"
+msgstr "(geömiş için yön tuşlarını kullanın)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------boyutlar(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------boyutlar(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------boyutlar(sayı)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI ayarları"
+
+msgid "About Pd"
+msgstr "Pd hakkında"
+
+msgid "Add new library"
+msgstr "Yeni kitaplık ekle"
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "Uygula"
+
+msgid "Array"
+msgstr "Satır"
+
+msgid "Array Properties"
+msgstr "Satır özellikleri"
+
+msgid "Atom Box Properties"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr "Ses ayarları"
+
+msgid "Audio Settings..."
+msgstr "Ses Ayarları..."
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Arkaplan"
+
+msgid "Background color"
+msgstr "Arkaplan rengi"
+
+msgid "Bang"
+msgstr ""
+
+msgid "Bezier curve"
+msgstr ""
+
+msgid "Block size:"
+msgstr "Blok boyutu:"
+
+msgid "Bottom"
+msgstr "Alt"
+
+msgid "Bring All to Front"
+msgstr "Hepsini Öne Getir"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "GUI yapılandırma dosyası okunamadı:"
+
+msgid "Canvas"
+msgstr ""
+
+msgid "Canvas Properties"
+msgstr ""
+
+msgid "Channels:"
+msgstr "Kanallar:"
+
+msgid "Clear Console"
+msgstr "Konsolu Temizle"
+
+msgid "Clear Menu"
+msgstr "Menüyü Temizle"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Close this window?"
+msgstr "Pencere kapatılsın mı?"
+
+msgid "Colors"
+msgstr "Renkler"
+
+msgid "Comment"
+msgstr "Yorum"
+
+msgid "Compose color"
+msgstr "Renk oluştur"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "Copying current patch..."
+msgstr "Güncel yama kopyalanıyor"
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr ""
+
+msgid "Cut"
+msgstr "Kes"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP kapalı"
+
+msgid "DSP On"
+msgstr "DSP açık"
+
+msgid "Data Properties"
+msgstr "Veri özellikleri"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Gecikme (ms)"
+
+msgid "Delete array"
+msgstr "Satır sil"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "'%s' üzerindeki değişikliklerden vaz mı geçiyorsunuz?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "'%s' üzerinde yaptığınız değişiklikleri kaydetmek istiyor musunuz?"
+
+msgid "Draw as:"
+msgstr ""
+
+msgid "Duplicate"
+msgstr "Kopya Üret"
+
+msgid "Edit"
+msgstr "Düzenle"
+
+msgid "Edit Mode"
+msgstr "Düzenleme Kipi"
+
+msgid "Edit library"
+msgstr "Kitaplığı düzenle"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "Find"
+msgstr "Bul"
+
+msgid "Find Again"
+msgstr "Yeniden Bul"
+
+msgid "Find Last Error"
+msgstr "Son Hatayı Bul"
+
+msgid "Find..."
+msgstr "Bul..."
+
+msgid "Font"
+msgstr "Font"
+
+msgid "Font Size"
+msgstr "Font Boyutu"
+
+msgid "Foreground color"
+msgstr "Önplan rengi"
+
+msgid "Front"
+msgstr "Ön"
+
+msgid "Graph"
+msgstr "Grafik"
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "Yardım"
+
+msgid "Help Browser"
+msgstr "yardım tarayıcısı"
+
+msgid "Hide object name and arguments"
+msgstr "Nesnenin adını ve argümanları gizle"
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr "GİRİŞ"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "'%s' bir Pd dosyası gibi görünmediğinden yok sayılıyor"
+
+msgid "In Ports:"
+msgstr "Giriş Portları:"
+
+msgid "Init"
+msgstr ""
+
+msgid "Input device 1:"
+msgstr "Girdi aygıtı 1:"
+
+msgid "Input device 2:"
+msgstr "Girdi aygıtı 2:"
+
+msgid "Input device 3:"
+msgstr "Girdi aygıtı 3:"
+
+msgid "Input device 4:"
+msgstr "Girdi aygıtı 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr ""
+
+msgid "Label"
+msgstr "Etiket"
+
+msgid "Label color"
+msgstr "Renk etiketi"
+
+msgid "Last graph"
+msgstr "Son grafik"
+
+msgid "Left   "
+msgstr "Sol"
+
+msgid "Limits"
+msgstr "Sınırlar"
+
+msgid "Load Meter"
+msgstr ""
+
+msgid "Log:"
+msgstr "Kayıt:"
+
+msgid "Lower:"
+msgstr "Azalt:"
+
+msgid "MIDI Settings"
+msgstr "MIDI ayarları"
+
+msgid "MIDI Settings..."
+msgstr "MIDI Ayarları"
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr ""
+
+msgid "Match whole word only"
+msgstr ""
+
+msgid "Media"
+msgstr "Medya"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Message..."
+msgstr "Mesaj..."
+
+msgid "Messages"
+msgstr "Mesajlar"
+
+msgid "Minimize"
+msgstr "Simge durumuna getir"
+
+msgid "Name:"
+msgstr "İsim:"
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "New graph"
+msgstr "Yeni grafik"
+
+msgid "Next Window"
+msgstr "Sonraki Pencere"
+
+msgid "No init"
+msgstr ""
+
+msgid "Number"
+msgstr "Numara"
+
+msgid "Number2"
+msgstr "Numara2"
+
+msgid "OK"
+msgstr "Tamam"
+
+msgid "OK (Ctrl t)"
+msgstr "Tamam (Ctrl t)"
+
+msgid "OUT"
+msgstr "ÇIKIŞ"
+
+msgid "Object"
+msgstr "Nesne"
+
+msgid "Open"
+msgstr "Aç"
+
+msgid "Open List View..."
+msgstr "Liste görünümünü aç..."
+
+msgid "Open Recent"
+msgstr "Günceli Aç"
+
+msgid "Out Ports:"
+msgstr "Çıkış Portları:"
+
+msgid "Output device 1:"
+msgstr "Çıktı aygıtı 1:"
+
+msgid "Output device 2:"
+msgstr "Çıktı aygıtı 2:"
+
+msgid "Output device 3:"
+msgstr "Çıktı aygıtı 3:"
+
+msgid "Output device 4:"
+msgstr "Çıktı aygıtı 4:"
+
+msgid "Parent Window"
+msgstr "Komşu Pencere"
+
+msgid "Paste"
+msgstr "Yapıştır"
+
+msgid "Pd Help Browser..."
+msgstr "Pd Yardım Tarayıcısı..."
+
+msgid "Pd libraries to load on startup"
+msgstr ""
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr ""
+
+msgid "Pd window"
+msgstr "Pd penceresi"
+
+msgid "Pd-extended"
+msgstr ""
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Noktalar"
+
+msgid "Polygon"
+msgstr "Çokgen"
+
+msgid "Preferences"
+msgstr "Seçenekler"
+
+msgid "Previous Window"
+msgstr "Önceki Pencere"
+
+msgid "Print..."
+msgstr "Yazdır..."
+
+msgid "Properties"
+msgstr "Özellikler"
+
+msgid "Put"
+msgstr "Koy"
+
+msgid "Put array into:"
+msgstr ""
+
+msgid "Quit"
+msgstr "Çık"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Aralık ve büyüklük"
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr "Sembol al:"
+
+msgid "Redo"
+msgstr "Yeniden yap"
+
+msgid "Redo clear"
+msgstr "Yeniden temizle"
+
+msgid "Redo connect"
+msgstr "Yeniden bağlan"
+
+msgid "Redo cut"
+msgstr "Kesmeyi yeniden yap"
+
+msgid "Redo disconnect"
+msgstr "Bağlantıyı koparmayı yeniden yap"
+
+msgid "Redo duplicate"
+msgstr "Kopya üretmeyi yeniden yap"
+
+msgid "Redo motion"
+msgstr "Hareketi yeniden yap"
+
+msgid "Redo paste"
+msgstr "Yeniden yapıştır"
+
+msgid "Redo typing"
+msgstr "Yeniden yaz"
+
+msgid "Report a bug"
+msgstr "Hata raporla"
+
+msgid "Reset to Defaults"
+msgstr "Öntanımlı Ayarlara Geri Dön"
+
+msgid "Right"
+msgstr "Sağ"
+
+msgid "Sample rate:"
+msgstr "Örnek hızı:"
+
+msgid "Save"
+msgstr "Kaydet"
+
+msgid "Save As..."
+msgstr "Farklı Kaydet..."
+
+msgid "Save application to..."
+msgstr "Uygulamayı kaydet..."
+
+msgid "Save contents"
+msgstr "İçeriği kaydet"
+
+msgid "Scale"
+msgstr "Ölçek"
+
+msgid "Search in"
+msgstr "Aranıyor"
+
+msgid "Select All"
+msgstr "Tümünü Seç"
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Gönder (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Bir Pd mesajı gönder"
+
+msgid "Send symbol:"
+msgstr "Sembol gönder:"
+
+msgid "Setting embedded preferences..."
+msgstr "Gömülü seçenekler ayarlanıyor"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Boyut:"
+
+msgid "Start Here!"
+msgstr "Buradan Başlayın!"
+
+msgid "Startup flags:"
+msgstr "Başlangıç bayrakları"
+
+msgid "Steady on click"
+msgstr ""
+
+msgid "Stretch"
+msgstr ""
+
+msgid "Symbol"
+msgstr "Sembol"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Sesi ve MIDI'yi test et"
+
+msgid "Test label"
+msgstr "Test etiketi"
+
+msgid "Tidy Up"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr "Üst"
+
+msgid "Undo"
+msgstr "Geri Al"
+
+msgid "Undo clear"
+msgstr "Temizlemeyi geri al"
+
+msgid "Undo connect"
+msgstr "Bağlantıyı geri al"
+
+msgid "Undo cut"
+msgstr "Kesimi geri al"
+
+msgid "Undo disconnect"
+msgstr "Bağlantıyı koparmayı geri al"
+
+msgid "Undo duplicate"
+msgstr "Kopya üretmeyi geri al"
+
+msgid "Undo motion"
+msgstr "Hareketi geri al"
+
+msgid "Undo paste"
+msgstr "Yapıştırmayı geri al"
+
+msgid "Undo typing"
+msgstr "Yazıyı geri al"
+
+msgid "Upper:"
+msgstr "Yükselt:"
+
+msgid "Use callbacks"
+msgstr ""
+
+msgid "Use multiple ALSA devices"
+msgstr "Çoklu ALSA aygıtı kullan"
+
+msgid "Use multiple devices"
+msgstr "Çoklu aygıt kullan"
+
+msgid "Use standard extensions"
+msgstr "Standart eklentileri kullan"
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr ""
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr ""
+
+msgid "Width:"
+msgstr "Genişlik:"
+
+msgid "Window"
+msgstr "Pencere"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X ve Y"
+
+msgid "X offset"
+msgstr ""
+
+msgid "X only"
+msgstr "Sadece X"
+
+msgid "X range, from"
+msgstr ""
+
+msgid "X units per pixel:"
+msgstr "Pixel başına X"
+
+msgid "Y offset"
+msgstr ""
+
+msgid "Y only"
+msgstr "Sadece Y"
+
+msgid "Y range, from"
+msgstr ""
+
+msgid "Y units per pixel:"
+msgstr "Pixel başına Y"
+
+msgid "Zoom"
+msgstr ""
+
+msgid "all"
+msgstr "tümü"
+
+msgid "audio I/O error"
+msgstr "Ses I/O hatası"
+
+msgid "bottom:"
+msgstr "alt:"
+
+msgid "debug"
+msgstr "hata ayıklama"
+
+msgid "error"
+msgstr "hata"
+
+msgid "fatal"
+msgstr "ölümcül"
+
+msgid "for:"
+msgstr ""
+
+msgid "height:"
+msgstr "yükseklik:"
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr ""
+
+msgid "left:"
+msgstr "sol:"
+
+msgid "lin"
+msgstr ""
+
+msgid "log"
+msgstr "kayıt"
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "really quit?"
+msgstr "Çıkmak istediğinizden emin misiniz?"
+
+msgid "right:"
+msgstr "sağ:"
+
+msgid "size:"
+msgstr "boyut:"
+
+msgid "to"
+msgstr ""
+
+msgid "top:"
+msgstr "üst:"
+
+msgid "value:"
+msgstr "değer:"
+
+msgid "width:"
+msgstr "genişlik:"
