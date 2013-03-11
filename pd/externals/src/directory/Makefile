@@ -61,7 +61,7 @@ PD_INCLUDE = $(PD_PATH)/include/pdextended
 # where to install the library, overridden below depending on platform
 prefix = ~
 libdir = $(prefix)
-pkglibdir = $(libdir)/pd-externals
+pkglibdir = ../../bin
 objectsdir = $(pkglibdir)
 
 INSTALL = install
@@ -127,7 +127,8 @@ ifeq ($(UNAME),Darwin)
     STRIP = strip -x
     DISTBINDIR=$(DISTDIR)-$(OS)
 # install into ~/Library/Pd on Mac OS X since /usr/local isn't used much
-    pkglibdir=$(HOME)/Library/Pd
+    # pkglibdir=$(HOME)/Library/Pd
+    pkglibdir=../../bin
   endif
 endif
 # Tho Android uses Linux, we use this fake uname to provide an easy way to
