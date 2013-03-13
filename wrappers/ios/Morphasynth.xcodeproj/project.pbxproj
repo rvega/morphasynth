@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		303C0B0E16F0C03F00556BBF /* list2symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B0B16F0C03F00556BBF /* list2symbol.c */; };
+		303C0B0F16F0C03F00556BBF /* zexy.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B0C16F0C03F00556BBF /* zexy.c */; };
+		303C0B1216F0C0C300556BBF /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B1116F0C0C300556BBF /* limit.c */; };
+		304F577016F0B2D50045A2C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F576F16F0B2D50045A2C3 /* UIKit.framework */; };
+		304F577216F0B2D50045A2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F577116F0B2D50045A2C3 /* Foundation.framework */; };
+		304F577416F0B2D50045A2C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F577316F0B2D50045A2C3 /* CoreGraphics.framework */; };
+		304F577A16F0B2D50045A2C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304F577816F0B2D50045A2C3 /* InfoPlist.strings */; };
+		304F577C16F0B2D50045A2C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F577B16F0B2D50045A2C3 /* main.m */; };
+		304F578016F0B2D50045A2C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F577F16F0B2D50045A2C3 /* AppDelegate.m */; };
+		304F578216F0B2D50045A2C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 304F578116F0B2D50045A2C3 /* Default.png */; };
+		304F578416F0B2D50045A2C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 304F578316F0B2D50045A2C3 /* Default@2x.png */; };
+		304F578616F0B2D60045A2C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 304F578516F0B2D60045A2C3 /* Default-568h@2x.png */; };
+		304F578916F0B2D60045A2C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 304F578816F0B2D60045A2C3 /* ViewController.m */; };
+		304F578C16F0B2D60045A2C3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304F578A16F0B2D60045A2C3 /* ViewController.xib */; };
+		304F57A516F0B35B0045A2C3 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F579F16F0B3030045A2C3 /* libpd-ios.a */; };
+		304F57A716F0B3620045A2C3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F57A616F0B3620045A2C3 /* AVFoundation.framework */; };
+		304F57A916F0B3670045A2C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304F57A816F0B3670045A2C3 /* AudioToolbox.framework */; };
+		304F57D016F0B86F0045A2C3 /* test.pd in Resources */ = {isa = PBXBuildFile; fileRef = 304F57CF16F0B86F0045A2C3 /* test.pd */; };
+		304F57D316F0B8D80045A2C3 /* patches in Resources */ = {isa = PBXBuildFile; fileRef = 304F57D216F0B8D80045A2C3 /* patches */; };
+		304F57DA16F0BA6F0045A2C3 /* vexp_fun.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D616F0BA6F0045A2C3 /* vexp_fun.c */; };
+		304F57DB16F0BA6F0045A2C3 /* vexp_if.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D716F0BA6F0045A2C3 /* vexp_if.c */; };
+		304F57DC16F0BA6F0045A2C3 /* vexp.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D816F0BA6F0045A2C3 /* vexp.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		304F579E16F0B3030045A2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 304F579616F0B3030045A2C3 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+		304F57A016F0B3030045A2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 304F579616F0B3030045A2C3 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
+		};
+		304F57A316F0B3420045A2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 304F579616F0B3030045A2C3 /* libpd.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		303C0B0B16F0C03F00556BBF /* list2symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = list2symbol.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/list2symbol.c"; sourceTree = "<group>"; };
+		303C0B0C16F0C03F00556BBF /* zexy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zexy.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/zexy.c"; sourceTree = "<group>"; };
+		303C0B0D16F0C03F00556BBF /* zexy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zexy.h; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/zexy.h"; sourceTree = "<group>"; };
+		303C0B1116F0C0C300556BBF /* limit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = limit.c; path = "../../../vendors/pd-extended-0.43.4/externals/maxlib/limit.c"; sourceTree = "<group>"; };
+		304F576B16F0B2D50045A2C3 /* Morphasynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morphasynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		304F576F16F0B2D50045A2C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		304F577116F0B2D50045A2C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		304F577316F0B2D50045A2C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		304F577716F0B2D50045A2C3 /* Morphasynth-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morphasynth-Info.plist"; sourceTree = "<group>"; };
+		304F577916F0B2D50045A2C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		304F577B16F0B2D50045A2C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		304F577D16F0B2D50045A2C3 /* Morphasynth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Morphasynth-Prefix.pch"; sourceTree = "<group>"; };
+		304F577E16F0B2D50045A2C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		304F577F16F0B2D50045A2C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		304F578116F0B2D50045A2C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		304F578316F0B2D50045A2C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		304F578516F0B2D60045A2C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		304F578716F0B2D60045A2C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		304F578816F0B2D60045A2C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		304F578B16F0B2D60045A2C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		304F579616F0B3030045A2C3 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../vendors/pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
+		304F57A616F0B3620045A2C3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		304F57A816F0B3670045A2C3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		304F57CF16F0B86F0045A2C3 /* test.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.pd; path = Morphasynth/Resources/test.pd; sourceTree = "<group>"; };
+		304F57D216F0B8D80045A2C3 /* patches */ = {isa = PBXFileReference; lastKnownFileType = folder; name = patches; path = ../../pd/patches; sourceTree = "<group>"; };
+		304F57D516F0BA6F0045A2C3 /* fts_to_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fts_to_pd.h; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/fts_to_pd.h"; sourceTree = "<group>"; };
+		304F57D616F0BA6F0045A2C3 /* vexp_fun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vexp_fun.c; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp_fun.c"; sourceTree = "<group>"; };
+		304F57D716F0BA6F0045A2C3 /* vexp_if.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vexp_if.c; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp_if.c"; sourceTree = "<group>"; };
+		304F57D816F0BA6F0045A2C3 /* vexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vexp.c; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp.c"; sourceTree = "<group>"; };
+		304F57D916F0BA6F0045A2C3 /* vexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vexp.h; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		304F576816F0B2D50045A2C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				304F57A916F0B3670045A2C3 /* AudioToolbox.framework in Frameworks */,
+				304F57A716F0B3620045A2C3 /* AVFoundation.framework in Frameworks */,
+				304F57A516F0B35B0045A2C3 /* libpd-ios.a in Frameworks */,
+				304F577016F0B2D50045A2C3 /* UIKit.framework in Frameworks */,
+				304F577216F0B2D50045A2C3 /* Foundation.framework in Frameworks */,
+				304F577416F0B2D50045A2C3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		304F576016F0B2D50045A2C3 = {
+			isa = PBXGroup;
+			children = (
+				304F579616F0B3030045A2C3 /* libpd.xcodeproj */,
+				304F577516F0B2D50045A2C3 /* Morphasynth */,
+				304F57D116F0B8750045A2C3 /* Resources */,
+				304F576E16F0B2D50045A2C3 /* Frameworks */,
+				304F576C16F0B2D50045A2C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		304F576C16F0B2D50045A2C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				304F576B16F0B2D50045A2C3 /* Morphasynth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		304F576E16F0B2D50045A2C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				304F57A816F0B3670045A2C3 /* AudioToolbox.framework */,
+				304F57A616F0B3620045A2C3 /* AVFoundation.framework */,
+				304F576F16F0B2D50045A2C3 /* UIKit.framework */,
+				304F577116F0B2D50045A2C3 /* Foundation.framework */,
+				304F577316F0B2D50045A2C3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		304F577516F0B2D50045A2C3 /* Morphasynth */ = {
+			isa = PBXGroup;
+			children = (
+				304F577E16F0B2D50045A2C3 /* AppDelegate.h */,
+				304F577F16F0B2D50045A2C3 /* AppDelegate.m */,
+				304F578716F0B2D60045A2C3 /* ViewController.h */,
+				304F578816F0B2D60045A2C3 /* ViewController.m */,
+				304F578A16F0B2D60045A2C3 /* ViewController.xib */,
+				304F57D416F0BA440045A2C3 /* Externals */,
+				304F577616F0B2D50045A2C3 /* Supporting Files */,
+			);
+			path = Morphasynth;
+			sourceTree = "<group>";
+		};
+		304F577616F0B2D50045A2C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				304F577716F0B2D50045A2C3 /* Morphasynth-Info.plist */,
+				304F577816F0B2D50045A2C3 /* InfoPlist.strings */,
+				304F577B16F0B2D50045A2C3 /* main.m */,
+				304F577D16F0B2D50045A2C3 /* Morphasynth-Prefix.pch */,
+				304F578116F0B2D50045A2C3 /* Default.png */,
+				304F578316F0B2D50045A2C3 /* Default@2x.png */,
+				304F578516F0B2D60045A2C3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		304F579716F0B3030045A2C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				304F579F16F0B3030045A2C3 /* libpd-ios.a */,
+				304F57A116F0B3030045A2C3 /* libpd-osx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		304F57D116F0B8750045A2C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				304F57D216F0B8D80045A2C3 /* patches */,
+				304F57CF16F0B86F0045A2C3 /* test.pd */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		304F57D416F0BA440045A2C3 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				303C0B1116F0C0C300556BBF /* limit.c */,
+				303C0B0B16F0C03F00556BBF /* list2symbol.c */,
+				303C0B0C16F0C03F00556BBF /* zexy.c */,
+				303C0B0D16F0C03F00556BBF /* zexy.h */,
+				304F57D516F0BA6F0045A2C3 /* fts_to_pd.h */,
+				304F57D616F0BA6F0045A2C3 /* vexp_fun.c */,
+				304F57D716F0BA6F0045A2C3 /* vexp_if.c */,
+				304F57D816F0BA6F0045A2C3 /* vexp.c */,
+				304F57D916F0BA6F0045A2C3 /* vexp.h */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		304F576A16F0B2D50045A2C3 /* Morphasynth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 304F578F16F0B2D60045A2C3 /* Build configuration list for PBXNativeTarget "Morphasynth" */;
+			buildPhases = (
+				304F576716F0B2D50045A2C3 /* Sources */,
+				304F576816F0B2D50045A2C3 /* Frameworks */,
+				304F576916F0B2D50045A2C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				304F57A416F0B3420045A2C3 /* PBXTargetDependency */,
+			);
+			name = Morphasynth;
+			productName = Morphasynth;
+			productReference = 304F576B16F0B2D50045A2C3 /* Morphasynth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		304F576216F0B2D50045A2C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = RafaelVega;
+			};
+			buildConfigurationList = 304F576516F0B2D50045A2C3 /* Build configuration list for PBXProject "Morphasynth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 304F576016F0B2D50045A2C3;
+			productRefGroup = 304F576C16F0B2D50045A2C3 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 304F579716F0B3030045A2C3 /* Products */;
+					ProjectRef = 304F579616F0B3030045A2C3 /* libpd.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				304F576A16F0B2D50045A2C3 /* Morphasynth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		304F579F16F0B3030045A2C3 /* libpd-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-ios.a";
+			remoteRef = 304F579E16F0B3030045A2C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		304F57A116F0B3030045A2C3 /* libpd-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-osx.a";
+			remoteRef = 304F57A016F0B3030045A2C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		304F576916F0B2D50045A2C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				304F577A16F0B2D50045A2C3 /* InfoPlist.strings in Resources */,
+				304F578216F0B2D50045A2C3 /* Default.png in Resources */,
+				304F578416F0B2D50045A2C3 /* Default@2x.png in Resources */,
+				304F578616F0B2D60045A2C3 /* Default-568h@2x.png in Resources */,
+				304F578C16F0B2D60045A2C3 /* ViewController.xib in Resources */,
+				304F57D016F0B86F0045A2C3 /* test.pd in Resources */,
+				304F57D316F0B8D80045A2C3 /* patches in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		304F576716F0B2D50045A2C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				304F577C16F0B2D50045A2C3 /* main.m in Sources */,
+				304F578016F0B2D50045A2C3 /* AppDelegate.m in Sources */,
+				304F578916F0B2D60045A2C3 /* ViewController.m in Sources */,
+				304F57DA16F0BA6F0045A2C3 /* vexp_fun.c in Sources */,
+				304F57DB16F0BA6F0045A2C3 /* vexp_if.c in Sources */,
+				304F57DC16F0BA6F0045A2C3 /* vexp.c in Sources */,
+				303C0B0E16F0C03F00556BBF /* list2symbol.c in Sources */,
+				303C0B0F16F0C03F00556BBF /* zexy.c in Sources */,
+				303C0B1216F0C0C300556BBF /* limit.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		304F57A416F0B3420045A2C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libpd-ios";
+			targetProxy = 304F57A316F0B3420045A2C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		304F577816F0B2D50045A2C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				304F577916F0B2D50045A2C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		304F578A16F0B2D60045A2C3 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				304F578B16F0B2D60045A2C3 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		304F578D16F0B2D60045A2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		304F578E16F0B2D60045A2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		304F579016F0B2D60045A2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morphasynth/Morphasynth-Prefix.pch";
+				INFOPLIST_FILE = "Morphasynth/Morphasynth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../vendors/pd-for-ios/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		304F579116F0B2D60045A2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morphasynth/Morphasynth-Prefix.pch";
+				INFOPLIST_FILE = "Morphasynth/Morphasynth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../vendors/pd-for-ios/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		304F576516F0B2D50045A2C3 /* Build configuration list for PBXProject "Morphasynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				304F578D16F0B2D60045A2C3 /* Debug */,
+				304F578E16F0B2D60045A2C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		304F578F16F0B2D60045A2C3 /* Build configuration list for PBXNativeTarget "Morphasynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				304F579016F0B2D60045A2C3 /* Debug */,
+				304F579116F0B2D60045A2C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 304F576216F0B2D50045A2C3 /* Project object */;
+}

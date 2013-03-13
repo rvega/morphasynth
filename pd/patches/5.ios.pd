@@ -1,4 +1,4 @@
-#N canvas 568 152 595 469 10;
+#N canvas 495 145 595 469 10;
 #X obj 107 158 dac~;
 #N canvas 0 54 1280 746 sliders 0;
 #X obj -1110 -523 cnv 15 190 195 empty empty OSC1 20 12 0 10 -233017
@@ -265,6 +265,10 @@
 #X msg 108 -46 54;
 #X msg 143 -46 55;
 #X obj 41 -119 pd/count 4;
+#X obj 248 -15 print;
+#X obj 248 -81 loadbang;
+#X msg 248 -48 "This is the Morphasynth you fuckers!";
+#X obj 175 -81 print Beat;
 #X connect 3 0 0 0;
 #X connect 3 0 0 1;
 #X connect 4 0 13 0;
@@ -281,3 +285,6 @@
 #X connect 11 0 9 0;
 #X connect 12 0 9 0;
 #X connect 13 0 6 0;
+#X connect 13 0 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
