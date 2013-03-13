@@ -1,5 +1,5 @@
-#N canvas 187 238 753 328 10;
-#N canvas 100 336 494 344 META 0;
+#N canvas 379 233 753 328 10;
+#N canvas 102 332 494 344 META 0;
 #X text 12 25 LICENSE GPL v3;
 #X text 11 67 AUTHOR Rafael Vega Gonzalez;
 #X text 12 5 KEYWORDS lopass filter moog;
@@ -37,8 +37,7 @@
 10 -262144 -1 -1 9500 1;
 #X floatatom 318 -18 5 0 0 0 - - -;
 #X msg 356 -19 resonance \$1;
-#X obj 457 126 dsp;
-#X obj 607 -105 pddp/dsp;
+#X obj 606 -106 pddp/dsp;
 #X connect 1 0 2 0;
 #X connect 2 1 5 0;
 #X connect 4 0 2 1;

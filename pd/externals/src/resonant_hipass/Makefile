@@ -1,22 +1,17 @@
-all: obj/resonant_hipass.cpp
-	g++ -DPD -Wall -O3 -c -msse -Dmydsp=resonant_hipass -o obj/resonant_hipass.o obj/resonant_hipass.cpp
-	ar rcu bin/resonant_hipass.a obj/resonant_hipass.o
-	g++ -DPD -Wall -fPIC -O3 -shared -msse -Dmydsp=resonant_hipass -o bin/resonant_hipass~.pd_linux obj/resonant_hipass.cpp
-	chmod 775 bin/resonant_hipass.a
-	chmod 775 bin/resonant_hipass~.pd_linux
+UNAME := $(shell uname -s)
+ifeq ($(UNAME),Darwin)
+	EXT = pd_darwin
+endif
+ifeq ($(UNAME),Linux)
+	EXT = pd_linux
+endif
 
-cpp: obj/resonant_hipass.cpp
-
-
-obj/resonant_hipass.cpp:
-	faust -a puredata.cpp -o obj/resonant_hipass.cpp resonant_hipass.dsp
-	sed -i 's/PdUI/PdUIResonantHipass/g' obj/resonant_hipass.cpp
+all: resonant_hipass.dsp
+	faust2puredata resonant_hipass.dsp
 
 clean:
-	rm -f obj/resonant_hipass.o
-	rm -f bin/resonant_hipass.a
-	rm -f bin/resonant_hipass~.pd_linux
-	rm -f obj/resonant_hipass.cpp
+	rm -f resonant_hipass~.$(EXT)
 
 install:
-	cp bin/resonant_hipass~.pd_linux ~/pd-externals
+	cp -f resonant_hipass~.$(EXT) ../../bin
+	cp -f *.pd ../../bin
