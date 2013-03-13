@@ -51,7 +51,7 @@ void MainWindow::connectToJS(){
 QString MainWindow::getPresets(){
    // List all files ending in .preset in the presets dir
    std::vector<std::string> filenames;
-   DIR *dir = opendir("./res/pd/presets");
+   DIR *dir = opendir("./res/patches/presets");
    struct dirent *entry;
    std::string filename;
    while(NULL != (entry = readdir(dir))){
@@ -67,7 +67,7 @@ QString MainWindow::getPresets(){
    std::string line;
    for(unsigned int i=0; i<filenames.size(); i++){
       out += "{";
-      std::ifstream file("res/pd/presets/" + filename);
+      std::ifstream file("res/patches/presets/" + filename);
       if(file.is_open()){
          while(file.good()){
             getline(file, line);

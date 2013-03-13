@@ -22,7 +22,7 @@
 */
 
 #include "zexy.h"
-#include "z_zexy.h"
+/* #include "z_zexy.h" */
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -158,18 +158,18 @@ void zexy_setup(void)
   zexy_register("zexy");
 
   /* ************************************** */
-  z_zexy_setup();
+  /* z_zexy_setup(); */
 }
 
-#ifndef __WIN32__
-void verbose(int level, const char *fmt, ...){
-  char buf[MAXPDSTRING];
-  va_list ap;
- 
-  va_start(ap, fmt);
-  vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
-  va_end(ap);
-
-  post("zverbose(%d): %s", level, buf);
-}
-#endif
+/* #ifndef __WIN32__ */
+/* void verbose(int level, const char *fmt, ...){ */
+/*   char buf[MAXPDSTRING]; */
+/*   va_list ap; */
+/*   */
+/*   va_start(ap, fmt); */
+/*   vsnprintf(buf, MAXPDSTRING-1, fmt, ap); */
+/*   va_end(ap); */
+/*  */
+/*   post("zverbose(%d): %s", level, buf); */
+/* } */
+/* #endif */

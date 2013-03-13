@@ -2,7 +2,9 @@
 *.swp
 *.swo
 *.o
+*.lo
 *.a
+*.l_ia64
 *.pd_linux
 /wrappers/linux/obj/*
 /wrappers/linux/bin/*

@@ -21,55 +21,55 @@ MOC_DIR += ./obj
 
 # Copy reources
 res.path = bin/res
-res.files += res/html
-res.files += res/pd
+res.files = ../../html
+res.files += ../../pd/patches
 INSTALLS += res
 
 # Link with jack libraries
 LIBS += -ljack
 
-# Compile limit external and link statically
-PRE_TARGETDEPS += libs/maxlib/limit.a
-limit.target = libs/maxlib/limit.a
-limit.commands = cd libs/maxlib && make
-QMAKE_EXTRA_TARGETS += limit
-LIBS += libs/maxlib/limit.a
+EXTERNALS_PATH = ../../vendors/pd-extended-0.43.4/externals
 
-# Compile hppass external and link statically
-PRE_TARGETDEPS += libs/resonant_hipass/bin/resonant_hipass.a
-hpf.target = libs/resonant_hipass/bin/resonant_hipass.a
-hpf.commands = cd libs/resonant_hipass && make
-QMAKE_EXTRA_TARGETS += hpf
-LIBS += libs/resonant_hipass/bin/resonant_hipass.a
-
-# Compile lowpass external and link statically
-PRE_TARGETDEPS += libs/moog_lopass/bin/moog_lopass.a
-lpf.target = libs/moog_lopass/bin/moog_lopass.a
-lpf.commands = cd libs/moog_lopass && make
-QMAKE_EXTRA_TARGETS += lpf
-LIBS += libs/moog_lopass/bin/moog_lopass.a
+# Compile limit external
+SOURCES += $${EXTERNALS_PATH}/maxlib/limit.c
 
 # Compile list2symbol external and link statically
-PRE_TARGETDEPS += libs/zexy/src/list2symbol.a
-list2symbol.target = libs/zexy/src/list2symbol.a
-list2symbol.commands = cd libs/zexy/src && make
-QMAKE_EXTRA_TARGETS += list2symbol
-LIBS += libs/zexy/src/list2symbol.a
+SOURCES += $${EXTERNALS_PATH}/zexy/src/zexy.h
+SOURCES += $${EXTERNALS_PATH}/zexy/src/zexy.c
+SOURCES += $${EXTERNALS_PATH}/zexy/src/list2symbol.c
 
 # Compile expr external and link statically
-PRE_TARGETDEPS += libs/libpd/pure-data/extra/expr~/expr.a
-expr.target = libs/libpd/pure-data/extra/expr~/expr.a
-expr.commands = cd libs/libpd/pure-data/extra/expr~ && make
-QMAKE_EXTRA_TARGETS += expr
-LIBS += libs/libpd/pure-data/extra/expr~/expr.a
+DEFINES += PD
+SOURCES += $${EXTERNALS_PATH}/extra/expr~/*.h
+SOURCES += $${EXTERNALS_PATH}/extra/expr~/*.c
+# PRE_TARGETDEPS += libs/libpd/pure-data/extra/expr~/expr.a
+# expr.target = libs/libpd/pure-data/extra/expr~/expr.a
+# expr.commands = cd libs/libpd/pure-data/extra/expr~ && make
+# QMAKE_EXTRA_TARGETS += expr
+# LIBS += libs/libpd/pure-data/extra/expr~/expr.a
+
+# Compile hppass external and link statically
+# PRE_TARGETDEPS += libs/resonant_hipass/bin/resonant_hipass.a
+# hpf.target = libs/resonant_hipass/bin/resonant_hipass.a
+# hpf.commands = cd libs/resonant_hipass && make
+# QMAKE_EXTRA_TARGETS += hpf
+# LIBS += libs/resonant_hipass/bin/resonant_hipass.a
+
+# Compile lowpass external and link statically
+# PRE_TARGETDEPS += libs/moog_lopass/bin/moog_lopass.a
+# lpf.target = libs/moog_lopass/bin/moog_lopass.a
+# lpf.commands = cd libs/moog_lopass && make
+# QMAKE_EXTRA_TARGETS += lpf
+# LIBS += libs/moog_lopass/bin/moog_lopass.a
+
 
 # Compile libPd and link statically
-PRE_TARGETDEPS += libs/libpd/libs/libpd.a
-libpd.target = libs/libpd/libs/libpd.a
-libpd.commands = cd libs/libpd && make
+PRE_TARGETDEPS += ../../vendors/libpd/libs/libpd.a
+libpd.target = ../../vendors/libpd/libs/libpd.a
+libpd.commands = cd ../../vendors/libpd && make
 QMAKE_EXTRA_TARGETS += libpd
-INCLUDEPATH += ./libs/libpd/libpd_wrapper ./libs/libpd/pure-data/src
-LIBS += ./libs/libpd/libs/libpd.a
+INCLUDEPATH += ../../vendors/libpd/libpd_wrapper ../../vendors/libpd/pure-data/src
+LIBS += ../../vendors/libpd/libs/libpd.a
 
 # Run
 run.target = run
@@ -78,4 +78,4 @@ run.depends = $(TARGET)
 QMAKE_EXTRA_TARGETS += run
 
 
-  
+# vim: set ft=make:

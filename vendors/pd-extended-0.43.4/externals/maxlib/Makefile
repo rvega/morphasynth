@@ -282,6 +282,7 @@ all: $(SOURCES:.c=.$(EXTENSION)) $(SHARED_LIB)
 
 %.$(EXTENSION): %.o $(SHARED_LIB)
 	$(CC) $(ALL_LDFLAGS) -o "$*.$(EXTENSION)" "$*.o"  $(ALL_LIBS) $(SHARED_LIB)
+	ar rcu "$*.a" "$*.o"
 	chmod a-x "$*.$(EXTENSION)"
 
 # this links everything into a single binary file
@@ -354,6 +355,7 @@ install-unittests:
 
 clean:
 	-rm -f -- $(SOURCES:.c=.o) $(SOURCES_LIB:.c=.o) $(SHARED_SOURCE:.c=.o)
+	-rm -f -- $(SOURCES:.c=.a) $(SOURCES_LIB:.c=.a) $(SHARED_SOURCE:.c=.a)
 	-rm -f -- $(SOURCES:.c=.$(EXTENSION))
 	-rm -f -- $(LIBRARY_NAME).o
 	-rm -f -- $(LIBRARY_NAME).$(EXTENSION)
