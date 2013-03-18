@@ -1,4 +1,4 @@
-NAME = moog_lopass
+NAME = resonant_hpf
 
 # Detect Linux or MacOS
 UNAME := $(shell uname -s)

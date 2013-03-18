@@ -1,4 +1,4 @@
-#N canvas 0 54 1280 746 10;
+#N canvas 4 22 1276 756 10;
 #X obj -561 -203 inlet;
 #X obj 495 514 adsr;
 #X obj 327 555 *~;
@@ -63,6 +63,15 @@
 #X obj -96 -129 r \$0-midi-freq;
 #X obj 454 77 r \$0-midi-freq;
 #X obj 359 -146 r \$0-midi-freq;
+#X obj 115 418 resonant_hpf~;
+#X obj 80 216 hsl 128 15 20 20000 1 1 empty empty Frequency -2 -8 0
+10 -262144 -1 -1 4600 1;
+#X floatatom 77 258 5 0 0 0 - - -;
+#X obj -42 319 hsl 128 15 0 20 0 0 empty empty Q -2 -8 0 10 -262144
+-1 -1 7800 1;
+#X floatatom -45 352 5 0 0 0 - - -;
+#X msg 115 258 f \$1;
+#X msg -7 351 q \$1;
 #X connect 0 0 5 0;
 #X connect 1 0 2 1;
 #X connect 2 0 3 0;
@@ -111,7 +120,7 @@
 #X connect 48 0 58 7;
 #X connect 49 0 43 0;
 #X connect 50 0 52 0;
-#X connect 51 0 2 0;
+#X connect 51 0 64 1;
 #X connect 52 0 51 1;
 #X connect 53 0 52 1;
 #X connect 54 0 53 0;
@@ -122,3 +131,10 @@
 #X connect 61 0 56 2;
 #X connect 62 0 40 0;
 #X connect 63 0 57 2;
+#X connect 64 1 2 0;
+#X connect 65 0 69 0;
+#X connect 65 0 66 0;
+#X connect 67 0 70 0;
+#X connect 67 0 68 0;
+#X connect 69 0 64 0;
+#X connect 70 0 64 0;

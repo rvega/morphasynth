@@ -1,16 +1,16 @@
-MoogLopass
-===========
+Resonant HPF
+============
 
-This is a [PureData](http://puredata.info) external that implements a lopass filter similar to the one available in moog synthesizers.
+This is a [PureData](http://puredata.info) external that implements a resonant high pass filter.
 
 Build Instructions
 ------------------
 
 ### For Linux and MacOS
 
-1. Install the latest stable verion of [Faust](http://faust.grame.fr/). 
+1. Install [Faust](http://faust.grame.fr/) version 0.9.58 from [here](http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download):
 
-    wget http://sourceforge.net/projects/faudiostream/files/latest/download?source=files -O faust.zip
+    wget http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download -O faust.zip
     unzip faust.zip -d ./
     cd faust-0.9.58
     make 
@@ -18,7 +18,7 @@ Build Instructions
 
 2. Use Faust to generate the external
 
-    faust2puredata moog_lopass.dsp
+    faust2puredata resonant_hpf.dsp
 
 3. Install the external (optional, will install to ../bin)
 

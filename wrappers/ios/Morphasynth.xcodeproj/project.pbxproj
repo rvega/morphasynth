@@ -29,6 +29,7 @@
 		304F57DA16F0BA6F0045A2C3 /* vexp_fun.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D616F0BA6F0045A2C3 /* vexp_fun.c */; };
 		304F57DB16F0BA6F0045A2C3 /* vexp_if.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D716F0BA6F0045A2C3 /* vexp_if.c */; };
 		304F57DC16F0BA6F0045A2C3 /* vexp.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D816F0BA6F0045A2C3 /* vexp.c */; };
+		305CA44316F7409100FCD608 /* resonant_hpf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 305CA44216F7409100FCD608 /* resonant_hpf.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		304F57D716F0BA6F0045A2C3 /* vexp_if.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vexp_if.c; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp_if.c"; sourceTree = "<group>"; };
 		304F57D816F0BA6F0045A2C3 /* vexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vexp.c; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp.c"; sourceTree = "<group>"; };
 		304F57D916F0BA6F0045A2C3 /* vexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vexp.h; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp.h"; sourceTree = "<group>"; };
+		305CA44216F7409100FCD608 /* resonant_hpf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resonant_hpf.cpp; path = ../../../pd/externals/src/resonant_hpf/resonant_hpf.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		304F57D416F0BA440045A2C3 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				305CA44016F7407B00FCD608 /* resonant_hpf */,
 				303C0B1116F0C0C300556BBF /* limit.c */,
 				303C0B0B16F0C03F00556BBF /* list2symbol.c */,
 				303C0B0C16F0C03F00556BBF /* zexy.c */,
@@ -196,6 +199,14 @@
 				304F57D916F0BA6F0045A2C3 /* vexp.h */,
 			);
 			name = Externals;
+			sourceTree = "<group>";
+		};
+		305CA44016F7407B00FCD608 /* resonant_hpf */ = {
+			isa = PBXGroup;
+			children = (
+				305CA44216F7409100FCD608 /* resonant_hpf.cpp */,
+			);
+			name = resonant_hpf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				303C0B0E16F0C03F00556BBF /* list2symbol.c in Sources */,
 				303C0B0F16F0C03F00556BBF /* zexy.c in Sources */,
 				303C0B1216F0C0C300556BBF /* limit.c in Sources */,
+				305CA44316F7409100FCD608 /* resonant_hpf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

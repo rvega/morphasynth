@@ -9,5 +9,4 @@
 *.pd_linux
 /wrappers/linux/obj/*
 /wrappers/linux/bin/*
-/Makefile
-/res/pd/sandbox
+/pd/externals/src/**/*.pd_darwin
