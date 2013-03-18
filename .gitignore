@@ -6,7 +6,8 @@
 *.lo
 *.a
 *.l_ia64
-*.pd_linux
 /wrappers/linux/obj/*
 /wrappers/linux/bin/*
 /pd/externals/src/**/*.pd_darwin
+/pd/externals/src/**/*.pd_linux
+/pd/externals/src/**/*.dll
