@@ -32,8 +32,15 @@ Morphasynth.Options = function(){
  * Manages the piano keyboard
  */
 Morphasynth.Keyboard = function(){
+
+   var lastNote;
+
    this.init = function(){
+      //calls the "mouse events" methods
+      //the pressed
       $('.key').bind('mousedown', $.proxy(this.pressedKey, this));
+
+      //the released
       $('.key').bind('mouseup', $.proxy(this.releasedKey, this));
       $('#piano-scroll').scrollLeft( $("#piano").width()/2.56 );
    };
@@ -45,15 +52,18 @@ Morphasynth.Keyboard = function(){
 
       // Debug:
       console.log("MIDI note on: " + noteNumber);
+      lastNote=noteNumber;
    };
 
-   this.releasedKey = function(event){
+   //Manages the released event on keyboard
+   this.releasedKey = function(event){ 
+      /*
       var key = $(event.target);
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
-
+      */
       // Debug:
-      console.log("MIDI note off: " + noteNumber);
+      console.log("MIDI note off: " + lastNote);
    };
 
 }
