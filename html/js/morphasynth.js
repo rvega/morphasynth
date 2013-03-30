@@ -33,7 +33,7 @@ Morphasynth.Options = function(){
  */
 Morphasynth.Keyboard = function(){
    this.init = function(){
-      $('.key').bind('click', $.proxy(this.clickedKey, this))
+      $('.key').bind('mousedown', $.proxy(this.clickedKey, this));
       $('#piano-scroll').scrollLeft( $("#piano").width()/2.56 );
    };
 
@@ -45,6 +45,7 @@ Morphasynth.Keyboard = function(){
       // Debug:
       console.log("MIDI note on: " + noteNumber);
    };
+
 }
 
 /*
