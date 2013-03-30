@@ -33,17 +33,27 @@ Morphasynth.Options = function(){
  */
 Morphasynth.Keyboard = function(){
    this.init = function(){
-      $('.key').bind('mousedown', $.proxy(this.clickedKey, this));
+      $('.key').bind('mousedown', $.proxy(this.pressedKey, this));
+      $('.key').bind('mouseup', $.proxy(this.releasedKey, this));
       $('#piano-scroll').scrollLeft( $("#piano").width()/2.56 );
    };
 
-   this.clickedKey = function(event){
+   this.pressedKey = function(event){
       var key = $(event.target);
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
 
       // Debug:
       console.log("MIDI note on: " + noteNumber);
+   };
+
+   this.releasedKey = function(event){
+      var key = $(event.target);
+      var octaveNumber = key.closest('.octave').attr('data-octave');
+      var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
+
+      // Debug:
+      console.log("MIDI note off: " + noteNumber);
    };
 
 }
