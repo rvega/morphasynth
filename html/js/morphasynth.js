@@ -33,7 +33,7 @@ Morphasynth.Options = function(){
  */
 Morphasynth.Keyboard = function(){
 
-   var lastNote;
+   var lastKey;
 
    this.init = function(){
       //calls the "mouse events" methods
@@ -49,10 +49,10 @@ Morphasynth.Keyboard = function(){
       var key = $(event.target);
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
-
+      $(key).addClass("pressed");
       // Debug:
       console.log("MIDI note on: " + noteNumber);
-      lastNote=noteNumber;
+      lastKey=key;
    };
 
    //Manages the released event on keyboard
@@ -62,8 +62,12 @@ Morphasynth.Keyboard = function(){
       var octaveNumber = key.closest('.octave').attr('data-octave');
       var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
       */
+      
+      $(lastKey).removeClass("pressed");
+      var octaveNumber = lastKey.closest('.octave').attr('data-octave');
+      var noteNumber = parseInt(octaveNumber*12) + parseInt(lastKey.attr('data-note-number'));
       // Debug:
-      console.log("MIDI note off: " + lastNote);
+      console.log("MIDI note off: " + noteNumber);
    };
 
 }
