@@ -1,14 +1,14 @@
 #N canvas 246 354 484 215 10;
-#X obj -1184 -539 cnv 15 320 140 empty empty ~~MAGIC~~ 20 12 0 11 -260097
+#X declare -stdpath extra/iemmatrix;
+#X obj 36 34 cnv 15 320 140 empty empty ~~MAGIC~~ 20 12 0 11 -260097
 -66577 0;
-#X obj -1090 -496 inlet;
-#X obj -1090 -431 outlet~;
-#X text -1052 -498 MIDI IN;
-#X text -1157 -431 AUDIO OUT;
-#X obj -1090 -466 pd/synthesizer;
-#X obj -987 -423 pd/morpher;
-#X obj -987 -516 r which-mfcc-x;
-#X obj -968 -492 r which-mfcc-y;
+#X obj 130 142 outlet~;
+#X text 168 75 MIDI IN;
+#X text 63 142 AUDIO OUT;
+#X obj 130 107 pd/synthesizer;
+#X obj 233 150 pd/morpher;
+#X obj 233 57 r which-mfcc-x;
+#X obj 252 81 r which-mfcc-y;
 #N canvas 185 228 1265 571 parameters 0;
 #X obj -1130 -543 cnv 15 200 135 empty empty OSC1 20 12 0 11 -233017
 -66577 0;
@@ -134,10 +134,10 @@
 #X text -919 -196 AMPLITUDE;
 #X obj -921 -178 pd/map noise-amplitude 0 1 0 1;
 #X text -501 -304 RESONANCE;
-#X restore -859 -539 pd parameters;
-#X obj -859 -515 iemmatrix 0.2;
-#X obj -949 -469 r xpos;
-#X obj -930 -446 r ypos;
+#X restore 361 34 pd parameters;
+#X obj 361 58 iemmatrix 0.2;
+#X obj 271 104 r xpos;
+#X obj 290 127 r ypos;
 #N canvas 1 87 450 300 panic 0;
 #X obj 87 217 until;
 #X obj 110 161 t b b;
@@ -154,13 +154,14 @@
 #X connect 3 0 0 0;
 #X connect 6 0 5 0;
 #X connect 7 0 1 0;
-#X restore -1153 -496 pd panic;
-#X obj -1153 -518 inlet;
-#X connect 1 0 5 0;
-#X connect 5 0 2 0;
-#X connect 7 0 6 0;
-#X connect 8 0 6 1;
-#X connect 11 0 6 2;
-#X connect 12 0 6 3;
-#X connect 13 0 5 0;
-#X connect 14 0 13 0;
+#X restore 130 57 pd panic;
+#X obj 130 35 inlet;
+#X obj 88 56 inlet;
+#X connect 4 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 1;
+#X connect 10 0 5 2;
+#X connect 11 0 5 3;
+#X connect 12 0 4 0;
+#X connect 13 0 12 0;
+#X connect 14 0 4 0;

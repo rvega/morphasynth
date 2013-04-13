@@ -1,0 +1,125 @@
+#N canvas 156 101 1114 583 10;
+#X obj 174 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 785 488 See timbreID helpfile:;
+#X obj 787 508 timbreID;
+#X obj 85 72 *~;
+#X obj 114 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 137 72 *~;
+#X obj 166 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 85 343 10 0 0 0 - - specFlux;
+#X obj 85 41 noise~;
+#N canvas 587 64 517 376 attack-detection 0;
+#X obj 33 289 select 1;
+#X obj 33 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 65 244 5 0 0 0 - - -;
+#X obj 33 69 adc~;
+#X obj 66 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 88 118 Turn on for continuous analysis;
+#X obj 33 187 specFlux~ 1024 256;
+#X obj 66 148 metro 5.80499;
+#X text 25 8 Spectral flux can be used for basic attack detection.
+Turn on the toggle below to check it out.;
+#X obj 33 268 > 0.6;
+#X text 108 241 If 0.6 is too low or high \, try a different threshhold.
+;
+#X connect 0 0 1 0;
+#X connect 2 0 9 1;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 9 0 0 0;
+#X restore 195 492 pd attack-detection;
+#X text 202 154 Activate a signal above and bang to output its flux.
+;
+#X obj 1 -13 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -13 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#N canvas 322 87 874 602 other-settings 0;
+#X text 174 109 Change window size.;
+#X obj 299 249 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 299 267 normalize \$1;
+#X text 337 248 Normalize spectrum. Default: ON.;
+#X obj 362 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 400 331 Squared difference vs. Absolute value of difference.
+;
+#X msg 253 180 separation 512;
+#X obj 63 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 63 72 power_spectrum \$1;
+#X text 94 52 Use power instead of magnitude;
+#X obj 124 525 outlet;
+#X text 363 179 Change distance between analysis windows in samples.
+;
+#X obj 379 444 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 379 464 window_function \$1;
+#X text 377 407 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X msg 176 130 window 2048;
+#X msg 362 350 squared_diff \$1;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 4 0 16 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
+#X connect 15 0 10 0;
+#X connect 16 0 10 0;
+#X restore 176 230 pd other-settings;
+#X text 642 297 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X text 642 337 Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message. The second creation argument specifies the separation
+between the two analysis windows in samples. This does not need to
+be a power of two. It can be changed on the fly with the "separation"
+message.;
+#X text 642 27 Typically \, spectral flux is the sum of squared difference
+between two successive magnitude spectra. specFlux~ gives you the option
+of taking the absolute value of differences rather than squaring so
+that the final result is a bit larger. This is the default configuration.
+The range of values for flux depends on frame separation. With the
+default frame separation of a quarter window \, the flux of noise~
+is higher than that of a sinusoid.;
+#X obj 85 303 specFlux~ 1024 256;
+#X text 642 147 specFlux~ reports the full list of differences (i.e.
+\, (N/2)+1 bins) at the right outlet \, and the sum of that list at
+the left outlet. You get a lot more detailed information about how
+a spectrum is changing with the right outlet if you have a reason to
+use it.;
+#X text 642 227 In the [attack-detection] sub-patch \, the left outlet
+is used as an attack detector. bonk~ and timbreID's bark~ objects are
+much better designed for this purpose - the sub-patch here is more
+of a proof of concept.;
+#X obj 208 355 list prepend 0;
+#X text 220 281 Creation arguments are window size and separation in
+samples between analysis windows.;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array bin-diffs 513 float 0;
+#X coords 0 0.1 512 -0.1 200 140 1;
+#X restore 382 368 graph;
+#X obj 209 376 s bin-diffs;
+#X obj 137 41 osc~ 440;
+#X connect 0 0 17 0;
+#X connect 3 0 17 0;
+#X connect 4 0 3 1;
+#X connect 5 0 17 0;
+#X connect 6 0 5 1;
+#X connect 8 0 3 0;
+#X connect 13 0 17 0;
+#X connect 17 0 7 0;
+#X connect 17 1 20 0;
+#X connect 20 0 23 0;
+#X connect 24 0 5 0;

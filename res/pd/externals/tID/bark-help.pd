@@ -1,0 +1,366 @@
+#N canvas 326 45 764 736 10;
+#X obj 101 109 r bark;
+#N canvas 30 372 731 351 init 0;
+#X msg 20 123 \; pd dsp 1 \;;
+#X obj 57 -24 loadbang;
+#X msg 455 153 thresh -1 5.5;
+#X obj 343 228 s bark;
+#X msg 377 71 mask 4 0.75;
+#X msg 337 38 debounce 200;
+#X obj 57 -1 t b b b b b b;
+#X msg 116 177 85;
+#X obj 116 198 s master-volume-set;
+#X msg 422 114 filter_range 0 45;
+#X msg 462 238 read -resize satie.wav satie-pno;
+#X obj 462 259 soundfiler;
+#X obj 462 280 / 44100;
+#X obj 462 301 print samp-duration;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;
+#X connect 6 1 7 0;
+#X connect 6 2 5 0;
+#X connect 6 3 4 0;
+#X connect 6 4 9 0;
+#X connect 6 5 2 0;
+#X connect 6 5 10 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X restore 27 382 pd init;
+#N canvas 63 82 1133 728 other-messages-and-settings 0;
+#X msg 8 87 debug \$1;
+#X obj 171 632 s bark;
+#X obj 8 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 267 542 filter_freqs;
+#X obj 8 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 227 457 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 227 477 loudness \$1;
+#X floatatom 171 325 5 0 0 1 - - -;
+#X msg 171 343 debounce \$1;
+#X text 253 445 Apply a loudness weighting curve to the Bark spectrum
+before measuring growth.;
+#X text 220 310 Block onset reports for a given number of millseconds
+after an onset is detected.;
+#X text 31 53 With debug on \, growth values will be posted for every
+onset report \, giving the peak and lower values.;
+#X obj 8 178 s bark;
+#X text 266 510 Print the center frequency of each filter in the Bark
+spaced filterbank. Results show up in the post window.;
+#X floatatom 201 385 5 0 0 1 - - -;
+#X msg 201 403 minvel \$1;
+#X text 290 373 Ignore onsets that are below a certain amplitude threshold.
+Units are not dB or MIDI velocity \, but the sum of the energy in all
+filterbands. You'll have to fiddle with it based on your input.;
+#X msg 78 120 print;
+#X text 125 120 Print current settings in the post window.;
+#X msg 346 633 samplerate 48000;
+#X text 472 627 If your file uses a sample rate other than the default
+44100 \, specify it here.;
+#X obj 499 185 s bark;
+#X obj 499 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 522 37 Average rather than sum energy in each filter according
+to its width.;
+#X msg 499 72 filter_avg \$1;
+#X obj 552 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 552 134 spew \$1;
+#X text 577 114 Spew growth data on every frame.;
+#X text 33 277 Use power vs. magnitude spectrum (default is power).
+;
+#X text 576 174 There is no "measure" function for the NRT version
+of bark \, as you can easily turn on spew mode and analyze a time range
+that is mostly silence. The results should be written to an array that
+you can look at for guidance on appropriate thresholds. See the [pd
+measure] subpatch in the parent level of this help patch for an example.
+;
+#X obj 648 516 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 648 536 window_function \$1;
+#X text 646 479 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X msg 8 297 power_spectrum \$1;
+#X obj -43 1 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj -43 1 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 12 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 33 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X connect 14 0 15 0;
+#X connect 15 0 1 0;
+#X connect 17 0 12 0;
+#X connect 19 0 1 0;
+#X connect 22 0 24 0;
+#X connect 24 0 21 0;
+#X connect 25 0 26 0;
+#X connect 26 0 21 0;
+#X connect 30 0 31 0;
+#X connect 31 0 1 0;
+#X connect 33 0 1 0;
+#X restore 409 450 pd other-messages-and-settings;
+#X msg 304 226 thresh -1 5.5;
+#X obj 304 397 s bark;
+#X msg 324 266 mask 4 0.75;
+#X msg 344 306 debounce 100;
+#N canvas 567 151 477 161 thresh-details 0;
+#X text 26 19 As with bonk~ \, the thresh message lets you specify
+lower and upper growth thresholds. An onset is reported when growth
+exceeds the upper threshold \, then falls below the lower threshold.
+If lower threshold is set to -1 \, onsets are reported at the first
+sign of decay after growth exceeds the upper threshold.;
+#X restore 512 226 pd thresh-details;
+#N canvas 868 187 477 161 mask-details 0;
+#X text 18 49 As with bonk~ \, you can specify a number of analysis
+periods and decay rate for the energy mask.;
+#X restore 512 266 pd mask-details;
+#N canvas 913 269 464 176 debounce-details 0;
+#X text 18 39 The spectral flux that goes on during the first few milliseconds
+of an instrument's attack can cause extra onset reports. Provide a
+time in milliseconds with the "debounce" message to deal with this.
+After an onset report \, bark will suppress further reporting until
+the given number of milliseconds goes by. This feature is useful for
+eliminating a burst of attack reports when the first one is all you
+really needed.;
+#X restore 512 306 pd debounce-details;
+#X msg 364 346 filter_range 0 20;
+#X text 26 -163 bark is a non-real-time onset detector that makes use
+of the perceptually determined Bark frequency scale to achieve its
+weighting of the frequency spectrum before attempting to measure spectral
+growth. It uses an algorithm very similar to bonk~ \, but the use of
+the Bark scale may improve results for some types of signals. For instance
+\, with a lot of previous resonance \, bonk~ sometimes misses low notes
+in this piano recording.;
+#X obj 27 402 table satie-pno;
+#N canvas 4 79 671 378 textfile 0;
+#X obj 45 291 textfile;
+#X msg 108 242 clear;
+#X msg 45 150 add \$1;
+#X msg 82 182 write bark-test.txt cr;
+#X obj 45 44 inlet;
+#X text 252 182 write to a text file and import as labels in Audacity
+;
+#X obj 108 219 r reset;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 6 0 1 0;
+#X restore 27 295 pd textfile;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array attacks 27 float 0;
+#X coords 0 1.13613e+06 26 0 200 140 1;
+#X restore 512 -130 graph;
+#N canvas 182 503 589 209 attacks-table-writer 0;
+#X obj 40 50 inlet;
+#X obj 40 71 t f b;
+#X obj 40 152 tabwrite attacks;
+#X obj 149 103 f;
+#X obj 179 103 + 1;
+#X obj 149 124 % 27;
+#X text 200 125 27 points in the table \, so wrap around if we go over
+;
+#X msg 167 68 0;
+#X obj 40 92 * 44100;
+#X text 108 16 convert from seconds to samples before writing to attacks
+array;
+#X obj 167 44 r reset;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 1 1 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 2 1;
+#X connect 7 0 3 1;
+#X connect 8 0 2 0;
+#X connect 10 0 7 0;
+#X restore 47 275 pd attacks-table-writer;
+#N canvas 221 206 337 428 segmented-player 0;
+#X obj 58 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 58 42 f;
+#X obj 88 42 + 1;
+#X obj 58 84 t f f;
+#X obj 58 105 + 1;
+#X obj 58 126 tabread attacks;
+#X obj 178 126 tabread attacks;
+#X obj 58 177 -;
+#X obj 58 253 pack f f;
+#X obj 58 198 t b f;
+#X obj 58 219 f;
+#X obj 58 359 dac~;
+#X obj 58 318 tabplay~ satie-pno;
+#X obj 58 63 % 27;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 13 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 3 1 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 6 0 10 1;
+#X connect 7 0 9 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 9 1 8 1;
+#X connect 10 0 8 0;
+#X connect 12 0 11 0;
+#X connect 12 0 11 1;
+#X connect 13 0 3 0;
+#X restore 512 20 pd segmented-player;
+#N canvas 419 71 574 583 growth-record 0;
+#X obj 64 23 inlet;
+#X obj 64 94 t f b;
+#X obj 64 205 tabwrite growth;
+#X obj 166 155 f;
+#X obj 196 155 + 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array growth 8860 float 0;
+#X coords 0 50 8859 0 200 140 1;
+#X restore 344 81 graph;
+#X obj 166 176 % 8860;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array growth-closeup 100 float 0;
+#X coords 0 12 99 0 200 140 1;
+#X restore 344 305 graph;
+#X obj 62 396 tabletool growth-closeup;
+#X msg 62 375 copy_range 0 growth \$1 \$2;
+#X floatatom 62 268 10 0 0 2 frame-number - -;
+#X obj 62 346 pack f f;
+#X obj 115 322 + 100;
+#X msg 184 130 0;
+#X obj 62 286 t f f f;
+#X floatatom 182 323 15 0 0 3 location-msec - -;
+#X obj 182 302 / 44.1;
+#X obj 182 279 * 128;
+#X obj 184 109 r reset;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 6 0 2 1;
+#X connect 9 0 8 0;
+#X connect 10 0 14 0;
+#X connect 11 0 9 0;
+#X connect 12 0 11 1;
+#X connect 13 0 3 1;
+#X connect 14 0 11 0;
+#X connect 14 1 12 0;
+#X connect 14 2 17 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 18 0 13 0;
+#X restore 106 217 pd growth-record;
+#X msg 27 30 analyze;
+#X msg 57 60 analyze 0.4 10.2;
+#X text 24 454 See the real-time version too:;
+#X obj 27 472 bark~;
+#X text 25 -51 See the [pd other-messages-and-settings] subpatch for
+more details.;
+#X obj 27 142 bark satie-pno 2048 128 0.5;
+#X obj -13 -195 cnv 10 400 10 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj -13 -195 cnv 10 10 400 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 236 135 Creation arguments are the array to analyze \, window
+size & hop in samples \, and filter spacing in Barks.;
+#X obj 218 79 bng 15 250 50 0 reset empty reset 17 7 0 12 -262144 -1
+-1;
+#X text 91 8 Analyze the whole array \, or a range given in seconds.
+If you're planning to make labels or measure growth using the subpatches
+here \, hit the reset button below first.;
+#N canvas 677 389 466 228 filter_range-details 0;
+#X text 18 158 You can send bark the "filter_freqs" message to see
+the center frequency in Hz of each filter in the bank.;
+#X text 18 39 Use the "filter_range" message to specify a range of
+filters to use in the total growth measurement. The appropriate limits
+for these values depend on how many filters are in the Bark filterbank.
+With the default spacing of 0.5 Barks \, you get 47 filters \, so "filter_range
+0 46" would cause bark to use the entire filterbank. If you think you
+can capture attacks with only high frequencies \, you might want to
+try "filter_range 30 46" \, for instance.;
+#X restore 512 346 pd filter_range-details;
+#N canvas 189 276 832 617 measure 0;
+#X obj 48 37 inlet;
+#X obj 190 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 190 48 spew \$1;
+#X obj 190 129 s bark;
+#X text 212 27 Turn on spew mode;
+#X obj 48 147 t f b;
+#X obj 157 208 f;
+#X obj 187 208 + 1;
+#X msg 175 183 0;
+#X msg 212 86 analyze 0.523 0.899;
+#X text 363 71 then analyze a time range that is relatively silent.
+In this file \, there's no complete silence \, so I just specified
+a range with piano resonance but no attack. So it's still relatively
+inactive.;
+#X obj 48 258 tabwrite measure;
+#X obj 48 335 loadbang;
+#X msg 48 358 \; measure ylabel -5 0 2 4 6 8 10 \;;
+#X msg 498 462 max;
+#X obj 498 503 tabletool measure;
+#X floatatom 498 524 10 0 0 0 - - -;
+#X msg 539 477 mean;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array measure 112 float 0;
+#X coords 0 10 112 0 200 140 1;
+#X restore 458 189 graph;
+#X obj 157 230 % 112;
+#X obj 48 58 moses 200;
+#X text 361 358 You can see from the results that this portion of the
+file (with no attacks in it \, only resonance) peaks out with a growth
+of around 4.5 So it's probably safe to set the threshold to something
+like 5.5 or 6.5 on the high end \, and maybe 5 on the low end. If you
+have the [tabletool] extern \, you can get the peak value with the
+"max" function \, and the average growth with the "mean" function:
+;
+#X obj 175 162 r reset;
+#X connect 0 0 20 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 11 0;
+#X connect 5 1 6 0;
+#X connect 6 0 7 0;
+#X connect 6 0 19 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 1;
+#X connect 9 0 3 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 15 0;
+#X connect 19 0 11 1;
+#X connect 20 0 5 0;
+#X connect 22 0 8 0;
+#X restore 126 197 pd measure;
+#X connect 0 0 23 0;
+#X connect 3 0 4 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 10 0 4 0;
+#X connect 18 0 23 0;
+#X connect 19 0 23 0;
+#X connect 23 0 13 0;
+#X connect 23 0 15 0;
+#X connect 23 1 17 0;
+#X connect 23 1 30 0;

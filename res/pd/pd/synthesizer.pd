@@ -1,4 +1,4 @@
-#N canvas 127 87 364 434 10;
+#N canvas 537 317 364 434 10;
 #X obj 83 67 inlet;
 #X obj 113 403 outlet~;
 #X text 82 47 Midi note in;

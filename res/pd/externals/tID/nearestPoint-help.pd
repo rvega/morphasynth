@@ -1,0 +1,57 @@
+#N canvas 429 174 556 513 10;
+#X floatatom 138 388 5 0 0 0 - - -;
+#X floatatom 43 386 5 0 0 0 - - -;
+#X msg 43 178 1 0 0 \, 0 1 0 \, 0 0 1;
+#X obj 138 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 739 157 210 314 random-point 0;
+#X obj 54 36 t b b b;
+#X obj 54 167 random 100;
+#X obj 54 249 pack f f f;
+#X obj 77 117 random 100;
+#X obj 100 66 random 100;
+#X obj 54 270 outlet;
+#X obj 54 7 inlet;
+#X obj 100 87 / 99;
+#X obj 77 138 / 99;
+#X obj 54 188 / 99;
+#X connect 0 0 1 0;
+#X connect 0 1 3 0;
+#X connect 0 2 4 0;
+#X connect 1 0 9 0;
+#X connect 2 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 2 2;
+#X connect 8 0 2 1;
+#X connect 9 0 2 0;
+#X restore 138 316 pd random-point;
+#X text 135 227 Clear the current set of points.;
+#X msg 86 228 clear;
+#X text 192 257 Change dimensionality.;
+#X msg 96 258 dimensions 2;
+#X text 41 406 The index of the nearest point comes out the left outlet
+\, and its distance from the input point comes out the right outlet.
+;
+#X text 161 295 Generate a random point in space.;
+#X obj 43 345 nearestPoint 3;
+#X text 40 31 This object exists in order to enable the timbreID timbre-space
+example patches \, but it's bound to be useful in other situations
+too.;
+#X text 40 81 nearestPoint accepts members from a set of points in
+its left inlet. All members of the set must have the same dimensionality
+\, set by a creation argument. Once you've given it all the points
+in your set \, send an arbitrary point of the same dimensionality to
+the right inlet to see which point in the set is nearest.;
+#X obj 1 -7 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -7 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 1;
+#X connect 6 0 11 0;
+#X connect 8 0 11 0;
+#X connect 11 0 1 0;
+#X connect 11 1 0 0;
