@@ -1,0 +1,25 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pd-extended
+GenericName=Pd
+Comment=Visual dataflow programming platform for multimedia
+Exec=pasuspender -- /usr/lib/pd-extended/tcl/pd-gui.tcl %F
+Terminal=false
+Type=Application
+Icon=pd-extended.xpm
+Categories=AudioVideo;Audio;Video;Development
+MimeType=text/x-puredata;application/x-maxmsp;text/x-maxmsp;
+StartupNotify=false
+
+# Translations
+Comment[ca]=Plataforma de programació visual per aplicacions multimèdia
+Comment[cs]=Vizuální programovací platforma datového toku pro multimédia
+Comment[da]=Visuel dataflow programmerings platform for multimedie
+Comment[de]=Grafische Datenflussprogrammierung für Multimedia
+Comment[el]=Πλατφόρμα εικονικής ροής προγραμματισμού για πολυμέσα
+Comment[es]=Plataforma de programación visual para aplicaciones multimedia
+Comment[fr]=Plateforme de programmation visuelle pour applications multimédia
+Comment[hu]=Vizuális adatfolyam programozási platform multimédiához
+Comment[it]=Piattaforma di programmazione visuale per applicazioni multimedia
+Comment[ja]=ビジュアルデータフロープログラミング環境
+Comment[pt]=Plataforma de programação visuais para multimedia

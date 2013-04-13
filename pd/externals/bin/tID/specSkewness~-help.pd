@@ -1,0 +1,77 @@
+#N canvas 219 178 933 562 10;
+#X obj 234 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 144 475 10 0 0 0 - - -;
+#X text 564 360 See timbreID helpfile:;
+#X obj 566 380 timbreID;
+#X text 268 237 Bang continuously;
+#X obj 247 260 metro 250;
+#X obj 247 238 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 486 195 This feature can be sent to the timbreID external in
+order to identify percussive timbres in real time.;
+#X obj 48 46 noise~;
+#X obj 48 106 hip~;
+#X obj 48 127 *~;
+#X obj 84 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 145 127 *~;
+#X obj 181 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 145 106 lop~;
+#X obj 169 47 hsl 128 15 20 20000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 12700 1;
+#X floatatom 166 67 10 0 0 0 - - -;
+#X obj 144 432 specSkewness~ 1024;
+#X text 486 65 Spectral skewness measures the symmetry of a spectral
+envelope. Positive skew means most of the energy is in the low end
+\, and the envelope tapers to 0 toward the higher frequencies. Negative
+skew is the opposite: most of the energy is at the high end \, and
+the envelope tapers to 0 toward the low frequencies. By filtering white
+noise with either a low- or high-pass filter at left \, you can get
+a sense of the range of values. Unfiltered white noise will have a
+skew value near 0;
+#X text 257 199 Bang to output skewness;
+#X text 486 235 Audio buffering and windowing are taken care of by
+the external \, so there is no need for tabreceive~ or block~. You
+can set the window size with a creation argument \, or change it with
+the "window" message.;
+#N canvas 415 84 706 394 other-settings 0;
+#X obj 54 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 54 106 window_function \$1;
+#X msg 169 236 power_spectrum \$1;
+#X obj 169 218 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 54 315 outlet;
+#X text 52 49 Change windowing function. Rectangular (0) \, Blackman
+(1) \, Cosine (2) \, Hamming (3) \, or Hann (4). (default: Hann);
+#X text 310 236 Use power spectrum. (default: magnitude);
+#X text 108 150 Change window size.;
+#X msg 110 168 window 2048;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 8 0 4 0;
+#X restore 286 337 pd other-settings;
+#X obj 1 -5 cnv 10 400 10 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1 -5 cnv 10 10 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 17 0;
+#X connect 5 0 17 0;
+#X connect 6 0 5 0;
+#X connect 8 0 9 0;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 17 0;
+#X connect 11 0 10 1;
+#X connect 12 0 17 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 1;
+#X connect 16 0 9 1;
+#X connect 17 0 1 0;
+#X connect 21 0 17 0;

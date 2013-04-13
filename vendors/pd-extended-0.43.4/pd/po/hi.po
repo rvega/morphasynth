@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr ""
+
+#, tcl-format
+msgid "%s Properties"
+msgstr ""
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr ""
+
+msgid "(use arrow keys for history)"
+msgstr ""
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr ""
+
+msgid "About Pd"
+msgstr ""
+
+msgid "Add new library"
+msgstr ""
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "लागू करो"
+
+msgid "Array"
+msgstr ""
+
+msgid "Array Properties"
+msgstr ""
+
+msgid "Atom Box Properties"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr ""
+
+msgid "Audio Settings..."
+msgstr ""
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Background color"
+msgstr ""
+
+msgid "Bang"
+msgstr ""
+
+msgid "Bezier curve"
+msgstr ""
+
+msgid "Block size:"
+msgstr ""
+
+msgid "Bottom"
+msgstr "नीचे"
+
+msgid "Bring All to Front"
+msgstr ""
+
+msgid "Cancel"
+msgstr "रद्द"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr ""
+
+msgid "Canvas Properties"
+msgstr ""
+
+msgid "Channels:"
+msgstr ""
+
+msgid "Clear Console"
+msgstr ""
+
+msgid "Clear Menu"
+msgstr ""
+
+msgid "Close"
+msgstr "बन्द करो"
+
+msgid "Close this window?"
+msgstr ""
+
+msgid "Colors"
+msgstr "रंग"
+
+msgid "Comment"
+msgstr ""
+
+msgid "Compose color"
+msgstr ""
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "कॉपी"
+
+msgid "Copying current patch..."
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr ""
+
+msgid "Cut"
+msgstr ""
+
+msgid "DSP"
+msgstr ""
+
+msgid "DSP Off"
+msgstr ""
+
+msgid "DSP On"
+msgstr ""
+
+msgid "Data Properties"
+msgstr ""
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr ""
+
+msgid "Delete array"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr ""
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr ""
+
+msgid "Draw as:"
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Mode"
+msgstr ""
+
+msgid "Edit library"
+msgstr ""
+
+msgid "File"
+msgstr "फाइल"
+
+msgid "Find"
+msgstr "ढूंढें"
+
+msgid "Find Again"
+msgstr ""
+
+msgid "Find Last Error"
+msgstr ""
+
+msgid "Find..."
+msgstr ""
+
+msgid "Font"
+msgstr ""
+
+msgid "Font Size"
+msgstr ""
+
+msgid "Foreground color"
+msgstr ""
+
+msgid "Front"
+msgstr ""
+
+msgid "Graph"
+msgstr "ग्राफ"
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "मदद"
+
+msgid "Help Browser"
+msgstr ""
+
+msgid "Hide object name and arguments"
+msgstr ""
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr ""
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr ""
+
+msgid "In Ports:"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Input device 1:"
+msgstr ""
+
+msgid "Input device 2:"
+msgstr ""
+
+msgid "Input device 3:"
+msgstr ""
+
+msgid "Input device 4:"
+msgstr ""
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Label color"
+msgstr ""
+
+msgid "Last graph"
+msgstr ""
+
+msgid "Left   "
+msgstr ""
+
+msgid "Limits"
+msgstr ""
+
+msgid "Load Meter"
+msgstr ""
+
+msgid "Log:"
+msgstr ""
+
+msgid "Lower:"
+msgstr ""
+
+msgid "MIDI Settings"
+msgstr ""
+
+msgid "MIDI Settings..."
+msgstr ""
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr ""
+
+msgid "Match whole word only"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "Message..."
+msgstr ""
+
+msgid "Messages"
+msgstr ""
+
+msgid "Minimize"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "New"
+msgstr "नया"
+
+msgid "New graph"
+msgstr ""
+
+msgid "Next Window"
+msgstr ""
+
+msgid "No init"
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "Number2"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "OK (Ctrl t)"
+msgstr ""
+
+msgid "OUT"
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "Open"
+msgstr "खोलें"
+
+msgid "Open List View..."
+msgstr ""
+
+msgid "Open Recent"
+msgstr ""
+
+msgid "Out Ports:"
+msgstr ""
+
+msgid "Output device 1:"
+msgstr ""
+
+msgid "Output device 2:"
+msgstr ""
+
+msgid "Output device 3:"
+msgstr ""
+
+msgid "Output device 4:"
+msgstr ""
+
+msgid "Parent Window"
+msgstr ""
+
+msgid "Paste"
+msgstr ""
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr ""
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr ""
+
+msgid "Pd window"
+msgstr ""
+
+msgid "Pd-extended"
+msgstr ""
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr ""
+
+msgid "Polygon"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Previous Window"
+msgstr ""
+
+msgid "Print..."
+msgstr ""
+
+msgid "Properties"
+msgstr ""
+
+msgid "Put"
+msgstr ""
+
+msgid "Put array into:"
+msgstr ""
+
+msgid "Quit"
+msgstr "बाहर"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr ""
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr ""
+
+msgid "Redo"
+msgstr ""
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr ""
+
+msgid "Redo cut"
+msgstr ""
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr ""
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr ""
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr ""
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "दाहिना"
+
+msgid "Sample rate:"
+msgstr ""
+
+msgid "Save"
+msgstr "सहेजें"
+
+msgid "Save As..."
+msgstr ""
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr ""
+
+msgid "Scale"
+msgstr ""
+
+msgid "Search in"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr ""
+
+msgid "Send a Pd message"
+msgstr ""
+
+msgid "Send symbol:"
+msgstr ""
+
+msgid "Setting embedded preferences..."
+msgstr "मदद"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr ""
+
+msgid "Start Here!"
+msgstr ""
+
+msgid "Startup flags:"
+msgstr ""
+
+msgid "Steady on click"
+msgstr ""
+
+msgid "Stretch"
+msgstr ""
+
+msgid "Symbol"
+msgstr ""
+
+msgid "Tcl:"
+msgstr ""
+
+msgid "Test Audio and MIDI..."
+msgstr ""
+
+msgid "Test label"
+msgstr ""
+
+msgid "Tidy Up"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr "ऊपर"
+
+msgid "Undo"
+msgstr ""
+
+msgid "Undo clear"
+msgstr ""
+
+msgid "Undo connect"
+msgstr ""
+
+msgid "Undo cut"
+msgstr ""
+
+msgid "Undo disconnect"
+msgstr ""
+
+msgid "Undo duplicate"
+msgstr ""
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr ""
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr ""
+
+msgid "Use callbacks"
+msgstr ""
+
+msgid "Use multiple ALSA devices"
+msgstr ""
+
+msgid "Use multiple devices"
+msgstr ""
+
+msgid "Use standard extensions"
+msgstr ""
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr ""
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr ""
+
+msgid "Width:"
+msgstr ""
+
+msgid "Window"
+msgstr ""
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr ""
+
+msgid "X offset"
+msgstr ""
+
+msgid "X only"
+msgstr ""
+
+msgid "X range, from"
+msgstr ""
+
+msgid "X units per pixel:"
+msgstr ""
+
+msgid "Y offset"
+msgstr ""
+
+msgid "Y only"
+msgstr ""
+
+msgid "Y range, from"
+msgstr ""
+
+msgid "Y units per pixel:"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
+msgid "all"
+msgstr ""
+
+msgid "audio I/O error"
+msgstr ""
+
+msgid "bottom:"
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr ""
+
+msgid "height:"
+msgstr ""
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr ""
+
+msgid "left:"
+msgstr ""
+
+msgid "lin"
+msgstr ""
+
+msgid "log"
+msgstr ""
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr ""
+
+msgid "min:"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "really quit?"
+msgstr ""
+
+msgid "right:"
+msgstr ""
+
+msgid "size:"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "top:"
+msgstr ""
+
+msgid "value:"
+msgstr ""
+
+msgid "width:"
+msgstr ""

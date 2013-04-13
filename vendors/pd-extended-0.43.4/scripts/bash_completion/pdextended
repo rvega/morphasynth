@@ -1,0 +1,119 @@
+# 
+# bash_completion file for Pd-extended
+# 
+# Save as: /etc/bash_completion.d/pd-extended or ~/.bash_completion and enjoy
+# never having to type any full command line option anymore. Instead you can
+# press <TAB>.
+#
+# If you want to help, these are fine introductions to bash's completion
+# feature:
+# 
+# http://www.debian-administration.org/articles/316
+# http://www.debian-administration.org/articles/317
+#
+# First version written by Frank Barknecht <fbar AT footils.org> Dec 26 2005
+# customized for Pd-extended by Hans-Christoph Steiner <hans@eds.org> 2012-10-17
+
+function _pdextended() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    
+    # Pd-extended's options:
+    opts="\
+    -32bit \
+    -alsa \
+    -alsaadd \
+    -alsamidi \
+    -audiobuf \
+    -audiodev \
+    -audioindev \
+    -audiooutdev \
+    -batch \
+    -blocksize \
+    -channels \
+    -d \
+    -extraflags \
+    -font-face \
+    -font-size \
+    -font-weight \
+    -guicmd \
+    -guiport \
+    -help \
+    -helppath \
+    -inchannels \
+    -jack \
+    -lib \
+    -listdev \
+    -mididev \
+    -midiindev \
+    -midioutdev \
+    -noadc \
+    -noaudio \
+    -noautopatch \
+    -nodac \
+    -nogui \
+    -noloadbang \
+    -nomidi \
+    -nomidiin \
+    -nomidiout \
+    -noprefs \
+    -nosleep \
+    -nostartup \
+    -nostdpath \
+    -nrt \
+    -open \
+    -oss \
+    -outchannels \
+    -path \
+    -r \
+    -realtime \
+    -rt \
+    -schedlib \
+    -send \
+    -sleepgrain \
+    -stderr \
+    -stdpath \
+    -verbose \
+    -version"
+
+    # options that require an argument:
+    case "${prev}" in
+        # directory argument:
+        # TODO: colon-separated paths as in "/usr/lib/pd/extra:/home/user/pd"
+        -path)
+            COMPREPLY=( $(compgen -d ${cur}) )
+            return 0
+            ;;
+        -stdpath)
+            COMPREPLY=( $(compgen -d ${cur}) )
+            return 0
+            ;;
+        -helppath)
+            COMPREPLY=( $(compgen -d ${cur}) )
+            return 0
+            ;;
+        # patch file argument:
+        -open)
+            _filedir '@(pd|pat|mxt|mxb)'
+            return 0
+            ;;
+        # other
+        -d)
+            COMPREPLY=( $(compgen -W "0 1 2 3" -- ${cur}) )
+            return 0
+            ;;
+        *)
+            ;;
+    esac
+
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    else
+        _filedir '@(pd|pat|mxt|mxb)'
+    fi
+}
+complete -o default -F _pdextended pd-extended
+complete -o default -F _pdextended pdextended

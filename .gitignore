@@ -3,9 +3,11 @@
 *.swp
 *.swo
 *.o
+*.lo
 *.a
-*.pd_linux
-/obj/*
-/bin/*
-/Makefile
-/res/pd/sandbox
+*.l_ia64
+/wrappers/linux/obj/*
+/wrappers/linux/bin/*
+/pd/externals/src/**/*.pd_darwin
+/pd/externals/src/**/*.pd_linux
+/pd/externals/src/**/*.dll

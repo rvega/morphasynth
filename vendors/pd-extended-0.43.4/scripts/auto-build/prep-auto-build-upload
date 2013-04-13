@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# prepare a directory per date for the auto-builders to upload to
+
+SYSTEM=`uname -s`
+DATE=`date +%Y-%m-%d`
+TIME=`date +%H.%M.%S`
+SCRIPT=`echo $0| sed 's|.*/\(.*\)|\1|g'`
+LOGFILE="/tmp/${DATE}_${TIME}_-_${SCRIPT}_-_${SYSTEM}.txt"
+
+BUILD_ROOT=/home/apt/www/auto-build
+TODAYS_ROOT="${BUILD_ROOT}/${DATE}"
+
+chmod u+w "${BUILD_ROOT}"              >> "${LOGFILE}" 2>&1
+mkdir "${TODAYS_ROOT}"                 >> "${LOGFILE}" 2>&1
+mkdir "${TODAYS_ROOT}/logs"            >> "${LOGFILE}" 2>&1
+
+find "${BUILD_ROOT}" -not -perm -a+r -exec chmod a+r \{\} \; >> "${LOGFILE}" 2>&1
+find "${BUILD_ROOT}"      -perm /a+w -exec chmod a-w \{\} \; >> "${LOGFILE}" 2>&1
+
+chmod 0755 "${TODAYS_ROOT}"               >> "${LOGFILE}" 2>&1
+chmod 0755 "${TODAYS_ROOT}/logs"          >> "${LOGFILE}" 2>&1
+chmod a-w "${BUILD_ROOT}"                 >> "${LOGFILE}" 2>&1
+chmod u+w "${BUILD_ROOT}/latest"          >> "${LOGFILE}" 2>&1
+
+if [ -d "${TODAYS_ROOT}/logs" ]; then
+	mv "${LOGFILE}" "${TODAYS_ROOT}/logs/"
+fi

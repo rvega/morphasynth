@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <dreamer@puikheid.nl>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2013-01-01 08:39+0000\n"
+"Last-Translator: dreamer <dreamer@puikheid.nl>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Lettertype"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Eigenschappen"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr "(zoals het invoerapparaat)..............."
+
+msgid "(use arrow keys for history)"
+msgstr "(pijltoetsen voor geschiedenis)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA-MIDI-instellingen"
+
+msgid "About Pd"
+msgstr "Over Pd"
+
+msgid "Add new library"
+msgstr "Nieuwe bibliotheek toevoegen"
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "Toepassen"
+
+msgid "Array"
+msgstr ""
+
+msgid "Array Properties"
+msgstr "Arrayeigenschappen"
+
+msgid "Atom Box Properties"
+msgstr ""
+
+msgid "Audio Settings"
+msgstr "Geluidsinstellingen"
+
+msgid "Audio Settings..."
+msgstr "Audio-instellingen..."
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Achtergrond"
+
+msgid "Background color"
+msgstr "Achtergrondkleur"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Bezierboog"
+
+msgid "Block size:"
+msgstr ""
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Bring All to Front"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr "Canvas"
+
+msgid "Canvas Properties"
+msgstr "Canvaseigenschappen"
+
+msgid "Channels:"
+msgstr "Kanalen:"
+
+msgid "Clear Console"
+msgstr ""
+
+msgid "Clear Menu"
+msgstr "Wis menu"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Close this window?"
+msgstr "Dit venster sluiten?"
+
+msgid "Colors"
+msgstr "Kleuren"
+
+msgid "Comment"
+msgstr ""
+
+msgid "Compose color"
+msgstr "Kleur maken"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopiëren"
+
+msgid "Copying current patch..."
+msgstr "Huidige patch kopiëren..."
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Kon '%s' niet vinden in %s"
+
+msgid "Cut"
+msgstr "Knippen"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP uit"
+
+msgid "DSP On"
+msgstr "DSP aan"
+
+msgid "Data Properties"
+msgstr "Dataeigenschappen"
+
+msgid "Defeat real-time scheduling"
+msgstr "Geen \"real-time scheduling\""
+
+msgid "Delay (msec):"
+msgstr "Delay (msec)"
+
+msgid "Delete array"
+msgstr "Array deleten"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Veranderingen aan '%s' ongedaan maken?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Wilt u de wijzigingen in '%s' opslaan?"
+
+msgid "Draw as:"
+msgstr "Tekenen als:"
+
+msgid "Duplicate"
+msgstr "Dupliceren"
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Mode"
+msgstr ""
+
+msgid "Edit library"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Find"
+msgstr "Zoeken"
+
+msgid "Find Again"
+msgstr "Opnieuw zoeken"
+
+msgid "Find Last Error"
+msgstr "De laatste fout zoeken"
+
+msgid "Find..."
+msgstr "Zoeken..."
+
+msgid "Font"
+msgstr "Lettertype"
+
+msgid "Font Size"
+msgstr "Lettergrootte"
+
+msgid "Foreground color"
+msgstr ""
+
+msgid "Front"
+msgstr ""
+
+msgid "Graph"
+msgstr "Grafiek"
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Help Browser"
+msgstr ""
+
+msgid "Hide object name and arguments"
+msgstr "Objectnaam en -argumenten verbergen"
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr "IN"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "'%s' negeren: het lijkt geen Pd-bestand te zijn"
+
+msgid "In Ports:"
+msgstr ""
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Input device 1:"
+msgstr "Invoerapparaat 1:"
+
+msgid "Input device 2:"
+msgstr "Invoerapparaat 2:"
+
+msgid "Input device 3:"
+msgstr "Invoerapparaat 3:"
+
+msgid "Input device 4:"
+msgstr "Invoerapparaat 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Label color"
+msgstr "Kleur van het label"
+
+msgid "Last graph"
+msgstr "Laatste grafiek"
+
+msgid "Left   "
+msgstr "Links"
+
+msgid "Limits"
+msgstr "Grenzen"
+
+msgid "Load Meter"
+msgstr ""
+
+msgid "Log:"
+msgstr ""
+
+msgid "Lower:"
+msgstr ""
+
+msgid "MIDI Settings"
+msgstr "MIDI-instellingen"
+
+msgid "MIDI Settings..."
+msgstr "MIDI-instellingen..."
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Marge:"
+
+msgid "Match whole word only"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr "Boodschap"
+
+msgid "Message..."
+msgstr "Boodschap..."
+
+msgid "Messages"
+msgstr "Berichten"
+
+msgid "Minimize"
+msgstr "Minimaliseren"
+
+msgid "Name:"
+msgstr "Naam:"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "New graph"
+msgstr "Nieuwe grafiek"
+
+msgid "Next Window"
+msgstr "Volgend raam"
+
+msgid "No init"
+msgstr "Geen init"
+
+msgid "Number"
+msgstr "Nummer"
+
+msgid "Number2"
+msgstr ""
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr ""
+
+msgid "Object"
+msgstr "Object"
+
+msgid "Open"
+msgstr "Open"
+
+msgid "Open List View..."
+msgstr "Lijstweergave openen..."
+
+msgid "Open Recent"
+msgstr ""
+
+msgid "Out Ports:"
+msgstr ""
+
+msgid "Output device 1:"
+msgstr "Uitvoerapparaat 1:"
+
+msgid "Output device 2:"
+msgstr "Uitvoerapparaat 2:"
+
+msgid "Output device 3:"
+msgstr "Uitvoerapparaat 3:"
+
+msgid "Output device 4:"
+msgstr "Uitvoerapparaat 4:"
+
+msgid "Parent Window"
+msgstr ""
+
+msgid "Paste"
+msgstr "Plakken"
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr ""
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr ""
+
+msgid "Pd window"
+msgstr "Pd-venster"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Punten"
+
+msgid "Polygon"
+msgstr "Veelhoek"
+
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+msgid "Previous Window"
+msgstr "Vorig raam"
+
+msgid "Print..."
+msgstr "Afdrukken..."
+
+msgid "Properties"
+msgstr "Eigenschappen"
+
+msgid "Put"
+msgstr ""
+
+msgid "Put array into:"
+msgstr ""
+
+msgid "Quit"
+msgstr "Stop"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr ""
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr ""
+
+msgid "Redo"
+msgstr "Opnieuw doen"
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr "Opnieuw verbinden"
+
+msgid "Redo cut"
+msgstr "Opnieuw knippen"
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr "Opnieuw dupliceren"
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr "Opnieuw plakken"
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr "Een bug meedelen"
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Sample rate:"
+msgstr ""
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Save As..."
+msgstr "Opslaan als..."
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr "Inhoud opslaan"
+
+msgid "Scale"
+msgstr "Schaal"
+
+msgid "Search in"
+msgstr "Zoeken in"
+
+msgid "Select All"
+msgstr "Alles selecteren"
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Zenden (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Een Pd-boodschap sturen"
+
+msgid "Send symbol:"
+msgstr "Send-symbool:"
+
+msgid "Setting embedded preferences..."
+msgstr "Help"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Grootte:"
+
+msgid "Start Here!"
+msgstr "Hier beginnen!"
+
+msgid "Startup flags:"
+msgstr "Opstartvlaggen:"
+
+msgid "Steady on click"
+msgstr ""
+
+msgid "Stretch"
+msgstr ""
+
+msgid "Symbol"
+msgstr "Symbool"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Audio en MIDI testen"
+
+msgid "Test label"
+msgstr "Testlabel"
+
+msgid "Tidy Up"
+msgstr "Opruimen"
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr ""
+
+msgid "Undo"
+msgstr "Ongedaan maken"
+
+msgid "Undo clear"
+msgstr ""
+
+msgid "Undo connect"
+msgstr ""
+
+msgid "Undo cut"
+msgstr ""
+
+msgid "Undo disconnect"
+msgstr ""
+
+msgid "Undo duplicate"
+msgstr "Dupliceren ongedaan maken"
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr "Plakken ongedaan maken"
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr ""
+
+msgid "Use callbacks"
+msgstr "Callbacks gebruiken"
+
+msgid "Use multiple ALSA devices"
+msgstr "Meerdere ALSA-apparaten gebruiken"
+
+msgid "Use multiple devices"
+msgstr "Verschillende apparaten gebruiken"
+
+msgid "Use standard extensions"
+msgstr ""
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr ""
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "Opgelet: onbekende graphme-vlaggen ontvangen in pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Breedte:"
+
+msgid "Window"
+msgstr ""
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X en Y"
+
+msgid "X offset"
+msgstr ""
+
+msgid "X only"
+msgstr "Enkel X"
+
+msgid "X range, from"
+msgstr ""
+
+msgid "X units per pixel:"
+msgstr "X eenheden per pixel:"
+
+msgid "Y offset"
+msgstr ""
+
+msgid "Y only"
+msgstr "Enkel Y"
+
+msgid "Y range, from"
+msgstr ""
+
+msgid "Y units per pixel:"
+msgstr "Y eenheden per pixel:"
+
+msgid "Zoom"
+msgstr ""
+
+msgid "all"
+msgstr ""
+
+msgid "audio I/O error"
+msgstr ""
+
+msgid "bottom:"
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "error"
+msgstr "fout"
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr ""
+
+msgid "height:"
+msgstr "hoogte:"
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "intrrpt:"
+
+msgid "left:"
+msgstr "links:"
+
+msgid "lin"
+msgstr ""
+
+msgid "log"
+msgstr ""
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normaal"
+
+msgid "really quit?"
+msgstr "echt stoppen?"
+
+msgid "right:"
+msgstr "rechts:"
+
+msgid "size:"
+msgstr "grootte:"
+
+msgid "to"
+msgstr "tot"
+
+msgid "top:"
+msgstr ""
+
+msgid "value:"
+msgstr "waarde:"
+
+msgid "width:"
+msgstr "breedte:"

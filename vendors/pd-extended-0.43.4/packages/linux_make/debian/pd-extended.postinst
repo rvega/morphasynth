@@ -1,0 +1,32 @@
+#!/bin/sh
+# this was is copied from audacity.postinst and audacity-data.postinst
+set -e
+
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+
+if [ "$1" = "configure" ] && [ -x "`which update-mime 2>/dev/null`" ]; then
+	update-mime
+fi
+
+if [ "$1" = "configure" ] && which update-desktop-database >/dev/null 2>&1 ; then
+	update-desktop-database -q
+fi
+
+if [ "$1" = "configure" ] && [ -x "`which update-mime-database 2>/dev/null`" ]; then
+	update-mime-database /usr/share/mime
+fi
+
+if [ "$1" = "configure" ] || [ "$1" = "upgrade" ]; then
+  update-alternatives --install /usr/bin/pd pd \
+                                /usr/bin/pd-extended 101 \
+                      --slave /usr/share/man/man1/pd.1.gz pd.1.gz \
+                              /usr/share/man/man1/pd-extended.1.gz
+  update-alternatives --install /usr/bin/pdextended pdextended \
+                                /usr/bin/pd-extended 60 \
+                      --slave /usr/share/man/man1/pdextended.1.gz pdextended.1.gz \
+                              /usr/share/man/man1/pd-extended.1.gz
+fi
+
+#DEBHELPER#

@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr ""
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "Egenskaper för %s"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr ""
+
+msgid "(same as input device) ..............      "
+msgstr ""
+
+msgid "(use arrow keys for history)"
+msgstr "(använd piltangenterna för historik)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI inställningar"
+
+msgid "About Pd"
+msgstr "Om Pd"
+
+msgid "Add new library"
+msgstr "Lägg till bibliotek"
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "Verkställ"
+
+msgid "Array"
+msgstr "Array"
+
+msgid "Array Properties"
+msgstr ""
+
+msgid "Atom Box Properties"
+msgstr "Egenskaper för Atom"
+
+msgid "Audio Settings"
+msgstr "Ljudinställningar"
+
+msgid "Audio Settings..."
+msgstr ""
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Bakgrund"
+
+msgid "Background color"
+msgstr "Bakgrundsfärg"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Bezier-kurva"
+
+msgid "Block size:"
+msgstr "Blockstorlek:"
+
+msgid "Bottom"
+msgstr "Underkant"
+
+msgid "Bring All to Front"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Ångra"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr "Canvas"
+
+msgid "Canvas Properties"
+msgstr ""
+
+msgid "Channels:"
+msgstr "Kanaler:"
+
+msgid "Clear Console"
+msgstr ""
+
+msgid "Clear Menu"
+msgstr ""
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Close this window?"
+msgstr "Stäng det här fönstret?"
+
+msgid "Colors"
+msgstr "Färger"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Compose color"
+msgstr "Skapa ny färg"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopiera"
+
+msgid "Copying current patch..."
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr ""
+
+msgid "Cut"
+msgstr "Klipp ut"
+
+msgid "DSP"
+msgstr ""
+
+msgid "DSP Off"
+msgstr "DSP av"
+
+msgid "DSP On"
+msgstr "DSP på"
+
+msgid "Data Properties"
+msgstr "Data egenskaper"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Fördröjning (msek)"
+
+msgid "Delete array"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Förkasta ändringar i '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Vill du spara dina ändringar i '%s'?"
+
+msgid "Draw as:"
+msgstr "Rita som:"
+
+msgid "Duplicate"
+msgstr "Duplicera"
+
+msgid "Edit"
+msgstr "Redigera"
+
+msgid "Edit Mode"
+msgstr "Redigeringsläge"
+
+msgid "Edit library"
+msgstr "Redigera bibliotek"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Find"
+msgstr "Sök"
+
+msgid "Find Again"
+msgstr "Sök igen"
+
+msgid "Find Last Error"
+msgstr "Sök senaste fel"
+
+msgid "Find..."
+msgstr "Sök..."
+
+msgid "Font"
+msgstr "Typsnitt"
+
+msgid "Font Size"
+msgstr "Font storlek"
+
+msgid "Foreground color"
+msgstr "Förgrundsfärg"
+
+msgid "Front"
+msgstr "Förgrund"
+
+msgid "Graph"
+msgstr "Graf"
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "Hjälp"
+
+msgid "Help Browser"
+msgstr ""
+
+msgid "Hide object name and arguments"
+msgstr "Göm objektnamn och argument"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hslider"
+
+msgid "IN"
+msgstr "IN"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr ""
+
+msgid "In Ports:"
+msgstr "In-portar:"
+
+msgid "Init"
+msgstr "Initiera"
+
+msgid "Input device 1:"
+msgstr ""
+
+msgid "Input device 2:"
+msgstr ""
+
+msgid "Input device 3:"
+msgstr ""
+
+msgid "Input device 4:"
+msgstr ""
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Ändra värde vid klick"
+
+msgid "Label"
+msgstr ""
+
+msgid "Label color"
+msgstr "Textfärg"
+
+msgid "Last graph"
+msgstr "Senaste graf"
+
+msgid "Left   "
+msgstr "Vänster"
+
+msgid "Limits"
+msgstr ""
+
+msgid "Load Meter"
+msgstr ""
+
+msgid "Log:"
+msgstr ""
+
+msgid "Lower:"
+msgstr "Lägre:"
+
+msgid "MIDI Settings"
+msgstr "MIDI inställningar"
+
+msgid "MIDI Settings..."
+msgstr "MIDI inställningar..."
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Marginal:"
+
+msgid "Match whole word only"
+msgstr "Endast hela ord"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "Message"
+msgstr "Meddelande"
+
+msgid "Message..."
+msgstr "Meddelande..."
+
+msgid "Messages"
+msgstr "Meddelanden"
+
+msgid "Minimize"
+msgstr "Minimera"
+
+msgid "Name:"
+msgstr "Namn:"
+
+msgid "New"
+msgstr "Ny"
+
+msgid "New graph"
+msgstr "Ny graf"
+
+msgid "Next Window"
+msgstr "Nästa fönster"
+
+msgid "No init"
+msgstr "Initiera inte"
+
+msgid "Number"
+msgstr "Number"
+
+msgid "Number2"
+msgstr "Number2"
+
+msgid "OK"
+msgstr "Ok"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr "UT"
+
+msgid "Object"
+msgstr "Objekt"
+
+msgid "Open"
+msgstr "Öppna"
+
+msgid "Open List View..."
+msgstr "Öppna listvy..."
+
+msgid "Open Recent"
+msgstr "Öppna senaste"
+
+msgid "Out Ports:"
+msgstr "Ut-portar:"
+
+msgid "Output device 1:"
+msgstr ""
+
+msgid "Output device 2:"
+msgstr ""
+
+msgid "Output device 3:"
+msgstr ""
+
+msgid "Output device 4:"
+msgstr ""
+
+msgid "Parent Window"
+msgstr "Föräldrafönster"
+
+msgid "Paste"
+msgstr "Klistra in"
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr ""
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Pd sökväg för objekt, hjälp, fonter och andra filer"
+
+msgid "Pd window"
+msgstr "Huvudfönster"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Punkter"
+
+msgid "Polygon"
+msgstr "Polygon"
+
+msgid "Preferences"
+msgstr "Inställningar"
+
+msgid "Previous Window"
+msgstr "Tidigare fönster"
+
+msgid "Print..."
+msgstr "Skriv ut..."
+
+msgid "Properties"
+msgstr "Egenskaper"
+
+msgid "Put"
+msgstr "Placera"
+
+msgid "Put array into:"
+msgstr ""
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Omfång och storlek"
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr "Mottagarsymbol:"
+
+msgid "Redo"
+msgstr "Gör om"
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr ""
+
+msgid "Redo cut"
+msgstr ""
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr ""
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr ""
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr "Rapportera ett fel"
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "Höger"
+
+msgid "Sample rate:"
+msgstr "Samplings-frekvens"
+
+msgid "Save"
+msgstr "Spara"
+
+msgid "Save As..."
+msgstr "Spara som..."
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr "Spara innehåll"
+
+msgid "Scale"
+msgstr "Skala"
+
+msgid "Search in"
+msgstr "Sök i"
+
+msgid "Select All"
+msgstr "Markera allt"
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Sänd (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Sänd ett Pd-meddelande"
+
+msgid "Send symbol:"
+msgstr "Sänd symbol:"
+
+msgid "Setting embedded preferences..."
+msgstr "Hjälp"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Storlek:"
+
+msgid "Start Here!"
+msgstr "Börja här!"
+
+msgid "Startup flags:"
+msgstr ""
+
+msgid "Steady on click"
+msgstr "Behåll värde vid klick"
+
+msgid "Stretch"
+msgstr ""
+
+msgid "Symbol"
+msgstr "Symbol"
+
+msgid "Tcl:"
+msgstr ""
+
+msgid "Test Audio and MIDI..."
+msgstr "Testa ljud och MIDI..."
+
+msgid "Test label"
+msgstr "Testtext"
+
+msgid "Tidy Up"
+msgstr "Städa upp"
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Top"
+msgstr "Överkant"
+
+msgid "Undo"
+msgstr "Ångra"
+
+msgid "Undo clear"
+msgstr ""
+
+msgid "Undo connect"
+msgstr ""
+
+msgid "Undo cut"
+msgstr ""
+
+msgid "Undo disconnect"
+msgstr ""
+
+msgid "Undo duplicate"
+msgstr ""
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr ""
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr "Övre"
+
+msgid "Use callbacks"
+msgstr ""
+
+msgid "Use multiple ALSA devices"
+msgstr ""
+
+msgid "Use multiple devices"
+msgstr ""
+
+msgid "Use standard extensions"
+msgstr "Använd standard-ändelser"
+
+msgid "VU Meter"
+msgstr "VU-mätare"
+
+msgid "Verbose"
+msgstr ""
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vslider"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr ""
+
+msgid "Width:"
+msgstr "Bredd:"
+
+msgid "Window"
+msgstr "Fönster"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X och Y"
+
+msgid "X offset"
+msgstr "x-position"
+
+msgid "X only"
+msgstr "Bara X"
+
+msgid "X range, from"
+msgstr "Omfång (x), från"
+
+msgid "X units per pixel:"
+msgstr "X enheter per pixel:"
+
+msgid "Y offset"
+msgstr "y-position"
+
+msgid "Y only"
+msgstr "Bara Y"
+
+msgid "Y range, from"
+msgstr "Omfång (y), från:"
+
+msgid "Y units per pixel:"
+msgstr "Y enheter per pixel:"
+
+msgid "Zoom"
+msgstr "Zooma"
+
+msgid "all"
+msgstr "alla"
+
+msgid "audio I/O error"
+msgstr ""
+
+msgid "bottom:"
+msgstr ""
+
+msgid "debug"
+msgstr "felsök"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr "efter:"
+
+msgid "height:"
+msgstr ""
+
+msgid "hold:"
+msgstr ""
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr ""
+
+msgid "left:"
+msgstr ""
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "really quit?"
+msgstr "Vill du avsluta?"
+
+msgid "right:"
+msgstr "höger:"
+
+msgid "size:"
+msgstr "storlek:"
+
+msgid "to"
+msgstr "till"
+
+msgid "top:"
+msgstr ""
+
+msgid "value:"
+msgstr "värde:"
+
+msgid "width:"
+msgstr "bredd:"

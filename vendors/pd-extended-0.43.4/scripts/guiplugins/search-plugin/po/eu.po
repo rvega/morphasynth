@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# Translators:
+# Mikel Olasagasti <hey_neken@euskal.org>, 2004, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
+"POT-Creation-Date: 2012-11-15 21:17-0500\n"
+"PO-Revision-Date: 2012-04-16 08:42+0000\n"
+"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../search-plugin.tcl:23
+msgid "All documents"
+msgstr ""
+
+#: ../search-plugin.tcl:24
+msgid "Object Help Patches"
+msgstr ""
+
+#: ../search-plugin.tcl:25 ../search-plugin.tcl:511
+msgid "All About Pd"
+msgstr ""
+
+#: ../search-plugin.tcl:26
+msgid "Tutorials"
+msgstr ""
+
+#: ../search-plugin.tcl:27
+msgid "Manual"
+msgstr ""
+
+#: ../search-plugin.tcl:28
+msgid "Uncategorized"
+msgstr ""
+
+#: ../search-plugin.tcl:92
+#, fuzzy, tcl-format
+msgid "Open %s"
+msgstr "Ireki"
+
+#: ../search-plugin.tcl:96
+#, tcl-format
+msgid "Browse %s%s"
+msgstr ""
+
+#: ../search-plugin.tcl:116
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr ""
+
+#: ../search-plugin.tcl:181
+msgid "Error\n"
+msgstr ""
+
+#: ../search-plugin.tcl:187
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:\n"
+"\n"
+msgstr ""
+
+#: ../search-plugin.tcl:196
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:\n"
+"\n"
+msgstr ""
+
+#: ../search-plugin.tcl:278
+msgid "Found "
+msgstr ""
+
+#: ../search-plugin.tcl:287
+#, tcl-format
+msgid " matches out of %s docs"
+msgstr ""
+
+#: ../search-plugin.tcl:402
+msgid "text of the license for this software"
+msgstr ""
+
+#: ../search-plugin.tcl:404
+msgid "general information from the author"
+msgstr ""
+
+#: ../search-plugin.tcl:440
+msgid "No DESCRIPTION tag."
+msgstr ""
+
+#: ../search-plugin.tcl:444
+msgid "Keywords:"
+msgstr ""
+
+#: ../search-plugin.tcl:488
+msgid "Enter terms above. Use the dropdown "
+msgstr ""
+
+#: ../search-plugin.tcl:489
+msgid "menu to filter by category.\n"
+msgstr ""
+
+#: ../search-plugin.tcl:490
+msgid "Browse the Documentation\n"
+msgstr ""
+
+#: ../search-plugin.tcl:491
+msgid "The \"doc\" directory"
+msgstr ""
+
+#: ../search-plugin.tcl:495
+msgid "External Pd libraries\n"
+msgstr ""
+
+#: ../search-plugin.tcl:496
+msgid "Introductory Topics\n"
+msgstr ""
+
+#: ../search-plugin.tcl:514
+msgid "reference patches for key concepts and settings in Pd\n"
+msgstr ""
+
+#: ../search-plugin.tcl:516
+msgid "Advanced Topics\n"
+msgstr ""
+
+#: ../search-plugin.tcl:518
+msgid "Networking"
+msgstr ""
+
+#: ../search-plugin.tcl:518
+msgid "sending data over networks with Pd"
+msgstr ""
+
+#: ../search-plugin.tcl:519
+msgid "Writing Externals"
+msgstr ""
+
+#: ../search-plugin.tcl:519
+msgid "how to code control and signal objects in C"
+msgstr ""
+
+#: ../search-plugin.tcl:520
+msgid "Data Structures"
+msgstr ""
+
+#: ../search-plugin.tcl:520
+msgid "creating graphical objects in Pure Data"
+msgstr ""
+
+#: ../search-plugin.tcl:521
+msgid "Dynamic Patching"
+msgstr ""
+
+#: ../search-plugin.tcl:521
+msgid "programmatically create/destroy Pd objects"
+msgstr ""
+
+#: ../search-plugin.tcl:523
+msgid "Implementation Details"
+msgstr ""
+
+#: ../search-plugin.tcl:523
+msgid "file format specification, license text, etc."
+msgstr ""
+
+#: ../search-plugin.tcl:535
+msgid "Keywords\n"
+msgstr ""
+
+#: ../search-plugin.tcl:536
+msgid ""
+"Many of the help documents are categorized by keyword. Click a link below to "
+"search for documents that have been tagged with that keyword.\n"
+msgstr ""
+
+#: ../search-plugin.tcl:659
+msgid "External libraries"
+msgstr ""
+
+#: ../search-plugin.tcl:681
+msgid "no DESCRIPTION tag or values.\n"
+msgstr ""
+
+#: ../search-plugin.tcl:756
+msgid "Home"
+msgstr ""
+
+#: ../search-plugin.tcl:791
+msgid "This help patch is for an internal Pd class"
+msgstr ""
+
+#: ../search-plugin.tcl:792 ../search-plugin.tcl:807 ../search-plugin.tcl:820
+#: ../search-plugin.tcl:838 ../search-plugin.tcl:1009
+msgid "Search"
+msgstr ""
+
+#: ../search-plugin.tcl:806
+msgid "Sorry, can't find a README file for this object's library."
+msgstr ""
+
+#: ../search-plugin.tcl:843
+msgid "Match all terms"
+msgstr ""
+
+#: ../search-plugin.tcl:845
+msgid "Match whole words"
+msgstr ""
+
+#: ../search-plugin.tcl:847
+msgid "Help"
+msgstr "Laguntza"
+
+#: ../search-plugin.tcl:854
+msgid "Pure Data Search"
+msgstr ""
+
+#: ../search-plugin.tcl:1007
+msgid "Report a bug"
+msgstr ""

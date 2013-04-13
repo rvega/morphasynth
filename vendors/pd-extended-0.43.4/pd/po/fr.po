@@ -1,0 +1,874 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# dwan  <dwanafite@yahoo.fr>, 2012-2013.
+# Hans-Christoph Steiner <hans@eds.org>, 2013.
+# Pierre-Olivier Boulant <po.boulant@free.fr>, 2012-2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-17 18:30+0000\n"
+"Last-Translator: Pierre-Olivier Boulant <po.boulant@free.fr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "Police de %s"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "Propriétés de %s"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s est terminé !"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' déjà chargé, '%s' ignoré"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) NOM DE COMMANDE INVALIDE :"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) ABSENCE DE L'ACCOLADE DE FIN '}' :"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) ABSENCE DU CROCHET DE FIN ']' :"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) ERREUR NON GÉRÉE :"
+
+msgid "(same as input device) ..............      "
+msgstr "(identique au périphérique d'entrée) .............. "
+
+msgid "(use arrow keys for history)"
+msgstr "(Utiliser les flèches pour l'historique)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------plage_sortie:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------dimensions(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------dimensions(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------durées_flash(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensions(chiffres)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------dimensions_poignée(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------visibilité_rectangle(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "Configuration ALSA MIDI"
+
+msgid "About Pd"
+msgstr "À propos de Pd"
+
+msgid "Add new library"
+msgstr "Ajouter une nouvelle bibliothèque"
+
+msgid "Appearance on parent patch"
+msgstr "Apparence dans le patch parent"
+
+msgid "Apply"
+msgstr "Appliquer"
+
+msgid "Array"
+msgstr "Tableau"
+
+msgid "Array Properties"
+msgstr "Propriétés du tableau"
+
+msgid "Associated Files"
+msgstr "Fichiers associés"
+
+msgid "Atom Box Properties"
+msgstr "Propriétés de l'élément"
+
+msgid "Audio Settings"
+msgstr "Paramètres audio"
+
+msgid "Audio Settings..."
+msgstr "Configuration audio..."
+
+msgid "Autopatch"
+msgstr "Autopatch"
+
+msgid "Autotips"
+msgstr "Infobulles"
+
+msgid "Background"
+msgstr "Arrière-plan"
+
+msgid "Background color"
+msgstr "Couleur de fond"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Courbes de Bézier"
+
+msgid "Block size:"
+msgstr "Vecteur audio :"
+
+msgid "Bottom"
+msgstr "Bas"
+
+msgid "Bring All to Front"
+msgstr "Tout ramener au premier plan    "
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "Impossible de lire les préférences de l'interface : "
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Impossible de lire le dossier des plugins : '%s'"
+
+msgid "Canvas"
+msgstr "Canevas"
+
+msgid "Canvas Properties"
+msgstr "Propriétés du canevas"
+
+msgid "Channels:"
+msgstr "Canaux :"
+
+msgid "Clear Console"
+msgstr "Effacer la console"
+
+msgid "Clear Menu"
+msgstr "Effacer le menu"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Close this window?"
+msgstr "Fermer cette fenêtre ?"
+
+msgid "Colors"
+msgstr "Couleurs"
+
+msgid "Comment"
+msgstr "Commentaire"
+
+msgid "Compose color"
+msgstr "Palette"
+
+msgid "Configuring Info.plist..."
+msgstr "Configuration de Info.plist..."
+
+msgid "Copy"
+msgstr "Copier"
+
+msgid "Copying current patch..."
+msgstr "Copie du patch courant..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr "Impossible de supprimer  'HKEY_LOCAL_MACHINE\\Software\\Pd-extended' :"
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr "Impossible de lire le fichier du registre : '%s'"
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Impossible de trouver '%s' dans %s"
+
+msgid "Cut"
+msgstr "Couper"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "Audio OFF"
+
+msgid "DSP On"
+msgstr "Audio ON"
+
+msgid "Data Properties"
+msgstr "Propriétés des données"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Police par défaut : %s"
+
+msgid "Defeat real-time scheduling"
+msgstr "Débrayer l'ordonnanceur temps-réel"
+
+msgid "Delay (msec):"
+msgstr "Latence (msec) :"
+
+msgid "Delete array"
+msgstr "Supprimer le tableau"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "Suppression du fichier de préférences : %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr "Suppression des préférences dans HKEY_CURRENT_USER\\Software\\Pd-extended"
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr "Suppression des préférences dans HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Annuler les changements de '%s' ?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Enregistrer les changements de '%s' ?"
+
+msgid "Draw as:"
+msgstr "Tracer avec :"
+
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+msgid "Edit"
+msgstr "Édition"
+
+msgid "Edit Mode"
+msgstr "Mode Édition"
+
+msgid "Edit library"
+msgstr "Éditer la bibliothèque"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "IMPOSSIBLE DE CHARGER %s"
+
+msgid "File"
+msgstr "Fichier"
+
+msgid "Find"
+msgstr "Rechercher"
+
+msgid "Find Again"
+msgstr "Rechercher encore"
+
+msgid "Find Last Error"
+msgstr "Rechercher la dernière erreur    "
+
+msgid "Find..."
+msgstr "Rechercher..."
+
+msgid "Font"
+msgstr "Police"
+
+msgid "Font Size"
+msgstr "Taille de la police :"
+
+msgid "Foreground color"
+msgstr "Couleur du premier plan"
+
+msgid "Front"
+msgstr "Premier plan"
+
+msgid "Graph"
+msgstr "Graphique"
+
+msgid "Graph-On-Parent"
+msgstr "Tracer dans le patch parent"
+
+msgid "Help"
+msgstr "Aide"
+
+msgid "Help Browser"
+msgstr "Navigateur d'aide"
+
+msgid "Hide object name and arguments"
+msgstr "Masquer le nom et les paramètres"
+
+msgid "Hradio"
+msgstr "Boutons horizontaux"
+
+msgid "Hslider"
+msgstr "Glissière horizontale"
+
+msgid "IN"
+msgstr "ENTRÉE"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Ignoré '%s' : ne semble pas être un fichier Pd"
+
+msgid "In Ports:"
+msgstr "Ports d'entrée : "
+
+msgid "Init"
+msgstr "Initialiser"
+
+msgid "Input device 1:"
+msgstr "Périphérique d'entrée 1 : "
+
+msgid "Input device 2:"
+msgstr "Périphérique d'entrée 2 : "
+
+msgid "Input device 3:"
+msgstr "Périphérique d'entrée 3 : "
+
+msgid "Input device 4:"
+msgstr "Périphérique d'entrée 4 : "
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Jack ne semble pas fonctionner, Pd ne peut donc s'y connecter."
+
+msgid "Jack not installed!"
+msgstr "Jack n'est pas installé !"
+
+msgid "Jack not running!"
+msgstr "Jack ne fonctionne pas !"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX n'est pas complètement installé. Pd-extended ne peut pas utiliser Jack sans cela."
+
+msgid "Jump on click"
+msgstr "Direct"
+
+msgid "Label"
+msgstr "Étiquette"
+
+msgid "Label color"
+msgstr "Couleur de l'étiquette"
+
+msgid "Last graph"
+msgstr "Graphique le plus récent"
+
+msgid "Left   "
+msgstr "Gauche"
+
+msgid "Limits"
+msgstr "Limites"
+
+msgid "Load Meter"
+msgstr "CPU-mètre"
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Chargement du plugin : %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Chargement des traductions pour %s"
+
+msgid "Log:"
+msgstr "Journal :"
+
+msgid "Lower:"
+msgstr "Inférieure :"
+
+msgid "MIDI Settings"
+msgstr "Configuration MIDI"
+
+msgid "MIDI Settings..."
+msgstr "Configuration MIDI..."
+
+msgid "Magic Glass"
+msgstr "Lunettes magiques"
+
+msgid "Make app from folder..."
+msgstr "Faire une application à partir du dossier..."
+
+msgid "Make app from patch..."
+msgstr "Faire une application à partir du patch..."
+
+msgid "Making App"
+msgstr "Fabrication de l'application"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "Fabrication de l'application dans %s..."
+
+msgid "Margin:"
+msgstr "Marge"
+
+msgid "Match whole word only"
+msgstr "Rechercher le mot complet uniquement"
+
+msgid "Max Binary Files"
+msgstr "Fichiers binaires Max"
+
+msgid "Max Help Files"
+msgstr "Fichiers d'aide Max"
+
+msgid "Max Patch Files"
+msgstr "Patchs Max"
+
+msgid "Max Text Files"
+msgstr "Fichiers texte Max"
+
+msgid "Media"
+msgstr "Média"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message..."
+msgstr "Message..."
+
+msgid "Messages"
+msgstr "Messages"
+
+msgid "Minimize"
+msgstr "Réduire"
+
+msgid "Name:"
+msgstr "Nom :"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "New graph"
+msgstr "Nouveau graphique"
+
+msgid "Next Window"
+msgstr "Fenêtre suivante"
+
+msgid "No init"
+msgstr "Ne pas initialiser"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr "Patch non trouvé ! Sélectionnez un patch parent ouvert avec la souris, puis réessayez."
+
+msgid "Number"
+msgstr "Nombre"
+
+msgid "Number2"
+msgstr "Nombre-2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl-T)"
+
+msgid "OUT"
+msgstr "SORTIE"
+
+msgid "Object"
+msgstr "Objet"
+
+msgid "Open"
+msgstr "Ouvrir"
+
+msgid "Open List View..."
+msgstr "Voir la liste..."
+
+msgid "Open Recent"
+msgstr "Ouvrir l'élément récent    "
+
+msgid "Out Ports:"
+msgstr "Ports de sortie :"
+
+msgid "Output device 1:"
+msgstr "Périphérique de sortie 1 : "
+
+msgid "Output device 2:"
+msgstr "Périphérique de sortie 2 : "
+
+msgid "Output device 3:"
+msgstr "Périphérique de sortie 3 : "
+
+msgid "Output device 4:"
+msgstr "Périphérique de sortie 4 : "
+
+msgid "Parent Window"
+msgstr "Fenêtre parente"
+
+msgid "Paste"
+msgstr "Coller"
+
+msgid "Pd Files"
+msgstr "Fichiers Pd"
+
+msgid "Pd Help Browser..."
+msgstr "Navigateur d'aide Pd..."
+
+msgid "Pd libraries to load on startup"
+msgstr "Bibliothèques à charger au démarrage"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Chemins pour les objets et les autres fichiers"
+
+msgid "Pd window"
+msgstr "Fenêtre Pd"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "Mode Action"
+
+msgid "Points"
+msgstr "Points"
+
+msgid "Polygon"
+msgstr "Polygones"
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Previous Window"
+msgstr "Fenêtre précédente"
+
+msgid "Print..."
+msgstr "Imprimer..."
+
+msgid "Properties"
+msgstr "Propriétés"
+
+msgid "Put"
+msgstr "Ajouter"
+
+msgid "Put array into:"
+msgstr "Insérer le tableau dans :"
+
+msgid "Quit"
+msgstr "Quitter"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Fermer Pd-extended, démarrer Jack et essayer à nouveau."
+
+msgid "Range and size"
+msgstr "Plage et taille"
+
+msgid "Real-time scheduling"
+msgstr "Ordonnancement temps réel"
+
+msgid "Receive symbol:"
+msgstr "Symbole de réception :"
+
+msgid "Redo"
+msgstr "Rétablir"
+
+msgid "Redo clear"
+msgstr "Rétablir Effacer"
+
+msgid "Redo connect"
+msgstr "Rétablir Connecter"
+
+msgid "Redo cut"
+msgstr "Rétablir Couper"
+
+msgid "Redo disconnect"
+msgstr "Rétablir Déconnecter"
+
+msgid "Redo duplicate"
+msgstr "Rétablir Dupliquer"
+
+msgid "Redo motion"
+msgstr "Rétablir Déplacer"
+
+msgid "Redo paste"
+msgstr "Rétablir Coller"
+
+msgid "Redo typing"
+msgstr "Rétablir Frappe"
+
+msgid "Report a bug"
+msgstr "Signaler un bogue"
+
+msgid "Reset to Defaults"
+msgstr "Valeurs par défaut"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr "Réinitialisation du registre à partir de %s"
+
+msgid "Right"
+msgstr "Droite"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "En cours : '%s %s'"
+
+msgid "Sample rate:"
+msgstr "Échantillonnage :"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Save As..."
+msgstr "Enregistrer sous..."
+
+msgid "Save application to..."
+msgstr "Enregistrer l'application dans..."
+
+msgid "Save contents"
+msgstr "Enregistrer les données"
+
+msgid "Scale"
+msgstr "Échelle"
+
+msgid "Search in"
+msgstr "Rechercher dans"
+
+msgid "Select All"
+msgstr "Tout sélectionner"
+
+msgid "Select name for app to build...\n"
+msgstr "Définition du nom de l'application...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Envoyer (Ctrl-S)"
+
+msgid "Send a Pd message"
+msgstr "Envoyer un message Pd"
+
+msgid "Send symbol:"
+msgstr "Symbole d'envoi :"
+
+msgid "Setting embedded preferences..."
+msgstr "Installation des préférences embarquées..."
+
+msgid "Setting patch name..."
+msgstr "Installation du nom du patch..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr "Mise en place de %s/Contents/Info.plist"
+
+msgid "Size:"
+msgstr "Taille :"
+
+msgid "Start Here!"
+msgstr "Pour commencer !"
+
+msgid "Startup flags:"
+msgstr "Options au démarrage :"
+
+msgid "Steady on click"
+msgstr "Relatif"
+
+msgid "Stretch"
+msgstr "Étirer"
+
+msgid "Symbol"
+msgstr "Symbole"
+
+msgid "Tcl:"
+msgstr "Tcl :"
+
+msgid "Test Audio and MIDI..."
+msgstr "Tester l'audio et le MIDI...    "
+
+msgid "Test label"
+msgstr "Exemple"
+
+msgid "Tidy Up"
+msgstr "Ranger"
+
+msgid "Toggle"
+msgstr "Interrupteur"
+
+msgid "Top"
+msgstr "Haut"
+
+msgid "Undo"
+msgstr "Annuler"
+
+msgid "Undo clear"
+msgstr "Annuler Effacer"
+
+msgid "Undo connect"
+msgstr "Annuler Connecter"
+
+msgid "Undo cut"
+msgstr "Annuler Couper"
+
+msgid "Undo disconnect"
+msgstr "Annuler Déconnecter"
+
+msgid "Undo duplicate"
+msgstr "Annuler Dupliquer"
+
+msgid "Undo motion"
+msgstr "Annuler Déplacer"
+
+msgid "Undo paste"
+msgstr "Annuler Coller"
+
+msgid "Undo typing"
+msgstr "Annuler Frappe"
+
+msgid "Upper:"
+msgstr "Supérieure :"
+
+msgid "Use callbacks"
+msgstr "Callbacks"
+
+msgid "Use multiple ALSA devices"
+msgstr "Utiliser plusieurs périphériques ALSA"
+
+msgid "Use multiple devices"
+msgstr "Utiliser plusieurs périphériques"
+
+msgid "Use standard extensions"
+msgstr "Extensions standards"
+
+msgid "VU Meter"
+msgstr "VU-mètre"
+
+msgid "Verbose"
+msgstr "Verbeux"
+
+msgid "Vradio"
+msgstr "Boutons verticaux"
+
+msgid "Vslider"
+msgstr "Glissière verticale"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr "ATTENTION : famille de police '%s' non trouvée, utilisation de la famille par défaut (%s)"
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr "ATTENTION : graisse '%s' non trouvée, utilisation de la graisse par défaut (%s)"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "ATTENTION : option inconnue de graphme reçue dans pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Largeur :"
+
+msgid "Window"
+msgstr "Fenêtre"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr "Souhaitez-vous ouvrir JackOSX.com pour télécharger Jack ?"
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr "Souhaitez-vous ouvrir JackPilot pour démarrer Jack ?"
+
+msgid "X and Y"
+msgstr "X et Y"
+
+msgid "X offset"
+msgstr "Décalage X"
+
+msgid "X only"
+msgstr "Seulement X"
+
+msgid "X range, from"
+msgstr "Plage X, de"
+
+msgid "X units per pixel:"
+msgstr "Unités par pixel X :"
+
+msgid "Y offset"
+msgstr "Décalage Y"
+
+msgid "Y only"
+msgstr "Seulement Y"
+
+msgid "Y range, from"
+msgstr "Plage Y, de"
+
+msgid "Y units per pixel:"
+msgstr "Unités par pixel Y :"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "all"
+msgstr "tout"
+
+msgid "audio I/O error"
+msgstr "erreur E/S audio"
+
+msgid "bottom:"
+msgstr "bas :"
+
+msgid "converted Max binary to text format:"
+msgstr "Binaire Max converti au format texte :"
+
+msgid "debug"
+msgstr "débogage"
+
+msgid "error"
+msgstr "erreur"
+
+msgid "fatal"
+msgstr "fatal"
+
+msgid "for:"
+msgstr "pour :"
+
+msgid "height:"
+msgstr "hauteur :"
+
+msgid "hold:"
+msgstr "maintien :"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr "http://puredata.info/docs/PourCommencer"
+
+msgid "intrrpt:"
+msgstr "interruption :"
+
+msgid "left:"
+msgstr "gauche :"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "log-hauteur :"
+
+msgid "max:"
+msgstr "max :"
+
+msgid "min:"
+msgstr "min :"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "really quit?"
+msgstr "Voulez-vous réellement quitter ?"
+
+msgid "right:"
+msgstr "droite :"
+
+msgid "size:"
+msgstr "taille :"
+
+msgid "to"
+msgstr "à"
+
+msgid "top:"
+msgstr "haut :"
+
+msgid "value:"
+msgstr "valeur :"
+
+msgid "width:"
+msgstr "largeur :"

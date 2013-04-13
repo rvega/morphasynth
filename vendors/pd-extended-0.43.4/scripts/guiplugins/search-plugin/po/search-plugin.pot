@@ -1,0 +1,391 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: search plugin 1.0\n"
+"Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
+"POT-Creation-Date: 2013-01-05 22:51-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Advanced search options"
+msgstr ""
+
+msgid "All About Pd"
+msgstr ""
+
+msgid "All documents"
+msgstr ""
+
+msgid "Audio Signals"
+msgstr ""
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr ""
+
+msgid "Browse Advanced Topics"
+msgstr ""
+
+msgid "Browse Introductory Topics"
+msgstr ""
+
+msgid "Browse the Documentation"
+msgstr ""
+
+msgid "Control Structure"
+msgstr ""
+
+msgid "Data Structures"
+msgstr ""
+
+msgid "Dynamic Patching"
+msgstr ""
+
+msgid "Enter search terms"
+msgstr ""
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "External Pd libraries"
+msgstr ""
+
+msgid "External libraries"
+msgstr ""
+
+msgid "Found "
+msgstr ""
+
+msgid "GUI"
+msgstr ""
+
+msgid "HTML manual for Pure Data"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Implementation Details"
+msgstr ""
+
+msgid "Keywords:"
+msgstr ""
+
+msgid "MIDI"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr ""
+
+msgid "Match all terms"
+msgstr ""
+
+msgid "Match whole words"
+msgstr ""
+
+msgid "Networking"
+msgstr ""
+
+msgid "No DESCRIPTION tag."
+msgstr ""
+
+msgid "Object Help Patches"
+msgstr ""
+
+#, tcl-format
+msgid "Open %s"
+msgstr ""
+
+msgid "Pd Manual"
+msgstr ""
+
+msgid "Pure Data Search"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search and Browse Documentation"
+msgstr ""
+
+msgid "Search by Category"
+msgstr ""
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr ""
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr ""
+
+msgid "The \"doc\" directory"
+msgstr ""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr ""
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr ""
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr ""
+
+msgid "This help patch is for an internal Pd class"
+msgstr ""
+
+msgid "Tutorials"
+msgstr ""
+
+msgid "Uncategorized"
+msgstr ""
+
+msgid "Writing Externals"
+msgstr ""
+
+msgid "abstraction"
+msgstr ""
+
+msgid "abstraction_op"
+msgstr ""
+
+msgid "analysis"
+msgstr ""
+
+msgid "analyze the incoming signal or value"
+msgstr ""
+
+msgid "anything_op"
+msgstr ""
+
+msgid "array"
+msgstr ""
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr ""
+
+msgid "bandlimited"
+msgstr ""
+
+msgid "block_oriented"
+msgstr ""
+
+msgid "canvas_op"
+msgstr ""
+
+msgid "control"
+msgstr ""
+
+msgid "control rate objects"
+msgstr ""
+
+msgid "conversion"
+msgstr ""
+
+msgid "convert from one set of units to another"
+msgstr ""
+
+msgid "create a ramp between a starting and ending value"
+msgstr ""
+
+msgid "create or manage data structures"
+msgstr ""
+
+msgid "create or manipulate an array"
+msgstr ""
+
+msgid "creating graphical objects in Pure Data"
+msgstr ""
+
+msgid "data_structure"
+msgstr ""
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr ""
+
+msgid "dynamic_patching"
+msgstr ""
+
+msgid "file format specification, license text, etc."
+msgstr ""
+
+msgid "filesystem"
+msgstr ""
+
+msgid "filter"
+msgstr ""
+
+msgid "general information from the author"
+msgstr ""
+
+msgid "graphical user interface"
+msgstr ""
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr ""
+
+msgid "how to code control and signal objects in C"
+msgstr ""
+
+msgid "list_op"
+msgstr ""
+
+msgid "manipulate or store a symbol"
+msgstr ""
+
+msgid "measure and/or manipulate time"
+msgstr ""
+
+msgid "network"
+msgstr ""
+
+msgid "no DESCRIPTION tag or values."
+msgstr ""
+
+msgid "nonlocal"
+msgstr ""
+
+msgid "object describes itself as being bandlimited"
+msgstr ""
+
+msgid "object itself is written in Pure Data"
+msgstr ""
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr ""
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr ""
+
+msgid "object that filters incoming data"
+msgstr ""
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr ""
+
+msgid "object that provides MIDI functionality"
+msgstr ""
+
+msgid "object that reads from and/or writes to the file system"
+msgstr ""
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr ""
+
+msgid "object whose main function is to store data"
+msgstr ""
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr ""
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr ""
+
+msgid "orphan"
+msgstr ""
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr ""
+
+msgid "output a random value, list, signal, or other random data"
+msgstr ""
+
+msgid "pass messages or data without patch wires"
+msgstr ""
+
+msgid "patchfile_op"
+msgstr ""
+
+msgid "pd_op"
+msgstr ""
+
+msgid "programmatically create/destroy Pd objects"
+msgstr ""
+
+msgid "provide trigonometric functionality"
+msgstr ""
+
+msgid "provides access to or sends/receives data over a network"
+msgstr ""
+
+msgid "ramp"
+msgstr ""
+
+msgid "random"
+msgstr ""
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr ""
+
+msgid "sending data over networks with Pd"
+msgstr ""
+
+msgid "signal"
+msgstr ""
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr ""
+
+msgid "soundfile"
+msgstr ""
+
+msgid "storage"
+msgstr ""
+
+msgid "store or manipulate any type of data"
+msgstr ""
+
+msgid "symbol_op"
+msgstr ""
+
+msgid "text of the license for this software"
+msgstr ""
+
+msgid "time"
+msgstr ""
+
+msgid "trigonometry"
+msgstr ""
+
+msgid "tutorials for audio signals"
+msgstr ""
+
+msgid "tutorials for control objects"
+msgstr ""

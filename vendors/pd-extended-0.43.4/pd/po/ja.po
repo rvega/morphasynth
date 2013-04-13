@@ -1,0 +1,872 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# Sei Matsumura <serv@low-tech-ism.com>, 2012-2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-20 14:34+0000\n"
+"Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s フォント"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s プロパティ"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s は完了しました!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' はすでにロード済みなので %s は無視します。"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) 不適切なコマンド名:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) カッコ閉じがありません。'}':"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) カッコ閉じがありません。']':"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) 操作不能エラー:"
+
+msgid "(same as input device) ..............      "
+msgstr "(入力デバイスと同じ)............"
+
+msgid "(use arrow keys for history)"
+msgstr "(履歴移動に矢印キーを使用)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------出力範囲:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "-------表示サイズ(pix):-------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "-------表示(pix)(pix):-------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------点滅時間(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------表示サイズ(digits)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------選択可能部分の表示サイズ(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------四角形の表示(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI設定"
+
+msgid "About Pd"
+msgstr "Pdについて"
+
+msgid "Add new library"
+msgstr "新しいライブラリを追加"
+
+msgid "Appearance on parent patch"
+msgstr "親パッチでの表示"
+
+msgid "Apply"
+msgstr "適用"
+
+msgid "Array"
+msgstr "アレイ"
+
+msgid "Array Properties"
+msgstr "アレイのプロパティ"
+
+msgid "Associated Files"
+msgstr "関連ファイル"
+
+msgid "Atom Box Properties"
+msgstr "Atomボックスのプロパティ"
+
+msgid "Audio Settings"
+msgstr "オーディオ設定"
+
+msgid "Audio Settings..."
+msgstr "オーディオ設定..."
+
+msgid "Autopatch"
+msgstr "オートパッチ"
+
+msgid "Autotips"
+msgstr "自動ヒント"
+
+msgid "Background"
+msgstr "背景"
+
+msgid "Background color"
+msgstr "背景色"
+
+msgid "Bang"
+msgstr "Bangボタン"
+
+msgid "Bezier curve"
+msgstr "ベジェ曲線"
+
+msgid "Block size:"
+msgstr "ブロックサイズ:"
+
+msgid "Bottom"
+msgstr "下"
+
+msgid "Bring All to Front"
+msgstr "すべてを前面に"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "GUI設定ファイルを読み込めません:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "プラグインフォルダーを読み込めません: '%s'"
+
+msgid "Canvas"
+msgstr "キャンバス"
+
+msgid "Canvas Properties"
+msgstr "キャンバスのプロバティ"
+
+msgid "Channels:"
+msgstr "チャンネル:"
+
+msgid "Clear Console"
+msgstr "コンソールをクリア"
+
+msgid "Clear Menu"
+msgstr "メニューをクリア"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Close this window?"
+msgstr "ウィンドウを閉じますか?"
+
+msgid "Colors"
+msgstr "色"
+
+msgid "Comment"
+msgstr "コメントボックス"
+
+msgid "Compose color"
+msgstr "色の作成"
+
+msgid "Configuring Info.plist..."
+msgstr "Info.plistを定義..."
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Copying current patch..."
+msgstr "現在のパッチをコピー..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr "'HKEY_LOCAL_MACHINE\\Software\\Pd-extended' を削除できませんでした:"
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr "レジストリファイルを貼り付けられませんでした: '%s'"
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "%sの中で'%s'が見つかりません"
+
+msgid "Cut"
+msgstr "切り取り"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP オフ"
+
+msgid "DSP On"
+msgstr "DSP オン"
+
+msgid "Data Properties"
+msgstr "データ プロパティ"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr "既定のフォント: %s"
+
+msgid "Defeat real-time scheduling"
+msgstr "リアルタイムスケジューリングの無効化"
+
+msgid "Delay (msec):"
+msgstr "遅延(ミリ秒):"
+
+msgid "Delete array"
+msgstr "アレイを削除"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "初期設定ファイルを削除します: %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr " HKEY_CURRENT_USER\\Software\\Pd-extended の初期設定を削除します。"
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr "HKEY_LOCAL_MACHINE\\Software\\Pd-extended の初期設定を削除します。"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "'%s'への変更を破棄しますか?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "'%s'への変更を保存しますか？"
+
+msgid "Draw as:"
+msgstr "描画方法:"
+
+msgid "Duplicate"
+msgstr "複製"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Edit Mode"
+msgstr "編集モード"
+
+msgid "Edit library"
+msgstr "ライブラリの編集"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "%sのロードに失敗しました。"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "Find"
+msgstr "検索"
+
+msgid "Find Again"
+msgstr "再検索..."
+
+msgid "Find Last Error"
+msgstr "最後のエラーを検索"
+
+msgid "Find..."
+msgstr "検索..."
+
+msgid "Font"
+msgstr "フォント"
+
+msgid "Font Size"
+msgstr "フォントサイズ"
+
+msgid "Foreground color"
+msgstr "前景色"
+
+msgid "Front"
+msgstr "前景"
+
+msgid "Graph"
+msgstr "グラフ"
+
+msgid "Graph-On-Parent"
+msgstr "親パッチに表示する"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Help Browser"
+msgstr "ヘルプブラウザ"
+
+msgid "Hide object name and arguments"
+msgstr "オブジェクト名と引数の非表示"
+
+msgid "Hradio"
+msgstr "水平ラジオボタン"
+
+msgid "Hslider"
+msgstr "水平スライダー"
+
+msgid "IN"
+msgstr "入力"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "'%s'を無視: Pdのファイルではありません"
+
+msgid "In Ports:"
+msgstr "入力ポート:"
+
+msgid "Init"
+msgstr "初期値を記録"
+
+msgid "Input device 1:"
+msgstr "入力デバイス 1:"
+
+msgid "Input device 2:"
+msgstr "入力デバイス 2:"
+
+msgid "Input device 3:"
+msgstr "入力デバイス 3:"
+
+msgid "Input device 4:"
+msgstr "入力デバイス 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr "Jackは動作していないようなので、Pd-extendedは接続できません。"
+
+msgid "Jack not installed!"
+msgstr "Jackがインストールされていません！"
+
+msgid "Jack not running!"
+msgstr "Jackが稼働していません！"
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSXが完全にインストールされていません。Pd-extendedは接続できません。"
+
+msgid "Jump on click"
+msgstr "クリックで移動"
+
+msgid "Label"
+msgstr "ラベル"
+
+msgid "Label color"
+msgstr "ラベル色"
+
+msgid "Last graph"
+msgstr "前のグラフ"
+
+msgid "Left   "
+msgstr "左"
+
+msgid "Limits"
+msgstr "出力範囲"
+
+msgid "Load Meter"
+msgstr "CPUロードメーター"
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "プラグインをロード中: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "%s のための翻訳をロード。"
+
+msgid "Log:"
+msgstr "ログ:"
+
+msgid "Lower:"
+msgstr "最小値:"
+
+msgid "MIDI Settings"
+msgstr "MIDI設定"
+
+msgid "MIDI Settings..."
+msgstr "MIDI設定..."
+
+msgid "Magic Glass"
+msgstr "マジックグラス"
+
+msgid "Make app from folder..."
+msgstr "フォルダからアプリケーションを作成"
+
+msgid "Make app from patch..."
+msgstr "パッチからアプリケーションを作成"
+
+msgid "Making App"
+msgstr "アプリを作成"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "%s の中にアプリを作成..."
+
+msgid "Margin:"
+msgstr "マージン:"
+
+msgid "Match whole word only"
+msgstr "全単語適合検索"
+
+msgid "Max Binary Files"
+msgstr "Max バイナリファイル"
+
+msgid "Max Help Files"
+msgstr "Max ヘルプファイル"
+
+msgid "Max Patch Files"
+msgstr "Max パッチファイル"
+
+msgid "Max Text Files"
+msgstr "Max テキストファイル"
+
+msgid "Media"
+msgstr "メディア"
+
+msgid "Message"
+msgstr "メッセージボックス"
+
+msgid "Message..."
+msgstr "メッセージ..."
+
+msgid "Messages"
+msgstr "メッセージ"
+
+msgid "Minimize"
+msgstr "最小化"
+
+msgid "Name:"
+msgstr "名前:"
+
+msgid "New"
+msgstr "新規"
+
+msgid "New graph"
+msgstr "新しいグラフ"
+
+msgid "Next Window"
+msgstr "次のウィンドウ"
+
+msgid "No init"
+msgstr "初期値なし"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr "パッチが見つかりません!マウスを使って親パッチを選択してからやり直してください。"
+
+msgid "Number"
+msgstr "ナンバーボックス"
+
+msgid "Number2"
+msgstr "ナンバーボックス2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK(Ctrl t)"
+
+msgid "OUT"
+msgstr "出力"
+
+msgid "Object"
+msgstr "オブジェクトボックス"
+
+msgid "Open"
+msgstr "開く"
+
+msgid "Open List View..."
+msgstr "リストビューを開く"
+
+msgid "Open Recent"
+msgstr "最近開いたパッチ"
+
+msgid "Out Ports:"
+msgstr "出力ポート:"
+
+msgid "Output device 1:"
+msgstr "出力デバイス 1:"
+
+msgid "Output device 2:"
+msgstr "出力デバイス 2:"
+
+msgid "Output device 3:"
+msgstr "出力デバイス 3:"
+
+msgid "Output device 4:"
+msgstr "出力デバイス 4:"
+
+msgid "Parent Window"
+msgstr "親パッチのウィンドウ"
+
+msgid "Paste"
+msgstr "貼り付け"
+
+msgid "Pd Files"
+msgstr "Pdファイル"
+
+msgid "Pd Help Browser..."
+msgstr "Pdヘルプブラウザ"
+
+msgid "Pd libraries to load on startup"
+msgstr "開始時のPdライブラリの読み込み"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "オブジェクト、ヘルプ、フォント等のためのPdの検索範囲"
+
+msgid "Pd window"
+msgstr "Pdウィンドウ"
+
+msgid "Pd-extended"
+msgstr "Pd-extended"
+
+msgid "Perf Mode"
+msgstr "パフォーマンスモード"
+
+msgid "Points"
+msgstr "点"
+
+msgid "Polygon"
+msgstr "ポリゴン"
+
+msgid "Preferences"
+msgstr "環境設定"
+
+msgid "Previous Window"
+msgstr "前のウィンドウ"
+
+msgid "Print..."
+msgstr "印刷..."
+
+msgid "Properties"
+msgstr "プロパティ"
+
+msgid "Put"
+msgstr "配置"
+
+msgid "Put array into:"
+msgstr "アレイの格納先:"
+
+msgid "Quit"
+msgstr "終了"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr "Pd-extendedを停止してJackを開始してから、もう一度試してみてください"
+
+msgid "Range and size"
+msgstr "範囲とサイズ"
+
+msgid "Real-time scheduling"
+msgstr "リアルタイム・スケジューリング"
+
+msgid "Receive symbol:"
+msgstr "Receiveシンボル"
+
+msgid "Redo"
+msgstr "やり直す"
+
+msgid "Redo clear"
+msgstr "クリアのやり直し"
+
+msgid "Redo connect"
+msgstr "ライン接続のやり直し"
+
+msgid "Redo cut"
+msgstr "切り取りのやり直し"
+
+msgid "Redo disconnect"
+msgstr "ライン解除のやり直し"
+
+msgid "Redo duplicate"
+msgstr "複製のやり直し"
+
+msgid "Redo motion"
+msgstr "移動のやり直し"
+
+msgid "Redo paste"
+msgstr "貼り付けのやり直し"
+
+msgid "Redo typing"
+msgstr "入力のやり直し"
+
+msgid "Report a bug"
+msgstr "バグを報告する"
+
+msgid "Reset to Defaults"
+msgstr "デフォルトに初期化"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr "%s からレジストリを再設定します。"
+
+msgid "Right"
+msgstr "右"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "動作中: '%s %s'"
+
+msgid "Sample rate:"
+msgstr "サンプリングレート:"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save As..."
+msgstr "別名で保存..."
+
+msgid "Save application to..."
+msgstr "アプリケーションとして保存..."
+
+msgid "Save contents"
+msgstr "内容を保存"
+
+msgid "Scale"
+msgstr "スケール"
+
+msgid "Search in"
+msgstr "検索範囲"
+
+msgid "Select All"
+msgstr "すべて選択"
+
+msgid "Select name for app to build...\n"
+msgstr "アプリケーションのための名前を選択...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "送る(Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Pdメッセージを送る"
+
+msgid "Send symbol:"
+msgstr "Sendシンボル"
+
+msgid "Setting embedded preferences..."
+msgstr "初期設定の埋め込み..."
+
+msgid "Setting patch name..."
+msgstr "パッチ名を設定..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr " %s/Contents/Info.plist をセットアップ。"
+
+msgid "Size:"
+msgstr "サイズ:"
+
+msgid "Start Here!"
+msgstr "ここからスタート!"
+
+msgid "Startup flags:"
+msgstr "スタートアップフラグ:"
+
+msgid "Steady on click"
+msgstr "クリックで移動しない"
+
+msgid "Stretch"
+msgstr "拡張"
+
+msgid "Symbol"
+msgstr "シンボルボックス"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "オーディオとMIDIのテスト"
+
+msgid "Test label"
+msgstr "ラベルのテスト"
+
+msgid "Tidy Up"
+msgstr "整列"
+
+msgid "Toggle"
+msgstr "Toggleボタン"
+
+msgid "Top"
+msgstr "上"
+
+msgid "Undo"
+msgstr "取り消し"
+
+msgid "Undo clear"
+msgstr "クリアの取り消し"
+
+msgid "Undo connect"
+msgstr "ライン接続の取り消し"
+
+msgid "Undo cut"
+msgstr "切り取りの取り消し"
+
+msgid "Undo disconnect"
+msgstr "ライン解除の取り消し"
+
+msgid "Undo duplicate"
+msgstr "複製の取り消し"
+
+msgid "Undo motion"
+msgstr "移動の取り消し"
+
+msgid "Undo paste"
+msgstr "貼り付けの取り消し"
+
+msgid "Undo typing"
+msgstr "入力の取り消し"
+
+msgid "Upper:"
+msgstr "最大値:"
+
+msgid "Use callbacks"
+msgstr "コールバックを使用"
+
+msgid "Use multiple ALSA devices"
+msgstr "複数のALSAデバイスを使用"
+
+msgid "Use multiple devices"
+msgstr "複数のデバイスを使用"
+
+msgid "Use standard extensions"
+msgstr "標準的な拡張子を使用"
+
+msgid "VU Meter"
+msgstr "VUメーター"
+
+msgid "Verbose"
+msgstr "詳細な表示"
+
+msgid "Vradio"
+msgstr "垂直ラジオボタン"
+
+msgid "Vslider"
+msgstr "垂直スライダー"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr "警告: フォント'%s' が見つかりません。既定 (%s) を使用します。"
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr "警告: フォントの太さ '%s' はありません。既定の太さ (%s) を使用します。"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "警告: pdtk_canvas_dialogで不明のgraphme flagsが入力されました"
+
+msgid "Width:"
+msgstr "幅:"
+
+msgid "Window"
+msgstr "ウィンドウ"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr "JackOSX.comを開いてJackをダウンロードしますか？"
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr "Jackパイロットを開いてJackを開始しますか？"
+
+msgid "X and Y"
+msgstr "X値とY値"
+
+msgid "X offset"
+msgstr "X値オフセット"
+
+msgid "X only"
+msgstr "X値のみ"
+
+msgid "X range, from"
+msgstr "X値の範囲, 始点"
+
+msgid "X units per pixel:"
+msgstr "表示領域のX値（ピクセル）:"
+
+msgid "Y offset"
+msgstr "Y値オフセット"
+
+msgid "Y only"
+msgstr "Y値のみ"
+
+msgid "Y range, from"
+msgstr "Y値の範囲, 始点"
+
+msgid "Y units per pixel:"
+msgstr "表示領域のY値（ピクセル）:"
+
+msgid "Zoom"
+msgstr "最大化"
+
+msgid "all"
+msgstr "すべて"
+
+msgid "audio I/O error"
+msgstr "オーディオ I/O エラー"
+
+msgid "bottom:"
+msgstr "下:"
+
+msgid "converted Max binary to text format:"
+msgstr "Maxバイナリをテキストフォーマットに変換:"
+
+msgid "debug"
+msgstr "デバッグ"
+
+msgid "error"
+msgstr "エラー"
+
+msgid "fatal"
+msgstr "致命的"
+
+msgid "for:"
+msgstr "検索語:"
+
+msgid "height:"
+msgstr "高さ:"
+
+msgid "hold:"
+msgstr "点灯時間:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr "http://puredata.info/docs/StartHereJapanese"
+
+msgid "intrrpt:"
+msgstr "点滅間隔:"
+
+msgid "left:"
+msgstr "左:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "log-height:"
+
+msgid "max:"
+msgstr "最大値:"
+
+msgid "min:"
+msgstr "最小値:"
+
+msgid "normal"
+msgstr "ノーマル"
+
+msgid "really quit?"
+msgstr "本当に終了しますか?"
+
+msgid "right:"
+msgstr "右:"
+
+msgid "size:"
+msgstr "サイズ:"
+
+msgid "to"
+msgstr "終点"
+
+msgid "top:"
+msgstr "上:"
+
+msgid "value:"
+msgstr "値:"
+
+msgid "width:"
+msgstr "幅:"

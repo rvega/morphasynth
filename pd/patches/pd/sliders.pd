@@ -1,0 +1,127 @@
+#N canvas -60 22 1276 756 10;
+#X obj -1110 -523 cnv 15 190 195 empty empty OSC1 20 12 0 10 -233017
+-66577 0;
+#X text -979 -407 WAVEFORM;
+#X text -979 -348 FINETUNE;
+#X obj -1110 -325 cnv 15 190 260 empty empty LFO1 20 12 0 10 -233017
+-66577 0;
+#X obj -1110 -62 cnv 15 190 260 empty empty ENVELOPE 20 12 0 10 -233017
+-66577 0;
+#X text -959 59 DECAY;
+#X text -971 118 SUSTAIN;
+#X text -970 177 RELEASE;
+#X text -983 -268 FREQUENCY;
+#X text -977 -208 WAVEFORM;
+#X text -1001 -89 TO FREQUENCY;
+#X obj -917 -523 cnv 15 190 195 empty empty OSC2 20 12 0 10 -233017
+-66577 0;
+#X text -784 -408 WAVEFORM;
+#X text -782 -349 FINETUNE;
+#X obj -917 -325 cnv 15 190 260 empty empty LFO2 20 12 0 10 -233017
+-66577 0;
+#X text -788 -265 FREQUENCY;
+#X text -783 -207 WAVEFORM;
+#X text -805 -147 TO AMPLITUDE;
+#X text -805 -89 TO FREQUENCY;
+#X obj -724 -523 cnv 15 210 195 empty empty OSC3 20 12 0 10 -233017
+-66577 0;
+#X text -587 -464 AMPLITUDE;
+#X text -580 -407 WAVEFORM;
+#X text -580 -351 FINETUNE;
+#X obj -724 -325 cnv 15 210 260 empty empty LFO3 20 12 0 10 -233017
+-66577 0;
+#X text -587 -268 FREQUENCY;
+#X text -581 -210 WAVEFORM;
+#X text -604 -151 TO AMPLITUDE;
+#X text -605 -90 TO FREQUENCY;
+#X text -983 -467 AMPLITUDE;
+#X text -1001 -149 TO AMPLITUDE;
+#X obj -511 -523 cnv 15 210 270 empty empty LO_PASS 20 12 0 10 -233017
+-66577 0;
+#X text -371 -463 FREQUENCY;
+#X text -373 -406 RESONANCE;
+#X text -372 -346 KEYFOLLOW;
+#X text -361 -288 CONTOUR;
+#X obj -511 -250 cnv 15 210 270 empty empty HI_PASS 20 12 0 10 -233017
+-66577 0;
+#X text -374 -190 FREQUENCY;
+#X text -374 -132 RESONANCE;
+#X text -372 -73 KEYFOLLOW;
+#X text -362 -16 CONTOUR;
+#X obj -298 -523 cnv 15 225 270 empty empty LO_PASS_ENVELOPE 20 12
+0 10 -233017 -66577 0;
+#X text -148 -459 ATTACK;
+#X text -140 -397 DECAY;
+#X text -153 -339 SUSTAIN;
+#X text -151 -279 RELEASE;
+#X obj -70 -523 cnv 15 210 270 empty empty LO_PASS_LFO 20 12 0 10 -233017
+-66577 0;
+#X text 66 -459 FREQUENCY;
+#X text 71 -400 WAVEFORM;
+#X text 67 -343 AMPLITUDE;
+#X text -789 -467 AMPLITUDE;
+#X obj -298 -250 cnv 15 225 270 empty empty HI_PASS_ENVELOPE 20 12
+0 10 -233017 -66577 0;
+#X text -148 -186 ATTACK;
+#X text -140 -124 DECAY;
+#X text -153 -66 SUSTAIN;
+#X text -151 -6 RELEASE;
+#X obj -70 -250 cnv 15 210 270 empty empty HI_PASS_LFO 20 12 0 10 -233017
+-66577 0;
+#X text 66 -186 FREQUENCY;
+#X text 71 -127 WAVEFORM;
+#X text 67 -69 AMPLITUDE;
+#X obj -500 -228 zlider hp-freq;
+#X text -964 -3 ATTACK;
+#X text -959 59 DECAY;
+#X text -970 177 RELEASE;
+#X obj -917 -62 cnv 15 190 260 empty empty NOISE 20 12 0 11 -233017
+-66577 0;
+#X text -789 0 AMPLITUDE;
+#X obj -713 -243 zlider lfo3-waveform;
+#X obj -1108 -444 zlider osc1-waveform;
+#X obj -1108 -385 zlider osc1-finetune;
+#X obj -1109 -306 zlider lfo1-freq;
+#X obj -1110 -247 zlider lfo1-waveform;
+#X obj -1109 -187 zlider lfo1-to-amplitude;
+#X obj -1109 -127 zlider lfo1-to-freq;
+#X obj -1107 -42 zlider envelope-a;
+#X obj -1106 20 zlider envelope-d;
+#X obj -1107 79 zlider envelope-s;
+#X obj -1108 139 zlider envelope-r;
+#X obj -914 -127 zlider lfo2-to-freq;
+#X obj -914 -186 zlider lfo2-to-amplitude;
+#X obj -914 -245 zlider lfo2-waveform;
+#X obj -914 -303 zlider lfo2-freq;
+#X obj -915 -386 zlider osc2-finetune;
+#X obj -915 -445 zlider osc2-waveform;
+#X obj -915 -505 zlider osc2-amplitude;
+#X obj -712 -502 zlider osc3-amplitude;
+#X obj -712 -444 zlider osc3-waveform;
+#X obj -712 -386 zlider osc3-finetune;
+#X obj -713 -302 zlider lfo3-freq;
+#X obj -713 -185 zlider lfo3-to-amplitude;
+#X obj -713 -128 zlider lfo3-to-freq;
+#X obj -498 -54 zlider hp-contour;
+#X obj -498 -111 zlider hp-keyfollow;
+#X obj -499 -170 zlider hp-resonance;
+#X obj -498 -326 zlider lp-contour;
+#X obj -498 -385 zlider lp-keyfollow;
+#X obj -498 -443 zlider lp-resonance;
+#X obj -498 -500 zlider lp-freq;
+#X obj -290 -498 zlider lp-envelope-a;
+#X obj -289 -436 zlider lp-envelope-d;
+#X obj -289 -378 zlider lp-envelope-s;
+#X obj -289 -317 zlider lp-envelope-r;
+#X obj -290 -225 zlider hp-envelope-a;
+#X obj -289 -162 zlider hp-envelope-d;
+#X obj -289 -105 zlider hp-envelope-s;
+#X obj -289 -44 zlider hp-envelope-r;
+#X obj -59 -498 zlider lp-lfo-freq;
+#X obj -59 -439 zlider lp-lfo-waveform;
+#X obj -59 -381 zlider lp-lfo-amplitude;
+#X obj -59 -225 zlider hp-lfo-freq;
+#X obj -59 -166 zlider hp-lfo-waveform;
+#X obj -59 -108 zlider hp-lfo-amplitude;
+#X obj -915 -39 zlider noise-amplitude;
+#X obj -1108 -504 zlider osc1-amplitude;

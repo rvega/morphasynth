@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Font"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Propietats"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) NOM INVÀLID DE COMANDAMENT:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) FALTA TANCAR CLAU ')':"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(TCL) FALTA TANCAR CLAUDÀTOR ']':"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) ERROR NO GESTIONAT:"
+
+msgid "(same as input device) ..............      "
+msgstr "(com l'entrada)"
+
+msgid "(use arrow keys for history)"
+msgstr "(utiliza teclecles de fleta per l'historial)"
+
+msgid "-----------output-range:-----------"
+msgstr "---------range-de-sortida-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "-------dimensions(pix):-------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "-------dimensions(pix)(pix):-------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------temps-de-flash(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensions(dígits)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------dimensions_sel·leccionades(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------rectangle_visible(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "Preferències ALSA MIDI"
+
+msgid "About Pd"
+msgstr "Sobre Pd"
+
+msgid "Add new library"
+msgstr "Afegeix libreria nova"
+
+msgid "Appearance on parent patch"
+msgstr "Aparença al patch primari"
+
+msgid "Apply"
+msgstr "Aplicar"
+
+msgid "Array"
+msgstr "Matriu"
+
+msgid "Array Properties"
+msgstr "Propietats de l'array"
+
+msgid "Atom Box Properties"
+msgstr "Propietats de caixa àtom"
+
+msgid "Audio Settings"
+msgstr "Preferències d'àudio"
+
+msgid "Audio Settings..."
+msgstr "Preferències d'audio"
+
+msgid "Autopatch"
+msgstr "Autopatch"
+
+msgid "Autotips"
+msgstr "Consells"
+
+msgid "Background"
+msgstr "Fons"
+
+msgid "Background color"
+msgstr "Color de fons"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Corba de Bezier"
+
+msgid "Block size:"
+msgstr "Mida del bloc:"
+
+msgid "Bottom"
+msgstr "fons"
+
+msgid "Bring All to Front"
+msgstr "Portar-ho tot al front"
+
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+msgid "Cannot read GUI prefs file: "
+msgstr "No es pot llegir l'arxiu de preferències GUI:"
+
+msgid "Canvas"
+msgstr "Llenç"
+
+msgid "Canvas Properties"
+msgstr "Propietats de matriu"
+
+msgid "Channels:"
+msgstr "Canals:"
+
+msgid "Clear Console"
+msgstr "Aclarir Consola"
+
+msgid "Clear Menu"
+msgstr "Netejar menú"
+
+msgid "Close"
+msgstr "tancar"
+
+msgid "Close this window?"
+msgstr "Tancar aquesta finestra?"
+
+msgid "Colors"
+msgstr "Colors"
+
+msgid "Comment"
+msgstr "Comentari"
+
+msgid "Compose color"
+msgstr "Composar color"
+
+msgid "Configuring Info.plist..."
+msgstr "Configurant Inf.plist..."
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Copying current patch..."
+msgstr "Copiant pegat sel·leccionat..."
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "No s'ha trobat '%s' a '%s'"
+
+msgid "Cut"
+msgstr "Tallar"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP tancat"
+
+msgid "DSP On"
+msgstr "DSP encès"
+
+msgid "Data Properties"
+msgstr "Propietats de les dades"
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Retard (msec):"
+
+msgid "Delete array"
+msgstr "Esborrar array"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Destacar canvis a '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Desitjaguardar les candis fets a '%s'?"
+
+msgid "Draw as:"
+msgstr "Dibuixar com:"
+
+msgid "Duplicate"
+msgstr "Duplicar"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit Mode"
+msgstr "Mode d'edició"
+
+msgid "Edit library"
+msgstr "Edita librería"
+
+msgid "File"
+msgstr "Arxiu"
+
+msgid "Find"
+msgstr "trobar"
+
+msgid "Find Again"
+msgstr "Trobar de nou"
+
+msgid "Find Last Error"
+msgstr "Troba l'últim error"
+
+msgid "Find..."
+msgstr "Trobar..."
+
+msgid "Font"
+msgstr "Font"
+
+msgid "Font Size"
+msgstr "Tamany de la font"
+
+msgid "Foreground color"
+msgstr "Color de primer pla"
+
+msgid "Front"
+msgstr "Front"
+
+msgid "Graph"
+msgstr "Gràfic"
+
+msgid "Graph-On-Parent"
+msgstr "Dibuixar el contingut"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Help Browser"
+msgstr "Navegador d'ajuda"
+
+msgid "Hide object name and arguments"
+msgstr "Ocultar el nom de l'objecte i arguments"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hcontrol lliscant"
+
+msgid "IN"
+msgstr "dins"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Ignorant '%s': no sembla ser un arxiu Pd"
+
+msgid "In Ports:"
+msgstr "Ports d'entrada:"
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Input device 1:"
+msgstr "Dispositiu d'entrada 1:"
+
+msgid "Input device 2:"
+msgstr "Dispositiu d'entrada 2:"
+
+msgid "Input device 3:"
+msgstr "Dispositiu d'entrada 3:"
+
+msgid "Input device 4:"
+msgstr "Dispositiu d'entrada 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Saltar al fer click"
+
+msgid "Label"
+msgstr "Etiqueta"
+
+msgid "Label color"
+msgstr "Color de l'etiqueta"
+
+msgid "Last graph"
+msgstr "Últim gràfic"
+
+msgid "Left   "
+msgstr "Esquerra"
+
+msgid "Limits"
+msgstr "Limits"
+
+msgid "Load Meter"
+msgstr "Carregar Medidor"
+
+msgid "Log:"
+msgstr "Registre:"
+
+msgid "Lower:"
+msgstr "Inferior:"
+
+msgid "MIDI Settings"
+msgstr "Preferències MIDI"
+
+msgid "MIDI Settings..."
+msgstr "Preferències de Midi"
+
+msgid "Magic Glass"
+msgstr "Vidre màgic"
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Marge:"
+
+msgid "Match whole word only"
+msgstr "Coincidir només per paraula completa"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "Message"
+msgstr "Missatge"
+
+msgid "Message..."
+msgstr "Missatge..."
+
+msgid "Messages"
+msgstr "MIssatges"
+
+msgid "Minimize"
+msgstr "MInimitzar"
+
+msgid "Name:"
+msgstr "Nom:"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "New graph"
+msgstr "Nou gràfic"
+
+msgid "Next Window"
+msgstr "Finestra següent"
+
+msgid "No init"
+msgstr "No init"
+
+msgid "Number"
+msgstr "Nombre"
+
+msgid "Number2"
+msgstr "Numero2"
+
+msgid "OK"
+msgstr "D'acord"
+
+msgid "OK (Ctrl t)"
+msgstr "Ok (Ctrl. t)"
+
+msgid "OUT"
+msgstr "fora"
+
+msgid "Object"
+msgstr "Objecte"
+
+msgid "Open"
+msgstr "Obrir"
+
+msgid "Open List View..."
+msgstr "Obrir vista de llista..."
+
+msgid "Open Recent"
+msgstr "Obrir recent"
+
+msgid "Out Ports:"
+msgstr "Ports de sortida:"
+
+msgid "Output device 1:"
+msgstr "Dispositiu de sortida 1:"
+
+msgid "Output device 2:"
+msgstr "Dispositiu de sortida 2:"
+
+msgid "Output device 3:"
+msgstr "Dispositiu de sortida 3:"
+
+msgid "Output device 4:"
+msgstr "Dispositiu de sortida 4:"
+
+msgid "Parent Window"
+msgstr "Finestra primaria"
+
+msgid "Paste"
+msgstr "Enganxar"
+
+msgid "Pd Help Browser..."
+msgstr "Buscador d'ajuda de Pd"
+
+msgid "Pd libraries to load on startup"
+msgstr "Llibreries Pd per carregar a l'inici"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Cerca PD de localización per objetes, ajuda, fonos i altres arxius"
+
+msgid "Pd window"
+msgstr "finestra de Pd"
+
+msgid "Pd-extended"
+msgstr "Pd-extès"
+
+msgid "Perf Mode"
+msgstr "Mode Pref"
+
+msgid "Points"
+msgstr "Punts"
+
+msgid "Polygon"
+msgstr "Polígon"
+
+msgid "Preferences"
+msgstr "Preferències"
+
+msgid "Previous Window"
+msgstr "Finestra anterior"
+
+msgid "Print..."
+msgstr "Imprimir..."
+
+msgid "Properties"
+msgstr "Propietats"
+
+msgid "Put"
+msgstr "Posar"
+
+msgid "Put array into:"
+msgstr "Posar array a:"
+
+msgid "Quit"
+msgstr "Sortir"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "rang i tamany"
+
+msgid "Real-time scheduling"
+msgstr "programació a temps real"
+
+msgid "Receive symbol:"
+msgstr "Rep simbol"
+
+msgid "Redo"
+msgstr "Refer"
+
+msgid "Redo clear"
+msgstr "Refer netejar"
+
+msgid "Redo connect"
+msgstr "Refer conectar"
+
+msgid "Redo cut"
+msgstr "Refer tallar"
+
+msgid "Redo disconnect"
+msgstr "Refer desconectar"
+
+msgid "Redo duplicate"
+msgstr "Refer duplicar"
+
+msgid "Redo motion"
+msgstr "Refer moviment"
+
+msgid "Redo paste"
+msgstr "Refer enganxar"
+
+msgid "Redo typing"
+msgstr "Refer escriptura"
+
+msgid "Report a bug"
+msgstr "Passar part d'un error"
+
+msgid "Reset to Defaults"
+msgstr "resultats per defecte"
+
+msgid "Right"
+msgstr "Dreta"
+
+msgid "Sample rate:"
+msgstr "Freqüència de mostreig:"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "Save As..."
+msgstr "Desa com:"
+
+msgid "Save application to..."
+msgstr "Guarda continguts"
+
+msgid "Save contents"
+msgstr "Desar el contingut"
+
+msgid "Scale"
+msgstr "Escala"
+
+msgid "Search in"
+msgstr "buscar a "
+
+msgid "Select All"
+msgstr "Sel·leccionar tot"
+
+msgid "Select name for app to build...\n"
+msgstr "Sel·lechonar nom per l'aplicació a construïr...\n"
+
+msgid "Send (Ctrl s)"
+msgstr "Enviar (Ctrl. s)"
+
+msgid "Send a Pd message"
+msgstr "Envia un missatge Pd"
+
+msgid "Send symbol:"
+msgstr "Envia simbol"
+
+msgid "Setting embedded preferences..."
+msgstr "Configurar preferències integrades..."
+
+msgid "Setting patch name..."
+msgstr "Configurar nom del pegat..."
+
+msgid "Size:"
+msgstr "Mida:"
+
+msgid "Start Here!"
+msgstr "Comença aquí!"
+
+msgid "Startup flags:"
+msgstr "Banderes d'inici:"
+
+msgid "Steady on click"
+msgstr "Fixar al fer click"
+
+msgid "Stretch"
+msgstr "Estirar"
+
+msgid "Symbol"
+msgstr "Símbol"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Provar Audio i Midi"
+
+msgid "Test label"
+msgstr "Comprovar etiqueta"
+
+msgid "Tidy Up"
+msgstr "Ordenar"
+
+msgid "Toggle"
+msgstr "Activar"
+
+msgid "Top"
+msgstr "a dalt"
+
+msgid "Undo"
+msgstr "Desfer"
+
+msgid "Undo clear"
+msgstr "Desfer letejar"
+
+msgid "Undo connect"
+msgstr "Desfer conectar"
+
+msgid "Undo cut"
+msgstr "Desfer tallar"
+
+msgid "Undo disconnect"
+msgstr "Desfer desconectar"
+
+msgid "Undo duplicate"
+msgstr "Desfer duplicar"
+
+msgid "Undo motion"
+msgstr "Desfer moviment"
+
+msgid "Undo paste"
+msgstr "Desfer enganxar"
+
+msgid "Undo typing"
+msgstr "Desfer escriptura"
+
+msgid "Upper:"
+msgstr "Superior:"
+
+msgid "Use callbacks"
+msgstr "Emprar retrocrides:"
+
+msgid "Use multiple ALSA devices"
+msgstr "Utilitza múltiples dispositius ALSA"
+
+msgid "Use multiple devices"
+msgstr "Emprar diversos dispositius"
+
+msgid "Use standard extensions"
+msgstr "Utilitza extencions estàndards "
+
+msgid "VU Meter"
+msgstr "VU Metre"
+
+msgid "Verbose"
+msgstr "Verbose"
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vcontrol lliscant"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "AVIS: les parámetros desconeguts de graphme debuts en pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Ample"
+
+msgid "Window"
+msgstr "Finestra"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X i Y"
+
+msgid "X offset"
+msgstr "Ajust en X"
+
+msgid "X only"
+msgstr "només X"
+
+msgid "X range, from"
+msgstr "Rang X, desde"
+
+msgid "X units per pixel:"
+msgstr "X unida pel pixel"
+
+msgid "Y offset"
+msgstr "Ajust en Y"
+
+msgid "Y only"
+msgstr "només Y"
+
+msgid "Y range, from"
+msgstr "Rang Y. desde "
+
+msgid "Y units per pixel:"
+msgstr "Y unida pel pixel"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "all"
+msgstr "tot"
+
+msgid "audio I/O error"
+msgstr "audio I/O error"
+
+msgid "bottom:"
+msgstr "fons:"
+
+msgid "debug"
+msgstr "depurar"
+
+msgid "error"
+msgstr "error"
+
+msgid "fatal"
+msgstr "fatal"
+
+msgid "for:"
+msgstr "per:"
+
+msgid "height:"
+msgstr "altura"
+
+msgid "hold:"
+msgstr "sostenir:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "intrrpt:"
+
+msgid "left:"
+msgstr "esquerra:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr "altura-log:"
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "really quit?"
+msgstr "Desitja sortir realment?"
+
+msgid "right:"
+msgstr "dreta:"
+
+msgid "size:"
+msgstr "tamany:"
+
+msgid "to"
+msgstr "a"
+
+msgid "top:"
+msgstr "A dalt"
+
+msgid "value:"
+msgstr "valor:"
+
+msgid "width:"
+msgstr "ample:"

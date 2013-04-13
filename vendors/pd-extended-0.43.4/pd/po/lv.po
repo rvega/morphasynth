@@ -1,0 +1,774 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Fonts"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Iestatījumi"
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) NEDERĪGS KOMANDAS NOSAUKUMS:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr "(Tcl) TRŪKST AIZVEROŠĀ FIGŪRIEKAVA '}':"
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr "(Tcl) TRŪKST AIZVEROŠĀ IEKAVA '}':"
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) NEAPSTRĀDĀTA KĻŪDA:"
+
+msgid "(same as input device) ..............      "
+msgstr "(tāpat kā ievadierīcei) ..............      "
+
+msgid "(use arrow keys for history)"
+msgstr "(lietot bultiņas, lai pārlūkotu vēsturi)"
+
+msgid "-----------output-range:-----------"
+msgstr "-----------izejas-diapazons:-----------"
+
+msgid "----------dimensions(pix):-----------"
+msgstr "----------dimensijas(pix):-----------"
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr "--------dimensijas(pix)(pix):--------"
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr "--------zibsņa-laiks(ms)(ms):---------"
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr "-------dimensijas(skaitļi)(pix):-------"
+
+msgid "------selectable_dimensions(pix):------"
+msgstr "------atzīmējamās_dimensijas(pix):------"
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr "------redzams_četrstūris(pix)(pix):------"
+
+msgid "ALSA MIDI Settings"
+msgstr "ALSA MIDI Iestatījumi"
+
+msgid "About Pd"
+msgstr "Par Pd"
+
+msgid "Add new library"
+msgstr "Pievienot jaunu bibliotēku"
+
+msgid "Appearance on parent patch"
+msgstr "Izskats augšējā patch"
+
+msgid "Apply"
+msgstr "Apstiprināt"
+
+msgid "Array"
+msgstr "Masīvs"
+
+msgid "Array Properties"
+msgstr "Masīva opcijas"
+
+msgid "Atom Box Properties"
+msgstr "Atom Box iestatījumi"
+
+msgid "Audio Settings"
+msgstr "Audio Iestatījumi"
+
+msgid "Audio Settings..."
+msgstr "Audio Iestatījumi..."
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr ""
+
+msgid "Background"
+msgstr "Fons"
+
+msgid "Background color"
+msgstr "Fona krāsa"
+
+msgid "Bang"
+msgstr "Bang"
+
+msgid "Bezier curve"
+msgstr "Bezier līkne"
+
+msgid "Block size:"
+msgstr "Bloka izmērs:"
+
+msgid "Bottom"
+msgstr "Apakšā"
+
+msgid "Bring All to Front"
+msgstr "Pārcelt visu uz priekšplānu"
+
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+msgid "Canvas"
+msgstr "Kanva"
+
+msgid "Canvas Properties"
+msgstr "Kanvas Iestatījumi"
+
+msgid "Channels:"
+msgstr "Kanāli:"
+
+msgid "Clear Console"
+msgstr "Attīrīt Konsoli"
+
+msgid "Clear Menu"
+msgstr "Attīrīt Izvēlni"
+
+msgid "Close"
+msgstr "Aizvērt"
+
+msgid "Close this window?"
+msgstr ""
+
+msgid "Colors"
+msgstr "Krāsas"
+
+msgid "Comment"
+msgstr "Komentārs"
+
+msgid "Compose color"
+msgstr "Izveidot krāsu"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "Kopēt"
+
+msgid "Copying current patch..."
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Nespēja atrast '%s' esot %s"
+
+msgid "Cut"
+msgstr "Izgriezt"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP Izslēgts"
+
+msgid "DSP On"
+msgstr "DSP Ieslēgts"
+
+msgid "Data Properties"
+msgstr "Datu iestatījumi"
+
+msgid "Defeat real-time scheduling"
+msgstr "Pieveikt reālā laika plānošanu"
+
+msgid "Delay (msec):"
+msgstr "Aizkave (msec):"
+
+msgid "Delete array"
+msgstr "Dzēst masīvu"
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Atmest izmaiņas '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Vai vēlaties saglabāt izmaiņas kuras veicāt '%s'?"
+
+msgid "Draw as:"
+msgstr "Zīmēt kā:"
+
+msgid "Duplicate"
+msgstr "Dublēt"
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Mode"
+msgstr "Rediģēšanas Režīms"
+
+msgid "Edit library"
+msgstr "Labot bibliotēku"
+
+msgid "File"
+msgstr ""
+
+msgid "Find"
+msgstr "Atrast"
+
+msgid "Find Again"
+msgstr "Meklēt Vēlreiz"
+
+msgid "Find Last Error"
+msgstr "Atrast pēdējo kļūdu"
+
+msgid "Find..."
+msgstr "Atrast..."
+
+msgid "Font"
+msgstr "Fonts"
+
+msgid "Font Size"
+msgstr "Fonta izmērs"
+
+msgid "Foreground color"
+msgstr "Priekšplāna krāsa"
+
+msgid "Front"
+msgstr "Priekšpuse"
+
+msgid "Graph"
+msgstr "Diagramma"
+
+msgid "Graph-On-Parent"
+msgstr "Diagramma-uz-augstāku"
+
+msgid "Help"
+msgstr "Palīdzība"
+
+msgid "Help Browser"
+msgstr "Palīdzības Pārlūks"
+
+msgid "Hide object name and arguments"
+msgstr "Slēpt objekta nosaukumu un vērtības"
+
+msgid "Hradio"
+msgstr "Hradio"
+
+msgid "Hslider"
+msgstr "Hslīdnis"
+
+msgid "IN"
+msgstr ""
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr "Ignorē '%s': neizskatās pēc Pd faila"
+
+msgid "In Ports:"
+msgstr "Ievadporti: "
+
+msgid "Init"
+msgstr "Init"
+
+msgid "Input device 1:"
+msgstr "Ievadierīce 1:"
+
+msgid "Input device 2:"
+msgstr "Ievadierīce 2:"
+
+msgid "Input device 3:"
+msgstr "Ievadierīce 3:"
+
+msgid "Input device 4:"
+msgstr "Ievadierīce 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr "Pārlekt uz klikšķa"
+
+msgid "Label"
+msgstr "Birka"
+
+msgid "Label color"
+msgstr "Birkas krāsa"
+
+msgid "Last graph"
+msgstr "Pēdējā diagramma"
+
+msgid "Left   "
+msgstr "Pa kreisi"
+
+msgid "Limits"
+msgstr "Limiti"
+
+msgid "Load Meter"
+msgstr "Ielādēt Skaitītāju"
+
+msgid "Log:"
+msgstr "Ziņojumi:"
+
+msgid "Lower:"
+msgstr "Apakšējais:"
+
+msgid "MIDI Settings"
+msgstr "MIDI Iestatījumi"
+
+msgid "MIDI Settings..."
+msgstr "MIDI Iestatījumi..."
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Robeža:"
+
+msgid "Match whole word only"
+msgstr "Jāsakrīt pilnībā tikai vārdam."
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr "Ziņa"
+
+msgid "Message..."
+msgstr "Ziņa..."
+
+msgid "Messages"
+msgstr "Ziņas"
+
+msgid "Minimize"
+msgstr "Minimizēt"
+
+msgid "Name:"
+msgstr "Nosaukums:"
+
+msgid "New"
+msgstr "Jauns"
+
+msgid "New graph"
+msgstr "Jauna diagramma"
+
+msgid "Next Window"
+msgstr "Nākošais Logs"
+
+msgid "No init"
+msgstr "Bez Init"
+
+msgid "Number"
+msgstr "Skaitlis"
+
+msgid "Number2"
+msgstr "Skaitlis2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr ""
+
+msgid "Object"
+msgstr "Objekts"
+
+msgid "Open"
+msgstr "Atvērt"
+
+msgid "Open List View..."
+msgstr "Atvērt saraksta skatu..."
+
+msgid "Open Recent"
+msgstr "Atvērt Neseno"
+
+msgid "Out Ports:"
+msgstr "Izvadporti:"
+
+msgid "Output device 1:"
+msgstr "Izvadierīce 1:"
+
+msgid "Output device 2:"
+msgstr "Izvadierīce 2:"
+
+msgid "Output device 3:"
+msgstr "Izvadierīce 3:"
+
+msgid "Output device 4:"
+msgstr "Izvadierīce 4:"
+
+msgid "Parent Window"
+msgstr "Augstākais Logs"
+
+msgid "Paste"
+msgstr "Ielīmēt"
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr "Pd bibliotēkas, kuras ielādēt sākumā"
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr "Pd meklēšanas ceļš objektiem, palīdzībai, fontiem un citiem failiem"
+
+msgid "Pd window"
+msgstr "Pd logs"
+
+msgid "Pd-extended"
+msgstr ""
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Punkti"
+
+msgid "Polygon"
+msgstr "Daudzstūris"
+
+msgid "Preferences"
+msgstr "Preferences"
+
+msgid "Previous Window"
+msgstr "Iepriekšējais Logs"
+
+msgid "Print..."
+msgstr "Printēt..."
+
+msgid "Properties"
+msgstr "Iestatījumi"
+
+msgid "Put"
+msgstr ""
+
+msgid "Put array into:"
+msgstr "Ievietot masīvu: "
+
+msgid "Quit"
+msgstr "Iziet"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Diapazons un izmērs"
+
+msgid "Real-time scheduling"
+msgstr ""
+
+msgid "Receive symbol:"
+msgstr "Saņemt simbolu:"
+
+msgid "Redo"
+msgstr "Atsaukt uz priekšu"
+
+msgid "Redo clear"
+msgstr "Atsaukt uz priekšu notīrīšanu"
+
+msgid "Redo connect"
+msgstr "Atsaukt uz priekšu pieslēgšanos"
+
+msgid "Redo cut"
+msgstr "Atsaukt uz priekšu izgriešanu"
+
+msgid "Redo disconnect"
+msgstr "Atsaukt uz priekšu atslēgšanos"
+
+msgid "Redo duplicate"
+msgstr "Atsaukt uz priekšu dublēšanu"
+
+msgid "Redo motion"
+msgstr "Atsaukt uz priekšu kustību"
+
+msgid "Redo paste"
+msgstr "Atsaukt uz priekšu ielīmēšanu"
+
+msgid "Redo typing"
+msgstr "Atsaukt uz priekšu rakstīšanu"
+
+msgid "Report a bug"
+msgstr "Ziņot par kļūdu"
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Right"
+msgstr "Pa labi"
+
+msgid "Sample rate:"
+msgstr "Parauga ātrums:"
+
+msgid "Save"
+msgstr "Saglabāt"
+
+msgid "Save As..."
+msgstr "Saglabāt kā..."
+
+msgid "Save application to..."
+msgstr ""
+
+msgid "Save contents"
+msgstr "Saglabāt saturu"
+
+msgid "Scale"
+msgstr "Mērogs"
+
+msgid "Search in"
+msgstr "Meklēt"
+
+msgid "Select All"
+msgstr "Iezīmēt visu"
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Sūtīt (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Nosūtīt Pd ziņu"
+
+msgid "Send symbol:"
+msgstr "Sūtīt simbolu:"
+
+msgid "Setting embedded preferences..."
+msgstr "Palīdzība"
+
+msgid "Setting patch name..."
+msgstr ""
+
+msgid "Size:"
+msgstr "Izmērs:"
+
+msgid "Start Here!"
+msgstr ""
+
+msgid "Startup flags:"
+msgstr "Sākuma karogi:"
+
+msgid "Steady on click"
+msgstr "Drošs uz klikšķa"
+
+msgid "Stretch"
+msgstr "Izstiept"
+
+msgid "Symbol"
+msgstr "Simbols"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr "Testēd Audio un MIDI..."
+
+msgid "Test label"
+msgstr "Pārbaudīt birku"
+
+msgid "Tidy Up"
+msgstr "Satīrīt"
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Top"
+msgstr "Augšā"
+
+msgid "Undo"
+msgstr "Atsaukt"
+
+msgid "Undo clear"
+msgstr "Atsaukt notīrīšanu"
+
+msgid "Undo connect"
+msgstr "Atsaukt pieslēgšanos"
+
+msgid "Undo cut"
+msgstr "Atsaukt izgriešanu"
+
+msgid "Undo disconnect"
+msgstr "Atsaukt atslēgšanos"
+
+msgid "Undo duplicate"
+msgstr "Atsaukt dublēšanu"
+
+msgid "Undo motion"
+msgstr "Atsaukt kustību"
+
+msgid "Undo paste"
+msgstr "Atsaukt ielīmēšanu"
+
+msgid "Undo typing"
+msgstr "Atsaukt rakstīšanu"
+
+msgid "Upper:"
+msgstr "Augšējais:"
+
+msgid "Use callbacks"
+msgstr "Lietot atzvanus"
+
+msgid "Use multiple ALSA devices"
+msgstr "Lietot vairākas ALSA ierīces"
+
+msgid "Use multiple devices"
+msgstr "Lietot vairākas ierīces"
+
+msgid "Use standard extensions"
+msgstr "Lietot standarta paplašinājumus"
+
+msgid "VU Meter"
+msgstr "Skaņas Vienību Skaitītājs"
+
+msgid "Verbose"
+msgstr "Runīgs"
+
+msgid "Vradio"
+msgstr "Vradio"
+
+msgid "Vslider"
+msgstr "Vslīdnis"
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "BRĪDINĀJUMS: pdtk_canvas_dialog ir saņēmis nezināmu graphme karogu"
+
+msgid "Width:"
+msgstr "Platums:"
+
+msgid "Window"
+msgstr ""
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X un Y"
+
+msgid "X offset"
+msgstr "X nobīde"
+
+msgid "X only"
+msgstr "Tikai X"
+
+msgid "X range, from"
+msgstr "X diapazons, no"
+
+msgid "X units per pixel:"
+msgstr "X vienības pikselī:"
+
+msgid "Y offset"
+msgstr "Y nobīde"
+
+msgid "Y only"
+msgstr "Tikai Y"
+
+msgid "Y range, from"
+msgstr "Y diapazons, no"
+
+msgid "Y units per pixel:"
+msgstr "Y vienības pikselī:"
+
+msgid "Zoom"
+msgstr "Palielināt"
+
+msgid "all"
+msgstr "viss"
+
+msgid "audio I/O error"
+msgstr "audio I/O kļūda"
+
+msgid "bottom:"
+msgstr "apakša"
+
+msgid "debug"
+msgstr "atkļūdot"
+
+msgid "error"
+msgstr "kļūda"
+
+msgid "fatal"
+msgstr "fatāls"
+
+msgid "for:"
+msgstr "par:"
+
+msgid "height:"
+msgstr "augstums:"
+
+msgid "hold:"
+msgstr "turēt:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "pārtraukt:"
+
+msgid "left:"
+msgstr "pa kreisi:"
+
+msgid "lin"
+msgstr "lin"
+
+msgid "log"
+msgstr "ziņojumi"
+
+msgid "log-height:"
+msgstr "ziņojumu-augstums:"
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr "normāls"
+
+msgid "really quit?"
+msgstr ""
+
+msgid "right:"
+msgstr "pa labi:"
+
+msgid "size:"
+msgstr "izmērs:"
+
+msgid "to"
+msgstr "līdz"
+
+msgid "top:"
+msgstr "augša:"
+
+msgid "value:"
+msgstr "vērtība:"
+
+msgid "width:"
+msgstr "platums:"

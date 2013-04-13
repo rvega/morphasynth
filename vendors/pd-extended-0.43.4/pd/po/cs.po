@@ -1,0 +1,872 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+# Aleš Černý <ales.cerny@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-18 12:15+0000\n"
+"Last-Translator: ales_cerny <ales.cerny@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, tcl-format
+msgid "%s Font"
+msgstr "%s Font"
+
+#, tcl-format
+msgid "%s Properties"
+msgstr "%s Vlastnosti"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr ""
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr ""
+
+msgid "(Tcl) INVALID COMMAND NAME: "
+msgstr "(Tcl) NEPLATNÉ JMÉNO PŘÍKAZU:"
+
+msgid "(Tcl) MISSING CLOSE-BRACE '}': "
+msgstr ""
+
+msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
+msgstr ""
+
+msgid "(Tcl) UNHANDLED ERROR: "
+msgstr "(Tcl) NEOŠETŘENÁ CHYBA:"
+
+msgid "(same as input device) ..............      "
+msgstr "(stejné jako vstupní zařízení) .............."
+
+msgid "(use arrow keys for history)"
+msgstr "(použijte klávesy se šipkami pro historii)"
+
+msgid "-----------output-range:-----------"
+msgstr ""
+
+msgid "----------dimensions(pix):-----------"
+msgstr ""
+
+msgid "--------dimensions(pix)(pix):--------"
+msgstr ""
+
+msgid "--------flash-time(ms)(ms):---------"
+msgstr ""
+
+msgid "-------dimensions(digits)(pix):-------"
+msgstr ""
+
+msgid "------selectable_dimensions(pix):------"
+msgstr ""
+
+msgid "------visible_rectangle(pix)(pix):------"
+msgstr ""
+
+msgid "ALSA MIDI Settings"
+msgstr "Nstavení ALSA MIDI"
+
+msgid "About Pd"
+msgstr "O PD"
+
+msgid "Add new library"
+msgstr "Přidat novou knihovnu"
+
+msgid "Appearance on parent patch"
+msgstr ""
+
+msgid "Apply"
+msgstr "Použít"
+
+msgid "Array"
+msgstr "Pole"
+
+msgid "Array Properties"
+msgstr "Vlasnosti pole"
+
+msgid "Associated Files"
+msgstr ""
+
+msgid "Atom Box Properties"
+msgstr "Vlastnosti Atom Boxu"
+
+msgid "Audio Settings"
+msgstr "Nastavení zvuku"
+
+msgid "Audio Settings..."
+msgstr "Nastavení zvuku..."
+
+msgid "Autopatch"
+msgstr ""
+
+msgid "Autotips"
+msgstr "Automatické Tipy"
+
+msgid "Background"
+msgstr "Pozadí"
+
+msgid "Background color"
+msgstr "Barva pozadí"
+
+msgid "Bang"
+msgstr ""
+
+msgid "Bezier curve"
+msgstr "Bézierovu křivku"
+
+msgid "Block size:"
+msgstr "Velikost bloku:"
+
+msgid "Bottom"
+msgstr "Spodní"
+
+msgid "Bring All to Front"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr ""
+
+msgid "Canvas"
+msgstr ""
+
+msgid "Canvas Properties"
+msgstr "Vlastnosti plátna"
+
+msgid "Channels:"
+msgstr "Kanály:"
+
+msgid "Clear Console"
+msgstr "Vyčistit konzoly"
+
+msgid "Clear Menu"
+msgstr ""
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Close this window?"
+msgstr "Zavřít toto okno?"
+
+msgid "Colors"
+msgstr "Barvy"
+
+msgid "Comment"
+msgstr "Komentář"
+
+msgid "Compose color"
+msgstr "Skložit barvu"
+
+msgid "Configuring Info.plist..."
+msgstr ""
+
+msgid "Copy"
+msgstr "kopírovat"
+
+msgid "Copying current patch..."
+msgstr "Kopírování aktuální opravy ..."
+
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
+#, tcl-format
+msgid "Couldn't find '%s' in %s"
+msgstr "Nemohu najít '%s' v %s"
+
+msgid "Cut"
+msgstr "Vyjmout"
+
+msgid "DSP"
+msgstr "DSP"
+
+msgid "DSP Off"
+msgstr "DSP Off"
+
+msgid "DSP On"
+msgstr "DSP On"
+
+msgid "Data Properties"
+msgstr "Vlastnosti dat"
+
+#, tcl-format
+msgid "Default font: %s"
+msgstr ""
+
+msgid "Defeat real-time scheduling"
+msgstr ""
+
+msgid "Delay (msec):"
+msgstr "Zpoždění (ms):"
+
+msgid "Delete array"
+msgstr "Smazat pole"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
+
+#, tcl-format
+msgid "Discard changes to '%s'?"
+msgstr "Zahodit změny '%s'?"
+
+#, tcl-format
+msgid "Do you want to save the changes you made in '%s'?"
+msgstr "Chcete uložit změny provedené v '%s'?"
+
+msgid "Draw as:"
+msgstr "Kreslit jako:"
+
+msgid "Duplicate"
+msgstr "Duplikovat"
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "Edit Mode"
+msgstr ""
+
+msgid "Edit library"
+msgstr "Upravit knihovnu"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr ""
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Find"
+msgstr "Najít"
+
+msgid "Find Again"
+msgstr "Najít další"
+
+msgid "Find Last Error"
+msgstr "Najít poslední chybu"
+
+msgid "Find..."
+msgstr "Najít..."
+
+msgid "Font"
+msgstr "Font"
+
+msgid "Font Size"
+msgstr "Velikost fontu"
+
+msgid "Foreground color"
+msgstr "Barva popředí"
+
+msgid "Front"
+msgstr "Přední"
+
+msgid "Graph"
+msgstr ""
+
+msgid "Graph-On-Parent"
+msgstr ""
+
+msgid "Help"
+msgstr "Nápověda"
+
+msgid "Help Browser"
+msgstr "Prohlížeč nápovědy"
+
+msgid "Hide object name and arguments"
+msgstr "Skrýt název objektu a argumenty"
+
+msgid "Hradio"
+msgstr ""
+
+msgid "Hslider"
+msgstr ""
+
+msgid "IN"
+msgstr "IN"
+
+#, tcl-format
+msgid "Ignoring '%s': doesn't look like a Pd-file"
+msgstr ""
+
+msgid "In Ports:"
+msgstr "Vstupní porty:"
+
+msgid "Init"
+msgstr "Inicializace"
+
+msgid "Input device 1:"
+msgstr "Vstupní zařízení 1:"
+
+msgid "Input device 2:"
+msgstr "Vstupní zařízení 2:"
+
+msgid "Input device 3:"
+msgstr "Vstupní zařízení 3:"
+
+msgid "Input device 4:"
+msgstr "Vstupní zařízení 4:"
+
+msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
+msgstr ""
+
+msgid "Jack not installed!"
+msgstr ""
+
+msgid "Jack not running!"
+msgstr ""
+
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr ""
+
+msgid "Jump on click"
+msgstr ""
+
+msgid "Label"
+msgstr "Štítek"
+
+msgid "Label color"
+msgstr "Barva štítku"
+
+msgid "Last graph"
+msgstr "Posledního grafu"
+
+msgid "Left   "
+msgstr ""
+
+msgid "Limits"
+msgstr "Limity"
+
+msgid "Load Meter"
+msgstr ""
+
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr ""
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr ""
+
+msgid "Log:"
+msgstr "Log:"
+
+msgid "Lower:"
+msgstr "Dolní:"
+
+msgid "MIDI Settings"
+msgstr "Nastavení MIDI"
+
+msgid "MIDI Settings..."
+msgstr "Nastavení MIDI..."
+
+msgid "Magic Glass"
+msgstr ""
+
+msgid "Make app from folder..."
+msgstr ""
+
+msgid "Make app from patch..."
+msgstr ""
+
+msgid "Making App"
+msgstr ""
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr ""
+
+msgid "Margin:"
+msgstr "Okraj:"
+
+msgid "Match whole word only"
+msgstr "Pouze celá slova"
+
+msgid "Max Binary Files"
+msgstr ""
+
+msgid "Max Help Files"
+msgstr ""
+
+msgid "Max Patch Files"
+msgstr ""
+
+msgid "Max Text Files"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Message..."
+msgstr "Zpráva ..."
+
+msgid "Messages"
+msgstr "Zprávy"
+
+msgid "Minimize"
+msgstr ""
+
+msgid "Name:"
+msgstr "Jmeno"
+
+msgid "New"
+msgstr "Nový"
+
+msgid "New graph"
+msgstr "Nového grafu"
+
+msgid "Next Window"
+msgstr "Další okno"
+
+msgid "No init"
+msgstr "Bez inicializace"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
+
+msgid "Number"
+msgstr "Číslo"
+
+msgid "Number2"
+msgstr "Číslo2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "OK (Ctrl t)"
+msgstr "OK (Ctrl t)"
+
+msgid "OUT"
+msgstr "OUT"
+
+msgid "Object"
+msgstr "Objekt"
+
+msgid "Open"
+msgstr "Otevřít"
+
+msgid "Open List View..."
+msgstr "Otevření Seznamu zobrazení ..."
+
+msgid "Open Recent"
+msgstr "Nedávno otevřené"
+
+msgid "Out Ports:"
+msgstr "Výstupní porty:"
+
+msgid "Output device 1:"
+msgstr "Výstupní zařízení 1:"
+
+msgid "Output device 2:"
+msgstr "Výstupní zařízení 2:"
+
+msgid "Output device 3:"
+msgstr "Výstupní zařízení 3:"
+
+msgid "Output device 4:"
+msgstr "Výstupní zařízení 4:"
+
+msgid "Parent Window"
+msgstr "Mateřské okno"
+
+msgid "Paste"
+msgstr "vložit"
+
+msgid "Pd Files"
+msgstr ""
+
+msgid "Pd Help Browser..."
+msgstr ""
+
+msgid "Pd libraries to load on startup"
+msgstr "Načíst při startu Pd knihovny "
+
+msgid "Pd search path for objects, help, fonts, and other files"
+msgstr ""
+
+msgid "Pd window"
+msgstr "Pd okno"
+
+msgid "Pd-extended"
+msgstr "Rozšířené-PD"
+
+msgid "Perf Mode"
+msgstr ""
+
+msgid "Points"
+msgstr "Body"
+
+msgid "Polygon"
+msgstr "Polygon"
+
+msgid "Preferences"
+msgstr "Předvolby"
+
+msgid "Previous Window"
+msgstr "Předešlé okno"
+
+msgid "Print..."
+msgstr "Tisk..."
+
+msgid "Properties"
+msgstr "Vlastnosti"
+
+msgid "Put"
+msgstr "Vložit"
+
+msgid "Put array into:"
+msgstr "Vložit pole do:"
+
+msgid "Quit"
+msgstr "Odejít"
+
+msgid "Quit Pd-extended, start Jack, then try again."
+msgstr ""
+
+msgid "Range and size"
+msgstr "Rozmezí a velikost"
+
+msgid "Real-time scheduling"
+msgstr "Plánování v reálném čase"
+
+msgid "Receive symbol:"
+msgstr "Přijmout symbol:"
+
+msgid "Redo"
+msgstr "Znovu"
+
+msgid "Redo clear"
+msgstr ""
+
+msgid "Redo connect"
+msgstr ""
+
+msgid "Redo cut"
+msgstr ""
+
+msgid "Redo disconnect"
+msgstr ""
+
+msgid "Redo duplicate"
+msgstr ""
+
+msgid "Redo motion"
+msgstr ""
+
+msgid "Redo paste"
+msgstr ""
+
+msgid "Redo typing"
+msgstr ""
+
+msgid "Report a bug"
+msgstr "Nahlásit chybu"
+
+msgid "Reset to Defaults"
+msgstr "Obnovit výchozí nastavení"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
+msgid "Right"
+msgstr "Levý"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr ""
+
+msgid "Sample rate:"
+msgstr "Vzorkovací frekvence:"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Save As..."
+msgstr "Uložit jako..."
+
+msgid "Save application to..."
+msgstr "Uložit aplikaci do..."
+
+msgid "Save contents"
+msgstr "Uložit obsah"
+
+msgid "Scale"
+msgstr "Měřítko"
+
+msgid "Search in"
+msgstr "Najít v"
+
+msgid "Select All"
+msgstr "Vybrat vše"
+
+msgid "Select name for app to build...\n"
+msgstr ""
+
+msgid "Send (Ctrl s)"
+msgstr "Odeslat (Ctrl s)"
+
+msgid "Send a Pd message"
+msgstr "Odeslat zprávu Pd"
+
+msgid "Send symbol:"
+msgstr "Poslat symbol:"
+
+msgid "Setting embedded preferences..."
+msgstr "Nastavení vložených předvoleb ..."
+
+msgid "Setting patch name..."
+msgstr "Nastavení názvu opravy ..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr ""
+
+msgid "Size:"
+msgstr "Velikost:"
+
+msgid "Start Here!"
+msgstr "Začněte zde!"
+
+msgid "Startup flags:"
+msgstr "Startovací praporek:"
+
+msgid "Steady on click"
+msgstr ""
+
+msgid "Stretch"
+msgstr "Roztažení"
+
+msgid "Symbol"
+msgstr "Symbol"
+
+msgid "Tcl:"
+msgstr "Tcl:"
+
+msgid "Test Audio and MIDI..."
+msgstr ""
+
+msgid "Test label"
+msgstr ""
+
+msgid "Tidy Up"
+msgstr ""
+
+msgid "Toggle"
+msgstr ""
+
+msgid "Top"
+msgstr "Vrchní"
+
+msgid "Undo"
+msgstr "Zpět"
+
+msgid "Undo clear"
+msgstr "Vrátit smazání"
+
+msgid "Undo connect"
+msgstr "Vrátit připojení"
+
+msgid "Undo cut"
+msgstr "Vrátit vystřižení"
+
+msgid "Undo disconnect"
+msgstr "Vrátit odpojení"
+
+msgid "Undo duplicate"
+msgstr "Vrátit duplikaci"
+
+msgid "Undo motion"
+msgstr ""
+
+msgid "Undo paste"
+msgstr "Vrátit vložení"
+
+msgid "Undo typing"
+msgstr ""
+
+msgid "Upper:"
+msgstr "Horní:"
+
+msgid "Use callbacks"
+msgstr "Použití zpětná volání"
+
+msgid "Use multiple ALSA devices"
+msgstr ""
+
+msgid "Use multiple devices"
+msgstr "Použít více zařízení"
+
+msgid "Use standard extensions"
+msgstr "Použít standardní rozšíření"
+
+msgid "VU Meter"
+msgstr ""
+
+msgid "Verbose"
+msgstr "Upovídaný"
+
+msgid "Vradio"
+msgstr ""
+
+msgid "Vslider"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "UPOZORNĚNÍ: neznámé graphme praporky přijaté v pdtk_canvas_dialog"
+
+msgid "Width:"
+msgstr "Šířka:"
+
+msgid "Window"
+msgstr "Okno"
+
+msgid "Would you like to open JackOSX.com to download Jack?"
+msgstr ""
+
+msgid "Would you like to open JackPilot to start Jack?"
+msgstr ""
+
+msgid "X and Y"
+msgstr "X a Y"
+
+msgid "X offset"
+msgstr "X offset"
+
+msgid "X only"
+msgstr "Jen X"
+
+msgid "X range, from"
+msgstr "X rozsah, od"
+
+msgid "X units per pixel:"
+msgstr "X jednotek na pixel:"
+
+msgid "Y offset"
+msgstr "Y offset"
+
+msgid "Y only"
+msgstr "Jen Y"
+
+msgid "Y range, from"
+msgstr "Y rozsah, od"
+
+msgid "Y units per pixel:"
+msgstr "Y jednotek na pixel:"
+
+msgid "Zoom"
+msgstr ""
+
+msgid "all"
+msgstr "vše"
+
+msgid "audio I/O error"
+msgstr "chyba zvukového I/O "
+
+msgid "bottom:"
+msgstr "dole:"
+
+msgid "converted Max binary to text format:"
+msgstr ""
+
+msgid "debug"
+msgstr "ladit"
+
+msgid "error"
+msgstr "chyba"
+
+msgid "fatal"
+msgstr ""
+
+msgid "for:"
+msgstr "pro:"
+
+msgid "height:"
+msgstr "výška:"
+
+msgid "hold:"
+msgstr "přidržet:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
+msgid "intrrpt:"
+msgstr "přerušit:"
+
+msgid "left:"
+msgstr "vlevo:"
+
+msgid "lin"
+msgstr "lineárně"
+
+msgid "log"
+msgstr "log"
+
+msgid "log-height:"
+msgstr ""
+
+msgid "max:"
+msgstr "max:"
+
+msgid "min:"
+msgstr "min:"
+
+msgid "normal"
+msgstr ""
+
+msgid "really quit?"
+msgstr "Opravdu ukončit?"
+
+msgid "right:"
+msgstr "vpravo"
+
+msgid "size:"
+msgstr "velikost:"
+
+msgid "to"
+msgstr "do"
+
+msgid "top:"
+msgstr "nahoře:"
+
+msgid "value:"
+msgstr "hodnota:"
+
+msgid "width:"
+msgstr "šířka:"

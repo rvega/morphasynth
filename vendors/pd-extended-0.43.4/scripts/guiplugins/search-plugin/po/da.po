@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <mathiasbredholt@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 21:04-0500\n"
+"PO-Revision-Date: 2013-01-01 08:34+0000\n"
+"Last-Translator: mathiasbredholt <mathiasbredholt@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Advanced search options"
+msgstr ""
+
+msgid "All About Pd"
+msgstr "Alt om Pd"
+
+msgid "All documents"
+msgstr "Alle dokumenter"
+
+msgid "Audio Signals"
+msgstr ""
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "Gennemse %s%s"
+
+msgid "Browse Advanced Topics"
+msgstr ""
+
+msgid "Browse Introductory Topics"
+msgstr "Gennemse Introduktionsemner"
+
+msgid "Browse the Documentation"
+msgstr "Gennemse Dokumentationen"
+
+msgid "Control Structure"
+msgstr "Kontrolstruktur"
+
+msgid "Data Structures"
+msgstr ""
+
+msgid "Dynamic Patching"
+msgstr ""
+
+msgid "Enter search terms"
+msgstr ""
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr ""
+
+msgid "Error"
+msgstr "Fejl"
+
+msgid "External Pd libraries"
+msgstr "Eksterne Pd biblioteker"
+
+msgid "External libraries"
+msgstr ""
+
+msgid "Found "
+msgstr "Fandt"
+
+msgid "HTML manual for Pure Data"
+msgstr "HTML manual til Pure Data"
+
+msgid "Help"
+msgstr "Hjælp"
+
+msgid "Home"
+msgstr ""
+
+msgid "Implementation Details"
+msgstr ""
+
+msgid "Keywords:"
+msgstr "Stikord:"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr ""
+
+msgid "Match all terms"
+msgstr "Match alle søgeord"
+
+msgid "Match whole words"
+msgstr "Match hele ord"
+
+msgid "Networking"
+msgstr ""
+
+msgid "No DESCRIPTION tag."
+msgstr "Ingen DESCRIPTION tag."
+
+msgid "Object Help Patches"
+msgstr "Objekt Hjælpepatches"
+
+#, tcl-format
+msgid "Open %s"
+msgstr "Åben %s"
+
+msgid "Pd Manual"
+msgstr "Pd Manual"
+
+msgid "Pure Data Search"
+msgstr "Pure Data Søgning"
+
+msgid "Report a bug"
+msgstr "Rapporter en fejl"
+
+msgid "Search"
+msgstr "Søg"
+
+msgid "Search and Browse Documentation"
+msgstr "Søg og gennemse Hjælpe-filer"
+
+msgid "Search by Category"
+msgstr ""
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "Søg efter mønsteret: %s"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr ""
+
+msgid "The \"doc\" directory"
+msgstr ""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "Pd Søgningsværktøjet kan ikke bruge det indtastede søgeord. Tcl-fortolkeren gav følgende fejl:"
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "Det indtastede søgeord skal være formateret som en korrekt tcl liste. Dette er normalt ikke et problem undtagen hvis du bruge specielle tegn som parenteser eller umatchede citationstegn i din søgning. For mere info om tcl lister, gå til:"
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "Det indtastede søgeord skal have den korrekte syntaks for et regulært udtryk i Tcl. Dette er normalt ikke et problem undtagen hvis du bruger specielle tegn til at skrive et komplekst regulært udtryk. For mere info omkring regulære udtryk i Tcl, gå til:"
+
+msgid "This help patch is for an internal Pd class"
+msgstr ""
+
+msgid "Tutorials"
+msgstr "Vejledninger"
+
+msgid "Uncategorized"
+msgstr "Ikke-kategoriseret"
+
+msgid "Writing Externals"
+msgstr ""
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr ""
+
+msgid "control rate objects"
+msgstr ""
+
+msgid "convert from one set of units to another"
+msgstr ""
+
+msgid "create a ramp between a starting and ending value"
+msgstr ""
+
+msgid "create or manage data structures"
+msgstr ""
+
+msgid "create or manipulate an array"
+msgstr ""
+
+msgid "creating graphical objects in Pure Data"
+msgstr ""
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr ""
+
+msgid "file format specification, license text, etc."
+msgstr ""
+
+msgid "general information from the author"
+msgstr "generel information fra forfatteren"
+
+msgid "graphical user interface"
+msgstr ""
+
+msgid ""
+"help patches that are still under construction or otherwise are incomplete"
+msgstr ""
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr ""
+
+msgid "how to code control and signal objects in C"
+msgstr ""
+
+msgid "manipulate or store a symbol"
+msgstr ""
+
+msgid "measure and/or manipulate time"
+msgstr ""
+
+msgid "no DESCRIPTION tag or values."
+msgstr ""
+
+msgid "object describes itself as being bandlimited"
+msgstr ""
+
+msgid "object itself is written in Pure Data"
+msgstr ""
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr ""
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr ""
+
+msgid "object that filters incoming data"
+msgstr ""
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr ""
+
+msgid "object that provides MIDI functionality"
+msgstr ""
+
+msgid "object that reads from and/or writes to the file system"
+msgstr ""
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr ""
+
+msgid "object whose main function is to store data"
+msgstr ""
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr ""
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr ""
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr ""
+
+msgid "output a random value, list, signal, or other random data"
+msgstr ""
+
+msgid "pass messages or data without patch wires"
+msgstr ""
+
+msgid "perform some sort of analysis on the incoming signal or value"
+msgstr ""
+
+msgid "programmatically create/destroy Pd objects"
+msgstr ""
+
+msgid "provide trigonometric functionality"
+msgstr ""
+
+msgid "provides access to or sends/receives data over a network"
+msgstr ""
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr ""
+
+msgid "sending data over networks with Pd"
+msgstr ""
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr ""
+
+msgid "store or manipulate any type of data"
+msgstr ""
+
+msgid "text of the license for this software"
+msgstr "denne softwares licens"
+
+msgid "tutorials for audio signals"
+msgstr ""
+
+msgid "tutorials for control objects"
+msgstr ""

@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
+#   <gnoownow10@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pure Data\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 21:04-0500\n"
+"PO-Revision-Date: 2013-01-01 08:34+0000\n"
+"Last-Translator: gnoownow10 <gnoownow10@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Advanced search options"
+msgstr ""
+
+msgid "All About Pd"
+msgstr "Pd를 파헤친다!"
+
+msgid "All documents"
+msgstr "모든 문서"
+
+msgid "Audio Signals"
+msgstr ""
+
+#, tcl-format
+msgid "Browse %s%s"
+msgstr "%s%s 탐색하기"
+
+msgid "Browse Advanced Topics"
+msgstr ""
+
+msgid "Browse Introductory Topics"
+msgstr ""
+
+msgid "Browse the Documentation"
+msgstr ""
+
+msgid "Control Structure"
+msgstr ""
+
+msgid "Data Structures"
+msgstr ""
+
+msgid "Dynamic Patching"
+msgstr ""
+
+msgid "Enter search terms"
+msgstr ""
+
+msgid "Enter terms above. Use the dropdown menu to filter by category."
+msgstr ""
+
+msgid "Error"
+msgstr "오류"
+
+msgid "External Pd libraries"
+msgstr ""
+
+msgid "External libraries"
+msgstr ""
+
+msgid "Found "
+msgstr "발견"
+
+msgid "HTML manual for Pure Data"
+msgstr ""
+
+msgid "Help"
+msgstr "도움말"
+
+msgid "Home"
+msgstr ""
+
+msgid "Implementation Details"
+msgstr ""
+
+msgid "Keywords:"
+msgstr ""
+
+msgid "Manual"
+msgstr "설명서"
+
+msgid ""
+"Many help documents are categorized using tags. Click a link below to find "
+"all documents with that tag."
+msgstr ""
+
+msgid "Match all terms"
+msgstr "모든 단어 일치"
+
+msgid "Match whole words"
+msgstr "단어 전체 일치"
+
+msgid "Networking"
+msgstr ""
+
+msgid "No DESCRIPTION tag."
+msgstr ""
+
+msgid "Object Help Patches"
+msgstr "도움말 패치"
+
+#, tcl-format
+msgid "Open %s"
+msgstr "%s 열기"
+
+msgid "Pd Manual"
+msgstr ""
+
+msgid "Pure Data Search"
+msgstr "Pure Data 검색"
+
+msgid "Report a bug"
+msgstr "버그 신고"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "Search and Browse Documentation"
+msgstr "관련 문서 검색 및 탐색"
+
+msgid "Search by Category"
+msgstr ""
+
+#, tcl-format
+msgid "Search for pattern: %s"
+msgstr "%s를 찾기"
+
+msgid "Sorry, can't find a README file for this object's library."
+msgstr ""
+
+msgid "The \"doc\" directory"
+msgstr ""
+
+msgid ""
+"The Pd Search Tool can't use the search term you entered. The tcl "
+"interpreter gave the following error:"
+msgstr "입력하신 검색어는 Pd 검색 도구에서 사용할 수 없습니다. tcl 해석기가 다음과 같은 오류를 보고했습니다. "
+
+msgid ""
+"The search term you enter must be formatted as a proper tcl list. This "
+"usually isn't an issue unless you use some special characters like brackets "
+"or unmatched quotes in your search. For more info on tcl lists, see:"
+msgstr "입력하신 검색어는 tcl 목록 형식을 따라야 합니다. 괄호나 짝 없는 따옴표와 같은 특수 문자를 쓰지 않는 이상 이 점은 크게 신경쓰지 않아도 될 것입니다. tcl 목록 형식에 대해 자세히 알고 싶다면 다음을 읽어보십시요: "
+
+msgid ""
+"The search term you enter must have the proper syntax for a regular "
+"expression in Tcl. This usually isn't an issue unless you use special "
+"characters to create a complex regular expression. For more info on regular "
+"expressions in Tcl, see:"
+msgstr "입력하신 검색어는 tcl에서 사용하는 정규직 문법을 지켜야 합니다. 특수 문자로 복잡한 정규식을 쓰려는 경우가 아니라면 이 점은 크게 신경 쓰지 않아도 될 것입니다. tcl에서 사용하는 정규식에 대해 더 알고 싶으시다면, 다음을 읽어보싶시요: "
+
+msgid "This help patch is for an internal Pd class"
+msgstr ""
+
+msgid "Tutorials"
+msgstr "지침서"
+
+msgid "Uncategorized"
+msgstr "미분류"
+
+msgid "Writing Externals"
+msgstr ""
+
+msgid "audiorate object (so called \"tilde\" object)"
+msgstr ""
+
+msgid "control rate objects"
+msgstr ""
+
+msgid "convert from one set of units to another"
+msgstr ""
+
+msgid "create a ramp between a starting and ending value"
+msgstr ""
+
+msgid "create or manage data structures"
+msgstr ""
+
+msgid "create or manipulate an array"
+msgstr ""
+
+msgid "creating graphical objects in Pure Data"
+msgstr ""
+
+msgid "dynamic instantiation/deletion of objects or patches"
+msgstr ""
+
+msgid "file format specification, license text, etc."
+msgstr ""
+
+msgid "general information from the author"
+msgstr ""
+
+msgid "graphical user interface"
+msgstr ""
+
+msgid ""
+"help patches that are still under construction or otherwise are incomplete"
+msgstr ""
+
+msgid ""
+"help patches that cannot be accessed by right-clicking \"help\" for the "
+"corresponding object"
+msgstr ""
+
+msgid "how to code control and signal objects in C"
+msgstr ""
+
+msgid "manipulate or store a symbol"
+msgstr ""
+
+msgid "measure and/or manipulate time"
+msgstr ""
+
+msgid "no DESCRIPTION tag or values."
+msgstr ""
+
+msgid "object describes itself as being bandlimited"
+msgstr ""
+
+msgid "object itself is written in Pure Data"
+msgstr ""
+
+msgid ""
+"object that can play, manipulate, and/or save a sound file (wav, ogg, flac, "
+"mp3, etc.)"
+msgstr ""
+
+msgid ""
+"object that can report on or manipulate global data associated with the "
+"running instance of Pd"
+msgstr ""
+
+msgid "object that filters incoming data"
+msgstr ""
+
+msgid "object that manipulates, outputs, or stores a list"
+msgstr ""
+
+msgid "object that provides MIDI functionality"
+msgstr ""
+
+msgid "object that reads from and/or writes to the file system"
+msgstr ""
+
+msgid "object whose behavior only makes sense in terms of a Pure Data patch"
+msgstr ""
+
+msgid "object whose main function is to store data"
+msgstr ""
+
+msgid "object's behavior only makes sense in context of a canvas"
+msgstr ""
+
+msgid "object's behavior only makes sense inside an abstraction"
+msgstr ""
+
+#, tcl-format
+msgid "out of %s docs"
+msgstr ""
+
+msgid "output a random value, list, signal, or other random data"
+msgstr ""
+
+msgid "pass messages or data without patch wires"
+msgstr ""
+
+msgid "perform some sort of analysis on the incoming signal or value"
+msgstr ""
+
+msgid "programmatically create/destroy Pd objects"
+msgstr ""
+
+msgid "provide trigonometric functionality"
+msgstr ""
+
+msgid "provides access to or sends/receives data over a network"
+msgstr ""
+
+msgid "reference patches for key concepts and settings in Pd"
+msgstr ""
+
+msgid "sending data over networks with Pd"
+msgstr ""
+
+msgid ""
+"signal object that performs block-wide operations (as opposed to repeating "
+"the same operation for each sample of the block)"
+msgstr ""
+
+msgid "store or manipulate any type of data"
+msgstr ""
+
+msgid "text of the license for this software"
+msgstr ""
+
+msgid "tutorials for audio signals"
+msgstr ""
+
+msgid "tutorials for control objects"
+msgstr ""
