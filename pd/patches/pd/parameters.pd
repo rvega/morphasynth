@@ -1,0 +1,125 @@
+#N canvas 4 22 1276 756 10;
+#X obj -1120 -533 cnv 15 200 135 empty empty OSC1 20 12 0 11 -233017
+-66577 0;
+#X text -1116 -478 WAVEFORM;
+#X text -1117 -439 FINETUNE;
+#X obj -1120 -395 cnv 15 200 180 empty empty LFO1 20 12 0 11 -233017
+-66577 0;
+#X obj -1120 -202 cnv 15 200 180 empty empty ENVELOPE 20 12 0 11 -233017
+-66577 0;
+#X text -1119 -184 ATTACK;
+#X text -1118 -148 DECAY;
+#X text -1119 -111 SUSTAIN;
+#X text -1119 -75 RELEASE;
+#X text -1118 -380 FREQUENCY;
+#X text -1117 -341 WAVEFORM;
+#X obj -917 -533 cnv 15 200 135 empty empty OSC2 20 12 0 11 -233017
+-66577 0;
+#X text -1119 -520 AMPLITUDE;
+#X text -1118 -298 TO AMPLITUDE;
+#X obj -488 -533 cnv 15 200 180 empty empty LO_PASS 20 12 0 11 -233017
+-66577 0;
+#X text -476 -518 FREQUENCY;
+#X text -476 -480 RESONANCE;
+#X text -475 -441 KEYFOLLOW;
+#X text -476 -401 CONTOUR;
+#X obj -488 -350 cnv 15 200 180 empty empty HI_PASS 20 12 0 11 -233017
+-66577 0;
+#X text -478 -331 FREQUENCY;
+#X text -476 -254 KEYFOLLOW;
+#X text -477 -213 CONTOUR;
+#X obj -285 -533 cnv 15 225 180 empty empty LO_PASS_ENVELOPE 20 12
+0 11 -233017 -66577 0;
+#X text -279 -516 ATTACK;
+#X text -277 -478 DECAY;
+#X text -277 -439 SUSTAIN;
+#X text -278 -398 RELEASE;
+#X obj -57 -533 cnv 15 210 180 empty empty LO_PASS_LFO 20 12 0 11 -233017
+-66577 0;
+#X text -51 -512 FREQUENCY;
+#X text -51 -477 WAVEFORM;
+#X text -53 -441 AMPLITUDE;
+#X obj -1117 -503 map osc1-amplitude 0 1 0.5 1;
+#X obj -285 -350 cnv 15 225 180 empty empty HI_PASS_ENVELOPE 20 12
+0 11 -233017 -66577 0;
+#X text -279 -330 ATTACK;
+#X text -278 -292 DECAY;
+#X text -278 -253 SUSTAIN;
+#X text -278 -213 RELEASE;
+#X obj -57 -350 cnv 15 210 180 empty empty HI_PASS_LFO 20 12 0 11 -233017
+-66577 0;
+#X text -53 -325 FREQUENCY;
+#X text -52 -274 WAVEFORM;
+#X text -52 -223 AMPLITUDE;
+#X obj -1116 -462 map osc1-waveform 0 1 0 1;
+#X obj -1116 -363 map lfo1-freq 0 200 0 2;
+#X obj -1116 -324 map lfo1-waveform 0 1 0 1;
+#X obj -1115 -424 map osc1-finetune -1 1 0.5 1;
+#X obj -474 -463 map lp-resonance 0 1 0 1;
+#X obj -474 -424 map lp-keyfollow 0 1 0 1;
+#X obj -475 -237 map hp-keyfollow 0 1 0 1;
+#X obj -475 -195 map hp-contour -5 5 0.5 1;
+#X obj -276 -423 map lp-envelope-s 0 1 1 1;
+#X obj -276 -382 map lp-envelope-r 0 10000 0.1 3;
+#X obj -277 -500 map lp-envelope-a 0 10000 0.1 3;
+#X obj -276 -462 map lp-envelope-d 0 10000 0.1 3;
+#X obj -50 -496 map lp-lfo-freq 0 200 0 2;
+#X obj -50 -460 map lp-lfo-waveform 0 1 0 1;
+#X obj -1117 -168 map envelope-a 0 10000 0.1 3;
+#X obj -1116 -132 map envelope-d 0 10000 0.1 3;
+#X obj -1117 -59 map envelope-r 0 10000 0.1 3;
+#X obj -1117 -95 map envelope-s 0 1 1 1;
+#X obj -277 -315 map hp-envelope-a 0 10000 0.1 3;
+#X obj -276 -277 map hp-envelope-d 0 10000 0.1 3;
+#X obj -276 -238 map hp-envelope-s 0 1 1 1;
+#X obj -276 -197 map hp-envelope-r 0 10000 0.1 3;
+#X obj -52 -309 map hp-lfo-freq 0 200 0 2;
+#X obj -52 -257 map hp-lfo-waveform 0 1 0 1;
+#X obj -1116 -281 map lfo1-to-amplitude 0 1 0 3;
+#X obj -1116 -240 map lfo1-to-freq 0 1 0 3;
+#X obj -474 -384 map lp-contour -10 10 0.5 1;
+#X obj -51 -425 map lp-lfo-amplitude -5 5 0 1;
+#X obj -50 -207 map hp-lfo-amplitude -5 5 0 1;
+#X text -1118 -257 TO FREQUENCY;
+#X obj -714 -533 cnv 15 210 135 empty empty OSC3 20 12 0 11 -233017
+-66577 0;
+#X text -908 -478 WAVEFORM;
+#X text -909 -439 FINETUNE;
+#X text -911 -520 AMPLITUDE;
+#X text -706 -478 WAVEFORM;
+#X text -707 -439 FINETUNE;
+#X text -709 -520 AMPLITUDE;
+#X obj -913 -503 map osc2-amplitude 0 1 0.5 1;
+#X obj -911 -462 map osc2-waveform 0 1 0 1;
+#X obj -911 -424 map osc2-finetune -1 1 0.5 1;
+#X obj -707 -503 map osc3-amplitude 0 1 0.5 1;
+#X obj -706 -462 map osc3-waveform 0 1 0 1;
+#X obj -705 -424 map osc3-finetune -1 1 0.5 1;
+#X obj -917 -395 cnv 15 200 180 empty empty LFO2 20 12 0 11 -233017
+-66577 0;
+#X text -913 -381 FREQUENCY;
+#X text -912 -342 WAVEFORM;
+#X text -913 -299 TO AMPLITUDE;
+#X text -913 -258 TO FREQUENCY;
+#X obj -714 -395 cnv 15 210 180 empty empty LFO3 20 12 0 11 -233017
+-66577 0;
+#X text -705 -381 FREQUENCY;
+#X text -704 -342 WAVEFORM;
+#X text -705 -299 TO AMPLITUDE;
+#X text -705 -258 TO FREQUENCY;
+#X obj -915 -364 map lfo2-freq 0 200 0 2;
+#X obj -915 -325 map lfo2-waveform 0 1 0 1;
+#X obj -916 -282 map lfo2-to-amplitude 0 1 0 3;
+#X obj -915 -241 map lfo2-to-freq 0 1 0 3;
+#X obj -703 -364 map lfo3-freq 0 200 0 2;
+#X obj -703 -325 map lfo3-waveform 0 1 0 1;
+#X obj -703 -282 map lfo3-to-amplitude 0 1 0 3;
+#X obj -702 -240 map lfo3-to-freq 0 1 0 3;
+#X obj -917 -202 cnv 15 200 180 empty empty NOISE 20 12 0 11 -233017
+-66577 0;
+#X text -909 -176 AMPLITUDE;
+#X obj -911 -158 map noise-amplitude 0 1 0 1;
+#X text -478 -294 RESONANCE;
+#X obj -475 -501 map lp-freq 20 20000 20000 3;
+#X obj -476 -278 map hp-resonance 0.05 100 1 3;
+#X obj -476 -315 map hp-freq 20 20000 20 3;

@@ -34,7 +34,7 @@
 #X text 731 -112 Phase synchronization;
 #X obj -22 208 oscillator;
 #X obj 359 -66 oscillator;
-#X obj 115 119 pow~;
+#X obj 115 121 pow~;
 #X connect 0 0 2 1;
 #X connect 1 0 2 0;
 #X connect 2 0 35 1;
