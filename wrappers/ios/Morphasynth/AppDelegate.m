@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "PdBase.h"
 
 extern void expr_setup(void);
 extern void limit_setup(void);
 extern void list2symbol_setup(void);
 extern void resonant_hpf_setup(void);
+extern void moog_lopass_setup(void);
 
 @implementation AppDelegate
 
@@ -71,13 +73,19 @@ extern void resonant_hpf_setup(void);
     limit_setup();
     list2symbol_setup();
     resonant_hpf_setup();
+    moog_lopass_setup();
     
 	NSString* path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"patches"];
     [PdBase setDelegate:self];
     [PdBase openFile:@"5.ios.pd" path:path];
     
-	[self.audioController setActive:YES];
-	//[self.audioController print];
+    // The patch might need it's path in the filesystem
+    [PdBase sendMessage:path withArguments:nil toReceiver:@"path"];
+
+	// Start DSP processing
+    [self.audioController setActive:YES];
+	
+    //[self.audioController print];
 }
 
 - (void)receivePrint:(NSString *)message {

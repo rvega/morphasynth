@@ -4,15 +4,15 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Morphasynth/AppDelegate.m"
-         timestampString = "385309696.787307"
+         timestampString = "387732457.104983"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
          landmarkName = "-receivePrint:"
          landmarkType = "5">
       </FileBreakpoint>
