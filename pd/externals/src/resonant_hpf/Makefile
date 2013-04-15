@@ -1,4 +1,5 @@
 NAME = resonant_hpf
+NAME_CAMEL = PdUIResonantHpf
 
 # Detect Linux or MacOS
 UNAME := $(shell uname -s)
@@ -15,6 +16,7 @@ all: $(NAME).dsp
 cpp:
 	faust -a puredata.cpp -o $(NAME).cpp $(NAME).dsp
 	sed -i '' 's/void faust_setup(/void $(NAME)_setup(/g' $(NAME).cpp
+	sed -i '' 's/PdUI/$(NAME_CAMEL)/g' $(NAME).cpp
 	echo "#define mydsp $(NAME)" > tmp && cat $(NAME).cpp >> tmp && rm $(NAME).cpp && mv tmp $(NAME).cpp
 
 clean_cpp:

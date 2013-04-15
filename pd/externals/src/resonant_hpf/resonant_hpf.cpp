@@ -140,15 +140,15 @@ struct ui_elem_t {
   float init, min, max, step;
 };
 
-class PdUI : public UI
+class PdUIResonantHpf : public UI
 {
 public:
   int nelems;
   ui_elem_t *elems;
 		
-  PdUI();
-  PdUI(const char *s);
-  virtual ~PdUI();
+  PdUIResonantHpf();
+  PdUIResonantHpf(const char *s);
+  virtual ~PdUIResonantHpf();
 
 protected:
   string path;
@@ -214,21 +214,21 @@ static string pathcat(string path, string label)
     return normpath(path+"/"+label);
 }
 
-PdUI::PdUI()
+PdUIResonantHpf::PdUIResonantHpf()
 {
   nelems = 0;
   elems = NULL;
   path = "";
 }
 
-PdUI::PdUI(const char *s)
+PdUIResonantHpf::PdUIResonantHpf(const char *s)
 {
   nelems = 0;
   elems = NULL;
   path = s?s:"";
 }
 
-PdUI::~PdUI()
+PdUIResonantHpf::~PdUIResonantHpf()
 {
   if (elems) {
     for (int i = 0; i < nelems; i++)
@@ -238,7 +238,7 @@ PdUI::~PdUI()
   }
 }
 
-inline void PdUI::add_elem(ui_elem_type_t type, const char *label)
+inline void PdUIResonantHpf::add_elem(ui_elem_type_t type, const char *label)
 {
   ui_elem_t *elems1 = (ui_elem_t*)realloc(elems, (nelems+1)*sizeof(ui_elem_t));
   if (elems1)
@@ -256,7 +256,7 @@ inline void PdUI::add_elem(ui_elem_type_t type, const char *label)
   nelems++;
 }
 
-inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone)
+inline void PdUIResonantHpf::add_elem(ui_elem_type_t type, const char *label, float *zone)
 {
   ui_elem_t *elems1 = (ui_elem_t*)realloc(elems, (nelems+1)*sizeof(ui_elem_t));
   if (elems1)
@@ -274,7 +274,7 @@ inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone)
   nelems++;
 }
 
-inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone,
+inline void PdUIResonantHpf::add_elem(ui_elem_type_t type, const char *label, float *zone,
 			  float init, float min, float max, float step)
 {
   ui_elem_t *elems1 = (ui_elem_t*)realloc(elems, (nelems+1)*sizeof(ui_elem_t));
@@ -293,7 +293,7 @@ inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone,
   nelems++;
 }
 
-inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone,
+inline void PdUIResonantHpf::add_elem(ui_elem_type_t type, const char *label, float *zone,
 			  float min, float max)
 {
   ui_elem_t *elems1 = (ui_elem_t*)realloc(elems, (nelems+1)*sizeof(ui_elem_t));
@@ -312,45 +312,45 @@ inline void PdUI::add_elem(ui_elem_type_t type, const char *label, float *zone,
   nelems++;
 }
 
-void PdUI::addButton(const char* label, float* zone)
+void PdUIResonantHpf::addButton(const char* label, float* zone)
 { add_elem(UI_BUTTON, label, zone); }
-void PdUI::addCheckButton(const char* label, float* zone)
+void PdUIResonantHpf::addCheckButton(const char* label, float* zone)
 { add_elem(UI_CHECK_BUTTON, label, zone); }
-void PdUI::addVerticalSlider(const char* label, float* zone, float init, float min, float max, float step)
+void PdUIResonantHpf::addVerticalSlider(const char* label, float* zone, float init, float min, float max, float step)
 { add_elem(UI_V_SLIDER, label, zone, init, min, max, step); }
-void PdUI::addHorizontalSlider(const char* label, float* zone, float init, float min, float max, float step)
+void PdUIResonantHpf::addHorizontalSlider(const char* label, float* zone, float init, float min, float max, float step)
 { add_elem(UI_H_SLIDER, label, zone, init, min, max, step); }
-void PdUI::addNumEntry(const char* label, float* zone, float init, float min, float max, float step)
+void PdUIResonantHpf::addNumEntry(const char* label, float* zone, float init, float min, float max, float step)
 { add_elem(UI_NUM_ENTRY, label, zone, init, min, max, step); }
 
-void PdUI::addHorizontalBargraph(const char* label, float* zone, float min, float max)
+void PdUIResonantHpf::addHorizontalBargraph(const char* label, float* zone, float min, float max)
 { add_elem(UI_H_BARGRAPH, label, zone, min, max); }
-void PdUI::addVerticalBargraph(const char* label, float* zone, float min, float max)
+void PdUIResonantHpf::addVerticalBargraph(const char* label, float* zone, float min, float max)
 { add_elem(UI_V_BARGRAPH, label, zone, min, max); }
 
-void PdUI::openTabBox(const char* label)
+void PdUIResonantHpf::openTabBox(const char* label)
 {
   if (!path.empty()) path += "/";
   path += mangle(label);
 }
-void PdUI::openHorizontalBox(const char* label)
+void PdUIResonantHpf::openHorizontalBox(const char* label)
 {
   if (!path.empty()) path += "/";
   path += mangle(label);
 }
-void PdUI::openVerticalBox(const char* label)
+void PdUIResonantHpf::openVerticalBox(const char* label)
 {
   if (!path.empty()) path += "/";
   path += mangle(label);
 }
-void PdUI::closeBox()
+void PdUIResonantHpf::closeBox()
 {
   int pos = path.rfind("/");
   if (pos < 0) pos = 0;
   path.erase(pos);
 }
 
-void PdUI::run() {}
+void PdUIResonantHpf::run() {}
 
 /******************************************************************************
 *******************************************************************************
@@ -493,7 +493,7 @@ struct t_faust {
   int fence; /* dummy field (not used) */
 #endif
   mydsp *dsp;
-  PdUI *ui;
+  PdUIResonantHpf *ui;
   string *label;
   int active, xfade, n_xfade, rate, n_in, n_out;
   t_sample **inputs, **outputs, **buf;
@@ -570,7 +570,7 @@ static void faust_dsp(t_faust *x, t_signal **sp)
   int n = sp[0]->s_n, sr = (int)sp[0]->s_sr;
   if (x->rate <= 0) {
     /* default sample rate is whatever Pd tells us */
-    PdUI *ui = x->ui;
+    PdUIResonantHpf *ui = x->ui;
     float *z = NULL;
     if (ui->nelems > 0 &&
 	(z = (float*)malloc(ui->nelems*sizeof(float)))) {
@@ -626,7 +626,7 @@ static int pathcmp(const char *s, const char *t)
 static void faust_any(t_faust *x, t_symbol *s, int argc, t_atom *argv)
 {
   if (!x->dsp) return;
-  PdUI *ui = x->ui;
+  PdUIResonantHpf *ui = x->ui;
   if (s == &s_bang) {
     for (int i = 0; i < ui->nelems; i++)
       if (ui->elems[i].label && ui->elems[i].zone) {
@@ -736,7 +736,7 @@ static void *faust_new(t_symbol *s, int argc, t_atom *argv)
   x->inputs = x->outputs = x->buf = NULL;
   x->label = new string(sym(mydsp) "~");
   x->dsp = new mydsp();
-  x->ui = new PdUI(id?id->s_name:NULL);
+  x->ui = new PdUIResonantHpf(id?id->s_name:NULL);
   if (!x->dsp || !x->ui || !x->label) goto error;
   if (id) {
     *x->label += " ";
