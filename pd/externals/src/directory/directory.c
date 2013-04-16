@@ -1,6 +1,7 @@
 #include "m_pd.h"
 #include "dirent.h"
 #include <string.h>
+#include <stdio.h>
 
 // #ifdef _WIN32
 

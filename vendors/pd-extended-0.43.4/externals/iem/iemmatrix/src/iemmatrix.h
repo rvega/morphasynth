@@ -31,6 +31,7 @@
 #ifndef INCLUDE_IEMMATRIX_H__
 #define INCLUDE_IEMMATRIX_H__
 
+#include "m_pd.h"
 
 #ifdef __WIN32__
 /* MinGW automaticaly defines __WIN32__

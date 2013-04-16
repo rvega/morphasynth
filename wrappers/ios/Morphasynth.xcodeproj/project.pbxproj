@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30216D07171DF33E00F9B3F7 /* directory.c in Sources */ = {isa = PBXBuildFile; fileRef = 30216D06171DF33E00F9B3F7 /* directory.c */; };
+		30216D09171DFA5100F9B3F7 /* repack.c in Sources */ = {isa = PBXBuildFile; fileRef = 30216D08171DFA5100F9B3F7 /* repack.c */; };
+		30216D0B171DFAC200F9B3F7 /* sum.c in Sources */ = {isa = PBXBuildFile; fileRef = 30216D0A171DFAC200F9B3F7 /* sum.c */; };
 		303C0B0E16F0C03F00556BBF /* list2symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B0B16F0C03F00556BBF /* list2symbol.c */; };
 		303C0B0F16F0C03F00556BBF /* zexy.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B0C16F0C03F00556BBF /* zexy.c */; };
 		303C0B1216F0C0C300556BBF /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = 303C0B1116F0C0C300556BBF /* limit.c */; };
@@ -31,6 +34,8 @@
 		304F57DC16F0BA6F0045A2C3 /* vexp.c in Sources */ = {isa = PBXBuildFile; fileRef = 304F57D816F0BA6F0045A2C3 /* vexp.c */; };
 		305CA44316F7409100FCD608 /* resonant_hpf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 305CA44216F7409100FCD608 /* resonant_hpf.cpp */; };
 		3072B83A171C481E002DAA18 /* moog_lopass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3072B839171C481E002DAA18 /* moog_lopass.cpp */; };
+		30A85149171C68D700EA8BFE /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30A85148171C68D700EA8BFE /* matrix.c */; };
+		30A8514C171C697700EA8BFE /* iemmatrix_utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 30A8514B171C697700EA8BFE /* iemmatrix_utility.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30216D06171DF33E00F9B3F7 /* directory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = directory.c; path = ../../../pd/externals/src/directory/directory.c; sourceTree = "<group>"; };
+		30216D08171DFA5100F9B3F7 /* repack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = repack.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/repack.c"; sourceTree = "<group>"; };
+		30216D0A171DFAC200F9B3F7 /* sum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sum.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/sum.c"; sourceTree = "<group>"; };
 		303C0B0B16F0C03F00556BBF /* list2symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = list2symbol.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/list2symbol.c"; sourceTree = "<group>"; };
 		303C0B0C16F0C03F00556BBF /* zexy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zexy.c; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/zexy.c"; sourceTree = "<group>"; };
 		303C0B0D16F0C03F00556BBF /* zexy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zexy.h; path = "../../../vendors/pd-extended-0.43.4/externals/zexy/src/zexy.h"; sourceTree = "<group>"; };
@@ -90,6 +98,9 @@
 		304F57D916F0BA6F0045A2C3 /* vexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vexp.h; path = "../../../vendors/pd-extended-0.43.4/externals/extra/expr~/vexp.h"; sourceTree = "<group>"; };
 		305CA44216F7409100FCD608 /* resonant_hpf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resonant_hpf.cpp; path = ../../../pd/externals/src/resonant_hpf/resonant_hpf.cpp; sourceTree = "<group>"; };
 		3072B839171C481E002DAA18 /* moog_lopass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moog_lopass.cpp; path = ../../../pd/externals/src/moog_lopass/moog_lopass.cpp; sourceTree = "<group>"; };
+		30A85148171C68D700EA8BFE /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix.c; path = "../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/matrix.c"; sourceTree = "<group>"; };
+		30A8514A171C695000EA8BFE /* iemmatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iemmatrix.h; path = "../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/iemmatrix.h"; sourceTree = "<group>"; };
+		30A8514B171C697700EA8BFE /* iemmatrix_utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = iemmatrix_utility.c; path = "../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/iemmatrix_utility.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +120,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30216D01171DF22B00F9B3F7 /* expr */ = {
+			isa = PBXGroup;
+			children = (
+				304F57D516F0BA6F0045A2C3 /* fts_to_pd.h */,
+				304F57D616F0BA6F0045A2C3 /* vexp_fun.c */,
+				304F57D716F0BA6F0045A2C3 /* vexp_if.c */,
+				304F57D816F0BA6F0045A2C3 /* vexp.c */,
+				304F57D916F0BA6F0045A2C3 /* vexp.h */,
+			);
+			name = expr;
+			sourceTree = "<group>";
+		};
+		30216D03171DF27E00F9B3F7 /* limit */ = {
+			isa = PBXGroup;
+			children = (
+				303C0B1116F0C0C300556BBF /* limit.c */,
+			);
+			name = limit;
+			sourceTree = "<group>";
+		};
+		30216D04171DF2AC00F9B3F7 /* zexy */ = {
+			isa = PBXGroup;
+			children = (
+				30216D0A171DFAC200F9B3F7 /* sum.c */,
+				30216D08171DFA5100F9B3F7 /* repack.c */,
+				303C0B0B16F0C03F00556BBF /* list2symbol.c */,
+				303C0B0C16F0C03F00556BBF /* zexy.c */,
+				303C0B0D16F0C03F00556BBF /* zexy.h */,
+			);
+			name = zexy;
+			sourceTree = "<group>";
+		};
+		30216D05171DF31500F9B3F7 /* directory */ = {
+			isa = PBXGroup;
+			children = (
+				30216D06171DF33E00F9B3F7 /* directory.c */,
+			);
+			name = directory;
+			sourceTree = "<group>";
+		};
 		304F576016F0B2D50045A2C3 = {
 			isa = PBXGroup;
 			children = (
@@ -189,17 +240,13 @@
 		304F57D416F0BA440045A2C3 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				30216D05171DF31500F9B3F7 /* directory */,
 				3072B837171C47EA002DAA18 /* moog_lopass */,
 				305CA44016F7407B00FCD608 /* resonant_hpf */,
-				303C0B1116F0C0C300556BBF /* limit.c */,
-				303C0B0B16F0C03F00556BBF /* list2symbol.c */,
-				303C0B0C16F0C03F00556BBF /* zexy.c */,
-				303C0B0D16F0C03F00556BBF /* zexy.h */,
-				304F57D516F0BA6F0045A2C3 /* fts_to_pd.h */,
-				304F57D616F0BA6F0045A2C3 /* vexp_fun.c */,
-				304F57D716F0BA6F0045A2C3 /* vexp_if.c */,
-				304F57D816F0BA6F0045A2C3 /* vexp.c */,
-				304F57D916F0BA6F0045A2C3 /* vexp.h */,
+				30216D04171DF2AC00F9B3F7 /* zexy */,
+				30216D03171DF27E00F9B3F7 /* limit */,
+				30216D01171DF22B00F9B3F7 /* expr */,
+				30A85147171C68AD00EA8BFE /* matrix */,
 			);
 			name = Externals;
 			sourceTree = "<group>";
@@ -218,6 +265,16 @@
 				3072B839171C481E002DAA18 /* moog_lopass.cpp */,
 			);
 			name = moog_lopass;
+			sourceTree = "<group>";
+		};
+		30A85147171C68AD00EA8BFE /* matrix */ = {
+			isa = PBXGroup;
+			children = (
+				30A8514B171C697700EA8BFE /* iemmatrix_utility.c */,
+				30A8514A171C695000EA8BFE /* iemmatrix.h */,
+				30A85148171C68D700EA8BFE /* matrix.c */,
+			);
+			name = matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +380,11 @@
 				303C0B1216F0C0C300556BBF /* limit.c in Sources */,
 				305CA44316F7409100FCD608 /* resonant_hpf.cpp in Sources */,
 				3072B83A171C481E002DAA18 /* moog_lopass.cpp in Sources */,
+				30A85149171C68D700EA8BFE /* matrix.c in Sources */,
+				30A8514C171C697700EA8BFE /* iemmatrix_utility.c in Sources */,
+				30216D07171DF33E00F9B3F7 /* directory.c in Sources */,
+				30216D09171DFA5100F9B3F7 /* repack.c in Sources */,
+				30216D0B171DFAC200F9B3F7 /* sum.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

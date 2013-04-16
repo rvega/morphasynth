@@ -108,50 +108,52 @@ static void matrix_read(t_matrix *x, t_symbol *filename)
 
 static void matrix_write(t_matrix *x, t_symbol *filename)
 {
-  t_atom *ap=x->atombuffer+2;
-  int rows = x->row, cols = x->col;
-  FILE *f=0;
+  pd_error("matrix : matrix_write is not implemented, look at matrix.c", "");
 
-  /* open file */
-  if (!(f = sys_fopen(filename->s_name, "w"))) {
-    pd_error(x,"matrix : failed to open %128s", filename->s_name);
-  } else {
-    char *text=(char *)getbytes(sizeof(char)*MAXPDSTRING);
-    int textlen;
-
-    /* header:
-     * we now write "#matrix" instead of "matrix",
-     * so that these files can easily read by other 
-     * applications such as octave
-     */
-    snprintf(text, MAXPDSTRING, "#matrix %d %d\n", rows, cols);
-    text[MAXPDSTRING-1]=0;
-    textlen = strlen(text);
-    if (fwrite(text, textlen*sizeof(char), 1, f) < 1) {
-      pd_error(x,"matrix : failed to write %128s", filename->s_name); goto end;
-    }
-
-    while(rows--) {
-      int c = cols;
-      while (c--) {
-	t_float val = atom_getfloat(ap++);
-	snprintf(text, MAXPDSTRING, "%.15f ", val);
-        text[MAXPDSTRING-1]=0;
-	textlen=strlen(text);
-	if (fwrite(text, textlen*sizeof(char), 1, f) < 1) {
-	  pd_error(x,"matrix : failed to write %128s", filename->s_name); goto end;
-	}
-      }
-      if (fwrite("\n", sizeof(char), 1, f) < 1) {
-	pd_error(x, "matrix : failed to write %128s", filename->s_name); goto end;
-      }
-    }
-    freebytes(text, sizeof(char)*MAXPDSTRING);
-  }
-
- end:
-  /* close file */
-  if (f) fclose(f);
+//  t_atom *ap=x->atombuffer+2;
+//  int rows = x->row, cols = x->col;
+//  FILE *f=0;
+//
+//  /* open file */
+//  if (!(f = sys_fopen(filename->s_name, "w"))) {
+//    pd_error(x,"matrix : failed to open %128s", filename->s_name);
+//  } else {
+//    char *text=(char *)getbytes(sizeof(char)*MAXPDSTRING);
+//    int textlen;
+//
+//    /* header:
+//     * we now write "#matrix" instead of "matrix",
+//     * so that these files can easily read by other 
+//     * applications such as octave
+//     */
+//    snprintf(text, MAXPDSTRING, "#matrix %d %d\n", rows, cols);
+//    text[MAXPDSTRING-1]=0;
+//    textlen = strlen(text);
+//    if (fwrite(text, textlen*sizeof(char), 1, f) < 1) {
+//      pd_error(x,"matrix : failed to write %128s", filename->s_name); goto end;
+//    }
+//
+//    while(rows--) {
+//      int c = cols;
+//      while (c--) {
+//	t_float val = atom_getfloat(ap++);
+//	snprintf(text, MAXPDSTRING, "%.15f ", val);
+//        text[MAXPDSTRING-1]=0;
+//	textlen=strlen(text);
+//	if (fwrite(text, textlen*sizeof(char), 1, f) < 1) {
+//	  pd_error(x,"matrix : failed to write %128s", filename->s_name); goto end;
+//	}
+//      }
+//      if (fwrite("\n", sizeof(char), 1, f) < 1) {
+//	pd_error(x, "matrix : failed to write %128s", filename->s_name); goto end;
+//      }
+//    }
+//    freebytes(text, sizeof(char)*MAXPDSTRING);
+//  }
+//
+// end:
+//  /* close file */
+//  if (f) fclose(f);
 }
 
 static void matrix_list(t_matrix *x, t_symbol *s, int argc, t_atom *argv)

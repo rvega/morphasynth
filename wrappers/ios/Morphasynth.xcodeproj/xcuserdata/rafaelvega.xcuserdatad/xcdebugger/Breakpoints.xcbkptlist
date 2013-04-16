@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Morphasynth/AppDelegate.m"
-         timestampString = "387732457.104983"
+         timestampString = "387840743.811548"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "-receivePrint:"
          landmarkType = "5">
       </FileBreakpoint>

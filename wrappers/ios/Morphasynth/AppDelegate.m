@@ -15,6 +15,10 @@ extern void limit_setup(void);
 extern void list2symbol_setup(void);
 extern void resonant_hpf_setup(void);
 extern void moog_lopass_setup(void);
+extern void matrix_setup(void);
+extern void directory_setup(void);
+extern void repack_setup(void);
+extern void sum_setup(void);
 
 @implementation AppDelegate
 
@@ -74,10 +78,14 @@ extern void moog_lopass_setup(void);
     list2symbol_setup();
     resonant_hpf_setup();
     moog_lopass_setup();
+    matrix_setup();
+    directory_setup();
+    repack_setup();
+    sum_setup();
     
 	NSString* path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"patches"];
     [PdBase setDelegate:self];
-    [PdBase openFile:@"5.ios.pd" path:path];
+    [PdBase openFile:@"5.iOS.pd" path:path];
     
     // The patch might need it's path in the filesystem
     [PdBase sendMessage:path withArguments:nil toReceiver:@"path"];

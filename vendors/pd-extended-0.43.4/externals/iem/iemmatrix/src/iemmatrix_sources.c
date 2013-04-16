@@ -37,6 +37,7 @@ void iemmatrix_sources_setup(void)
 	iemtx_distance2_setup(); /* mtx_distance2.c */
 	iemtx_egg_setup(); /* mtx_egg.c */
 	iemtx_eig_setup(); /* mtx_eig.c */
+	iemtx_ei__setup(); /* mtx_ei~.c */
 	iemtx_element_setup(); /* mtx_element.c */
 	iemtx_eq_setup(); /* mtx_eq.c */
 	iemtx_exp_setup(); /* mtx_exp.c */
@@ -59,8 +60,8 @@ void iemmatrix_sources_setup(void)
 	iemtx_mean_setup(); /* mtx_mean.c */
 	iemtx_min2_setup(); /* mtx_min2.c */
 	iemtx_minmax_setup(); /* mtx_minmax.c */
-	iemtx_mul__setup(); /* mtx_mul~.c */
 	iemtx_mul_setup(); /* mtx_mul.c */
+	iemtx_mul__setup(); /* mtx_mul~.c */
 	iemtx_neq_setup(); /* mtx_neq.c */
 	iemtx_not_setup(); /* mtx_not.c */
 	iemtx_ones_setup(); /* mtx_ones.c */
