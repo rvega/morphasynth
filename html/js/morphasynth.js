@@ -76,10 +76,15 @@ Morphasynth.Keyboard = function(){
  * Manages the 2D space
  */
 Morphasynth.TimbreSpace = function(){
+
    this.presets = null;
    this.canvas = null;
    this.height = 0;
    this.width = 0;
+   var pointer;
+   var pointerX = $('#timbre-space').width()/2;
+   var pointerY = $('#timbre-space').height()/2;
+   var sendXY=false;
 
    this.init = function(){
       // Load presets
@@ -87,32 +92,63 @@ Morphasynth.TimbreSpace = function(){
 
       // Bind mouse events
       self = this;
-      $('#timbre-space').bind('doubleclick', function(event){
-         if(event.which == 3){ // Right click
-            self.rightDoubleClick.call(self);
-         }
-         else{
-            self.leftDoubleClick.call(self);
-         }
-      });
-      $('#timbre-space').bind('click', function(event){
-         if(event.which == 3){
-            self.rightClick.call(self);
-         }
-         else{
-            self.leftClick.call(self);
-         }
-      });
 
       // Create drawing surface
       var ts = $('#timbre-space');
       this.width = ts.width();
       this.height = ts.height();
       this.canvas = Raphael('timbre-space', ts.width(), ts.height());
+      var bg = this.canvas.rect(0,0,ts.width(),ts.height());
+      bg.attr("fill", "#180027");
 
+      //draw the pointer
+      this.drawPointer();
       // Draw the points
       this.drawPoints();
+
+      //iterTime controla el tiempo del intervalo de repetición del iterador intervalId
+      interTime=1;
+      var intervalId;
+
+      //the pressed
+      $('#timbre-space').bind('mousedown', $.proxy(this.pressedKey, this));
+
+      //the released
+      $('#timbre-space').bind('mouseup', $.proxy(this.releasedKey, this));
+
+      $("#timbre-space").mousemove(function (event) {
+
+        if(sendXY){
+         pointerX = event.pageX;
+         pointerY = event.pageY;
+
+         self.sendPoses(event.pageX,event.pageY);
+
+         pointer.attr("cx",pointerX);
+         pointer.attr("cy",pointerY);
+        }
+      }); 
    };
+
+   this.pressedKey = function(event){
+      console.log("pres");
+
+      this.sendPoses(event.clientX,event.clientY);
+
+      sendXY=true;
+      pointer.attr("cx",event.clientX);
+      pointer.attr("cy",event.clientY);
+   };
+
+   this.releasedKey = function(event){ 
+      console.log("rels");
+      sendXY=false;
+   };
+
+   //SEND CANVAS POSES
+   this.sendPoses = function (xx, yy){
+      console.log("pointer poses x:"+xx+" y:"+yy);
+   }
 
    this.drawPoints = function(){
       var preset, x, y, xDescriptor, yDescriptor;
@@ -122,25 +158,18 @@ Morphasynth.TimbreSpace = function(){
          yDescriptor = Options.y;
          x = preset[xDescriptor] * this.width;
          y = preset[yDescriptor] * this.height;
-         this.canvas.circle(x, y, 5);
+         var cir = this.canvas.circle(x, y, 2);
+         cir.attr("fill", "#C290E1");
+         cir.attr("stroke-width",0);
       }
    };
 
-   this.leftDoubleClick = function(event){
-      console.log('a');
-   }
-
-   this.leftClick = function(event){
-      console.log('b');
-   }
-   
-   this.rightDoubleClick = function(event){
-      console.log('c');
-   }
-
-   this.rightClick = function(event){
-      console.log('d');
-   }
+   this.drawPointer = function (){
+      console.log("pointerX: "+pointerX+"  pointerY:"+pointerY);
+      pointer=this.canvas.circle(pointerX,pointerY,20);
+      pointer.attr("fill","r(0.5, 0.5)#ccc-#180027");
+      pointer.attr("stroke-width","0");
+   };
 }
 
 /*
