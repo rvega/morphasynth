@@ -1,7 +1,7 @@
 MoogLopass
 ===========
 
-This is a [PureData](http://puredata.info) external that implements a lopass filter similar to the one available in moog synthesizers.
+This is a [PureData](http://puredata.info) external that implements a resonant lopass filter similar to the one available in moog synthesizers.
 
 Build Instructions
 ------------------
