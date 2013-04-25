@@ -1,14 +1,22 @@
 MORPHASYNTH
 ===========
 
-A musical audio synthesizer written in [Pd](http://puredata.info/) and HTML+JavaScript. This is an exploration of preset morphing (smooth interpolation) using dimensionality reduction with audio descriptors and as a means of simplifying user interfaces for timbre settings.
+A musical audio synthesizer written in [Pd](http://puredata.info/) and HTML+JavaScript. This is an exploration of preset morphing (smooth interpolation) using dimensionality reduction with audio descriptors as a means of simplifying user interfaces for setting timbres.
 
 Some wrappers and scripts are provided for compiling as a Linux Jack client (currently broken), an iPad application (currently incomplete) and running the synthesizer using a web browser as the GUI and [pd-extended](http://puredata.info/downloads/pd-extended) as the sound engine.
 
-Running in development mode
----------------------------
+Running in Pd only
+------------------
 
-Tested using Google Chrome 26, pd-extended 0.43.4, Ubuntu Linux 12.04, node 0.10.5
+Tested in pd-extended 0.43.4
+
+There is a simple GUI implemented in PureData. Just open the pd/patches/00_Morphasynth_GUI.pd patch and start playing. We'll probably deprecate this at some point in favour of the HTML GUI.
+
+
+Running in development mode (HTML GUI in Web Browser, DSP engine in pd-extended)
+--------------------------------------------------------------------------------
+
+Tested using Google Chrome 26, pd-extended 0.43.4, Ubuntu Linux 12.04, Windows XP, MacOS 10.7.5, node 0.10.5
 
 ### For the impatient:
 
@@ -58,7 +66,8 @@ To allow communication between the JavaScript GUI code running in a web browser 
             
     In Windows, download and run the Windows installer from [here](http://nodejs.org/download/) and then:
 
-        ***TODO***
+        cd vendors/KievII/comm/oscproxy
+        npm install socket.io
         
 2. Run it
         
@@ -69,7 +78,8 @@ To allow communication between the JavaScript GUI code running in a web browser 
     
     In Windows:
 
-        ***TODO***
+        cd path/to/this/repo
+        scripts/development.bat
 
 Building the iPad app
 ---------------------
