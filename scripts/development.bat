@@ -1,2 +1,1 @@
-rd /s /q _public
-node_modules/.bin/brunch watch
+node vendors/KievII/comm/oscproxy/oscproxy.js
