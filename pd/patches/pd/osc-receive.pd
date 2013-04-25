@@ -1,0 +1,11 @@
+#N canvas 1 81 450 300 10;
+#X obj 40 263 outlet;
+#X obj 92 237 outlet;
+#X obj 242 158 outlet;
+#X obj 193 183 outlet;
+#X text 86 262 Which mfcc x;
+#X text 134 236 Which mfcc y;
+#X obj 143 208 outlet;
+#X text 186 208 X;
+#X text 233 182 Y;
+#X text 283 157 Cursor width;
