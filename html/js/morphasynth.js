@@ -81,7 +81,11 @@ Morphasynth.TimbreSpace = function(){
   this.canvas = null;
   this.height = 0;
   this.width = 0;
-  var pointer;
+  var pointer1;
+  var pointer2;
+  var pointer3;
+  var pointer4;
+  var bglines;
   var pointerX = $('#timbre-space').width()/2;
   var pointerY = $('#timbre-space').height()/2;
   var sendXY=false;
@@ -98,8 +102,11 @@ Morphasynth.TimbreSpace = function(){
     this.width = ts.width();
     this.height = ts.height();
     this.canvas = Raphael('timbre-space', ts.width(), ts.height());
+
+    //set Background
     var bg = this.canvas.rect(0,0,ts.width(),ts.height());
-    bg.attr("fill", "#180027");
+    bg.attr("fill", "#002129");
+    this.BackgroundBeauties(ts.width(),ts.height());
 
     //draw the pointer
     this.drawPointer();
@@ -123,7 +130,7 @@ Morphasynth.TimbreSpace = function(){
         pointerY = event.pageY;
 
         self.sendPoses(event.pageX,event.pageY);
-
+        self.actualicePointer();
         pointer.attr("cx",pointerX);
         pointer.attr("cy",pointerY);
       }
@@ -136,8 +143,6 @@ Morphasynth.TimbreSpace = function(){
     this.sendPoses(event.clientX,event.clientY);
 
     sendXY=true;
-    pointer.attr("cx",event.clientX);
-    pointer.attr("cy",event.clientY);
   };
 
   this.releasedKey = function(event){ 
@@ -158,18 +163,76 @@ Morphasynth.TimbreSpace = function(){
       xDescriptor = Options.x;
       yDescriptor = Options.y;
       x = preset[xDescriptor] * this.width;
-      y = preset[yDescriptor] * this.height;
+      y = preset[yDescriptor] * this.height-68;
       var cir = this.canvas.circle(x, y, 2);
-      cir.attr("fill", "#C290E1");
+      cir.attr("fill", "#FFF");
       cir.attr("stroke-width",0);
     }
   };
 
   this.drawPointer = function (){
     console.log("pointerX: "+pointerX+"  pointerY:"+pointerY);
-    pointer=this.canvas.circle(pointerX,pointerY,20);
-    pointer.attr("fill","r(0.5, 0.5)#ccc-#180027");
-    pointer.attr("stroke-width","0");
+
+    pointer1=this.canvas.circle(pointerX,pointerY,18);
+    pointer1.attr("fill-opacity","0");
+    pointer1.attr("stroke-width","1");
+    pointer1.attr("stroke-opacity",".3");
+    pointer1.attr("stroke","#fff");
+
+    pointer2=this.canvas.circle(pointerX,pointerY,25);
+    pointer2.attr("fill-opacity","0");
+    pointer2.attr("stroke-width","2");
+    pointer2.attr("stroke","#fff")
+
+    pointer3=this.canvas.circle(pointerX,pointerY,33);
+    pointer3.attr("fill-opacity","0");
+    pointer3.attr("stroke-width","6");
+    pointer3.attr("stroke","#fff");
+    pointer3.attr("stroke-dasharray","--.");
+    pointer3.attr("stroke-linecap","square");
+
+//    pointer4=this.canvas.circle(pointerX,pointerY,33);
+//    pointer4.attr("fill-opacity","0");
+//    pointer4.attr("stroke-width","7");
+//    pointer4.attr("stroke","#fff");
+
+
+//    pointer4=this.canvas.path("M"+pointerX+","+(pointerY-33)+"c19,0,35,16,35,35S"+(pointerX+18)+","+(pointerY+35)+","+pointerX+","+(pointerY+33));
+//    pointer4.attr("fill-opacity","0");
+//    pointer4.attr("stroke-width","4");
+//    pointer4.attr("stroke","#fff");
+//    pointer4.attr("stroke-dasharray", "100 ");
+  };
+
+  this.actualicePointer = function (){
+    pointer1.attr("cx",event.clientX);
+    pointer1.attr("cy",event.clientY);
+    pointer2.attr("cx",event.clientX);
+    pointer2.attr("cy",event.clientY);
+    pointer3.attr("cx",event.clientX);
+    pointer3.attr("cy",event.clientY);
+  };
+
+  this.BackgroundBeauties = function (wid, hei){
+
+    console.log("sisaasfajsdfiasdlfa"+wid);
+
+    //Dots
+    for(var i=15;i<wid;i+=30){
+      for(var j=15;j<hei;j+=30){
+        pointer=this.canvas.circle(i,j,.3);
+        pointer.attr("fill","#fff");
+        pointer.attr("stroke-width","0");
+      }
+    }
+
+    //Under canvas Lines
+    for(var i=0;i<(wid+100);i+=12){
+      bglines=this.canvas.path("M"+i+",712L"+(i-100)+",780");
+      bglines.attr("stroke","#fff");
+      bglines.attr("stroke-width","1");
+      bglines.attr("stroke-opacity",".3");
+    }
   };
 }
 
