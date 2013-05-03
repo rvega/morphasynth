@@ -20,8 +20,8 @@ html{
    /* height: 100%; */
 
    /* Computer size */
-   height: 668px;
-   width: 488px;
+   height: 1024px;
+   width: 768px;
    border: 1px solid grey;
 
    /* iPad size */
@@ -50,7 +50,7 @@ html{
    height: 100%;
    width: 8.8%;
    float:left;
-   background: url(../img/piano.png) no-repeat center center;
+   background: url(../img/pianoTriangle.png) no-repeat center center;
    /* -webkit-background-size: cover; */
    background-size: 100% 100%;
 }
