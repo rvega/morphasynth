@@ -10,19 +10,19 @@ Build Instructions
 
 1. Install [Faust](http://faust.grame.fr/) version 0.9.58 from [here](http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download):
 
-    wget http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download -O faust.zip
-    unzip faust.zip -d ./
-    cd faust-0.9.58
-    make 
-    sudo make install
+        wget http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download -O faust.zip
+        unzip faust.zip -d ./
+        cd faust-0.9.58
+        make 
+        sudo make install
 
 2. Use Faust to generate the external
 
-    faust2puredata resonant_hpf.dsp
+        faust2puredata resonant_hpf.dsp
 
 3. Install the external (optional, will install to ../bin)
 
-    make install
+        make install
 
 ### For Windows
 
