@@ -20,9 +20,9 @@ Build Instructions
 
 3. Compile and install. Using a terminal on Linux or MacOS, or the MinGW shell in Windows, do
 
-    cd /path/to/this/directory
-    make
-    make install #(optional, will try to copy the compiled external to ../../bin)
+        cd /path/to/this/directory
+        make
+        make install #(optional, will try to copy the compiled external to ../../bin)
 
 License
 -------
