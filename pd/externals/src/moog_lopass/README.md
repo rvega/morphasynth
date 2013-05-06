@@ -10,19 +10,19 @@ Build Instructions
 
 1. Install the latest stable verion of [Faust](http://faust.grame.fr/). 
 
-    wget http://sourceforge.net/projects/faudiostream/files/latest/download?source=files -O faust.zip
-    unzip faust.zip -d ./
-    cd faust-0.9.58
-    make 
-    sudo make install
+        wget http://sourceforge.net/projects/faudiostream/files/latest/download?source=files -O faust.zip
+        unzip faust.zip -d ./
+        cd faust-0.9.58
+        make 
+        sudo make install
 
 2. Use Faust to generate the external
 
-    faust2puredata moog_lopass.dsp
+        faust2puredata moog_lopass.dsp
 
 3. Install the external (optional, will install to ../bin)
 
-    make install
+        make install
 
 ### For Windows
 
