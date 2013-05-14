@@ -17,6 +17,8 @@
     <script src="js/vendor/raphael.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/vendor/jquery.touchSwipe.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/morphasynth.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/Timbre-space.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/Keyboard.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body id="main-container">
     <div id="timbre-space"></div>
@@ -210,38 +212,94 @@
         <form>
           <label>X:
             <select id="select-x">
-              <option value="envelope-a">Attack Time</option>
-              <option value="mfcc-1">Mfcc 1</option>
-              <option value="mfcc-2">Mfcc 2</option>
-              <option value="mfcc-3">Mfcc 3</option>
-              <option value="mfcc-4">Mfcc 4</option>
-              <option value="mfcc-5">Mfcc 5</option>
-              <option value="mfcc-6">Mfcc 6</option>
-              <option value="mfcc-7">Mfcc 7</option>
-              <option value="mfcc-8">Mfcc 8</option>
-              <option value="mfcc-9">Mfcc 9</option>
-              <option value="mfcc-10">Mfcc 10</option>
-              <option value="mfcc-11">Mfcc 11</option>
-              <option value="mfcc-12">Mfcc 12</option>
-              <option value="mfcc-13">Mfcc 13</option>
+              <option value="osc1-amplitude">osc1-amplitud</option>
+              <option value="osc1-waveform">osc1-waveform</option>
+              <option value="osc1-finetune">osc1-finetune</option>
+              <option value="lfo1-freq">lfo1-freq</option>
+              <option value="lfo1-waveform">lfo1-waveform</option>
+              <option value="lfo1-to-amplitude">lfo1-to-ampli</option>
+              <option value="lfo1-to-freq">lfo1-to-freq</option>
+              <option value="osc2-amplitude">osc2-amplitud</option>
+              <option value="osc2-waveform">osc2-waveform</option>
+              <option value="osc2-finetune">osc2-finetune</option>
+              <option value="lfo2-freq">lfo2-freq</option>
+              <option value="lfo2-waveform">lfo2-waveform</option>
+              <option value="lfo2-to-amplitude">lfo2-to-ampli</option>
+              <option value="lfo2-to-freq">lfo2-to-freq</option>
+              <option value="osc3-amplitude">osc3-amplitud</option>
+              <option value="osc3-waveform">osc3-waveform</option>
+              <option value="osc3-finetune">osc3-finetune</option>
+              <option value="lfo3-freq">lfo3-freq</option>
+              <option value="lfo3-waveform">lfo3-waveform</option>
+              <option value="lfo3-to-amplitude">lfo3-to-ampli</option>
+              <option value="lfo3-to-freq">lfo3-to-freq</option>
+              <option value="noise-amplitude">noise-amplitu</option>
+              <option value="lp-freq">lp-freq</option>
+              <option value="lp-resonance">lp-resonance</option>
+              <option value="lp-keyfollow">lp-keyfollow</option>
+              <option value="lp-contour">lp-contour</option>
+              <option value="lp-envelope-a">lp-envelope-a</option>
+              <option value="lp-envelope-d">lp-envelope-d</option>
+              <option value="lp-envelope-s">lp-envelope-s</option>
+              <option value="lp-envelope-r">lp-envelope-r</option>
+              <option value="lp-lfo-freq">lp-lfo-freq</option>
+              <option value="lp-lfo-waveform">lp-lfo-wavefo</option>
+              <option value="lp-lfo-amplitude">lp-lfo-amplit</option>
+              <option value="hp-freq">hp-freq</option>
+              <option value="hp-resonance">hp-resonance</option>
+              <option value="hp-keyfollow">hp-keyfollow</option>
+              <option value="hp-contour">hp-contour</option>
+              <option value="hp-envelope-a">hp-envelope-a</option>
+              <option value="hp-envelope-d">hp-envelope-d</option>
+              <option value="hp-envelope-s">hp-envelope-s</option>
+              <option value="hp-envelope-r">hp-envelope-r</option>
+              <option value="hp-lfo-freq">hp-lfo-freq</option>
             </select>
           </label>
           <label>Y:
             <select id="select-y">
-              <option value="envelope-a">Attack Time</option>
-              <option value="mfcc-1">Mfcc 1</option>
-              <option value="mfcc-2">Mfcc 2</option>
-              <option value="mfcc-3">Mfcc 3</option>
-              <option value="mfcc-4">Mfcc 4</option>
-              <option value="mfcc-5">Mfcc 5</option>
-              <option value="mfcc-6">Mfcc 6</option>
-              <option value="mfcc-7">Mfcc 7</option>
-              <option value="mfcc-8">Mfcc 8</option>
-              <option value="mfcc-9">Mfcc 9</option>
-              <option value="mfcc-10">Mfcc 10</option>
-              <option value="mfcc-11">Mfcc 11</option>
-              <option value="mfcc-12">Mfcc 12</option>
-              <option value="mfcc-13">Mfcc 13</option>
+              <option value="osc1-amplitude">osc1-amplitud</option>
+              <option value="osc1-waveform">osc1-waveform</option>
+              <option value="osc1-finetune">osc1-finetune</option>
+              <option value="lfo1-freq">lfo1-freq</option>
+              <option value="lfo1-waveform">lfo1-waveform</option>
+              <option value="lfo1-to-amplitude">lfo1-to-ampli</option>
+              <option value="lfo1-to-freq">lfo1-to-freq</option>
+              <option value="osc2-amplitude">osc2-amplitud</option>
+              <option value="osc2-waveform">osc2-waveform</option>
+              <option value="osc2-finetune">osc2-finetune</option>
+              <option value="lfo2-freq">lfo2-freq</option>
+              <option value="lfo2-waveform">lfo2-waveform</option>
+              <option value="lfo2-to-amplitude">lfo2-to-ampli</option>
+              <option value="lfo2-to-freq">lfo2-to-freq</option>
+              <option value="osc3-amplitude">osc3-amplitud</option>
+              <option value="osc3-waveform">osc3-waveform</option>
+              <option value="osc3-finetune">osc3-finetune</option>
+              <option value="lfo3-freq">lfo3-freq</option>
+              <option value="lfo3-waveform">lfo3-waveform</option>
+              <option value="lfo3-to-amplitude">lfo3-to-ampli</option>
+              <option value="lfo3-to-freq">lfo3-to-freq</option>
+              <option value="noise-amplitude">noise-amplitu</option>
+              <option value="lp-freq">lp-freq</option>
+              <option value="lp-resonance">lp-resonance</option>
+              <option value="lp-keyfollow">lp-keyfollow</option>
+              <option value="lp-contour">lp-contour</option>
+              <option value="lp-envelope-a">lp-envelope-a</option>
+              <option value="lp-envelope-d">lp-envelope-d</option>
+              <option value="lp-envelope-s">lp-envelope-s</option>
+              <option value="lp-envelope-r">lp-envelope-r</option>
+              <option value="lp-lfo-freq">lp-lfo-freq</option>
+              <option value="lp-lfo-waveform">lp-lfo-wavefo</option>
+              <option value="lp-lfo-amplitude">lp-lfo-amplit</option>
+              <option value="hp-freq">hp-freq</option>
+              <option value="hp-resonance">hp-resonance</option>
+              <option value="hp-keyfollow">hp-keyfollow</option>
+              <option value="hp-contour">hp-contour</option>
+              <option value="hp-envelope-a">hp-envelope-a</option>
+              <option value="hp-envelope-d">hp-envelope-d</option>
+              <option value="hp-envelope-s">hp-envelope-s</option>
+              <option value="hp-envelope-r">hp-envelope-r</option>
+              <option value="hp-lfo-freq">hp-lfo-freq</option>
             </select>
           </label>
         </form>
