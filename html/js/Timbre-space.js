@@ -107,7 +107,7 @@ Morphasynth.TimbreSpace = function(){
       yDescriptor = Options.y;
       x = preset[xDescriptor] * this.width;
       y = preset[yDescriptor] * this.height-68;
-      this.presetDots[i].animate({'cx': x,'cy':y},1000,'ease-in-out');
+      this.presetDots[i].animate({'cx': x,'cy':y},1500,'ease-in-out');
     }
   };
 
