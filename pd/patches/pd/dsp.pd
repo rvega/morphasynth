@@ -1,4 +1,4 @@
-#N canvas 689 58 558 360 10;
+#N canvas 425 266 538 206 10;
 #X obj 110 110 outlet~;
 #X text 7 18 MIDI IN;
 #X text 51 111 AUDIO OUT;

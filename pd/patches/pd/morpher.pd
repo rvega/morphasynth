@@ -1,4 +1,4 @@
-#N canvas 91 30 931 597 10;
+#N canvas 382 122 755 513 10;
 #N canvas 207 22 583 588 presetreader 0;
 #X obj 102 179 textfile;
 #X msg 68 142 read \$1 \, rewind;
@@ -99,13 +99,13 @@ este archivo!!! :);
 #X connect 10 59 11 60;
 #X connect 11 0 9 0;
 #X connect 12 0 1 0;
-#X restore -388 160 pd presetreader;
-#X msg -29 233 bang;
-#X msg -117 233 0;
-#X text -161 216 clear the matrix;
-#X msg -181 121 0;
-#X text -182 104 reset;
-#X text -32 214 print!;
+#X restore 276 149 pd presetreader;
+#X msg 634 192 bang;
+#X msg 546 192 0;
+#X text 502 175 clear the matrix;
+#X msg 483 127 0;
+#X text 482 110 reset;
+#X text 631 173 print!;
 #N canvas 338 112 427 388 format 0;
 #X obj 110 98 f;
 #X obj 134 98 + 1;
@@ -137,7 +137,7 @@ este archivo!!! :);
 #X connect 11 0 6 0;
 #X connect 12 0 8 0;
 #X connect 13 0 2 0;
-#X restore -388 186 pd format preset vector with number;
+#X restore 276 169 pd format preset vector with number;
 #N canvas 137 31 338 422 readallpresets 0;
 #X obj 143 150 directory;
 #X obj 27 -25 inlet;
@@ -162,36 +162,29 @@ este archivo!!! :);
 #X connect 10 0 3 0;
 #X connect 10 1 4 0;
 #X connect 10 2 7 0;
-#X restore -388 132 pd readallpresets;
-#X obj -388 104 t b b;
-#X text -308 260 1-48: presets \, 49-61: MFCC;
-#N canvas 48 23 1264 734 calcular 0;
-#X obj 155 363 list split;
-#X obj 285 363 list split;
-#X obj 183 383 list split 1;
-#X obj 313 383 list split 1;
-#X obj 136 323 t a a a;
-#X obj 212 326 + 48;
-#X obj 342 325 + 48;
-#X msg 136 240 row \$1;
-#X obj 117 146 until;
-#X obj 117 180 f;
-#X obj 143 180 + 1;
-#X msg 85 112 bang;
-#X msg 157 146 0;
-#X obj 136 220 + 1;
-#X obj 237 216 < 44;
-#X obj 136 303 spigot;
-#X obj 264 129 sel 0;
-#X obj 237 286 t f f;
-#X obj 237 247 change;
-#X obj 285 285 unpack f f;
-#X obj 183 450 -;
-#X obj 313 450 -;
-#X text 81 887 ____________________________________________________________
+#X restore 276 130 pd readallpresets;
+#N canvas 0 0 1280 734 calcular 0;
+#X obj 155 343 list split;
+#X obj 285 343 list split;
+#X obj 183 363 list split 1;
+#X obj 313 363 list split 1;
+#X obj 136 303 t a a a;
+#X msg 136 220 row \$1;
+#X obj 117 126 until;
+#X obj 117 160 f;
+#X obj 143 160 + 1;
+#X msg 85 92 bang;
+#X msg 157 126 0;
+#X obj 136 200 + 1;
+#X obj 136 283 spigot;
+#X obj 264 109 sel 0;
+#X obj 237 266 t f f;
+#X obj 237 227 change;
+#X obj 285 265 unpack f f;
+#X obj 183 446 -;
+#X obj 313 446 -;
+#X text 81 851 ____________________________________________________________
 ;
-#X text 443 886 Multiplicar cada fila por su distancia y guardarla
-en la matriz de resultado;
 #X obj 845 208 * 5;
 #X obj 845 225 expr (1/(sqrt(2*3.14159*pow($f2 \, 2)))*(exp((-1)*pow($f1
 \, 2)/2*pow($f2 \, 2))))*(2.5*$f2);
@@ -199,35 +192,87 @@ en la matriz de resultado;
 #X obj 845 157 f;
 #X obj 867 157 + 1;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array sigma 100 float 1;
-#A 0 0.997356 1.81485e-09 1.09348e-35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#X array sigma 1000 float 1;
+#A 0 0.997356 0.995784 0.991082 0.983295 0.972496 0.958785 0.94229
+0.923162 0.901572 0.877714 0.851795 0.824037 0.794672 0.76394 0.732083
+0.699343 0.665964 0.63218 0.598219 0.564299 0.530626 0.49739 0.464767
+0.432916 0.401977 0.372074 0.343309 0.315771 0.289527 0.264628 0.241108
+0.218986 0.198268 0.178944 0.160995 0.14439 0.129089 0.115047 0.102209
+0.0905171 0.0799104 0.0703243 0.0616933 0.053951 0.0470318 0.0408708
+0.0354049 0.0305734 0.0263181 0.0225837 0.0193181 0.0164726 0.0140021
+0.0118646 0.0100217 0.00843836 0.00708282 0.0059263 0.004943 0.00410987
+0.00340639 0.00281443 0.00231801 0.00190315 0.00155761 0.00127079 0.00103352
+0.000837899 0.000677167 0.000545544 0.00043812 0.000350741 0.000279905
+0.00022267 0.000176581 0.000139591 0.000110001 8.64111e-005 6.76661e-005
+5.28204e-005 4.11018e-005 3.18825e-005 2.46531e-005 1.9003e-005 1.46016e-005
+1.11843e-005 8.5398e-006 6.50004e-006 4.9319e-006 3.73028e-006 2.81255e-006
+2.1139e-006 1.58381e-006 1.1829e-006 8.80696e-007 6.53629e-007 4.83578e-007
+3.56642e-007 2.62196e-007 1.92155e-007 1.4038e-007 1.02233e-007 7.42168e-008
+5.37089e-008 3.87453e-008 2.78626e-008 1.99735e-008 1.4273e-008 1.01674e-008
+7.21989e-009 5.11072e-009 3.6063e-009 2.53673e-009 1.77874e-009 1.24332e-009
+8.66327e-010 6.01745e-010 4.1665e-010 2.8758e-010 1.97869e-010 1.35714e-010
+9.27906e-011 6.3243e-011 4.29684e-011 2.91014e-011 1.96477e-011 1.32232e-011
+8.87143e-012 5.93308e-012 3.95543e-012 2.6287e-012 1.74147e-012 1.15006e-012
+7.57099e-013 4.96839e-013 3.25019e-013 2.1195e-013 1.3778e-013 8.92831e-014
+5.76741e-014 3.71384e-014 2.38393e-014 1.52544e-014 9.73027e-015 6.18713e-015
+3.92174e-015 2.47798e-015 1.5608e-015 9.8e-016 6.13388e-016 3.82717e-016
+2.38035e-016 1.47584e-016 9.12158e-017 5.61988e-017 3.45155e-017 2.11317e-017
+1.28967e-017 7.84615e-018 4.75837e-018 2.8767e-018 1.73364e-018 1.04149e-018
+6.23707e-019 3.72336e-019 2.21576e-019 1.31442e-019 7.77283e-020 4.58196e-020
+2.69249e-020 1.57718e-020 9.20974e-021 5.36092e-021 3.11072e-021 1.79934e-021
+1.03752e-021 5.96356e-022 3.41699e-022 1.95172e-022 1.11127e-022 6.30736e-023
+3.56863e-023 2.01276e-023 1.13165e-023 6.34248e-024 3.54353e-024 1.97355e-024
+1.09568e-024 6.06391e-025 3.34542e-025 1.83981e-025 1.00864e-025 5.51208e-026
+3.00283e-026 1.63071e-026 8.82775e-027 4.76379e-027 2.56267e-027 1.37421e-027
+7.34592e-028 3.91448e-028 2.07934e-028 1.10106e-028 5.8119e-029 3.05815e-029
+1.6041e-029 8.38754e-030 4.37186e-030 2.27157e-030 1.17658e-030 6.07489e-031
+3.12673e-031 1.60423e-031 8.20499e-032 4.18323e-032 2.12611e-032 1.07716e-032
+5.44014e-033 2.73888e-033 1.37454e-033 6.87663e-034 3.42941e-034 1.7049e-034
+8.44901e-035 4.17393e-035 2.05543e-035 1.00901e-035 4.93773e-036 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 1 99 0 300 100 1;
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 999 0 300 100 1;
 #X restore 845 290 graph;
 #X msg 921 135 0;
-#X obj 845 191 / 100;
 #X obj 845 174 t f f;
 #X obj 845 137 until;
 #X obj 846 119 t f b;
-#X msg 846 102 100;
 #X obj 1178 208 + 0.62;
 #X obj 1178 191 * 4.38;
 #X obj 1049 194 t b f;
-#X text 82 708 ____________________________________________________________
+#X text 82 668 ____________________________________________________________
 ;
-#X text 445 713 Calcular la distancia gauss;
-#X obj 183 503 +;
-#X obj 183 520 sqrt;
-#X obj 313 486 pow 2;
-#X obj 183 486 pow 2;
-#X obj 420 95 t b f;
-#X obj 313 467 abs;
-#X obj 183 468 abs;
-#X obj 183 762 tabread sigma;
-#X obj 183 724 * 100;
-#X obj 183 743 int;
+#X text 445 673 Calcular la distancia gauss;
+#X obj 183 499 +;
+#X obj 183 516 sqrt;
+#X obj 313 482 pow 2;
+#X obj 183 482 pow 2;
+#X obj 420 75 t b f;
+#X obj 313 463 abs;
+#X obj 183 464 abs;
+#X obj 183 726 tabread sigma;
+#X obj 183 707 int;
 #N canvas 320 139 237 246 serialize 0;
 #X obj 55 155 list split 1;
 #X obj 55 121 until;
@@ -249,31 +294,27 @@ en la matriz de resultado;
 #X connect 5 0 3 0;
 #X connect 8 0 7 0;
 #X connect 8 1 4 0;
-#X restore 136 925 pd serialize a list;
-#X obj 299 942 *;
-#X obj 190 978 list;
-#X obj 299 961 repack 48;
-#X msg 117 961 row \$1;
-#X obj 190 995 list trim;
-#X obj 117 199 t f f f;
-#X obj 136 906 list split 48;
-#X text 81 1006 ____________________________________________________________
+#X restore 136 889 pd serialize a list;
+#X obj 299 906 *;
+#X obj 190 942 list;
+#X msg 117 925 row \$1;
+#X obj 190 959 list trim;
+#X obj 117 179 t f f f;
+#X obj 136 870 list split 48;
+#X text 81 970 ____________________________________________________________
 ;
-#X text 443 1010 Matriz de resultado;
-#X obj 117 367 + 1;
-#X obj 100 1067 until;
-#X msg 100 1029 48;
-#X obj 100 1086 f;
-#X obj 122 1086 + 1;
-#X obj 100 1048 t f b;
-#X msg 147 1067 0;
-#X text 362 961 <<< son 48 presets;
-#X text 131 1029 <<< son 48 presets;
-#X msg 100 1149 col \$1;
-#X obj 146 1184 sum;
-#X obj 100 1130 + 1;
-#X obj 146 1204 tabwrite parametros;
-#X obj 100 1107 t f f;
+#X text 443 974 Matriz de resultado;
+#X obj 100 1031 until;
+#X msg 100 993 48;
+#X obj 100 1050 f;
+#X obj 122 1050 + 1;
+#X obj 100 1012 t f b;
+#X msg 147 1031 0;
+#X msg 100 1113 col \$1;
+#X obj 146 1148 sum;
+#X obj 100 1094 + 1;
+#X obj 146 1187 tabwrite parametros;
+#X obj 100 1071 t f f;
 #N canvas 350 229 709 329 parametertable 0;
 #X obj -232 198 textfile;
 #X msg -232 141 rewind;
@@ -330,60 +371,59 @@ y paralelo lee la tabla parametros.;
 #X connect 17 0 20 1;
 #X connect 19 0 20 0;
 #X connect 25 0 9 0;
-#X restore 68 1225 pd parametertable;
-#X obj 420 75 inlet;
-#X obj 467 75 inlet;
-#X text 419 57 xpos;
-#X text 466 55 ypos;
-#X obj 100 1167 matrix 45 48;
-#X text 80 396 ____________________________________________________________
+#X restore 68 1208 pd parametertable;
+#X obj 420 55 inlet;
+#X obj 467 55 inlet;
+#X text 419 37 xpos;
+#X text 466 35 ypos;
+#X obj 100 1131 matrix 45 48;
+#X text 80 392 ____________________________________________________________
 ;
-#X text 443 401 Calcular la distancia del cursor al preset;
-#X obj 328 431 - 1;
-#X obj 198 431 - 1;
-#X text 364 406 *;
-#X text 364 412 *;
-#X text 364 418 *;
-#X text 364 424 *;
-#X text 364 430 *;
-#X text 364 436 *;
-#X text 373 435 <<<<<<<<<<;
-#X text 438 434 Los MFCC están entre -1 y 1 Entonces tenemos que convertir
+#X text 443 397 Calcular la distancia del cursor al preset;
+#X obj 328 427 - 1;
+#X obj 198 427 - 1;
+#X text 364 402 *;
+#X text 364 408 *;
+#X text 364 414 *;
+#X text 364 420 *;
+#X text 364 426 *;
+#X text 364 432 *;
+#X text 373 431 <<<<<<<<<<;
+#X text 438 430 Los MFCC están entre -1 y 1 Entonces tenemos que convertir
 el valor que viene desde el cursor a esas mismas unidades para poder
 calculra la distancia.;
-#X text 338 1062 Aqui extraemos cada columna (parámetros) \, la sumamos
+#X text 338 1026 Aqui extraemos cada columna (parámetros) \, la sumamos
 y luego la escribimos en la tabla parámetros.;
-#X text 180 1166 <--------------------Esta es la matriz resultado!!!!!
+#X text 180 1130 <--------------------Esta es la matriz resultado!!!!!
 ;
-#X text 429 190 Iteración a todas las filas de la matriz para extraer
+#X text 439 166 Iteración a todas las filas de la matriz para extraer
 los valores de los MFCC que se han seleccoinado en la interfaz.;
-#X text 423 190 <;
-#X obj 375 573 +;
-#X obj 400 573 f;
-#X msg 400 554 0;
-#X text 80 529 ____________________________________________________________
+#X text 423 170 <;
+#X obj 375 569 +;
+#X obj 400 569 f;
+#X msg 400 550 0;
+#X text 80 532 ____________________________________________________________
 ;
-#X text 443 533 A la salida de la raiz cuadrada tenemos las distancias
+#X text 443 538 A la salida de la raiz cuadrada tenemos las distancias
 lineales;
-#X obj 360 592 f;
-#X msg 400 146 bang;
-#X text 364 442 *;
-#X text 364 448 *;
-#X text 364 454 *;
-#X text 364 460 *;
-#X text 364 466 *;
-#X text 364 472 *;
-#X text 387 593 Sumammos todas las distancias al cursor en cada momento
+#X obj 360 601 f;
+#X msg 400 126 bang;
+#X text 364 438 *;
+#X text 364 444 *;
+#X text 364 450 *;
+#X text 364 456 *;
+#X text 364 462 *;
+#X text 364 468 *;
+#X text 387 602 Sumammos todas las distancias al cursor en cada momento
 ;
-#X obj 183 556 t f f;
+#X obj 183 552 t f f;
 #X obj 1178 155 * 2;
 #X obj 1178 173 pow 2;
-#X obj 344 1211 clip 0 1;
-#X obj 183 644 /;
-#X text 209 639 Dividimos cada distancia por la distancia total de
+#X obj 146 1165 clip 0 1;
+#X obj 183 649 /;
+#X text 209 644 Dividimos cada distancia por la distancia total de
 la iteración anterior. Esto nos da cada distancia normalizada.;
-#X text 218 722 (la tabla tiene 100 puntos);
-#X text 388 603 y hallamos la distancia total. Este es el penúltimo
+#X text 388 612 y hallamos la distancia total. Este es el penúltimo
 paso del loop (mirar el bang que saca el resultado);
 #N canvas 0 22 450 300 addall 0;
 #X obj 157 135 +;
@@ -405,199 +445,235 @@ paso del loop (mirar el bang que saca el resultado);
 #X connect 4 0 0 0;
 #X connect 7 0 2 0;
 #X connect 8 0 3 0;
-#X restore 381 779 pd addall;
-#X obj 29 575 t b b b;
-#X msg 29 762 bang;
-#X obj 85 129 t b b b b b b;
-#X msg 432 146 bang;
-#X text 442 776 Suma total de distancias gauss (iteración anterior)
+#X restore 381 743 pd addall;
+#X obj 29 584 t b b b;
+#X msg 29 726 bang;
+#X obj 85 109 t b b b b b b;
+#X msg 432 126 bang;
+#X text 442 740 Suma total de distancias gauss (iteración anterior)
 ;
-#X obj 274 853 *;
-#X obj 393 836 /;
-#X obj 381 798 t b f;
-#X msg 381 817 1;
-#X text 432 816 Inverso multiplicativo;
-#X text 300 853 Amplificar para que la suma total sea 1;
+#X obj 274 817 *;
+#X obj 393 800 /;
+#X obj 381 762 t b f;
+#X msg 381 781 1;
+#X text 432 780 Inverso multiplicativo;
+#X text 300 817 Amplificar para que la suma total sea 1;
 #X obj 1178 137 clip 0 10;
-#X obj 226 667 - 1;
-#X obj 226 684 * -1;
-#X obj 198 412 / 200;
-#X obj 328 412 / 200;
+#X obj 198 408 / 200;
+#X obj 328 408 / 200;
 #X obj 1049 102 inlet;
 #X obj 1049 135 * 10;
 #X text 1046 84 Sigma (ancho de la gráfica) [0 \, 1];
-#X obj 136 257 s tomatrix;
-#X obj 136 279 r frommatrix;
-#X obj 285 266 r \$0-selectedMFCC;
+#X obj 136 237 s tomatrix;
+#X obj 136 259 r frommatrix;
+#X obj 285 246 r \$0-selectedMFCC;
+#X obj 342 305 + 48;
+#X obj 212 306 + 48;
+#X text 443 850 Multiplicar cada fila por su distancia gauss y guardarla
+en la matriz de resultado;
+#X obj 820 761 s distancias-gauss;
+#X text 230 688 (la tabla donde se calcula el gauss tiene 1000 puntos)
+;
+#X msg 846 102 10000;
+#X obj 845 191 / 10000;
+#X obj 183 688 * 10000;
+#X obj 299 925 repack 48;
+#X obj 237 196 < 44;
+#X obj 258 159 r totalPresets;
+#X text 377 305 <---------;
+#X text 440 305 Cantidad de parÃ¡metros del sinte;
+#X obj 853 701 r totalPresets;
+#X obj 820 744 repack;
+#X text 227 869 <<< son 48 parÃ¡metros del sinte;
+#X text 362 925 <<< son 48 parÃ¡metros del sinte;
+#X text 131 993 <<< son 48 parÃ¡metros del sinte;
+#X obj 69 1229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 258 176 - 1;
+#X obj 117 346 + 1;
+#X obj 853 723 - 1;
 #X connect 0 1 2 0;
 #X connect 1 1 3 0;
-#X connect 2 0 20 0;
-#X connect 3 0 21 0;
-#X connect 4 0 58 0;
+#X connect 2 0 17 0;
+#X connect 3 0 18 0;
+#X connect 4 0 50 0;
 #X connect 4 1 0 0;
 #X connect 4 2 1 0;
-#X connect 5 0 0 1;
-#X connect 6 0 1 1;
-#X connect 7 0 139 0;
-#X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X connect 9 0 57 0;
-#X connect 10 0 9 1;
-#X connect 11 0 122 0;
-#X connect 12 0 9 1;
-#X connect 13 0 7 0;
-#X connect 14 0 18 0;
-#X connect 15 0 4 0;
-#X connect 16 0 8 1;
-#X connect 17 0 15 1;
-#X connect 17 1 16 0;
-#X connect 18 0 17 0;
-#X connect 19 0 5 0;
-#X connect 19 1 6 0;
-#X connect 20 0 47 0;
-#X connect 21 0 46 0;
-#X connect 24 0 25 0;
-#X connect 25 0 26 0;
-#X connect 27 0 28 0;
-#X connect 27 0 32 0;
-#X connect 28 0 27 1;
-#X connect 30 0 27 1;
-#X connect 31 0 24 0;
-#X connect 32 0 31 0;
-#X connect 32 1 26 1;
-#X connect 33 0 27 0;
-#X connect 34 0 33 0;
-#X connect 34 1 30 0;
-#X connect 35 0 34 0;
-#X connect 36 0 25 1;
-#X connect 37 0 36 0;
+#X connect 5 0 125 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 49 0;
+#X connect 8 0 7 1;
+#X connect 9 0 110 0;
+#X connect 10 0 7 1;
+#X connect 11 0 5 0;
+#X connect 12 0 4 0;
+#X connect 13 0 6 1;
+#X connect 14 0 12 1;
+#X connect 14 1 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 129 0;
+#X connect 16 1 128 0;
+#X connect 17 0 41 0;
+#X connect 18 0 40 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 23 0 24 0;
+#X connect 23 0 27 0;
+#X connect 24 0 23 1;
+#X connect 26 0 23 1;
+#X connect 27 0 134 0;
+#X connect 27 1 22 1;
+#X connect 28 0 23 0;
+#X connect 29 0 28 0;
+#X connect 29 1 26 0;
+#X connect 30 0 21 1;
+#X connect 31 0 30 0;
+#X connect 32 0 133 0;
+#X connect 32 1 119 0;
+#X connect 35 0 36 0;
+#X connect 36 0 100 0;
+#X connect 37 0 35 1;
 #X connect 38 0 35 0;
-#X connect 38 1 131 0;
-#X connect 41 0 42 0;
-#X connect 42 0 111 0;
-#X connect 43 0 41 1;
-#X connect 44 0 41 0;
-#X connect 45 0 11 0;
-#X connect 45 1 134 0;
-#X connect 46 0 43 0;
-#X connect 47 0 44 0;
-#X connect 48 0 119 1;
-#X connect 48 0 125 0;
-#X connect 49 0 50 0;
-#X connect 50 0 48 0;
-#X connect 51 0 52 0;
-#X connect 52 0 54 0;
-#X connect 53 0 56 0;
-#X connect 54 0 53 1;
-#X connect 55 0 53 0;
-#X connect 56 0 80 0;
-#X connect 57 0 61 0;
-#X connect 57 1 13 0;
-#X connect 57 2 14 0;
-#X connect 58 0 51 0;
-#X connect 61 0 55 0;
-#X connect 62 0 64 0;
-#X connect 63 0 66 0;
-#X connect 64 0 65 0;
-#X connect 64 0 74 0;
-#X connect 65 0 64 1;
-#X connect 66 0 62 0;
-#X connect 66 1 67 0;
-#X connect 67 0 64 1;
-#X connect 70 0 80 0;
-#X connect 71 0 114 0;
-#X connect 72 0 70 0;
-#X connect 74 0 72 0;
-#X connect 74 1 73 1;
-#X connect 76 0 45 0;
-#X connect 77 0 135 0;
-#X connect 80 0 71 0;
-#X connect 83 0 21 1;
-#X connect 84 0 20 1;
-#X connect 97 0 98 0;
-#X connect 97 0 102 1;
-#X connect 98 0 97 1;
-#X connect 99 0 98 0;
-#X connect 102 0 115 1;
-#X connect 103 0 99 0;
-#X connect 111 0 115 0;
-#X connect 111 1 97 0;
-#X connect 112 0 113 0;
-#X connect 113 0 37 0;
-#X connect 114 0 73 0;
-#X connect 115 0 132 0;
-#X connect 115 0 49 0;
-#X connect 119 0 127 0;
-#X connect 120 0 121 0;
-#X connect 120 1 102 0;
-#X connect 120 2 75 0;
-#X connect 121 0 119 0;
-#X connect 122 0 120 0;
-#X connect 122 1 63 0;
-#X connect 122 2 8 0;
-#X connect 122 3 12 0;
-#X connect 122 4 103 0;
-#X connect 122 5 123 0;
-#X connect 123 0 119 2;
-#X connect 125 0 52 1;
-#X connect 126 0 125 1;
-#X connect 127 0 128 0;
-#X connect 127 1 126 1;
-#X connect 128 0 126 0;
-#X connect 131 0 112 0;
-#X connect 132 0 133 0;
-#X connect 134 0 84 0;
-#X connect 135 0 83 0;
-#X connect 136 0 137 0;
-#X connect 137 0 38 0;
-#X connect 140 0 15 0;
-#X connect 141 0 19 0;
-#X restore -252 503 pd calcular distancias amplitudes y matrizresultado
+#X connect 39 0 9 0;
+#X connect 39 1 120 0;
+#X connect 40 0 37 0;
+#X connect 41 0 38 0;
+#X connect 42 0 107 1;
+#X connect 42 0 113 0;
+#X connect 42 0 142 0;
+#X connect 43 0 42 0;
+#X connect 44 0 45 0;
+#X connect 45 0 136 0;
+#X connect 46 0 48 0;
+#X connect 47 0 46 0;
+#X connect 48 0 69 0;
+#X connect 49 0 148 0;
+#X connect 49 1 11 0;
+#X connect 49 2 137 0;
+#X connect 50 0 44 0;
+#X connect 53 0 55 0;
+#X connect 54 0 57 0;
+#X connect 55 0 56 0;
+#X connect 55 0 63 0;
+#X connect 56 0 55 1;
+#X connect 57 0 53 0;
+#X connect 57 1 58 0;
+#X connect 58 0 55 1;
+#X connect 59 0 69 0;
+#X connect 60 0 103 0;
+#X connect 61 0 59 0;
+#X connect 63 0 61 0;
+#X connect 63 1 62 1;
+#X connect 65 0 39 0;
+#X connect 66 0 121 0;
+#X connect 69 0 60 0;
+#X connect 72 0 18 1;
+#X connect 73 0 17 1;
+#X connect 86 0 87 0;
+#X connect 86 0 91 1;
+#X connect 87 0 86 1;
+#X connect 88 0 87 0;
+#X connect 91 0 104 1;
+#X connect 92 0 88 0;
+#X connect 100 0 104 0;
+#X connect 100 1 86 0;
+#X connect 101 0 102 0;
+#X connect 102 0 31 0;
+#X connect 103 0 62 0;
+#X connect 104 0 135 0;
+#X connect 107 0 115 0;
+#X connect 108 0 109 0;
+#X connect 108 1 91 0;
+#X connect 108 2 64 0;
+#X connect 109 0 107 0;
+#X connect 110 0 108 0;
+#X connect 110 1 54 0;
+#X connect 110 2 6 0;
+#X connect 110 3 10 0;
+#X connect 110 4 92 0;
+#X connect 110 5 111 0;
+#X connect 111 0 107 2;
+#X connect 113 0 45 1;
+#X connect 114 0 113 1;
+#X connect 115 0 116 0;
+#X connect 115 1 114 1;
+#X connect 116 0 114 0;
+#X connect 119 0 101 0;
+#X connect 120 0 73 0;
+#X connect 121 0 72 0;
+#X connect 122 0 123 0;
+#X connect 123 0 32 0;
+#X connect 126 0 12 0;
+#X connect 127 0 16 0;
+#X connect 128 0 1 1;
+#X connect 129 0 0 1;
+#X connect 133 0 29 0;
+#X connect 134 0 20 0;
+#X connect 135 0 43 0;
+#X connect 136 0 46 1;
+#X connect 137 0 15 0;
+#X connect 138 0 147 0;
+#X connect 141 0 149 0;
+#X connect 142 0 131 0;
+#X connect 147 0 137 1;
+#X connect 148 0 47 0;
+#X connect 149 0 142 1;
+#X restore 370 476 pd calcular distancias amplitudes y matrizresultado
 ;
-#X text -611 497 calcular distancia \, gauss \, amplitudes \, la matriz
+#X obj 276 90 loadbang;
+#X text 149 130 Name of each preset:;
+#X text 173 150 Read one preset:;
+#X text 135 168 Give format to vector:;
+#X obj 276 294 inlet;
+#X obj 318 294 inlet;
+#X text 196 292 Which mfcc x;
+#X text 356 294 Which mfcc y;
+#X obj 311 334 pack f f;
+#X obj 318 314 t b f;
+#X obj 370 439 inlet;
+#X obj 521 447 inlet;
+#X text 368 421 XPos;
+#X text 520 429 YPos;
+#X text 141 209 Save preset in matrix;
+#X msg 205 93 bang;
+#X text 533 208 -- 45 columnas de 45 presets;
+#X obj 276 209 matrix 45 61;
+#X obj 673 452 inlet;
+#X text 671 433 Cursor width;
+#X obj 282 188 r tomatrix;
+#X obj 276 233 s frommatrix;
+#X obj 311 353 s \$0-selectedMFCC;
+#X text 81 55 1 Conformar una matriz con todos los valores extraidos
+de los archivos presets_mfcc_ed;
+#X text 81 266 2 Recibir los datos desde la interfaz para definir los
+ejes de el canvas;
+#X text 80 388 3 calcular distancia \, gauss \, amplitudes \, la matriz
 final y el estado final >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ;
-#X obj -388 77 loadbang;
-#X text -515 132 Name of each preset:;
-#X text -491 161 Read one preset:;
-#X text -529 185 Give format to vector:;
-#X obj -523 338 inlet;
-#X obj -481 338 inlet;
-#X text -603 336 Which mfcc x;
-#X text -443 338 Which mfcc y;
-#X obj -488 416 pack f f;
-#X obj -481 377 t b f;
-#X obj -252 466 inlet;
-#X obj 51 472 inlet;
-#X text -254 448 XPos;
-#X text 50 454 YPos;
-#X text -598 213 Add 13 random mfcc coefs to preset;
-#X text -523 260 Save preset in matrix;
-#X msg -459 74 bang;
-#X text -131 259 -- 45 columnas de 45 presets;
-#X obj -388 260 matrix 45 61;
-#X obj 116 470 inlet;
-#X text 114 451 Cursor width;
-#X obj -382 233 r tomatrix;
-#X obj -388 284 s frommatrix;
-#X obj -488 446 s \$0-selectedMFCC;
+#X obj 539 127 countFiles ../presets_mfcc_ed;
+#X text 356 209 1-48: parameters \, 49-61: MFCC;
+#X obj 276 110 t b b b;
+#X obj 539 144 s totalPresets;
 #X connect 0 0 7 0;
-#X connect 1 0 31 0;
-#X connect 2 0 31 0;
+#X connect 1 0 27 0;
+#X connect 2 0 27 0;
 #X connect 4 0 7 1;
-#X connect 7 0 31 0;
+#X connect 7 0 27 0;
 #X connect 8 0 0 0;
-#X connect 9 0 8 0;
-#X connect 9 1 4 0;
-#X connect 13 0 9 0;
-#X connect 17 0 21 0;
-#X connect 18 0 22 0;
-#X connect 21 0 36 0;
-#X connect 22 0 21 0;
-#X connect 22 1 21 1;
-#X connect 23 0 11 0;
-#X connect 24 0 11 1;
-#X connect 29 0 9 0;
-#X connect 31 0 35 0;
-#X connect 32 0 11 2;
-#X connect 34 0 31 0;
+#X connect 10 0 38 0;
+#X connect 14 0 18 0;
+#X connect 15 0 19 0;
+#X connect 18 0 32 0;
+#X connect 19 0 18 0;
+#X connect 19 1 18 1;
+#X connect 20 0 9 0;
+#X connect 21 0 9 1;
+#X connect 25 0 38 0;
+#X connect 27 0 31 0;
+#X connect 28 0 9 2;
+#X connect 30 0 27 0;
+#X connect 36 0 39 0;
+#X connect 38 0 8 0;
+#X connect 38 1 4 0;
+#X connect 38 2 36 0;
