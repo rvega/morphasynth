@@ -10,10 +10,10 @@ Morphasynth.Keyboard = function(){
   this.init = function(){
     //calls the "mouse events" methods
     //the pressed
-    $('.key').bind('mousedown', $.proxy(this.pressedKey, this));
+    $('.key').bind('mousedown touchstart', $.proxy(this.pressedKey, this));
 
     //the released
-    $('.key').bind('mouseup', $.proxy(this.releasedKey, this));
+    $('.key').bind('mouseup touchend', $.proxy(this.releasedKey, this));
     $('#piano-scroll').scrollLeft( $("#piano").width()/2.56 );
   };
 

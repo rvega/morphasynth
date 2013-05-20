@@ -147,7 +147,7 @@ extern void sum_setup(void);
 
 - (void)sendNoteOn:(CDVInvokedUrlCommand*)command {
   float note = [[command.arguments objectAtIndex:0] floatValue];
-  float vel = [[command.arguments objectAtIndex:0] floatValue];
+  float vel = [[command.arguments objectAtIndex:1] floatValue];
   [PdBase sendNoteOn:0 pitch:note velocity:vel];
 
   CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];

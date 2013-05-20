@@ -90,7 +90,7 @@ Morphasynth.TimbreSpace = function(){
   //SEND CANVAS POSES
   this.sendPoses = function (xx, yy){
     // console.log("pointer poses x:"+xx+" y:"+yy);
-    //
+    
     // ContainerApp.sendMessage("/pointer/",this.pointerX,this.pointerY);
     if(typeof xx != 'undefined')
       PureData.sendFloat(xx, 'xpos');

@@ -54,6 +54,7 @@
 		30E2FCDC174A584600EBA16E /* limit.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E2FCDB174A584600EBA16E /* limit.c */; };
 		30E2FCE1174A58A900EBA16E /* iemmatrix_utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E2FCDE174A58A900EBA16E /* iemmatrix_utility.c */; };
 		30E2FCE2174A58A900EBA16E /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E2FCE0174A58A900EBA16E /* matrix.c */; };
+		30E2FCE7174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E2FCE6174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.m */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
@@ -155,6 +156,8 @@
 		30E2FCDE174A58A900EBA16E /* iemmatrix_utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = iemmatrix_utility.c; path = "../../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/iemmatrix_utility.c"; sourceTree = "<group>"; };
 		30E2FCDF174A58A900EBA16E /* iemmatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iemmatrix.h; path = "../../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/iemmatrix.h"; sourceTree = "<group>"; };
 		30E2FCE0174A58A900EBA16E /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix.c; path = "../../../../vendors/pd-extended-0.43.4/externals/iem/iemmatrix/src/matrix.c"; sourceTree = "<group>"; };
+		30E2FCE5174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+UIWebViewNoCopy.h"; sourceTree = "<group>"; };
+		30E2FCE6174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+UIWebViewNoCopy.m"; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Morphasynth-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Morphasynth-Prefix.pch"; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				30E2FCE5174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.h */,
+				30E2FCE6174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.m */,
 			);
 			name = Classes;
 			path = Morphasynth/Classes;
@@ -573,6 +578,7 @@
 				30E2FCDC174A584600EBA16E /* limit.c in Sources */,
 				30E2FCE1174A58A900EBA16E /* iemmatrix_utility.c in Sources */,
 				30E2FCE2174A58A900EBA16E /* matrix.c in Sources */,
+				30E2FCE7174A7B9900EBA16E /* UIWebView+UIWebViewNoCopy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
