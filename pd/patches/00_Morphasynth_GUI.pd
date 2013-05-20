@@ -1,4 +1,4 @@
-#N canvas 769 1 445 519 10;
+#N canvas 769 22 445 519 10;
 #X declare -stdpath extra/iemmatrix;
 #X obj 2 30 cnv 15 150 25 empty empty empty 5 12 0 11 -202944 -66577
 0;
@@ -100,8 +100,8 @@
 #X obj 383 51 soundfiler;
 #X obj 105 120 hsl 61 15 0 1 0 1 empty empty rev 21 7 1 12 -262144
 -1 -1 0 1;
-#X obj 368 164 table L 7.938e+006;
-#X obj 368 183 table R 7.938e+006;
+#X obj 368 164 table L 7.938e+06;
+#X obj 368 183 table R 7.938e+06;
 #X msg 383 29 write -wave d:/morphasynth5-L.wav L;
 #X msg 349 80 write -wave d:/morphasynth5-R.wav R;
 #X connect 0 0 4 0;
@@ -132,7 +132,7 @@
 #X text 157 4 - Dejar la envolvente de amplitud afuera;
 #X obj 286 87 pd/sliders;
 #X obj 210 194 declare -stdpath extra/iemmatrix;
-#N canvas 423 0 540 220 dsp 0;
+#N canvas 423 22 540 220 dsp 0;
 #X obj 3 -5 inlet;
 #X obj 41 19 inlet;
 #X obj 65 142 pd/dsp;
@@ -159,7 +159,7 @@
 #X obj 12 7 pd/make-notes;
 #X text 206 167 [matrix];
 #N canvas 630 227 450 300 showmorph 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 22 450 300 (subpatch) 0;
 #X array distancias-gauss 43 float 2;
 #X coords 0 1 43 0 172 19 2 0 0;
 #X restore 100 100 graph;
@@ -215,10 +215,10 @@
 por 100 para que ocupe todo el canvas de 400;
 #X obj 101 38 - 1;
 #X obj 261 43 - 1;
-#X obj 261 62 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 9 256;
-#X obj 101 58 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 2 256;
+#X obj 261 62 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 9 256;
+#X obj 101 58 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 2 256;
 #X obj 352 24 loadbang;
 #X obj 352 45 delay 1000;
 #X obj 55 240 t f f;
@@ -314,6 +314,8 @@ por 100 para que ocupe todo el canvas de 400;
 #X obj 63 432 pack f 15;
 #X text 13 236 DRAW INTERFACE;
 #X text 159 19 - Poner el speed en la interfaz;
+#X obj 198 430 r cursor-width;
+#X obj 216 467 print CW;
 #X connect 11 0 22 1;
 #X connect 13 0 22 0;
 #X connect 13 0 28 0;
@@ -336,3 +338,4 @@ por 100 para que ocupe todo el canvas de 400;
 #X connect 53 0 54 0;
 #X connect 55 0 52 0;
 #X connect 56 0 53 0;
+#X connect 59 0 60 0;

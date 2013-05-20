@@ -3,22 +3,28 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <link rel="stylesheet" href="css/vendor/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8">
 
     <!-- Include these scripts when running in development mode -->
-    <script src="http://localhost:1488/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="../vendors/KievII/third_part/jspack-1.0.0/code/struct.js"></script>
-    <script type="text/javascript" src="../vendors/KievII/dist/kievII.js"></script>
+      <!-- <script src="http://localhost:1488/socket.io/socket.io.js"></script> -->
+      <!-- <script type="text/javascript" src="../vendors/KievII/third_part/jspack&#45;1.0.0/code/struct.js"></script> -->
+      <!-- <script type="text/javascript" src="../vendors/KievII/dist/kievII.js"></script> -->
+
+    <!-- Include these scripts when running in iPad -->
+    <script src="vendors/cordova.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libpd.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- <script src="http://localhost:8080/target/target&#45;script&#45;min.js#anonymous"></script> -->
 
     <!-- Include these scripts always -->
-    <script src="js/vendor/jquery.js" type="text/javascript" charset="utf-8"></script>
-    <script src="css/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/vendor/raphael.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/vendor/jquery.touchSwipe.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/morphasynth.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/Timbre-space.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendors/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendors/raphael.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendors/jquery.touchSwipe.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/TimbreSpace.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/Keyboard.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/Morphasynth.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body id="main-container">
     <div id="timbre-space"></div>

@@ -1,3 +1,5 @@
+if(typeof Morphasynth==='undefined') Morphasynth = {};
+
 /*
  * Manages the piano keyboard
  */
@@ -20,8 +22,11 @@ Morphasynth.Keyboard = function(){
     var octaveNumber = key.closest('.octave').attr('data-octave');
     var noteNumber = parseInt(octaveNumber*12) + parseInt(key.attr('data-note-number'));
     $(key).addClass("pressed");
+    
+    PureData.sendNoteOn(noteNumber, 64);
+
     // Debug:
-    console.log("MIDI note on: " + noteNumber);
+    // console.log("MIDI note on: " + noteNumber);
     lastKey=key;
   };
 
@@ -36,7 +41,10 @@ Morphasynth.Keyboard = function(){
     $(lastKey).removeClass("pressed");
     var octaveNumber = lastKey.closest('.octave').attr('data-octave');
     var noteNumber = parseInt(octaveNumber*12) + parseInt(lastKey.attr('data-note-number'));
+
+    PureData.sendNoteOn(noteNumber, 0);
+
     // Debug:
-    console.log("MIDI note off: " + noteNumber);
+    // console.log("MIDI note off: " + noteNumber);
   };
 }
