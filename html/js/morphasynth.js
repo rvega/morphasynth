@@ -7,8 +7,8 @@ Morphasynth = {}
  * Manages the options
  */
 Morphasynth.Options = function(){
-  this.x = 'envelope-a';
-  this.y = 'mfcc-1';
+  this.x = 'osc1-amplitude';
+  this.y = 'osc1-waveform';
 
   this.init = function(){
     $('#select-x').val(0);

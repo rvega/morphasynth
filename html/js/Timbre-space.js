@@ -155,9 +155,6 @@ Morphasynth.TimbreSpace = function(){
   };
 
   this.BackgroundBeauties = function (wid, hei){
-
-    console.log("sisaasfajsdfiasdlfa"+wid);
-
     //Dots
     for(var i=15;i<wid;i+=30){
       for(var j=15;j<hei;j+=30){
