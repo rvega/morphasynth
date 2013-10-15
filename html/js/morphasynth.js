@@ -97,6 +97,9 @@ function main(){
 
   Space = new Morphasynth.TimbreSpace();
   Space.init();
+
+  Config = new Morphasynth.ConfigPanel();
+  Config.init();
 }
 
 /*

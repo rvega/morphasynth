@@ -20,9 +20,12 @@
     <script src="js/morphasynth.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/Timbre-space.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/Keyboard.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/config-panel.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body id="main-container">
     <div id="timbre-space"></div>
+    <div id="config-panel"></div>
+    <div id="clasic-synth"></div>
     <div id="piano-scroll">
       <div id="piano">
         <div class="octave" data-octave="0"> 
@@ -203,7 +206,9 @@
         </div>
       </div> 
     </div>
-    <button class="btn btn-mini" id="options-button" data-target="#options" data-toggle="modal"><i class="icon-wrench"></i></button>
+    <button class="btn btn-mini" id="options-button" data-target="#options" data-toggle="modal">
+      <i class="icon-wrench"></i>
+    </button>
     <div class="modal hide fade" id="options">
       <div class="modal-header">
         <i class="icon-wrench"></i>

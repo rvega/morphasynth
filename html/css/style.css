@@ -33,6 +33,20 @@ html{
    height: 76.5%;
 }
 
+#config-panel{
+   height: 100%;
+   width: 100%;
+   background: #000;
+   display: none;
+}
+
+#clasic-synth{
+   height: 76.5%;
+   width: 100%;
+   background: #000;
+   display: none;
+}
+
 #piano-scroll{
    height: 23.5%;
    width: 100%;

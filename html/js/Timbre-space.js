@@ -22,7 +22,7 @@ Morphasynth.TimbreSpace = function(){
     this.presets = JSON.parse(ContainerApp.getPresets());
 
     // Bind mouse events
-    self = this;
+    var self = this;
 
     //stop browser scrolling
     $('#timbre-space').bind('touchmove', function(e){e.preventDefault()});
@@ -82,7 +82,7 @@ Morphasynth.TimbreSpace = function(){
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
           if(fingerCount == 2){
             $("#timbre-space").slideToggle();
-            //$("#config-panel").slideToggle();
+            $("#config-panel").slideToggle();
             $("#piano-scroll").slideToggle();
           }
         },
