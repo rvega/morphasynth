@@ -55,7 +55,7 @@ function createMockContainerApp(){
 
     this.sendMessage = function(msg, a ,b){
       var msg = new K2.OSC.Message(msg,a,b);
-      this.oscConnector.sendOSC(msg);
+      //this.oscConnector.sendOSC(msg);
     }
 
     this.getPresets = function(){

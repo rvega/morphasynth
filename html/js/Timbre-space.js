@@ -24,6 +24,9 @@ Morphasynth.TimbreSpace = function(){
     // Bind mouse events
     self = this;
 
+    //stop browser scrolling
+    $('body').bind('touchmove', function(e){e.preventDefault()});
+
     // Create drawing surface
     var ts = $('#timbre-space');
     this.width = ts.width();
@@ -44,6 +47,28 @@ Morphasynth.TimbreSpace = function(){
     interTime=1;
     var intervalId;
 
+
+    //The Touch with hammer.js
+    Hammer(ts).on("dragstart", function (event) {
+        console.log("start: ");
+    });
+
+    Hammer(ts).on("drag", function (event) {
+
+        //console.log(event.gesture.touches[0]);
+
+        self.pointerX = event.gesture.touches[0].pageX;
+        self.pointerY = event.gesture.touches[0].pageY;
+
+        self.sendPoses(self.pointerX,self.pointerY);
+        self.actualicePointer(self.pointerX,self.pointerY);
+    });
+
+    Hammer(ts).on("dragend", function (event) {
+        console.log("end");
+    });
+
+/*
     //the pressed
     $('#timbre-space').bind('mousedown', $.proxy(this.pressedKey, this));
 
@@ -60,28 +85,15 @@ Morphasynth.TimbreSpace = function(){
         self.actualicePointer(self.pointerX,self.pointerY);
       }
     });
-
+*/
     $(".icon-ok").mouseup(function (){
       self.actPoints();
     }); 
   };
 
-  this.pressedKey = function(event){
-    console.log("pres");
-
-    this.sendPoses(event.clientX,event.clientY);
-
-    this.sendXY=true;
-  };
-
-  this.releasedKey = function(event){ 
-    console.log("rels");
-    this.sendXY=false;
-  };
-
   //SEND CANVAS POSES
   this.sendPoses = function (xx, yy){
-    console.log("pointer poses x:"+xx+" y:"+yy);
+    //console.log("pointer poses x:"+xx+" y:"+yy);
     ContainerApp.sendMessage("/pointer/",this.pointerX,this.pointerY);
   }
 
