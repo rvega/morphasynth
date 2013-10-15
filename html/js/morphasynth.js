@@ -100,6 +100,9 @@ function main(){
 
   Config = new Morphasynth.ConfigPanel();
   Config.init();
+
+  Synth = new Morphasynth.ClasicSynth();
+  Synth.init();
 }
 
 /*

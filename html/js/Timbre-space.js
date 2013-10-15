@@ -39,7 +39,7 @@ Morphasynth.TimbreSpace = function(){
     this.BackgroundBeauties(ts.width(),ts.height());
 
     //draw the pointer
-    this.drawPointer();
+    self.drawPointer();
     // Draw the points
     this.drawPoints();
 
@@ -84,6 +84,7 @@ Morphasynth.TimbreSpace = function(){
             $("#timbre-space").slideToggle();
             $("#config-panel").slideToggle();
             $("#piano-scroll").slideToggle();
+            $("#options-button").slideToggle();
           }
         },
         threshold:0,
