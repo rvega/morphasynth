@@ -77,6 +77,18 @@ Morphasynth.TimbreSpace = function(){
       }
     });
 
+    //When just make a little tap
+    Hammer(ts).on("touch", function (event) {
+
+        if(event.gesture.touches.length == 1){
+          self.pointerX = event.gesture.touches[0].pageX;
+          self.pointerY = event.gesture.touches[0].pageY;
+
+          self.sendPoses(self.pointerX,self.pointerY);
+          self.actualicePointer(self.pointerX,self.pointerY);
+        }
+    });
+
     //touchSwipe Implementation
     $(ts).swipe( {
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
@@ -87,7 +99,7 @@ Morphasynth.TimbreSpace = function(){
             $("#options-button").slideToggle();
           }
         },
-        threshold:0,
+        threshold:200,
         fingers:'all'
       });
 

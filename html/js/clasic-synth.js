@@ -12,6 +12,12 @@ Morphasynth.ClasicSynth = function(){
     var cs = $("#clasic-synth");
     this.synthCanvas = Raphael('clasic-synth', cs.width(), cs.height());
 
+    //create buttons array
+    var Buttons = new Array();
+
+    button = new Morphasynth.Button();
+    button.init("papucho", this.synthCanvas);
+
     //stop browser scrolling
     $(cs).bind('touchmove', function(e){e.preventDefault()});
 
@@ -20,7 +26,7 @@ Morphasynth.ClasicSynth = function(){
     bg.attr("fill", "#002129");
     self.BackgroundBeauties(cs.width(), cs.height());
 
-    self.drawOnConfig(this.synthCanvas);
+    self.drawOn(this.synthCanvas);
 
     //return to canvas swipe
     $(cs).swipe( {
@@ -39,10 +45,13 @@ Morphasynth.ClasicSynth = function(){
       });
   };
 
-  this.drawOnConfig = function (paper){
+  this.drawOn = function (paper){
     var title = paper.text(100, 20, "Clasic Synth");
     title.attr("fill","#fff");
     title.attr("font-size","25");
+
+    //draw test button
+    button.draw(75,115);
   };
 
   this.BackgroundBeauties = function (wid, hei){
