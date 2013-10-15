@@ -25,7 +25,7 @@ Morphasynth.TimbreSpace = function(){
     self = this;
 
     //stop browser scrolling
-    $('body').bind('touchmove', function(e){e.preventDefault()});
+    $('#timbre-space').bind('touchmove', function(e){e.preventDefault()});
 
     // Create drawing surface
     var ts = $('#timbre-space');
@@ -43,49 +43,40 @@ Morphasynth.TimbreSpace = function(){
     // Draw the points
     this.drawPoints();
 
-    //iterTime controla el tiempo del intervalo de repetición del iterador intervalId
-    interTime=1;
-    var intervalId;
 
 
     //The Touch with hammer.js
+    //boolean for single drag
+    var singleDrag = false;
+
+    //when touch starts
     Hammer(ts).on("dragstart", function (event) {
-        console.log("start: ");
+        console.log("start: "+event.gesture.touches.length);
+        if(event.gesture.touches.length == 1){
+          singleDrag = true;
+        }
     });
 
+    //when touch Ends
+    Hammer(ts).on("dragend", function (event) {
+        console.log("end");
+        singleDrag = false;
+    });
+
+    //when is dragging
     Hammer(ts).on("drag", function (event) {
 
-        //console.log(event.gesture.touches[0]);
+      console.log(event.gesture.touches.length);
 
+      if(singleDrag){
         self.pointerX = event.gesture.touches[0].pageX;
         self.pointerY = event.gesture.touches[0].pageY;
 
         self.sendPoses(self.pointerX,self.pointerY);
         self.actualicePointer(self.pointerX,self.pointerY);
-    });
-
-    Hammer(ts).on("dragend", function (event) {
-        console.log("end");
-    });
-
-/*
-    //the pressed
-    $('#timbre-space').bind('mousedown', $.proxy(this.pressedKey, this));
-
-    //the released
-    $('#timbre-space').bind('mouseup', $.proxy(this.releasedKey, this));
-
-    $("#timbre-space").mousemove(function (event) {
-      //console.log("entrando al movimiento");
-      if(self.sendXY){
-        self.pointerX = event.pageX;
-        self.pointerY = event.pageY;
-
-        self.sendPoses(self.pointerX,self.pointerY);
-        self.actualicePointer(self.pointerX,self.pointerY);
       }
     });
-*/
+
     $(".icon-ok").mouseup(function (){
       self.actPoints();
     }); 
@@ -171,7 +162,7 @@ Morphasynth.TimbreSpace = function(){
     for(var i=15;i<wid;i+=30){
       for(var j=15;j<hei;j+=30){
         var pointer=this.canvas.circle(i,j,.3);
-        pointer.attr("fill","#fff");
+        pointer.attr("fill","#666");
         pointer.attr("stroke-width","0");
       }
     }
