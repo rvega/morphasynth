@@ -77,6 +77,19 @@ Morphasynth.TimbreSpace = function(){
       }
     });
 
+    //touchSwipe Implementation
+    $(ts).swipe( {
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          if(fingerCount == 2){
+            $("#timbre-space").slideToggle();
+            //$("#config-panel").slideToggle();
+            $("#piano-scroll").slideToggle();
+          }
+        },
+        threshold:0,
+        fingers:'all'
+      });
+
     $(".icon-ok").mouseup(function (){
       self.actPoints();
     }); 
