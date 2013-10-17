@@ -4,12 +4,14 @@
 Morphasynth.ClasicSynth = function(){
 
   this.synthCanvas = null;
+  var cs;
+  var currentButton = null;
 
   this.init = function (){
 
     var self = this;
 
-    var cs = $("#clasic-synth");
+    cs = $("#clasic-synth");
     this.synthCanvas = Raphael('clasic-synth', cs.width(), cs.height());
 
     //create buttons array
@@ -51,7 +53,32 @@ Morphasynth.ClasicSynth = function(){
     title.attr("font-size","25");
 
     //draw test button
-    button.draw(75,115);
+    button.draw(70,115);
+    
+    //when touch starts
+    Hammer(cs).on("touch", function (event) {
+        console.log("start: "+event.gesture.touches.length);
+        if(event.gesture.touches.length == 1){
+          if(button.getTouch(event.gesture.touches[0].pageX,event.gesture.touches[0].pageY)){
+            currentButton = button;
+            //alert("yaerahh !!  "+currentButton.getName());
+          }
+        }
+    });
+
+    //while touching
+    Hammer(cs).on("drag", function (event) {
+        //console.log("start: "+event.gesture.touches.length);
+        if(event.gesture.touches.length == 1 && currentButton!=null){
+          currentButton.setAngle(event.gesture.angle);
+        }
+    });
+
+    //when touch finishes
+    Hammer(cs).on("release", function (event) {
+        currentButton = null;
+    });
+
   };
 
   this.BackgroundBeauties = function (wid, hei){

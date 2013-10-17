@@ -23,14 +23,11 @@ html{
    height: 1024px;
    width: 768px;
    border: 1px solid grey;
-
-   /* iPad size */
-   /* height: 1024px; */
-   /* width: 748px; */
 }
 
 #timbre-space{
    height: 76.5%;
+   display: none;
 }
 
 #config-panel{
@@ -44,7 +41,7 @@ html{
    height: 76.5%;
    width: 100%;
    background: #000;
-   display: none;
+   /*display: none;*/
 }
 
 #piano-scroll{

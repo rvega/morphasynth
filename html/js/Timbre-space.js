@@ -68,13 +68,12 @@ Morphasynth.TimbreSpace = function(){
 
       console.log(event.gesture.touches.length);
 
-      if(singleDrag){
         self.pointerX = event.gesture.touches[0].pageX;
         self.pointerY = event.gesture.touches[0].pageY;
 
         self.sendPoses(self.pointerX,self.pointerY);
         self.actualicePointer(self.pointerX,self.pointerY);
-      }
+
     });
 
     //When just make a little tap
