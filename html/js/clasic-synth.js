@@ -6,6 +6,7 @@ Morphasynth.ClasicSynth = function(){
   this.synthCanvas = null;
   var cs;
   var currentButton = null;
+  var buttons = new Array();
 
   this.init = function (){
 
@@ -14,11 +15,13 @@ Morphasynth.ClasicSynth = function(){
     cs = $("#clasic-synth");
     this.synthCanvas = Raphael('clasic-synth', cs.width(), cs.height());
 
-    //create buttons array
-    var Buttons = new Array();
-
-    button = new Morphasynth.Button();
-    button.init("papucho", this.synthCanvas);
+    //create buttons
+    for(var i=0 ; i<5 ; i++){
+      var button = new Morphasynth.Button();
+      button.init("papucho "+i, this.synthCanvas);
+      buttons.push(button);
+    }
+    console.log("butones: "+buttons.length);
 
     //stop browser scrolling
     $(cs).bind('touchmove', function(e){e.preventDefault()});
@@ -52,17 +55,24 @@ Morphasynth.ClasicSynth = function(){
     title.attr("fill","#fff");
     title.attr("font-size","25");
 
-    //draw test button
-    button.draw(70,115);
+    //put buttons on canvas
+    for (var i = buttons.length - 1; i >= 0; i--) {
+      buttons[i].draw(70+(i*100), 115);
+    };
     
     //when touch starts
     Hammer(cs).on("touch", function (event) {
         console.log("start: "+event.gesture.touches.length);
+
         if(event.gesture.touches.length == 1){
-          if(button.getTouch(event.gesture.touches[0].pageX,event.gesture.touches[0].pageY)){
-            currentButton = button;
-            //alert("yaerahh !!  "+currentButton.getName());
-          }
+
+          for (var i = buttons.length - 1; i >= 0; i--) {
+            if(buttons[i].getTouch(event.gesture.touches[0].pageX,event.gesture.touches[0].pageY)){
+              currentButton = buttons[i];
+              //alert("yaerahh !!  "+currentButton.getName());
+            }
+          };
+
         }
     });
 
