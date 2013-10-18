@@ -1,3 +1,9 @@
+@font-face
+{
+font-family: synth;
+src: url('../fonts/synth_norm.ttf');
+}
+
 html{
    height:100%;
 }
@@ -27,7 +33,7 @@ html{
 
 #timbre-space{
    height: 76.5%;
-   display: none;
+   /*display: none;*/
 }
 
 #config-panel{
@@ -41,7 +47,7 @@ html{
    height: 76.5%;
    width: 100%;
    background: #000;
-   /*display: none;*/
+   display: none;
 }
 
 #piano-scroll{
@@ -61,7 +67,7 @@ html{
    height: 100%;
    width: 8.8%;
    float:left;
-   background: url(../img/pianoTriangle.png) no-repeat center center;
+   background: url(../img/pianoDark.png) no-repeat center center;
    /* -webkit-background-size: cover; */
    background-size: 100% 100%;
 }
