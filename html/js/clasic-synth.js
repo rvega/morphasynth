@@ -32,7 +32,8 @@ Morphasynth.ClasicSynth = function(){
 
     //set Background
     var bg = this.synthCanvas.rect(0,0,cs.width(),cs.height());
-    bg.attr("fill", "#002129");
+    bg.attr("fill", "#0A0420");
+    //var bg = this.synthCanvas.image('img/fondo.jpg',0,0,cs.width(),cs.height());
     
     //put background dots
     //self.BackgroundBeauties(cs.width(), cs.height());
@@ -133,7 +134,7 @@ Morphasynth.ClasicSynth = function(){
     cnt = 0;
     for (var i = 38; i < 44; i++) {
       buttons[i].draw(143+(cnt), 621);
-      ttt = this.synthCanvas.text(143+(cnt), 328, butNames[i]);
+      ttt = this.synthCanvas.text(143+(cnt), 330, butNames[i]);
       ttt.attr({'font-family':'synth','font-size':'18','fill':"#B9E9E1"});
       cnt += 80;
       if((i+1)%2 == 0){
@@ -144,8 +145,8 @@ Morphasynth.ClasicSynth = function(){
     //6th row
     cnt = 0;
     for (var i = 44; i < 48; i++) {
-      buttons[i].draw(267+(cnt), 718);
-      ttt = this.synthCanvas.text(267+(cnt), 377, butNames[i]);
+      buttons[i].draw(267+(cnt), 724);
+      ttt = this.synthCanvas.text(267+(cnt), 381, butNames[i]);
       ttt.attr({'font-family':'synth','font-size':'18','fill':"#B9E9E1"});
       cnt += 78;
     };

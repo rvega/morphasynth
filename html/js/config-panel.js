@@ -17,7 +17,9 @@ Morphasynth.ConfigPanel = function(){
 
     //set Background
     var bg = this.configCanvas.rect(0,0,cp.width(),cp.height());
-    bg.attr("fill", "#002129");
+    bg.attr("fill", "#141525");
+    /*var bg = this.configCanvas.image('img/fondoclaro.jpg',0,0,cp.width(),cp.height());*/
+
     self.BackgroundBeauties(cp.width(), cp.height());
 
     self.drawOnConfig(this.configCanvas);

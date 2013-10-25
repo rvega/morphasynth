@@ -17,6 +17,11 @@ Morphasynth.TimbreSpace = function(){
   this.pointerY = $('#timbre-space').height()/2;
   this.sendXY=false;
 
+  //Morphing
+  var pathData;
+  var pathString = "";
+  var path = null;
+
   this.init = function(){
     // Load presets
     this.presets = JSON.parse(ContainerApp.getPresets());
@@ -32,10 +37,12 @@ Morphasynth.TimbreSpace = function(){
     this.width = ts.width();
     this.height = ts.height();
     this.canvas = Raphael('timbre-space', ts.width(), ts.height());
+    path = this.canvas.path("M0,0L-10,10");
+
 
     //set Background
     var bg = this.canvas.rect(0,0,ts.width(),ts.height());
-    bg.attr("fill", "#002129");
+    bg.attr("fill", "#0A0420");
     this.BackgroundBeauties(ts.width(),ts.height());
 
     //draw the pointer
@@ -54,11 +61,17 @@ Morphasynth.TimbreSpace = function(){
         console.log("start: "+event.gesture.touches.length);
         if(event.gesture.touches.length == 1){
           singleDrag = true;
+
+          //begin path
+          pathData = new Array();
+          path.remove();
+          pathString = "M"+event.gesture.touches[0].pageX+","+event.gesture.touches[0].pageY;
         }
     });
 
     //when touch Ends
     Hammer(ts).on("dragend", function (event) {
+        self.sendPoses(0);
         console.log("end");
         singleDrag = false;
     });
@@ -66,14 +79,19 @@ Morphasynth.TimbreSpace = function(){
     //when is dragging
     Hammer(ts).on("drag", function (event) {
 
-      console.log(event.gesture.touches.length);
-
         self.pointerX = event.gesture.touches[0].pageX;
         self.pointerY = event.gesture.touches[0].pageY;
 
-        self.sendPoses(self.pointerX,self.pointerY);
+        self.sendPoses(1);
         self.actualicePointer(self.pointerX,self.pointerY);
 
+        //add to path
+        //pathData.push({self.pointerX, self.pointerY});
+        path.remove();
+        pathString += " L"+event.gesture.touches[0].pageX+","+event.gesture.touches[0].pageY;
+        path = self.canvas.path(pathString);
+        path.attr({'stroke':'#B9E9E1', 'stroke-width':'2', 'stroke-opacity':'.3'});
+        //console.log("path: "+pathString);
     });
 
     //When just make a little tap
@@ -83,7 +101,7 @@ Morphasynth.TimbreSpace = function(){
           self.pointerX = event.gesture.touches[0].pageX;
           self.pointerY = event.gesture.touches[0].pageY;
 
-          self.sendPoses(self.pointerX,self.pointerY);
+          self.sendPoses(1);
           self.actualicePointer(self.pointerX,self.pointerY);
         }
     });
@@ -108,9 +126,9 @@ Morphasynth.TimbreSpace = function(){
   };
 
   //SEND CANVAS POSES
-  this.sendPoses = function (xx, yy){
+  this.sendPoses = function (pres){
     //console.log("pointer poses x:"+xx+" y:"+yy);
-    ContainerApp.sendMessage("/pointer/",this.pointerX,this.pointerY);
+    ContainerApp.sendMessage("/pointer/",this.pointerX,this.pointerY,pres);
   }
 
   this.drawPoints = function(){
@@ -120,7 +138,7 @@ Morphasynth.TimbreSpace = function(){
       xDescriptor = Options.x;
       yDescriptor = Options.y;
       x = preset[xDescriptor] * this.width;
-      y = preset[yDescriptor] * this.height-68;
+      y = (preset[yDescriptor] * (this.height-68))+68;
       this.presetDots[i] = this.canvas.circle(x, y, 2);
       this.presetDots[i].attr("fill", "#FFF");
       this.presetDots[i].attr("stroke-width",0);
@@ -159,18 +177,6 @@ Morphasynth.TimbreSpace = function(){
     this.pointer3.attr("stroke","#fff");
     this.pointer3.attr("stroke-dasharray","--.");
     this.pointer3.attr("stroke-linecap","square");
-
-//    pointer4=this.canvas.circle(pointerX,pointerY,33);
-//    pointer4.attr("fill-opacity","0");
-//    pointer4.attr("stroke-width","7");
-//    pointer4.attr("stroke","#fff");
-
-
-//    pointer4=this.canvas.path("M"+pointerX+","+(pointerY-33)+"c19,0,35,16,35,35S"+(pointerX+18)+","+(pointerY+35)+","+pointerX+","+(pointerY+33));
-//    pointer4.attr("fill-opacity","0");
-//    pointer4.attr("stroke-width","4");
-//    pointer4.attr("stroke","#fff");
-//    pointer4.attr("stroke-dasharray", "100 ");
   };
 
   this.actualicePointer = function (xx,yy){
@@ -192,12 +198,14 @@ Morphasynth.TimbreSpace = function(){
       }
     }
 
+    this.canvas.rect(0,0,this.canvas.width, 68).attr({'fill':'#22303D', 'stroke-width':'0'});
+
     //Under canvas Lines
-    for(var i=0;i<(wid+100);i+=12){
+/*    for(var i=0;i<(wid+100);i+=12){
       bglines=this.canvas.path("M"+i+",712L"+(i-100)+",780");
       bglines.attr("stroke","#fff");
       bglines.attr("stroke-width","1");
       bglines.attr("stroke-opacity",".3");
-    }
+    }*/
   };
 }

@@ -113,7 +113,7 @@ Morphasynth.Button = function(){
     //setLeds
     this.turnLeds();
 
-    console.log("value of "+name+": "+ang);
+    //console.log("value of "+name+": "+ang);
   };
 
   this.turnLeds = function (){
