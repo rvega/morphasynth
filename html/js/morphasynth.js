@@ -65,7 +65,7 @@ function createMockContainerApp(){
       for(var i = 0; i<50; i++) {
         var preset = {};
         for(var j = 0; j<keys.length; j++) {
-          preset[keys[j]] = Math.random();
+          preset[keys[j]] = Math.random()-0.5;
         }
         presets.push(preset);
       }
