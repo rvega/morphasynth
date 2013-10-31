@@ -17,7 +17,7 @@ Morphasynth.TimbreSpace = function(){
   this.pointerY;
   this.sendXY = false;
   var originX, originY;
-  var zoom;
+  var zoom, zm;
   var yMiddle;
   var pinching = false;
 
@@ -48,6 +48,7 @@ Morphasynth.TimbreSpace = function(){
     originY = yMiddle;
     console.log("origin: "+originX+", "+originY);
     zoom = 1;
+    zm = 1;
 
     //set Background
     var bg = this.canvas.rect(0,0,ts.width(),ts.height());
@@ -85,6 +86,17 @@ Morphasynth.TimbreSpace = function(){
         self.sendPoses(0);
         console.log("end");
         singleDrag = false;
+
+        if(zoom>1){
+          zm = zoom;
+        }else{
+          zoom = 1;
+          zm = zoom;
+          originX = self.width/2;
+          originY = yMiddle;
+          self.actPoints();
+        }
+        
     });
 
     //when is dragging
@@ -109,26 +121,8 @@ Morphasynth.TimbreSpace = function(){
         path.attr({path: pathData});
     });
 
-    //When just make a little tap
-    Hammer(ts).on("touch", function (event) {
-
-        if(event.gesture.touches.length == 1){
-          self.pointerX = event.gesture.touches[0].pageX;
-          self.pointerY = event.gesture.touches[0].pageY;
-
-          self.sendPoses(1);
-          self.actualicePointer(self.pointerX,self.pointerY);
-        }
-    });
-
-/*    Hammer(ts).on("pinch", function (event) {
-        if(event.gesture.touches.length == 2){
-
-        }
-    });*/
-
     //touchSwipe Implementation
-    $(ts).swipe( {
+/*    $(ts).swipe( {
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
           if(fingerCount == 3){
             $("#timbre-space").slideToggle();
@@ -138,7 +132,48 @@ Morphasynth.TimbreSpace = function(){
           }
         },
         fingers:$.fn.swipe.fingers.ALL
+      });*/
+
+      $(ts).swipe( {
+        pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom)
+        {
+          //$(this).text("You pinched " +direction + " by " + distance +"px, zoom scale is "+pinchZoom);
+        },
+        pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom)
+        {
+          //$(this).text("You pinched " +direction + " by " + distance +"px, zoom scale is "+pinchZoom);
+        },
+        pinchStatus:function(event, phase, direction, distance , duration , fingerCount, pinchZoom) {
+          //$(this).html("Pinch zoom scale "+pinchZoom+"  <br/>Distance pinched "+distance+" <br/>Direction " + direction);
+          if(fingerCount ==2){
+
+            zoom = zm*pinchZoom;
+
+            try{
+              var centro = self.middlePoint(event.touches[0].pageX, event.touches[0].pageY, event.touches[1].pageX, event.touches[1].pageY);
+              originX = centro[0];
+              originY = centro[1];
+            }
+            catch(err){
+              //alert(err);
+            }
+
+            self.zoomPoints();
+
+          }
+        },
+/*        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          if(fingerCount == 3){
+            $("#timbre-space").slideToggle();
+            $("#config-panel").slideToggle();
+            $("#piano-scroll").slideToggle();
+            $("#options-button").slideToggle();
+          }
+        },*/
+        fingers:2,  
+        pinchThreshold:0  
       });
+
 
     $(".icon-ok").mouseup(function (){
       self.actPoints();
@@ -178,6 +213,21 @@ Morphasynth.TimbreSpace = function(){
       x =originX+(zoom*(preset[xDescriptor]*this.width));
       y = originY+(zoom*((this.height-68)*preset[yDescriptor]));
       this.presetDots[i].animate({'cx': x,'cy':y},1500,'ease-in-out');
+      //console.log("preset: "+preset[xDescriptor]+" ,  "+preset[yDescriptor]);
+    }
+  };
+
+  this.zoomPoints = function(){
+    var preset, x, y, xDescriptor, yDescriptor;
+
+    for(var i=0; i<this.presets.length; i++) {
+      preset = this.presets[i];
+      xDescriptor = Options.x;
+      yDescriptor = Options.y;
+      x =originX+(zoom*(preset[xDescriptor]*this.width));
+      y = originY+(zoom*((this.height-68)*preset[yDescriptor]));
+      //this.presetDots[i].animate({'cx': x,'cy':y},1500,'ease-in-out');
+      this.presetDots[i].attr({'cx': x,'cy':y});
       //console.log("preset: "+preset[xDescriptor]+" ,  "+preset[yDescriptor]);
     }
   };
@@ -234,4 +284,9 @@ Morphasynth.TimbreSpace = function(){
   this.drawUpperMenu = function (){
     this.canvas.rect(0,0,this.canvas.width, 68).attr({'fill':'#22303D', 'stroke-width':'0'});
   };
+
+  this.middlePoint = function (x1, y1, x2, y2) {
+    return [(x1+x2)/2,(y1+y2)/2];
+  };
+
 }
