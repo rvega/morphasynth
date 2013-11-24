@@ -17,20 +17,25 @@ Morphasynth.TimbreSpace = function(){
   this.pointerY;
   this.sendXY = false;
   var originX, originY;
+  var offsetX, offsetY; // cantidad de desplazamiento absoluto de el space en un zoom.
+  var displacementX, displacementY;// valores de verdacidad temporal para cálculos estáticos de el desplazamiento realizado.
   var zoom, zm;
   var yMiddle;
   var pinching = false;
+  var centro;
 
   //Morphing
+
+  //var pathsArray;
+  var currentPath; 
   var pathData;
   var path = null;
+
+  var self = this;
 
   this.init = function(){
     // Load presets
     this.presets = JSON.parse(ContainerApp.getPresets());
-
-    // Bind mouse events
-    var self = this;
 
     //stop browser scrolling
     $('#timbre-space').bind('touchmove', function(e){e.preventDefault()});
@@ -46,6 +51,8 @@ Morphasynth.TimbreSpace = function(){
     yMiddle = ((this.height-68)/2)+68;
     originX = this.width/2;
     originY = yMiddle;
+    displacementX = 0;
+    displacementY = 0;  
     console.log("origin: "+originX+", "+originY);
     zoom = 1;
     zm = 1;
@@ -77,6 +84,7 @@ Morphasynth.TimbreSpace = function(){
 
           //begin path
           pathData = new Array();
+          currentPath = new Array();
           path.remove();
         }
     });
@@ -96,11 +104,12 @@ Morphasynth.TimbreSpace = function(){
           originY = yMiddle;
           self.actPoints();
         }
-        
     });
 
     //when is dragging
     Hammer(ts).on("drag", function (event) {
+
+      if(event.gesture.touches.length == 1 && !pinching){
 
         self.pointerX = event.gesture.touches[0].pageX;
         self.pointerY = event.gesture.touches[0].pageY;
@@ -109,16 +118,35 @@ Morphasynth.TimbreSpace = function(){
         self.actualicePointer(self.pointerX,self.pointerY);
 
         //add to path
-        //second option
+        //var lx = originX+(zoom*(self.pointerX-(self.width/2)));
+        //var ly = originY+(zoom*(self.pointerY-((self.height+68)/2)));
+
+        //logic aproach
+        //var lx = (self.pointerX-(self.width/2));
+        //var ly = (self.pointerY-((self.height+68)/2));
+
+        //math aproach
+        var lx = ((self.pointerX-(self.width/2))/zoom)-offsetX;
+        var ly = ((self.pointerY-((self.height+68)/2))/zoom)-offsetY;
+
+        console.log("dat: "+lx+", "+ly);
+
         if (pathData.length == 0) {
-            pathData[0] = ["M",self.pointerX,self.pointerY];
+          //no before
+          //originX+(zoom*(preset[xDescriptor]*this.width))
+          currentPath[0] = [lx, ly];
+          pathData[0] = ["M", self.pointerX, self.pointerY];
+            //pathData[0] = ["M",self.pointerX,self.pointerY];
             path = self.canvas.path(pathData);
             path.attr({stroke: "#aaa","stroke-width": 2});
         }
-        else
-            pathData[pathData.length] =["L",self.pointerX,self.pointerY];
-
+        else{
+          //pathData[pathData.length] =["L",self.pointerX,self.pointerY];
+          pathData[pathData.length] =["L",self.pointerX, self.pointerY];
+          currentPath[currentPath.length] = [lx, ly];
+        }
         path.attr({path: pathData});
+      }
     });
 
     //touchSwipe Implementation
@@ -130,7 +158,7 @@ Morphasynth.TimbreSpace = function(){
             $("#piano-scroll").slideToggle();
             $("#options-button").slideToggle();
           }
-        },
+        } ,
         fingers:$.fn.swipe.fingers.ALL
       });*/
 
@@ -138,10 +166,12 @@ Morphasynth.TimbreSpace = function(){
         pinchIn:function(event, direction, distance, duration, fingerCount, pinchZoom)
         {
           //$(this).text("You pinched " +direction + " by " + distance +"px, zoom scale is "+pinchZoom);
+          self.pinchRelease();
         },
         pinchOut:function(event, direction, distance, duration, fingerCount, pinchZoom)
         {
           //$(this).text("You pinched " +direction + " by " + distance +"px, zoom scale is "+pinchZoom);
+          self.pinchRelease();
         },
         pinchStatus:function(event, phase, direction, distance , duration , fingerCount, pinchZoom) {
           //$(this).html("Pinch zoom scale "+pinchZoom+"  <br/>Distance pinched "+distance+" <br/>Direction " + direction);
@@ -150,26 +180,36 @@ Morphasynth.TimbreSpace = function(){
             zoom = zm*pinchZoom;
 
             try{
-              var centro = self.middlePoint(event.touches[0].pageX, event.touches[0].pageY, event.touches[1].pageX, event.touches[1].pageY);
-              originX = centro[0];
-              originY = centro[1];
+              if(event.touches.length>1){
+                centro = self.middlePoint(event.touches[0].pageX, event.touches[0].pageY, event.touches[1].pageX, event.touches[1].pageY);
+                
+                if(pinching==false){
+                  //set the position
+                  displacementX = centro[0]-originX;
+                  displacementY = centro[1]-originY;
+
+                  // first frame pinching
+                  pinching=true;
+                }
+
+                //set the origin with displacement
+                originX = centro[0]-displacementX;
+                originY = centro[1]-displacementY;
+
+                //set the offset of the timbre space
+                offsetX = originX - (self.width/2);
+                offsetY = originY - (((self.height-68)/2)+68);
+              }
             }
             catch(err){
-              //alert(err);
+              alert(err);
             }
 
-            self.zoomPoints();
+             self.zoomPoints();
+             self.actPath();
 
           }
         },
-/*        swipeLeft:function(event, direction, distance, duration, fingerCount) {
-          if(fingerCount == 3){
-            $("#timbre-space").slideToggle();
-            $("#config-panel").slideToggle();
-            $("#piano-scroll").slideToggle();
-            $("#options-button").slideToggle();
-          }
-        },*/
         fingers:2,  
         pinchThreshold:0  
       });
@@ -185,6 +225,41 @@ Morphasynth.TimbreSpace = function(){
   this.sendPoses = function (pres){
     //console.log("pointer poses x:"+xx+" y:"+yy);
     ContainerApp.sendMessage("/pointer/",this.pointerX,this.pointerY,pres);
+  }
+
+  this.pinchRelease = function (){
+    if(zoom>1){
+      zm = zoom;
+
+      //control canvas go out
+      if((originX+(zoom*(0.5*self.width)))<self.width) {
+        //alert("asdfasdfasdf");
+        originX = self.width-((zoom*self.width)/2);
+      }
+      if((originX+(zoom*(-0.5*self.width)))>0) {
+        originX = ((zoom*self.width)/2);
+      }
+      //control canvas go out
+      if((originY+(zoom*(0.5*self.height)))<self.height) {
+        //alert("asdfasdfasdf");
+        originY = self.height-((zoom*self.height)/2)+68;
+      }
+      if((originY+(zoom*(-0.5*self.height)))>0) {
+        //alert("asdfasdfasdf");
+        originY = ((zoom*self.height)/2);
+      }
+
+      self.actPoints();
+      self.actPath();
+    }else{
+      zoom = 1;
+      zm = zoom;
+      originX = self.width/2;
+      originY = yMiddle;
+      self.actPoints();
+      self.actPath();
+    }
+    pinching = false;
   }
 
   this.drawPoints = function(){
@@ -232,6 +307,18 @@ Morphasynth.TimbreSpace = function(){
     }
   };
 
+  this.actPath = function (){
+    //pathData[0] = ["M", lx, ly];
+    for (var i = 0; i < currentPath.length; i++) {
+      var tx =originX+(zoom*(currentPath[i][0]));
+      var ty = originY+(zoom*(currentPath[i][1]));
+      // var tx = (zoom*currentPath[i][0]);
+      // var ty = (zoom*currentPath[i][1]);
+      pathData[i] = [pathData[i][0], tx, ty];
+    };
+    path.attr({path: pathData});
+  }
+
   this.drawPointer = function (){
     console.log("pointerX: "+this.pointerX+"  pointerY:"+this.pointerY);
 
@@ -246,12 +333,12 @@ Morphasynth.TimbreSpace = function(){
     this.pointer2.attr("stroke-width","2");
     this.pointer2.attr("stroke","#fff")
 
-    this.pointer3=this.canvas.circle(this.pointerX,this.pointerY,33);
+/*    this.pointer3=this.canvas.circle(this.pointerX,this.pointerY,33);
     this.pointer3.attr("fill-opacity","0");
     this.pointer3.attr("stroke-width","6");
     this.pointer3.attr("stroke","#fff");
     this.pointer3.attr("stroke-dasharray","--.");
-    this.pointer3.attr("stroke-linecap","square");
+    this.pointer3.attr("stroke-linecap","square");*/
   };
 
   this.actualicePointer = function (xx,yy){
@@ -259,8 +346,8 @@ Morphasynth.TimbreSpace = function(){
     this.pointer1.attr("cy",yy);
     this.pointer2.attr("cx",xx);
     this.pointer2.attr("cy",yy);
-    this.pointer3.attr("cx",xx);
-    this.pointer3.attr("cy",yy);
+/*    this.pointer3.attr("cx",xx);
+    this.pointer3.attr("cy",yy);*/
   };
 
   this.BackgroundBeauties = function (wid, hei){

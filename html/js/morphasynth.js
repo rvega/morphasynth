@@ -103,6 +103,8 @@ function main(){
 
   Synth = new Morphasynth.ClasicSynth();
   Synth.init();
+
+  $("#load").toggle();
 }
 
 /*
@@ -114,4 +116,5 @@ $(document).ready(function(){
   }
 
   ContainerApp.htmlDidLoad();
+
 });

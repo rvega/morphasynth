@@ -8,6 +8,16 @@ html{
    height:100%;
 }
 
+#load{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #f00;
+   z-index: 1000;
+}
+
 #options-button{
    position:absolute;
    right:20px;
